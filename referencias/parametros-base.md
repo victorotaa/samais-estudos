@@ -1,10 +1,18 @@
 # Parâmetros-Base — os "botões" da Fórmula Mestre
 
-> Centraliza todos os percentuais, fatores, índices e valores de referência usados
-> no cálculo. **Calibre aqui** conforme entrarem dados reais — a começar pelos
-> números de Maringá (padrão ouro). Cada valor traz a fonte e o status
-> (`normativo` = de portaria/lei; `referência` = típico de mercado, confirmar;
-> `a calibrar` = placeholder até termos dado real).
+> Centraliza percentuais, fatores, índices e referências do cálculo. **Não são
+> valores fixos a aplicar cegamente** — a fórmula é alimentada pelo contexto real
+> de cada ente. Leia junto com os **Princípios Reitores** da Fórmula Mestre.
+>
+> Cada item tem um **status** que define como pode ser usado:
+> - `normativo` — de portaria/lei: é dado real, pode ser usado direto.
+> - `a levantar` — **deve vir da pesquisa/input do estudo**; nunca preencher por
+>   estimativa inventada (Princípio da Realidade). Sem dado = pendência sinalizada.
+> - `validação` — banda apenas para **conferir sanidade** do resultado, não para
+>   preencher valor.
+> - `referência (teto conservador)` — quando admitida como premissa e o real não
+>   foi levantado, usar o **limite superior** da faixa e rotular como premissa a
+>   validar (Princípio da Projeção Conservadora — sempre o mais caro).
 
 ---
 
@@ -33,17 +41,17 @@
 |---|---|---|
 | Horas a cobrir/mês por posto 24×7 | ≈ 730,5 h | 24 h × 30,44 dias |
 | FC só para fechar escala (jornada 44h) | ≈ 4,0–4,5 | antes de férias/13º/absenteísmo |
-| **FC efetivo (com férias, 13º, absenteísmo)** | **≈ 5,0–5,5** | usar este para provisionar pessoal |
-| Absenteísmo de referência | 5–10% | calibrar pela operação real |
+| **FC efetivo (com férias, 13º, absenteísmo)** | **≈ 5,0–5,5** | usar este para provisionar pessoal; sem dado real, usar o **teto (5,5)** |
+| Absenteísmo de referência | 5–10% | sem dado real, usar o **teto (10%)** |
 
-> Ajustar por jornada da CCT (12×36, 44 h, 40 h) e por categoria. **A calibrar**
-> com a escala real de Maringá.
+> Ajustar por jornada da CCT (12×36, 44 h, 40 h) e por categoria. **A levantar**
+> com a escala real do ente; na ausência, teto conservador.
 
 ## 4. Encargos sociais e custo de pessoal (referência)
 
 | Componente | Faixa de referência | Status |
 |---|---|---|
-| Encargos sociais sobre salário (CLT, saúde) | **68–80%** | referência |
+| Encargos sociais sobre salário (CLT, saúde) | **68–80%** | a levantar (do regime/CCT); sem dado, teto 80% |
 | — Grupo A (INSS patronal, FGTS, RAT/SAT, terceiros) | ~36–38% | referência |
 | — Grupo B (férias, 13º, abono, licenças) | ~20–22% | referência |
 | — Grupo C (aviso prévio, multa FGTS, rescisão) | ~5–8% | referência |
@@ -51,7 +59,7 @@
 | Adicional de insalubridade (saúde, grau médio) | 20% do salário-mín. ou base CCT | normativo/CCT |
 | Adicional noturno | ≥ 20% sobre hora noturna | normativo/CCT |
 | Sobreaviso médico | conforme CCT | a calibrar |
-| Piso salarial por função | **da CCT da categoria/região** | a calibrar |
+| Piso salarial por função | **da CCT da categoria/região** | a levantar |
 
 > Os pisos (médico, enfermeiro, técnico de enfermagem, condutor socorrista, TARM,
 > rádio-operador, administrativo) vêm da **Convenção Coletiva vigente** da região
@@ -63,7 +71,8 @@
 |---|---|---|
 | **Margem-alvo Samais** | **35% (arredondar para mais)** | política interna |
 | Forma de embutir | distribuída no BDI (despesas indiretas, reserva técnica, risco, remuneração da gestão) — **não** como linha "lucro" isolada | política |
-| Fator K de referência (serviços, MPU) | 2,5–2,7 (faixa de mercado p/ serviços; ver fonte) | referência |
+| Regime tributário | quando indefinido, projetar **sempre o de MAIOR carga** (mais caro) | política conservadora |
+| Fator K de referência (serviços, MPU) | 2,5–2,7 (faixa de mercado p/ serviços; ver fonte) | validação |
 | Gross-up correto | `Preço = Custo ÷ [1 − (Tributos% + Margem%)]` | método |
 
 ### Tributos sobre faturamento — referência por regime
@@ -77,8 +86,9 @@
 | CSLL | 9% sobre presunção de 32% → ~2,88% efetivo | — |
 | **Carga efetiva aproximada** | **~13–16% do faturamento** | confirmar caso a caso |
 
-> Decidir Lucro Real × Presumido por contrato. **A calibrar** com a contabilidade
-> da Samais.
+> Quando o regime efetivo não estiver definido pelo contexto, **projetar o de
+> maior carga** (mais caro). Quando definido, usar o real. **A calibrar** com a
+> contabilidade da Samais.
 
 ## 6. Repasse federal SAMU 192 (receita — para o Encontro de Contas)
 

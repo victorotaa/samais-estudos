@@ -2,15 +2,19 @@
 
 > As 66 rubricas da planilha-modelo de Maringá (`PLANO OPERACIONAL DE
 > TERCEIRIZAÇÃO DO SAMU`), fielmente transcritas, com: **Tipo de Despesa**,
-> **rateio** (Proamusep / Prefeituras / Contratada) e o **driver/método de
+> **rateio** (Mantenedora / Prefeituras / Contratada) e o **driver/método de
 > cálculo** que a Fórmula Mestre usa para cada uma. Use como checklist de escopo
 > — nenhum estudo deve omitir rubrica sem justificativa.
 >
-> Colunas de rateio: **PRO** = Proamusep · **PREF** = Prefeituras · **CTR** = Contratada (Samais).
+> Colunas de rateio: **MANT** = Mantenedora · **PREF** = Prefeituras · **CTR** = Contratada (Samais).
+>
+> O rateio abaixo reproduz o **exemplo de Maringá** (mantenedora = Proamusep). Ele
+> é **referência**, não regra: em cada estudo o rateio e os % de itens híbridos
+> são redefinidos pelo contexto do ente (Princípio da Parametrização por Contexto).
 
 ## 1. Recursos Humanos
 
-| Item | Serviço | Tipo de Despesa | PRO | PREF | CTR | Driver / método de cálculo |
+| Item | Serviço | Tipo de Despesa | MANT | PREF | CTR | Driver / método de cálculo |
 |---|---|---|:--:|:--:|:--:|---|
 | 1.1 | Servidores Públicos (Maringá) | Encontro de Contas | X | X |  | Folha real dos cedidos → entra no Cenário A; abatido no Encontro de Contas |
 | 1.2 | Funcionários Públicos (Proamusep) | Contratação Direta | X |  |  | Folha do consórcio (custo + encargos), fora do faturamento Samais |
@@ -21,7 +25,7 @@
 
 ## 2. Gestão de Serviços
 
-| Item | Serviço | Tipo de Despesa | PRO | PREF | CTR | Driver / método |
+| Item | Serviço | Tipo de Despesa | MANT | PREF | CTR | Driver / método |
 |---|---|---|:--:|:--:|:--:|---|
 | 2.1 | Gestão da Central de Regulação de Urgências | Contrato de Serviço |  |  | X | Equipe de regulação (postos × FC) + estrutura |
 | 2.2 | Gestão de Farmácia | Contrato de Serviço |  |  | X | Equipe dedicada + sistema |
@@ -48,7 +52,7 @@
 
 ## 3. Fornecimento de Insumos
 
-| Item | Serviço | Tipo de Despesa | PRO | PREF | CTR | Driver / método |
+| Item | Serviço | Tipo de Despesa | MANT | PREF | CTR | Driver / método |
 |---|---|---|:--:|:--:|:--:|---|
 | 3.1 | Medicamentos | Central de Compras |  |  | X | Custo/atendimento × atendimentos/mês |
 | 3.2 | Material Médico-Hospitalar | Central de Compras |  |  | X | Custo/atendimento × atendimentos/mês |
@@ -63,7 +67,7 @@
 
 ## 4. Serviços e Tecnologia
 
-| Item | Serviço | Tipo de Despesa | PRO | PREF | CTR | Driver / método |
+| Item | Serviço | Tipo de Despesa | MANT | PREF | CTR | Driver / método |
 |---|---|---|:--:|:--:|:--:|---|
 | 4.1 | Sistema de Controle de Frota, Georreferenciamento e Telemetria | Contrato de Serviço |  |  | X | Licença/viatura/mês |
 | 4.2 | Sistema de Controle de Farmácia | Contrato de Serviço |  |  | X | Licença mensal |

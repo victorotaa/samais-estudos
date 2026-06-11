@@ -37,13 +37,54 @@ Diagnóstico da causa-raiz (o que esta fórmula corrige):
 
 ---
 
+## Princípios Reitores (inegociáveis)
+
+Estes princípios valem acima de qualquer parâmetro deste documento. A fórmula
+**não carrega valores fixos**: ela é um motor alimentado pelo **contexto
+levantado de cada ente** (pesquisa em dados públicos + inputs manuais), porque
+cada município / estado / consórcio / mantenedora tem dinâmica e quadro
+próprios. A saída é o **estudo** no formato padrão.
+
+1. **Princípio da Realidade — nunca deduzir dado inexistente.**
+   Trabalhar **exclusivamente** com realidades levantadas. Onde faltar dado, a
+   fórmula **sinaliza a lacuna** ("a levantar") e **não preenche por estimativa
+   inventada**. Premissa de mercado só é admitida quando rotulada explicitamente
+   como premissa a validar — e jamais apresentada como fato. Sem dado, não há
+   número: há pendência.
+
+2. **Princípio da Projeção Conservadora — na dúvida, sempre o mais caro.**
+   Quando houver mais de um caminho possível e o contexto não definir qual,
+   adota-se **sempre o de maior custo projetado**. Exemplos: médico CLT/estatutário
+   × PJ credenciado → o maior; regime tributário da Samais → o de **maior carga**;
+   faixas de encargos/escala → o teto. Isso protege contra o erro histórico de
+   **subprojetar** (propostas que saíam baratas demais e custo atual subestimado).
+
+3. **Princípio do Custo Real Composto — os ocultos entram no valor final do
+   Cenário A.** Os gastos invisíveis e diluídos da gestão pública são
+   **apresentados explicitamente e somados** ao valor final do cenário existente,
+   compondo o custo real atual do ente — não ficam em nota de rodapé.
+
+4. **Princípio da Parametrização por Contexto.** Rateio (Mantenedora /
+   Prefeituras / Contratada), % de itens híbridos, regime e quantidades são
+   **definidos a partir do contexto de cada estudo**, não fixados aqui. A
+   mantenedora é variável (em Maringá é a Proamusep, mas pode mudar) — tratar
+   sempre como "Mantenedora".
+
+> Por que o conservadorismo não torna a Samais cara: mesmo projetando o cenário
+> de maior custo para a Samais (Cenário B), ele tende a ficar **abaixo** do
+> Cenário A, porque o custo público real carrega inflações que a Samais não
+> reproduz (RPPS, encargos cruzados de outras pastas, ociosidade, folha inchada).
+> Conservador no custo, competitivo na comparação.
+
+---
+
 ## 1. Produtos do estudo
 
 Todo estudo gera **dois cenários** comparáveis, na mesma base de rubricas:
 
 | Cenário | O que é | Para que serve |
 |---|---|---|
-| **A — Custo Real Atual** | Quanto o ente *de fato* gasta hoje com a operação, incluindo os custos invisíveis e diluídos. | Mostrar a realidade financeira (quase sempre maior do que o ente imagina). |
+| **A — Custo Real Atual** | Quanto o ente *de fato* gasta hoje com a operação, com os custos invisíveis e diluídos **explicitados e somados** ao valor final do cenário. | Mostrar a realidade financeira (quase sempre maior do que o ente imagina). |
 | **B — Proposta Samais** | Custo real e necessário da operação sob gestão Samais + margem-alvo embutida, com qualidade otimizada. | Valor ofertado pela Samais. |
 
 **Tese comercial:** na maioria dos cenários, **B ≈ A ou B ≤ A**, porém com
@@ -176,12 +217,14 @@ Custo total da função/mês = Custo mensal/profissional × nº de postos × FC
 > Cobertura são **multiplicativos**. Esquecer um deles, ou os dois, é o que
 > produzia os "valores muito errados".
 
-### 4.4 Médico de plantão por credenciamento
+### 4.4 Médico — regime variável, sempre o custo maior
 
-No modelo de Maringá o item 1.4 ("Médico (plantão)") é **Credenciamento de
-Serviços** (PJ), não CLT. Nesse caso, custo = valor da hora-plantão credenciada
-× nº de plantões/mês, **sem** encargos CLT, mas com retenção tributária aplicável.
-Decidir o regime (CLT × PJ credenciado) **antes** de calcular.
+O médico pode entrar como **PJ credenciado** (ex.: item 1.4 de Maringá,
+"Credenciamento de Serviços": valor da hora-plantão × plantões/mês, sem encargos
+CLT, mas com retenção tributária) **ou** como **CLT/estatutário** (postos × FC ×
+custo carregado). Quando o contexto do estudo **não** definir o regime, calcular
+**ambos** e adotar **sempre o de maior custo projetado** (Princípio da Projeção
+Conservadora). Quando o contexto definir, usar o regime real levantado.
 
 ---
 
@@ -298,22 +341,28 @@ verdade — são apenas demonstração do método.)
 
 ### 8.3 Regime tributário
 
-Escolher o regime (Lucro Presumido × Lucro Real) que minimiza a carga para o
-perfil do contrato — serviços de saúde têm presunção e alíquotas específicas.
-Registrar a carga efetiva usada em cada estudo. Detalhe em `parametros-base.md`.
+Quando o regime efetivo da Samais no contrato **não** estiver definido, projetar
+**sempre o de MAIOR carga** (mais caro) entre os aplicáveis — Lucro Presumido ×
+Lucro Real (Princípio da Projeção Conservadora). Quando estiver definido pelo
+contexto, usar o regime real. Registrar a carga efetiva usada em cada estudo.
+Detalhe em `parametros-base.md`.
 
 ---
 
 ## 9. Bloco [4]+rateio — Quem paga o quê (Encontro de Contas)
 
 A planilha de Maringá já traz, por rubrica, o **TIPO DE DESPESA** e o **rateio**
-entre **PROAMUSEP**, **PREFEITURAS** e **CONTRATADA** — esse é o ativo mais
-valioso do modelo. A fórmula trata cada tipo assim:
+entre **MANTENEDORA**, **PREFEITURAS** e **CONTRATADA** — esse é o ativo mais
+valioso do modelo. (A mantenedora é variável: em Maringá é a **Proamusep**, mas
+pode mudar de ente para ente; tratar sempre como "Mantenedora".) O **rateio e os
+% de itens híbridos não são fixados aqui** — são definidos a partir do contexto
+de cada estudo (Princípio da Parametrização por Contexto). A fórmula trata cada
+tipo de despesa assim:
 
 | Tipo de Despesa | Tratamento |
 |---|---|
 | **Encontro de Contas** | Custo que o ente já tem (ex.: servidores cedidos). Entra no Cenário A; no Cenário B é abatido/compensado, não cobrado em dobro. |
-| **Contratação Direta** | Pago diretamente pelo ente (Proamusep/Prefeitura) — fora do faturamento Samais, mas dentro do custo total da operação. |
+| **Contratação Direta** | Pago diretamente pelo ente (Mantenedora/Prefeitura) — fora do faturamento Samais, mas dentro do custo total da operação. |
 | **Credenciamento de Serviços** | Pagamento a credenciados (ex.: médico-plantão PJ) — repasse, com tributação própria. |
 | **Contrato de Serviço** | Núcleo do faturamento Samais — recebe BDI + margem. |
 | **Central de Compras** | Insumos adquiridos de forma centralizada — repassados a custo + taxa de administração definida. |
