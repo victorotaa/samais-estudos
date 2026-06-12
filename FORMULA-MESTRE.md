@@ -78,6 +78,40 @@ próprios. A saída é o **estudo** no formato padrão.
 
 ---
 
+## Regras Operacionais Samais (modelo de assunção)
+
+Como a Samais assume uma operação na prática — define o **escopo de custo** do
+Cenário B e o que fica com o ente. São regras de negócio confirmadas, válidas
+por padrão até que o edital/contexto diga o contrário.
+
+- **R1 · Frota é do ente, sem CAPEX de aquisição.** Mantém-se o número de
+  ambulâncias que o município já tem ao assumir; a frota é sempre de recurso
+  governamental (municipal/federal). A Samais **não compra frota**. Responsabiliza-se
+  por **manutenção** e por **recolocar em operação as viaturas paradas**. Aluguel
+  de USA/USB é **exceção** (casos muito necessários) — projetar como **contingência
+  hipotética** (linha de risco/eventual), nunca como base.
+- **R2 · Equipe própria, inclusive médicos, CLT no piso.** Por padrão a Samais
+  contrata **toda a equipe** (incluindo médicos) para ter controle total da
+  operação, em **CLT pagando o piso da CCT**. Premissa estrutural: contratação
+  privada ao piso quase sempre custa **menos** que a pública (que paga acima do
+  piso, com gratificações, adicionais e RPPS). Logo, no Cenário B os médicos estão
+  **dentro** do escopo; no Cenário A o mesmo profissional custa **mais** (público)
+  — isso reforça a tese B ≤ A. *(A regra de "projetar o regime mais caro" só vale
+  quando o regime do médico é incerto e não levantado; o modelo-alvo é equipe
+  própria CLT-piso, e o conservadorismo recai sobre encargos, Fator de Cobertura e
+  tributos — no teto — não sobre inflar o salário acima do piso, que é a realidade
+  da CCT.)*
+- **R3 · Bases e CRU permanecem; obra é do ente.** O número de bases se mantém. A
+  Samais entra com **gestão e eficiência**; **criar ou reformar CRUs e bases é
+  responsabilidade da contratante** (CAPEX de obra/imóvel **fora** do custo Samais).
+  Consistente com o padrão de Maringá (itens 4.24/4.25 — bases sob a Prefeitura).
+- **R4 · Atendimentos não se preveem; usa-se histórico.** O volume de atendimentos
+  (que dimensiona insumos clínicos) vem de **série histórica da região** quando
+  houver dado. Sem dado, sinalizar a lacuna (Princípio da Realidade) — não estimar
+  no escuro.
+
+---
+
 ## 1. Produtos do estudo
 
 Todo estudo gera **dois cenários** comparáveis, na mesma base de rubricas:
@@ -217,14 +251,17 @@ Custo total da função/mês = Custo mensal/profissional × nº de postos × FC
 > Cobertura são **multiplicativos**. Esquecer um deles, ou os dois, é o que
 > produzia os "valores muito errados".
 
-### 4.4 Médico — regime variável, sempre o custo maior
+### 4.4 Médico — equipe própria CLT no piso (modelo-alvo)
 
-O médico pode entrar como **PJ credenciado** (ex.: item 1.4 de Maringá,
-"Credenciamento de Serviços": valor da hora-plantão × plantões/mês, sem encargos
-CLT, mas com retenção tributária) **ou** como **CLT/estatutário** (postos × FC ×
-custo carregado). Quando o contexto do estudo **não** definir o regime, calcular
-**ambos** e adotar **sempre o de maior custo projetado** (Princípio da Projeção
-Conservadora). Quando o contexto definir, usar o regime real levantado.
+Por padrão (Regra R2), a Samais contrata **toda a equipe médica em CLT pagando o
+piso da CCT** — postos × FC × custo carregado (encargos e FC no teto conservador).
+É a opção que dá controle operacional e, ao piso, sai **mais barata que a pública**.
+Onde o contexto impuser **PJ credenciado** (ex.: item 1.4 de Maringá, ou o Edital
+SESMA 005/2024 de Belém: valor da hora-plantão × plantões/mês, sem encargos CLT,
+com retenção tributária), usar o regime real. Só quando o regime for **incerto e
+não levantado** vale calcular ambos e adotar o de **maior custo** (Princípio da
+Projeção Conservadora). No **Cenário A**, o médico é custeado pelo valor **público
+real** (acima do piso) — quase sempre maior que o da Samais.
 
 ---
 
@@ -279,12 +316,16 @@ outras pastas ou inflados por estruturas que a Samais não reproduz. Levantar e
 
 ## 7. Bloco [6] — Camada Temporal (CAPEX, depreciação, reajuste)
 
-1. **Separar CAPEX de OPEX.** Frota, equipamentos, mobiliário e implantação
+1. **Separar CAPEX de OPEX.** Equipamentos, mobiliário e implantação
    (mobilização/start-up) são investimento, não custeio mensal. Diluir o CAPEX no
    prazo do contrato como **depreciação/amortização + custo de reposição**, ou
-   tratar como aporte inicial, conforme o modelo do edital.
-2. **Reposição de ativos.** Provisionar a troca de viaturas/equipamentos ao fim
-   da vida útil dentro do horizonte do contrato.
+   tratar como aporte inicial, conforme o modelo do edital. **Frota: sem CAPEX de
+   aquisição** (Regra R1 — é do ente); a Samais custeia **manutenção + reativação
+   de viaturas paradas**, e prevê **contingência hipotética de aluguel** de USA/USB
+   para casos excepcionais.
+2. **Reposição de ativos.** Provisionar a troca de equipamentos ao fim da vida
+   útil dentro do horizonte do contrato (frota é reposta pelo ente/recurso federal).
+   **Obras de CRU e bases são do ente** (Regra R3) — fora do CAPEX Samais.
 3. **Reajuste anual.** Aplicar o índice contratual (IPCA) à parcela de insumos/
    serviços e o **dissídio/CCT** à parcela de pessoal, a partir da data-base.
    Projetar o fluxo por todo o prazo (12–60 meses) e, quando o edital pede valor
