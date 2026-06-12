@@ -1,107 +1,114 @@
-# Estudo SAMU — Belém/PA (estudo-exemplo / calibração da fórmula)
+# Estudo SAMU — Belém/PA (calibração com o modelo do André)
 
-> Primeira aplicação ponta a ponta da Fórmula Mestre. Serve para **validar e
-> calibrar** o motor contra um caso real. Os dados marcados ✅ são reais
-> (pesquisados); os marcados ⚠️ são **premissa a validar** — conservadores, nunca
-> apresentados como fato (Princípio da Realidade). Referência do CEO André:
-> **R$ 7,9 mi/mês**.
+> Aplicação da Fórmula Mestre cruzada com o **modelo de custos do André**
+> (`SAMU_Belem_Modelo_Custos.xlsx`). O modelo trouxe os pisos reais da CCT-PA,
+> encargos, tributação e custos unitários (todos calibrados em
+> [`../referencias/parametros-base.md`](../referencias/parametros-base.md) §9).
+> Referência verbal do CEO: **R$ 7,9 mi/mês**.
 
-## 1. Drivers (dados de entrada)
+## 1. Os três números — e por que divergem
 
-| Driver | Valor | Status |
+| Fonte | Valor/mês | Leitura |
 |---|---|---|
-| População | 1.303.403 hab | ✅ IBGE Censo 2022 |
-| USB | 20 | ✅ SESMA/Agência Belém (jan/2025) |
-| USA | 4 | ✅ idem |
-| Motolância | 4 | ✅ idem |
-| Ambulancha (fluvial) | 1 | ✅ idem |
-| Médicos | equipe própria CLT-piso (modelo Samais, R2) — há também Edital SESMA 005/2024 de credenciamento | ✅ contexto / ⚠️ escopo a confirmar |
-| Frota | do ente; Samais faz manutenção + reativação (R1) | ✅ regra |
-| Bases / CRU | permanecem; obra é do ente (R3) | ✅ regra |
-| Atendimentos/mês | **a levantar** (histórico DataSUS) | ⚠️ |
-| Piso CCT por função (PA) | **a levantar** | ⚠️ |
-| Nº de bases descentralizadas | **a levantar** | ⚠️ |
+| **Modelo preliminar do André** | **R$ 3,25 mi** | Subdimensionado (3 erros, abaixo) |
+| Alvo verbal do André | R$ 7,9 mi | Intuição do CEO |
+| **Fórmula Mestre (corrigida)** | **~R$ 8,1 mi** | Bate com o alvo verbal |
 
-> Dimensionamento normativo daria ~9–13 USB e ~3 USA para 1,3 mi hab; Belém opera
-> **20 USB / 4 USA** (acima do piso, provável reflexo da área fluvial). **Prevalece
-> o real**, não o parâmetro.
+O modelo do André contém **o erro que a Fórmula Mestre existe para pegar**:
 
-## 2. Pessoal (postos 24/7 × Fator de Cobertura 5,5)
+1. **Fator de cobertura 24/7 = 2,2 (deveria ser ~4,5).** O 2,2 cobre só um turno
+   de 12h; um posto 24h em 12×36 exige 2 turnos × 2 turmas ≈ 4,4–4,5. *A própria
+   planilha usa 4,5 para o médico regulador e 2,2 para o resto* — inconsistência
+   que revela o erro. E a **Nota nº 1 do André** alerta: *"lição Taboão: 148 reais
+   vs 80 modelados"* → 148/80 = **1,85×**, idêntico à correção do nosso custo
+   direto (R$ 1,94 mi → R$ 3,59 mi = 1,85×).
+2. **Frota = 12 USB (real = 20 USB).** A entrega de jan/2025 levou Belém a 20 USB.
+3. **Margem = 18% (política Samais = 35%).**
 
-| Função | Postos 24/7 | FTE | Custo/FTE ⚠️ | Total/mês ⚠️ |
-|---|---|---|---|---|
-| Condutor socorrista | 25 | 137,5 | ~R$ 4,7k | ~R$ 0,64 mi |
-| Técnico de enfermagem | 25 | 137,5 | ~R$ 4,9k | ~R$ 0,67 mi |
-| Enfermeiro (USA) | 4 | 22 | ~R$ 10,5k | ~R$ 0,23 mi |
-| TARM (regulação) | 8 | 44 | ~R$ 4,0k | ~R$ 0,18 mi |
-| Rádio-operador | 3 | 16,5 | ~R$ 4,0k | ~R$ 0,07 mi |
-| Médico (USA + regulação) CLT-piso | 7 | 38,5 | ~R$ 20,6k | ~R$ 0,79 mi |
-| Admin / gestão / coordenação | ~35 FTE | — | ~R$ 6,0k | ~R$ 0,21 mi |
-| **Total pessoal** | | | | **~R$ 2,8 mi** |
+## 2. Recálculo corrigido (Fórmula Mestre)
 
-Postos por viatura (Portaria 1.010/2012): USB = condutor + técnico; USA = condutor
-+ enfermeiro + médico; motolância = técnico; ambulancha ≈ condutor + técnico.
-Encargos a 80% e FC a 5,5 — **tetos conservadores**.
+Pisos e custos unitários: do modelo do André (calibrados). Correções: **FC 4,5**
+para todo posto 24/7, **20 USB**, **margem 35%**.
 
-## 3. Não-pessoal (premissas a validar)
+### Pessoal em viaturas (postos = viaturas × tripulação × FC 4,5)
 
-| Rubrica | Estimativa/mês ⚠️ |
+| Bloco | Cálculo | Total/mês |
+|---|---|---|
+| USB (20) — técnico + condutor | 20 × 4,5 × (8.177 + 6.512) | ~R$ 1.322.000 |
+| USA (4) — médico + enfermeiro + condutor | 4 × 4,5 × (27.272 + 10.832 + 6.512) | ~R$ 803.000 |
+| Motolância (4) — técnico | 4 × 4,5 × 8.177 | ~R$ 147.000 |
+| Ambulancha (1) — FC 2,0 (fluvial enxuta) | 2,0 × (8.177 + 7.952) | ~R$ 32.000 |
+| **Subtotal pessoal viaturas** | | **~R$ 2.304.000** |
+
+### Central de Regulação (FC 4,5)
+
+| Função | Postos×FC | Total/mês |
+|---|---|---|
+| Médico Regulador (3 × 4,5) | 13,5 | ~R$ 344.000 |
+| TARM (6 × 4,5) | 27 | ~R$ 134.000 |
+| Rádio-Operador (3 × 4,5) | 13,5 | ~R$ 72.000 |
+| Supervisor CR (1 × 4,5) | 4,5 | ~R$ 42.000 |
+| Infra CR (software, telefonia, internet, GPS, rádio, utilidades) | — | ~R$ 53.000 |
+| **Subtotal CR** | | **~R$ 643.000** |
+
+### Não-pessoal (custos unitários do André × frota real de 20 USB)
+
+| Bloco | Total/mês |
 |---|---|
-| Combustível | ~R$ 0,20 mi |
-| Manutenção de frota (inclui reativar paradas) | ~R$ 0,12 mi |
-| Insumos clínicos (medicamentos + material) | ~R$ 0,45 mi |
-| Gases medicinais | ~R$ 0,03 mi |
-| Facilities / lavanderia / resíduos / esterilização / higienização | ~R$ 0,10 mi |
-| Sistemas / TI / apps / telefonia / internet / datacenter | ~R$ 0,15 mi |
-| Uniformes / EPI / material | ~R$ 0,05 mi |
-| Seguros (veículos + vida) | ~R$ 0,04 mi |
-| Contingência hipotética de aluguel USA/USB (R1) | ~R$ 0,03 mi |
-| **Total não-pessoal** | **~R$ 1,07 mi** |
+| Frota (combustível, manutenção, seguro, IPVA) | ~R$ 248.000 |
+| Insumos (descartáveis, medicamentos, O₂, almoxarifado, reposição) | ~R$ 174.000 |
+| Equipe de suporte (coordenadores, adm, mecânicos, ASG) | ~R$ 158.000 |
+| Estrutura geral (sede, TI, treinamento, qualidade, contingência) | ~R$ 66.000 |
+| **Subtotal não-pessoal** | **~R$ 646.000** |
 
-> Bases (aluguel/despesas) **não entram** no custo Samais — são do ente (R3).
-> Frota **não entra como CAPEX** — é do ente (R1).
-
-## 4. Composição do preço (Cenário B)
+### Composição do preço
 
 ```
-Custo direto    = 2,8 (pessoal) + 1,07 (não-pessoal)     ≈ R$ 3,87 mi
-+ overhead central Samais (~5%)                           ≈ R$ 0,19 mi
-= Custo total da operação                                 ≈ R$ 4,06 mi
-Preço = Custo ÷ [1 − (Tributos 16% + Margem 35%)] = ÷ 0,49
-Preço Samais                                              ≈ R$ 8,3 mi/mês
+Custo direto = 2.304 + 643 + 646 (mil)                ≈ R$ 3.593 mil
++ indiretos (overhead 7% + operacional 3%)            ≈ R$ 359 mil
+= Subtotal (B)                                        ≈ R$ 3.952 mil
+Faturamento = B ÷ [1 − (tributos 16,33% + margem 35%)] = ÷ 0,4867
+PREÇO SAMAIS                                          ≈ R$ 8,12 mi/mês
 ```
 
-## 5. Veredito vs. R$ 7,9 mi do André
+> Com **margem 18%** (a do modelo do André) em vez de 35%, o mesmo custo dá
+> **~R$ 6,0 mi/mês**. A margem é a maior alavanca do número final.
 
-| | Valor |
+## 3. Veredito
+
+**A R$ 7,9 mi/mês do André faz sentido** — é o que a Fórmula Mestre produz (~R$ 8,1
+mi) quando se usa **pessoal honesto (FC 4,5) + margem 35%** sobre os pisos reais.
+A planilha dele (R$ 3,25 mi) é que está errada, por subcontar a escala 24/7 e a
+frota. **A intuição do CEO estava certa; o modelo preliminar, não.**
+
+## 4. ⚠️ A tensão que precisa de decisão
+
+| Benchmark (contratos reais ganhos) | R$/viatura/mês |
 |---|---|
-| Fórmula (conservadora, tetos) | **~R$ 8,3 mi/mês** |
-| Referência André | **R$ 7,9 mi/mês** |
-| Diferença | **~5%** |
+| CIMSAMU 02/2020 (Ponta Grossa) | R$ 94k |
+| Ourinhos/SP (Samais) | R$ 159k |
+| FAHECE/SC (estado) | R$ 93k |
+| **Belém — nosso cálculo (R$ 8,1 mi ÷ 29)** | **~R$ 280k** |
 
-**Coerente.** A construção bottom-up independente cai a ~5% da âncora do André —
-não é número solto. Como a fórmula usou **tetos conservadores** (encargos 80%, FC
-5,5, tributo 16%, salários por estimativa), ao calibrar com **piso real da CCT-PA**
-e **atendimentos históricos** o valor tende a convergir para a faixa dos R$ 7,9 mi.
-A R$ 7,9 mi, a margem efetiva fica em ~31% (vs. alvo 35%) — aceitável, mas a
-**disciplina de margem depende de fechar no piso** e confirmar insumos pelo histórico.
+Nosso número honesto fica **~2× o mercado por viatura**. Isso significa:
 
-### Benchmarks (a R$ 7,9 mi)
-- **R$ 72,7 / habitante / ano** — plausível p/ escopo amplo em capital com área fluvial.
-- **R$ 272 mil / viatura / mês** (29 viaturas) — coerente.
-- **Peso da folha sobre o custo:** ~2,8 / 4,06 ≈ **69%** — dentro da faixa de SAMU (55–70%).
+- Se Belém for **contrato dirigido** (você indicou: *"conversas feitas, licitação
+  para vencermos"*), R$ 7,9–8,1 mi é sustentável e seguro — segue.
+- Se houver **disputa real**, R$ 280k/viatura não vence; seria preciso flexionar a
+  **margem** (de 35% para ~18–22% leva o preço a R$ 6,0–6,5 mi) ou o escopo. A
+  margem é o botão; o custo de pessoal honesto (FC 4,5) **não** deve ser cortado —
+  cortá-lo é repetir o erro do modelo preliminar.
 
-## 6. O que fecha o número (pendências, por impacto)
+## 5. Pendências de diligência (fecham o número)
 
-1. **Piso da CCT-PA** por função (médico, enfermeiro, técnico, condutor, TARM) — maior alavanca.
-2. **Atendimentos/mês históricos** — dimensiona insumos clínicos.
-3. **Nº de bases** e estrutura real da Central de Regulação.
-4. **Escopo do médico** confirmado (próprio CLT × credenciamento SESMA 005/2024).
-
-> Comparar com o **estudo atual de Belém** (PDF "Samais Estudo SAMU Belém 2026")
-> assim que tivermos os números-cabeçalho dele — o PDF (54 MB, escaneado) não pôde
-> ser lido automaticamente.
+1. **Headcount real do SAMU Belém** (a própria Nota nº 1 do André pede — lição Taboão).
+2. **USB: 12 ou 20?** Confirmar a frota tripulada vs. reserva técnica.
+3. **Margem: 35% (política) ou 18% (modelo)?** — decide R$ 8,1 mi vs R$ 6,0 mi.
+4. **Regime jurídico:** pregão tradicional × Contrato de Gestão (OS, possível imunidade tributária → recalcular tributos).
+5. **CCT-PA** confirmada (André usou piso nacional da enfermagem como base).
+6. **Frota cedida** (assumido) — se houver locação, +R$ 8–12 mil/viatura/mês.
 
 ---
 
-*Status: rascunho de calibração. Atualizar conforme entrarem os dados reais.*
+*Status: calibrado com dados reais (pisos, encargos, tributos, custos unitários) e
+frota levantada. Falta diligência de headcount, decisão de margem e regime jurídico.*

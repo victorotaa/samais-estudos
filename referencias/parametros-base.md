@@ -41,17 +41,23 @@
 |---|---|---|
 | Horas a cobrir/mês por posto 24×7 | ≈ 730,5 h | 24 h × 30,44 dias |
 | FC só para fechar escala (jornada 44h) | ≈ 4,0–4,5 | antes de férias/13º/absenteísmo |
-| **FC efetivo (com férias, 13º, absenteísmo)** | **≈ 5,0–5,5** | usar este para provisionar pessoal; sem dado real, usar o **teto (5,5)** |
-| Absenteísmo de referência | 5–10% | sem dado real, usar o **teto (10%)** |
+| **FC para posto 24/7 (12×36), com férias/13º já nos encargos** | **≈ 4,4–4,5** | headcount físico: 2 turnos × 2 turmas + absenteísmo |
+| FC alternativo (se férias/13º **não** estiverem nos encargos) | ≈ 5,0–5,5 | evita subcontagem, mas **não** usar junto com encargos que já provisionam férias |
+| Absenteísmo de referência | 5–10% | já embutido no FC |
+| ❌ **Erro comum (não usar)** | FC ≈ 2,0–2,2 | cobre só **um turno de 12h** — subdimensiona o 24/7 pela metade |
 
-> Ajustar por jornada da CCT (12×36, 44 h, 40 h) e por categoria. **A levantar**
-> com a escala real do ente; na ausência, teto conservador.
+> **Não duplicar férias/13º:** se os encargos (~68%) já provisionam férias e 13º, o
+> FC é só o **headcount físico** (~4,5). O fator **2,2** do modelo preliminar de
+> Belém cobre apenas um turno — é exatamente o erro que infla a diferença entre
+> projeção e realidade (lição Taboão: **148 reais vs 80 modelados ≈ 1,85×**, que
+> coincide com a correção da nossa fórmula). André usou 4,5 para o médico regulador
+> e 2,2 para o resto: aplicar **4,5 de forma consistente** a todo posto 24/7.
 
 ## 4. Encargos sociais e custo de pessoal (referência)
 
 | Componente | Faixa de referência | Status |
 |---|---|---|
-| Encargos sociais sobre salário (CLT, saúde) | **68–80%** | a levantar (do regime/CCT); sem dado, teto 80% |
+| Encargos sociais sobre salário (CLT, APH) | **68,24%** (calibrado) | calibrado (modelo André, IN SEGES 05/2017); insalubridade à parte |
 | — Grupo A (INSS patronal, FGTS, RAT/SAT, terceiros) | ~36–38% | referência |
 | — Grupo B (férias, 13º, abono, licenças) | ~20–22% | referência |
 | — Grupo C (aviso prévio, multa FGTS, rescisão) | ~5–8% | referência |
@@ -70,6 +76,7 @@
 | Item | Valor | Status |
 |---|---|---|
 | **Margem-alvo Samais** | **35% (arredondar para mais)** | política interna |
+| ⚠️ Conflito a resolver | modelo preliminar do André usa **18%** (faixa 15–22%) | André × política 35% |
 | Forma de embutir | distribuída no BDI (despesas indiretas, reserva técnica, risco, remuneração da gestão) — **não** como linha "lucro" isolada | política |
 | Regime tributário | quando indefinido, projetar **sempre o de MAIOR carga** (mais caro) | política conservadora |
 | Fator K de referência (serviços, MPU) | 2,5–2,7 (faixa de mercado p/ serviços; ver fonte) | validação |
@@ -84,7 +91,7 @@
 | COFINS (cumulativo) | 3,00% | — |
 | IRPJ | 15% sobre presunção de 32% → ~4,8% efetivo | + adicional 10% acima de R$20k/mês |
 | CSLL | 9% sobre presunção de 32% → ~2,88% efetivo | — |
-| **Carga efetiva aproximada** | **~13–16% do faturamento** | confirmar caso a caso |
+| **Carga efetiva (Belém, Presumido)** | **16,33% do faturamento** | calibrado (modelo André): PIS 0,65 + COFINS 3 + IRPJ 4,8 + CSLL 2,88 + ISS 5 |
 
 > Quando o regime efetivo não estiver definido pelo contexto, **projetar o de
 > maior carga** (mais caro). Quando definido, usar o real. **A calibrar** com a
@@ -117,13 +124,80 @@
 |---|---|---|
 | Peso da folha (pessoal ÷ custo total) | ~55–70% | referência |
 | Custo por habitante/ano | **calibrar com Maringá** | a calibrar |
-| Custo por viatura/mês | **calibrar com Maringá** | a calibrar |
+| **Custo por viatura/mês (mercado)** | **R$ 93k–159k** (CIMSAMU 94k · Ourinhos/Samais 159k · FAHECE 93k) | calibrado (modelo André) |
 | Custo por atendimento | **calibrar com Maringá** | a calibrar |
 | Cobertura do repasse federal | informativo | — |
 
 > **Padrão Ouro Maringá:** assim que tivermos a planilha de Maringá preenchida,
 > registrar aqui os valores reais por indicador. Eles passam a ser o gabarito
 > contra o qual todo estudo novo é checado.
+>
+> ⚠️ **Tensão de benchmark:** os contratos reais ganhos rodam a **R$ 93k–159k/
+> viatura/mês** (já com margem). Pessoal honesto (FC 4,5) + margem 35% empurra para
+> ~R$ 280k/viatura — **~2× o mercado**. Em pregão competitivo isso não vence; só
+> fecha em **contrato dirigido** ou escopo premium. A margem é a maior alavanca.
+
+---
+
+## 9. Valores calibrados — Belém/PA (modelo André, CCT 2024/25, data-base abr/2026)
+
+Pisos, encargos e custos unitários extraídos do modelo de custos do André
+(`SAMU_Belem_Modelo_Custos.xlsx`) — **com aval do CEO**. Servem de referência
+para o Pará e de ponto de partida para outras regiões (ajustar pela CCT local).
+
+### Pisos salariais por função (R$/mês, salário-base)
+
+| Função | Base | Adicionais | Custo/posto carregado* |
+|---|---|---|---|
+| Médico Regulador (24h sem.) | 13.500 | noturno | 25.472 |
+| Médico Intervencionista USA | 14.500 | noturno | 27.272 |
+| Enfermeiro Intervencionista USA | 4.800 | insalub.+noturno | 10.832 |
+| Enfermeiro Supervisor | 5.800 | — | 10.928 |
+| Técnico de Enfermagem (Lei 14.434) | 3.325 | insalub.+noturno | 8.177 |
+| Condutor Socorrista | 2.400 | insalub.+noturno | 6.512 |
+| TARM | 2.100 | noturno | 4.950 |
+| Rádio-Operador | 2.300 | noturno | 5.310 |
+| Supervisor Operacional CR | 4.500 | noturno | 9.271 |
+| Auxiliar Administrativo | 2.000 | — | 4.535 |
+| Aux. Serviços Gerais/Higienização | 1.518 | insalub. | 4.745 |
+| Coordenador de Frota | 4.200 | — | 8.236 |
+| Mecânico/Auxiliar Frota | 2.400 | insalub. | 6.229 |
+| Coordenador Médico | 18.000 | — | 31.453 |
+| Coordenador de Enfermagem | 8.500 | — | 15.470 |
+| Diretor Técnico (rateio 50%) | 12.000 | — | 21.359 (×0,5) |
+| Piloto/Condutor Ambulancha | 3.200 | insalub.+noturno | 7.952 |
+
+\*Custo/posto = (base + insalub. + noturno) × (1 + 68,24% encargos) + R$ 1.170 benefícios.
+Insalubridade = 40% × salário-mínimo (R$ 1.518 em 2026); noturno ≈ 7% (20% sobre ~35% das horas).
+
+### Custos unitários não-pessoal (R$/mês)
+
+| Item | Unitário | Base |
+|---|---|---|
+| Combustível USB | 4.500/viatura | ~4 mil km/mês |
+| Combustível USA | 4.800/viatura | uso intensivo |
+| Combustível motolância | 600/moto | — |
+| Combustível ambulancha | 7.500 | marítimo |
+| Manutenção USB | 3.500/viatura | pneus/óleo/peças |
+| Manutenção USA | 4.500/viatura | mais equipamentos |
+| Manutenção motolância | 800/moto | — |
+| Manutenção ambulancha | 6.000 | naval |
+| Seguro de frota | 850/veículo | — |
+| IPVA/licenciamento | 320/veículo | rateio mensal |
+| Insumos descartáveis USB | 4.200/viatura | curativos/EPI/soros |
+| Insumos USA (UTI móvel) | 9.500/viatura | drogas vasoativas/ventilador |
+| Insumos motolância | 800/moto | — |
+| Insumos ambulancha | 3.500 | — |
+| Oxigênio medicinal | 18.000 (global) | recarga+cilindros |
+| Almoxarifado + logística | 15.000 (global) | distribuição bases |
+| Sistema de regulação (software) | 18.000 (global) | licenças+suporte |
+| Telefonia 0800/192 + PABX | 12.000 (global) | — |
+| Indiretos: overhead admin | 7% do custo direto | sede/RH/jurídico/qualidade |
+| Indiretos: operacional não-pessoal | 3% do custo direto | TI/comunicação/capacitação |
+
+> **Frota/USB de Belém:** o modelo do André usa **12 USB**; a entrega de jan/2025
+> levou Belém a **20 USB** (dado real levantado). Usar **20** e confirmar em
+> diligência (a própria Nota nº 1 do André pede isso).
 
 ---
 
