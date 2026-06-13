@@ -380,25 +380,12 @@ verdade — são apenas demonstração do método.)
 > Onde o edital admite preço global/por posto, a abertura é menor, mas a memória
 > interna deve existir.
 
-### 8.3 Regime tributário (inclui OS / Contrato de Gestão)
+### 8.3 Regime tributário
 
-Três regimes possíveis; o regime **muda radicalmente** o gross-up:
-
-- **Lucro Presumido / Real (empresa):** carga sobre faturamento ~13–16% (Presumido)
-  — ver `parametros-base.md`. Quando o regime de empresa for incerto, projetar o
-  de **maior carga** (Princípio da Projeção Conservadora).
-- **OS / Contrato de Gestão (entidade sem fins lucrativos):** se houver
-  **imunidade/isenção** (CEBAS + requisitos do art. 14 CTN), caem IRPJ, CSLL, ISS e
-  COFINS sobre atividade própria; resta basicamente **PIS 1% sobre a folha**. A
-  carga sobre o repasse vai a **~0–1%**, o que **derruba o gross-up**. Porém: (a) a
-  imunidade **precisa ser confirmada** (certificação e operação genuína); (b) OS é
-  **sem fins lucrativos** — não há "lucro": há **superávit/taxa de administração**,
-  que em muitos Contratos de Gestão é **limitada** (faixas baixas, ex. 5–10%).
-  Logo, embutir margem-alvo alta num OS exige **estrutura defensável** (sobrevive a
-  TCU/MP), sob pena de descaracterizar a imunidade e configurar irregularidade.
-
-> Em OS, "margem" deixa de ser lucro e vira superávit/taxa de gestão — registrar
-> como tal e validar a defensabilidade (princípio da composição auditável).
+Quando o regime tributário **não** estiver definido pelo contexto, projetar
+**sempre o de MAIOR carga** (mais caro) entre os aplicáveis (Princípio da Projeção
+Conservadora). Quando estiver definido, usar o regime real e registrar a carga
+efetiva usada em cada estudo. Detalhe em `parametros-base.md`.
 
 ---
 
