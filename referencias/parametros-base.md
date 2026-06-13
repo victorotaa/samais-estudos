@@ -92,6 +92,13 @@
 | IRPJ | 15% sobre presunção de 32% → ~4,8% efetivo | + adicional 10% acima de R$20k/mês |
 | CSLL | 9% sobre presunção de 32% → ~2,88% efetivo | — |
 | **Carga efetiva (Belém, Presumido)** | **16,33% do faturamento** | calibrado (modelo André): PIS 0,65 + COFINS 3 + IRPJ 4,8 + CSLL 2,88 + ISS 5 |
+| **Carga efetiva (OS imune/CEBAS)** | **~0–1%** (só PIS 1% sobre folha) | IRPJ/CSLL/ISS/COFINS imunes — **confirmar certificação** |
+
+> **OS / Contrato de Gestão:** sem fins lucrativos. Com imunidade, a carga sobre o
+> repasse vai a ~0–1% (derruba o gross-up). Mas não há "lucro" — há superávit/taxa
+> de administração, frequentemente **limitada** no Contrato de Gestão (5–10%).
+> Margem-alvo alta num OS exige estrutura defensável (TCU/MP) e não pode
+> descaracterizar a imunidade.
 
 > Quando o regime efetivo não estiver definido pelo contexto, **projetar o de
 > maior carga** (mais caro). Quando definido, usar o real. **A calibrar** com a

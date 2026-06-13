@@ -1,114 +1,91 @@
-# Estudo SAMU — Belém/PA (calibração com o modelo do André)
+# Estudo SAMU — Belém/PA  ·  CONFIDENCIAL (uso interno Samais)
 
-> Aplicação da Fórmula Mestre cruzada com o **modelo de custos do André**
-> (`SAMU_Belem_Modelo_Custos.xlsx`). O modelo trouxe os pisos reais da CCT-PA,
-> encargos, tributação e custos unitários (todos calibrados em
-> [`../referencias/parametros-base.md`](../referencias/parametros-base.md) §9).
-> Referência verbal do CEO: **R$ 7,9 mi/mês**.
+> Aplicação da Fórmula Mestre calibrada com o modelo de custos do André
+> (`SAMU_Belem_Modelo_Custos.xlsx`). Pisos, encargos, tributos e custos unitários
+> calibrados em [`../referencias/parametros-base.md`](../referencias/parametros-base.md) §9.
 
-## 1. Os três números — e por que divergem
+## 0. Decisões travadas (André)
+
+| Decisão | Valor |
+|---|---|
+| Frota USB | **20** (notícias oficiais jan/2025) — + 4 USA, 4 motolâncias, 1 ambulancha |
+| Margem-alvo | **35%** (definida pelo André) |
+| Regime jurídico | **OS / Contrato de Gestão** (entidade do grupo Samais) |
+| Fator de cobertura 24/7 | **4,5** (corrigido; o 2,2 do modelo preliminar subdimensiona) |
+
+## 1. Os três números de partida
 
 | Fonte | Valor/mês | Leitura |
 |---|---|---|
-| **Modelo preliminar do André** | **R$ 3,25 mi** | Subdimensionado (3 erros, abaixo) |
+| Modelo preliminar do André | R$ 3,25 mi | Subdimensionado (FC 2,2; 12 USB; margem 18%) |
 | Alvo verbal do André | R$ 7,9 mi | Intuição do CEO |
-| **Fórmula Mestre (corrigida)** | **~R$ 8,1 mi** | Bate com o alvo verbal |
+| Fórmula Mestre (FC 4,5; 20 USB; **regime empresa**) | ~R$ 8,1 mi | Bate com o alvo verbal |
 
-O modelo do André contém **o erro que a Fórmula Mestre existe para pegar**:
+A planilha do André dava menos da metade por três erros (fator de cobertura 2,2 vs
+4,5; 12 USB vs 20; margem 18% vs 35%). Detalhe e a "prova Taboão" (148/80 = 1,85×,
+igual à nossa correção de custo) no histórico do commit anterior.
 
-1. **Fator de cobertura 24/7 = 2,2 (deveria ser ~4,5).** O 2,2 cobre só um turno
-   de 12h; um posto 24h em 12×36 exige 2 turnos × 2 turmas ≈ 4,4–4,5. *A própria
-   planilha usa 4,5 para o médico regulador e 2,2 para o resto* — inconsistência
-   que revela o erro. E a **Nota nº 1 do André** alerta: *"lição Taboão: 148 reais
-   vs 80 modelados"* → 148/80 = **1,85×**, idêntico à correção do nosso custo
-   direto (R$ 1,94 mi → R$ 3,59 mi = 1,85×).
-2. **Frota = 12 USB (real = 20 USB).** A entrega de jan/2025 levou Belém a 20 USB.
-3. **Margem = 18% (política Samais = 35%).**
-
-## 2. Recálculo corrigido (Fórmula Mestre)
-
-Pisos e custos unitários: do modelo do André (calibrados). Correções: **FC 4,5**
-para todo posto 24/7, **20 USB**, **margem 35%**.
-
-### Pessoal em viaturas (postos = viaturas × tripulação × FC 4,5)
-
-| Bloco | Cálculo | Total/mês |
-|---|---|---|
-| USB (20) — técnico + condutor | 20 × 4,5 × (8.177 + 6.512) | ~R$ 1.322.000 |
-| USA (4) — médico + enfermeiro + condutor | 4 × 4,5 × (27.272 + 10.832 + 6.512) | ~R$ 803.000 |
-| Motolância (4) — técnico | 4 × 4,5 × 8.177 | ~R$ 147.000 |
-| Ambulancha (1) — FC 2,0 (fluvial enxuta) | 2,0 × (8.177 + 7.952) | ~R$ 32.000 |
-| **Subtotal pessoal viaturas** | | **~R$ 2.304.000** |
-
-### Central de Regulação (FC 4,5)
-
-| Função | Postos×FC | Total/mês |
-|---|---|---|
-| Médico Regulador (3 × 4,5) | 13,5 | ~R$ 344.000 |
-| TARM (6 × 4,5) | 27 | ~R$ 134.000 |
-| Rádio-Operador (3 × 4,5) | 13,5 | ~R$ 72.000 |
-| Supervisor CR (1 × 4,5) | 4,5 | ~R$ 42.000 |
-| Infra CR (software, telefonia, internet, GPS, rádio, utilidades) | — | ~R$ 53.000 |
-| **Subtotal CR** | | **~R$ 643.000** |
-
-### Não-pessoal (custos unitários do André × frota real de 20 USB)
+## 2. Custo (travado: 20 USB, FC 4,5)
 
 | Bloco | Total/mês |
 |---|---|
-| Frota (combustível, manutenção, seguro, IPVA) | ~R$ 248.000 |
-| Insumos (descartáveis, medicamentos, O₂, almoxarifado, reposição) | ~R$ 174.000 |
-| Equipe de suporte (coordenadores, adm, mecânicos, ASG) | ~R$ 158.000 |
-| Estrutura geral (sede, TI, treinamento, qualidade, contingência) | ~R$ 66.000 |
-| **Subtotal não-pessoal** | **~R$ 646.000** |
+| Pessoal em viaturas (USB 20, USA 4, moto 4, ambulancha 1) | ~R$ 2.304 mil |
+| Central de Regulação (pessoal FC 4,5 + infra) | ~R$ 643 mil |
+| Não-pessoal (frota, insumos, suporte, estrutura) | ~R$ 646 mil |
+| **Custo direto** | **~R$ 3.593 mil** |
+| + indiretos (overhead 7% + operacional 3%) | ~R$ 359 mil |
+| **Subtotal (B)** | **~R$ 3.952 mil** |
 
-### Composição do preço
+## 3. O regime OS muda o preço — esta é a questão central
 
-```
-Custo direto = 2.304 + 643 + 646 (mil)                ≈ R$ 3.593 mil
-+ indiretos (overhead 7% + operacional 3%)            ≈ R$ 359 mil
-= Subtotal (B)                                        ≈ R$ 3.952 mil
-Faturamento = B ÷ [1 − (tributos 16,33% + margem 35%)] = ÷ 0,4867
-PREÇO SAMAIS                                          ≈ R$ 8,12 mi/mês
-```
+O gross-up depende da carga tributária, e **OS imune ≈ 0–1%** contra **empresa ≈ 16,33%**:
 
-> Com **margem 18%** (a do modelo do André) em vez de 35%, o mesmo custo dá
-> **~R$ 6,0 mi/mês**. A margem é a maior alavanca do número final.
+| Regime tributário | Gross-up @ 35% | **Preço (35%)** | A R$ 7,9 mi, o superávit efetivo é… |
+|---|---|---|---|
+| Empresa (Presumido, 16,33%) | ÷ 0,487 | **~R$ 8,1 mi** | ~33% (≈ alvo) |
+| **OS imune/CEBAS (~0–1%)** | ÷ 0,645 | **~R$ 6,1 mi** | **~49%** (bem acima de 35%) |
 
-## 3. Veredito
+**Tradução:** se o OS obtiver imunidade (objetivo provável), manter os **35%** leva
+o preço a **~R$ 6,1 mi/mês** — porque os ~16% de tributo somem do gross-up. Para
+sustentar o preço em **R$ 7,9 mi** sob imunidade, o superávit efetivo sobe para
+**~49%**, não 35%.
 
-**A R$ 7,9 mi/mês do André faz sentido** — é o que a Fórmula Mestre produz (~R$ 8,1
-mi) quando se usa **pessoal honesto (FC 4,5) + margem 35%** sobre os pisos reais.
-A planilha dele (R$ 3,25 mi) é que está errada, por subcontar a escala 24/7 e a
-frota. **A intuição do CEO estava certa; o modelo preliminar, não.**
+Ou seja, o ganho tributário do OS é uma **escolha estratégica**:
+- **Repassar como preço menor** → ~R$ 6,1 mi: altamente competitivo e defensável.
+- **Reter como superávit** → manter ~R$ 7,9 mi: captura ~49%, mas é o ponto sensível abaixo.
 
-## 4. ⚠️ A tensão que precisa de decisão
+## 4. ⚠️ Ponto de compliance (protege o contrato)
 
-| Benchmark (contratos reais ganhos) | R$/viatura/mês |
-|---|---|
-| CIMSAMU 02/2020 (Ponta Grossa) | R$ 94k |
-| Ourinhos/SP (Samais) | R$ 159k |
-| FAHECE/SC (estado) | R$ 93k |
-| **Belém — nosso cálculo (R$ 8,1 mi ÷ 29)** | **~R$ 280k** |
+OS é **sem fins lucrativos**. Dois cuidados, por ordem:
 
-Nosso número honesto fica **~2× o mercado por viatura**. Isso significa:
+1. **A imunidade precisa ser real** (CEBAS + operação genuína sem distribuição de
+   lucro). Sem isso, cai no regime empresa (16,33%) e o preço volta a ~R$ 8,1 mi.
+2. **Superávit alto chama TCU/MP.** Muitos Contratos de Gestão **limitam a taxa de
+   administração** (faixas de 5–10%). Um superávit de 35–49% repassado ao grupo
+   precisa de **estrutura defensável** (composição auditável) — senão
+   descaracteriza a imunidade e expõe a improbidade. É o mesmo princípio que já
+   está na fórmula: *a composição tem de sobreviver à auditoria*.
 
-- Se Belém for **contrato dirigido** (você indicou: *"conversas feitas, licitação
-  para vencermos"*), R$ 7,9–8,1 mi é sustentável e seguro — segue.
-- Se houver **disputa real**, R$ 280k/viatura não vence; seria preciso flexionar a
-  **margem** (de 35% para ~18–22% leva o preço a R$ 6,0–6,5 mi) ou o escopo. A
-  margem é o botão; o custo de pessoal honesto (FC 4,5) **não** deve ser cortado —
-  cortá-lo é repetir o erro do modelo preliminar.
+> Não é recomendação de recuar do número — é o guard-rail para que o número
+> **se sustente**. Com o André/jurídico, definir o **veículo** do superávit
+> (taxa de gestão, contratos de serviço intragrupo a preço de mercado etc.).
 
-## 5. Pendências de diligência (fecham o número)
+## 5. Número travado (sujeito ao regime)
 
-1. **Headcount real do SAMU Belém** (a própria Nota nº 1 do André pede — lição Taboão).
-2. **USB: 12 ou 20?** Confirmar a frota tripulada vs. reserva técnica.
-3. **Margem: 35% (política) ou 18% (modelo)?** — decide R$ 8,1 mi vs R$ 6,0 mi.
-4. **Regime jurídico:** pregão tradicional × Contrato de Gestão (OS, possível imunidade tributária → recalcular tributos).
-5. **CCT-PA** confirmada (André usou piso nacional da enfermagem como base).
-6. **Frota cedida** (assumido) — se houver locação, +R$ 8–12 mil/viatura/mês.
+- **OS com imunidade + 35%** → **~R$ 6,1 mi/mês** *(mais competitivo e limpo)*.
+- **OS sem imunidade (empresa) + 35%** → **~R$ 8,1 mi/mês** *(≈ alvo do André)*.
+- O alvo de **R$ 7,9 mi** só fica em 35% no cenário **sem** imunidade; **com**
+  imunidade, R$ 7,9 mi = ~49% de superávit.
+
+## 6. Pendências que fecham de vez
+
+1. **Imunidade do OS confirmada?** (CEBAS) — decide R$ 6,1 mi vs R$ 8,1 mi.
+2. **Veículo do superávit de 35%** sob Contrato de Gestão (jurídico).
+3. **Headcount real** em diligência (lição Taboão).
+4. **CCT-PA** confirmada (André usou piso nacional da enfermagem como base).
+5. **Frota cedida** (assumido); locação eventual de USA/USB como contingência (R1).
 
 ---
 
-*Status: calibrado com dados reais (pisos, encargos, tributos, custos unitários) e
-frota levantada. Falta diligência de headcount, decisão de margem e regime jurídico.*
+*Status: calibrado e com decisões travadas (20 USB, 35%, OS). Falta confirmar
+imunidade tributária, veículo do superávit e diligência de headcount.*
