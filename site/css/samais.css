@@ -48,7 +48,7 @@ img{max-width:100%;display:block}
 /* ---------- HERO ---------- */
 .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;
   background:linear-gradient(180deg,rgba(10,10,10,.35) 0%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.92) 100%),
-  #0A0A0A url("https://upload.wikimedia.org/wikipedia/commons/d/d9/Bel%C3%A9m_from_SE_01.jpg") center 40%/cover no-repeat}
+  #0A0A0A url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Bel%C3%A9m_from_SE_01.jpg/1920px-Bel%C3%A9m_from_SE_01.jpg") center 40%/cover no-repeat}
 .hero-inner{padding:0 0 64px}
 .hero .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold-soft);
   padding:6px 14px;border-radius:999px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:22px}
