@@ -40,6 +40,15 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
 9. **Próximos passos** (diligência, mobilização, início).
 10. **Footer** com identidade + crédito da foto.
 
+## Preferências fixas (CEO)
+
+- **CTA final sem contato e sem botão.** A dobra de fechamento é uma afirmação
+  (eyebrow + título + lede), nunca um formulário ou "fale conosco".
+- **Rodapé sem link cruzado para os demais estudos** (cada estudo é peça fechada;
+  a navegação entre estudos vive só no hub `index.html`).
+- **Variar as fotos ao longo do documento** — não repetir a mesma imagem do
+  município em hero, faixas e CTA. Buscar 3–4 fotos distintas e validadas.
+
 ## Imagens
 
 - **Hero:** foto que identifique o município. Buscar em fonte com URL estável e
