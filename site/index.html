@@ -1,56 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Samais — Estudos de Operação e Custos de SAMU</title>
+<title>Samais · Estudos de SAMU 192 — Brasil</title>
+<meta name="description" content="Portfólio de estudos técnicos da Samais para o SAMU 192 — dimensionamento, viabilidade e proposta operacional por município e região.">
 <link rel="icon" href="assets/brand/samais-favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/samais.css">
 </head>
 <body>
 
-<section class="idx-hero">
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#estudos">Estudos</a>
+    <a href="#diagnosticos">Diagnósticos</a>
+    <a href="#metodo">Método</a>
+    <a href="#cta" class="nav-cta">Contato</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO (institucional · liquid glass, sem foto) -->
+<section class="hero-section" id="top">
   <div class="wrap">
-    <img src="assets/brand/samais-logo-white.svg" alt="Samais">
-    <h1>Estudos de <span class="gold">Operação e Custos</span> de SAMU</h1>
-    <p>Apresentações executivas para gestores, secretários e tomadores de decisão — cada estudo dimensionado pela Fórmula Mestre Samais, a partir de dados reais e dos parâmetros oficiais do SUS.</p>
+    <div class="hero">
+      <div class="tag">Samais Gestão em Saúde · Portfólio de estudos</div>
+      <h1>Estudos<br/>de SAMU 192</h1>
+      <div class="hero-sub">Dimensionamento honesto, viabilidade financeira e proposta operacional — município a município, do Pará ao interior de São Paulo.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Cada estudo aplica a mesma metodologia: cobertura 24/7 correta, parâmetros nacionais, dados públicos rastreáveis e a experiência de quem opera SAMU de verdade. O resultado é uma proposta que cabe no orçamento de saúde e responde à demanda real — não ao histórico subdimensionado.</p>
+          <div class="src">Metodologia própria · calibrada com dados públicos oficiais</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">7</div><div class="l">Estudos de SAMU<br/>municipais e regionais</div></div>
+        <div class="it"><div class="n">6</div><div class="l">Estados<br/>PA · RO · MT · RN · SP</div></div>
+        <div class="it"><div class="n">+6 mi</div><div class="l">Habitantes<br/>nas áreas estudadas</div></div>
+        <div class="it"><div class="n">24/7</div><div class="l">Cobertura real<br/>em todo dimensionamento</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Estudos</span>
-      <h2>Operações analisadas</h2>
+<!-- ESTUDOS DE SAMU -->
+<section class="wrap" id="estudos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Estudos de SAMU 192</span>
+      <h2>Os municípios e regiões estudados.</h2>
+      <p class="lede">Cada cartão abre o estudo completo — contexto, diagnóstico, demanda, proposta operacional e viabilidade financeira. Capitais, cidades-polo e consórcios regionais.</p>
     </div>
-    <div class="grid c3">
-      <a class="study-card" href="estudos/belem-pa.html">
-        <div class="ph" style="background-image:linear-gradient(180deg,rgba(10,10,10,.15),rgba(10,10,10,.7)),url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Bel%C3%A9m_from_SE_01.jpg/1280px-Bel%C3%A9m_from_SE_01.jpg')">
-          <span class="tag">SAMU 192</span>
-        </div>
-        <div class="body">
-          <h3>Belém / Pará</h3>
-          <div class="meta">1,30 mi hab · 29 unidades móveis · Central 24/7</div>
-          <span class="go">Ver estudo →</span>
-        </div>
-      </a>
+    <div class="right">Portfólio ativo<br/><span class="acc">7 estudos · 6 UFs</span></div>
+  </div>
+
+  <div class="studies">
+
+    <a class="study" href="estudos/belem-pa.html">
+      <div class="top"><span class="uf">Belém · PA</span><span class="st int">Estudo aprofundado</span></div>
+      <h3>Belém</h3>
+      <div class="d">Capital amazônica, sede da COP30. Proposta de SAMU regional para a RMB, com regulação por IA e a única operação fluvial estruturada do país.</div>
+      <div class="kv">
+        <div class="r"><span class="k">População RMB</span><span class="v">2,37 mi</span></div>
+        <div class="r"><span class="k">Frota proposta</span><span class="v">40 USB · 12 USA</span></div>
+        <div class="r"><span class="k">Por hab./mês</span><span class="v">R$ 1,67</span></div>
+      </div>
+      <div class="go">Ver estudo completo</div>
+    </a>
+
+    <a class="study" href="https://samais-natal-rn.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Natal · RN</span><span class="st">No ar</span></div>
+      <h3>Natal</h3>
+      <div class="d">Capital potiguar com SAMU municipal em gestão direta e uma janela aberta por decisão judicial. Raio-X estratégico da operação.</div>
+      <div class="kv">
+        <div class="r"><span class="k">Habitantes</span><span class="v">784 mil</span></div>
+        <div class="r"><span class="k">Chamados/mês</span><span class="v">~18 mil</span></div>
+        <div class="r"><span class="k">Ambulâncias</span><span class="v">14</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+
+    <a class="study" href="https://samais-taboao-da-serra.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Taboão da Serra · SP</span><span class="st">No ar</span></div>
+      <h3>Taboão da Serra</h3>
+      <div class="d">O município mais denso do Brasil. Gestão integrada do SAMU com central de regulação digital, frota habilitada e IA embarcada.</div>
+      <div class="kv">
+        <div class="r"><span class="k">Habitantes</span><span class="v">273 mil</span></div>
+        <div class="r"><span class="k">Densidade</span><span class="v">+14 mil/km²</span></div>
+        <div class="r"><span class="k">Custo proposta</span><span class="v">R$ 1,8 mi/mês</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+
+    <a class="study" href="https://samais-ji-parana.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Ji-Paraná · RO</span><span class="st">No ar</span></div>
+      <h3>Ji-Paraná</h3>
+      <div class="d">Segunda maior cidade de Rondônia e sede da 1ª Gerência Regional de Saúde. Operação de padrão nacional para a Região Central.</div>
+      <div class="kv">
+        <div class="r"><span class="k">Rede regional</span><span class="v">~290 mil</span></div>
+        <div class="r"><span class="k">Municípios</span><span class="v">17</span></div>
+        <div class="r"><span class="k">Por hab./mês</span><span class="v">R$ 3,02</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+
+    <a class="study" href="https://samais-sorriso.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Sorriso · MT</span><span class="st">No ar</span></div>
+      <h3>Sorriso</h3>
+      <div class="d">Âncora de um SAMU regional para o norte de Mato Grosso. Regulação centralizada do Vale do Teles Pires, consolidando 16 municípios.</div>
+      <div class="kv">
+        <div class="r"><span class="k">Região</span><span class="v">~600 mil</span></div>
+        <div class="r"><span class="k">Municípios</span><span class="v">16</span></div>
+        <div class="r"><span class="k">Cenário base</span><span class="v">R$ 2,76 mi/mês</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+
+    <a class="study" href="https://samais-deploy.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Vale do Jurumirim · SP</span><span class="st">No ar</span></div>
+      <h3>Vale do Jurumirim</h3>
+      <div class="d">SAMU Regional ancorado em Avaré: gestão integrada para 17 municípios, com regulação central e despacho por IA.</div>
+      <div class="kv">
+        <div class="r"><span class="k">Protegidos</span><span class="v">~290 mil</span></div>
+        <div class="r"><span class="k">Municípios</span><span class="v">17</span></div>
+        <div class="r"><span class="k">Cenário base</span><span class="v">R$ 1,78 mi/mês</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+
+    <a class="study" href="https://samais-avare.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Avaré · SP</span><span class="st">No ar</span></div>
+      <h3>Avaré</h3>
+      <div class="d">O maior município do Vale do Jurumirim paga por um SAMU regional e recebe um terço dele. A tese da municipalização da operação.</div>
+      <div class="kv">
+        <div class="r"><span class="k">Habitantes</span><span class="v">96.450</span></div>
+        <div class="r"><span class="k">Cobertura regional</span><span class="v">312 mil</span></div>
+        <div class="r"><span class="k">Custo atual</span><span class="v">R$ 491 mil/mês</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- DIAGNÓSTICOS & OUTROS -->
+<section class="wrap" id="diagnosticos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Diagnósticos e estudos correlatos</span>
+      <h2>Além do dimensionamento de SAMU.</h2>
+      <p class="lede">Diagnósticos setoriais de saúde e novas frentes de serviço pré-hospitalar que ampliam a atuação da Samais.</p>
+    </div>
+    <div class="right">Frentes correlatas<br/><span class="acc">saúde · novos verticais</span></div>
+  </div>
+  <div class="g-2">
+    <a class="study" href="https://samais-raiox-avare.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Avaré · SP</span><span class="st int">Diagnóstico</span></div>
+      <h3>Raio-X da Saúde — Avaré</h3>
+      <div class="d">Diagnóstico completo da saúde municipal: orçamento, rede assistencial, governança e epidemiologia. Base de contexto para a tese de SAMU.</div>
+      <div class="kv">
+        <div class="r"><span class="k">LOA 2026</span><span class="v">R$ 649,6 mi</span></div>
+        <div class="r"><span class="k">Saúde (est.)</span><span class="v">~R$ 155 mi</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+    <a class="study" href="https://samais-crau.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="uf">Novo vertical</span><span class="st int">Conceito</span></div>
+      <h3>CRAU 152 — Resgate Animal</h3>
+      <div class="d">O "192 dos animais": serviço pré-hospitalar veterinário 24/7 em modelo hub-and-spoke, integrado à infraestrutura do SAMU humano.</div>
+      <div class="kv">
+        <div class="r"><span class="k">Pets no Brasil</span><span class="v">160 mi</span></div>
+        <div class="r"><span class="k">Per capita/mês</span><span class="v">R$ 0,59</span></div>
+      </div>
+      <div class="go">Abrir no Vercel</div>
+    </a>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="wrap fold-light" id="metodo">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · O método Samais</span>
+      <h2>Por que nossos números fecham.</h2>
+      <p class="lede">O mesmo rigor em todos os estudos. É o que separa uma proposta que funciona às 3h da manhã de uma planilha bonita que não opera.</p>
+    </div>
+    <div class="right">Padrão único<br/><span class="acc">dado real, sempre</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Pilar metodológico</th><th>O que garante</th></tr></thead>
+    <tbody>
+      <tr><td>Cobertura 24/7 correta</td><td>Pessoal dimensionado para escala ininterrupta — sem turnos descobertos</td></tr>
+      <tr><td>Parâmetros nacionais (PNAU)</td><td>Frota e demanda referenciadas à norma e à taxa de acionamento real</td></tr>
+      <tr><td>Dados públicos rastreáveis</td><td>Cada número separa o fato verificado da estimativa a validar</td></tr>
+      <tr><td>Cofinanciamento federal</td><td>Viabilidade financeira que cabe no orçamento de saúde do ente</td></tr>
+      <tr><td>Operação comprovada</td><td>Atestados de capacidade técnica — Ourinhos e CISNORPI — disponíveis para verificação</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- PULL -->
+<section class="wrap pull fold-gold">
+  <blockquote>Onde gestão <em>se mede em vidas.</em></blockquote>
+  <div class="s">Samais Gestão em Saúde</div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="cta">
+  <div class="cta-box">
+    <span class="sec-num">Vamos conversar</span>
+    <h2>Quer um estudo para o seu município?</h2>
+    <p class="lede">Aplicamos a metodologia ao seu território — diagnóstico, dimensionamento e viabilidade — e apresentamos o CoPilot OS e o plano de transição.</p>
+    <div class="cta-actions">
+      <a class="btn" href="mailto:contato@samais.com.br?subject=Estudo%20de%20SAMU%20-%20Munic%C3%ADpio">Solicitar um estudo</a>
+      <div class="cta-contact"><b>Samais Gestão em Saúde</b><br/>samais.com.br · contato@samais.com.br</div>
     </div>
   </div>
 </section>
 
-<footer class="foot">
-  <div class="wrap">
-    <img src="assets/brand/samais-logo-white.svg" alt="Samais">
-    <div class="row">
-      <small>Samais Saúde — Estudos de Operação e Custos de SAMU.<br>Documentos para apresentação. Valores de referência sujeitos a diligência.</small>
-      <small>© Samais Saúde.</small>
-    </div>
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Portfólio de estudos · uso restrito</div>
   </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Documento de uso restrito · não indexado. Links externos abrem os estudos publicados no Vercel.</p>
 </footer>
 
+<script src="js/samais.js"></script>
 </body>
 </html>
