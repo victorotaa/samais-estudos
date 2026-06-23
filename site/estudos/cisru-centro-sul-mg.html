@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · CISRU Centro-Sul/MG — Panorama Preliminar do SAMU 192 Regional</title>
+<meta name="description" content="Panorama preliminar da Samais para operar e qualificar o SAMU 192 do Consórcio CISRU — 51 municípios da Macrorregião Centro-Sul de Minas, escala regional, padrão único e regulação assistida por IA.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#sumario">Sumário</a>
+    <a href="#territorio">Território</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#metodo">Método</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Vista_geral_e_ruas_de_Barbacena%2C_julho_de_2025_%281%29.jpg/1920px-Vista_geral_e_ruas_de_Barbacena%2C_julho_de_2025_%281%29.jpg')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Consórcio CISRU · 51 municípios · SAMU 192 Regional · Panorama Preliminar</div>
+      <h1>SAMU<br/>Centro-Sul</h1>
+      <div class="hero-sub">Operar e qualificar o SAMU 192 de toda a Macrorregião Centro-Sul de Minas — escala regional, padrão único e regulação assistida por IA.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>O CISRU é uma rede regional consolidada de urgência, com sede em Barbacena e cobertura de 51 municípios. Esta é uma leitura preliminar: a Samais propõe assumir a operação do SAMU regional com equipe própria CLT, frota gerida e mantida e a central de regulação de Barbacena potencializada pelo CoPilot OS — mantendo a escala e elevando desempenho e transparência. Os valores apresentados são projeção, a calibrar em diligência de campo.</p>
+          <div class="src">Indicadores regionais — IBGE, dados públicos do consórcio e parâmetros nacionais (PNAU)</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">51</div><div class="l">Municípios<br/>consorciados</div></div>
+        <div class="it"><div class="n">~760 mil</div><div class="l">Habitantes<br/>cobertos</div></div>
+        <div class="it"><div class="n">24 · 18</div><div class="l">Ambulâncias<br/>e bases</div></div>
+        <div class="it"><div class="n">R$ 3–4 mi</div><div class="l">Por mês<br/>valor de referência</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>Uma rede regional pronta para o próximo passo.</h2>
+      <p class="lede">O CISRU já entregou o difícil: cobrir 51 municípios sob uma única regulação. O passo seguinte é qualificar essa operação — padrão único, equipe estável e tecnologia — sustentando a escala que a região conquistou. Esta é uma leitura preliminar, a confirmar em diligência.</p>
+    </div>
+    <div class="right">Valor de referência<br/><span class="acc">R$ 3–4 mi / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>Macrorregião Centro-Sul</h3>
+      <div class="subtitle">Referência para ~760 mil habitantes</div>
+      <p>O consórcio organiza a urgência de 51 municípios em quatro microrregiões, com central única em Barbacena e hospital de referência regional com UTI e hemodinâmica. É infraestrutura de Estado em escala regional.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Municípios</span><span class="v">51</span></div>
+        <div class="row"><span class="k">População</span><span class="v">~760 mil</span></div>
+        <div class="row"><span class="k">Microrregiões</span><span class="v">4</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Momento</div>
+      <h3>Rede consolidada sob pressão</h3>
+      <div class="subtitle">Frota renovada, custeio tensionado</div>
+      <p>O CISRU recebeu 16 ambulâncias novas em fev/2025 e opera 18 bases descentralizadas. Ao mesmo tempo, o custeio tripartite e o repasse federal defasado pressionam a operação numa área extensa — contexto que pede qualificação e eficiência.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Frota</span><span class="v">24 ambulâncias</span></div>
+        <div class="row"><span class="k">Novas (2025)</span><span class="v">16</span></div>
+        <div class="row"><span class="k">Bases</span><span class="v">18</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>Padrão único + IA</h3>
+      <div class="subtitle">Operação regional qualificada</div>
+      <p>Equipe própria CLT, frota gerida e mantida, CRU em Barbacena potencializada pelo CoPilot OS e 18 bases. Manter a escala (~24 viaturas) e elevar desempenho e transparência, com rastreabilidade auditável.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Valor de referência</span><span class="v">R$ 3–4 mi/mês</span></div>
+        <div class="row"><span class="k">Cofinanciamento federal</span><span class="v">PNAU</span></div>
+        <div class="row"><span class="k">Por hab/mês (bruto)</span><span class="v">~R$ 4,6</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Natureza do documento</strong> Este é um panorama <strong>preliminar</strong>. Os números de escopo e o valor de referência são projeção de modelagem, a calibrar com os dados reais do consórcio em diligência de campo. Nenhuma premissa é apresentada como fato.</div></div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Vista_geral_e_ruas_de_Barbacena%2C_julho_de_2025_%284%29.jpg/1920px-Vista_geral_e_ruas_de_Barbacena%2C_julho_de_2025_%284%29.jpg" alt="Vista geral de Barbacena, Minas Gerais — sede do consórcio" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Barbacena · Minas Gerais</div>
+    <div class="t">Sede da Central de Regulação das Urgências — o cérebro de uma rede de 51 municípios.</div>
+  </div></div>
+</div>
+
+<!-- 02 TERRITÓRIO -->
+<section class="wrap" id="territorio">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Território e contexto</span>
+      <h2>Cinquenta e um municípios, quatro microrregiões.</h2>
+      <p class="lede">A Macrorregião Centro-Sul de Minas é extensa e policêntrica. O CISRU a organiza sob uma única regulação, com sede em Barbacena e referência hospitalar regional de alta complexidade.</p>
+    </div>
+    <div class="right">51 municípios<br/><span class="acc">~760 mil hab</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Indicador</th><th class="num">CISRU</th><th>Leitura estratégica</th></tr></thead>
+    <tbody>
+      <tr><td>Municípios consorciados</td><td class="num">51</td><td>Escala regional — uma só regulação para muitos entes</td></tr>
+      <tr><td>População coberta</td><td class="num">~760 mil</td><td>Massa crítica para uma central regional eficiente</td></tr>
+      <tr><td>Microrregiões</td><td class="num">4</td><td>Barbacena · Congonhas · Conselheiro Lafaiete · São João del-Rei</td></tr>
+      <tr><td>Central de Regulação (CRU)</td><td class="num">Barbacena</td><td>Sede única — base natural do CoPilot OS</td></tr>
+      <tr><td>Referência hospitalar</td><td class="num">Hospital FOB</td><td>Fundação Ouro Branco · UTI e hemodinâmica</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Estrutura</strong> Os 51 municípios distribuem-se em quatro microrregiões (Barbacena, Congonhas, Conselheiro Lafaiete e São João del-Rei). Congonhas e Ouro Branco estão entre os consorciados, e o Hospital FOB (Fundação Ouro Branco) atua como referência regional de alta complexidade, com UTI e hemodinâmica.</div></div>
+</section>
+
+<!-- 03 DIAGNÓSTICO -->
+<section class="wrap" id="diagnostico">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Diagnóstico da rede</span>
+      <h2>Rede consolidada, sob forte pressão.</h2>
+      <p class="lede">O CISRU é uma conquista regional: 24 ambulâncias, 18 bases descentralizadas e 16 viaturas novas recebidas em fev/2025. Essa estrutura, porém, opera sob forte pressão operacional e financeira — e é aí que a qualificação faz diferença.</p>
+    </div>
+    <div class="right">Custeio tripartite<br/><span class="acc">União · Estado · municípios</span></div>
+  </div>
+
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Estrutura · Frota</div>
+      <h3>24 ambulâncias, 18 bases</h3>
+      <p>A rede é descentralizada e foi renovada com 16 ambulâncias novas em fev/2025. Numa área extensa, manter essa frota disponível e bem mantida é o desafio operacional central — e uma das competências da Samais.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Ambulâncias</span><span class="v">24</span></div>
+        <div class="row"><span class="k">Novas (2025)</span><span class="v">16</span></div>
+        <div class="row"><span class="k">Bases</span><span class="v">18</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Pressão · Custeio</div>
+      <h3>Repasse federal defasado</h3>
+      <p>O financiamento é tripartite (União, Estado e municípios). O repasse federal está defasado, o que tensiona a frota numa área extensa — na microrregião de Conselheiro Lafaiete, por exemplo, a cobertura opera no limite.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Custeio</span><span class="v">tripartite</span></div>
+        <div class="row"><span class="k">Repasse federal</span><span class="v">defasado</span></div>
+        <div class="row"><span class="k">Cobertura</span><span class="v">no limite</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Produção · Histórico</div>
+      <h3>1,13 mi de ligações</h3>
+      <p>Entre 2016 e 2022, a rede acumulou 1,13 milhão de ligações e 156.716 saídas de ambulância. A demanda potencial supera o registro — sinal de demanda reprimida que uma regulação qualificada captura.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Ligações (2016–22)</span><span class="v">1,13 mi</span></div>
+        <div class="row"><span class="k">Saídas (2016–22)</span><span class="v">156.716</span></div>
+        <div class="row"><span class="k">Demanda potencial</span><span class="v">~9–10 mil/mês</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Demanda reprimida</strong> Pela referência de ~0,15 atendimento/habitante/ano, a demanda potencial da região fica em torno de 9 a 10 mil atendimentos/mês — acima do registro histórico. A diferença não é demanda inexistente: é demanda que uma regulação qualificada e bem dimensionada passa a capturar.</div></div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Igreja_de_S%C3%A3o_Francisco_de_Assis%2C_S%C3%A3o_Jo%C3%A3o_del_Rei%2C_Minas_Gerais%2C_Brasil.JPG" alt="Igreja de São Francisco de Assis, São João del-Rei, Minas Gerais" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">São João del-Rei · microrregião</div>
+    <div class="t">Uma das quatro microrregiões — onde o socorro precisa chegar com o mesmo padrão de toda a rede.</div>
+  </div></div>
+</div>
+
+<!-- 04 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Proposta operacional</span>
+      <h2>Operar e qualificar — sem perder a escala.</h2>
+      <p class="lede">A proposta preliminar é assumir a operação do SAMU regional com o padrão Samais: equipe própria CLT, frota gerida e mantida, central em Barbacena potencializada por IA e as 18 bases preservadas. Manter ~24 viaturas e elevar desempenho e transparência.</p>
+    </div>
+    <div class="right">Cenário ofertado<br/><span class="acc">CISRU · hub Barbacena</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo ofertado</span>
+    <h4>Operação integral do SAMU 192 — Consórcio CISRU Centro-Sul/MG</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Frota</span><span class="v">~24 ambulâncias · gestão e manutenção Samais</span></div>
+      <div class="row"><span class="k">Central</span><span class="v">CRU Regional em Barbacena</span></div>
+      <div class="row"><span class="k">Bases</span><span class="v">18 descentralizadas</span></div>
+      <div class="row"><span class="k">Pessoal</span><span class="v">equipe própria CLT · cobertura 24/7</span></div>
+      <div class="row"><span class="k">Tecnologia</span><span class="v">CoPilot OS · regulação e despacho por IA</span></div>
+      <div class="row"><span class="k">Rastreabilidade</span><span class="v">100% auditável · indicadores em tempo real</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Bloco 01 · Pessoas</span>
+      <h3>Equipe própria CLT</h3>
+      <p>Médicos reguladores, enfermeiros, técnicos e condutores contratados, treinados e fixados — fim do passivo trabalhista, com cobertura 24/7 honesta e sem turnos descobertos.</p>
+      <div class="kv"><div class="r"><span class="k">Regime</span><span class="v">CLT · piso CCT</span></div><div class="r"><span class="k">Cobertura</span><span class="v">24/7 real</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 02 · Operação</span>
+      <h3>Frota e bases</h3>
+      <p>Manutenção e reativação da frota do consórcio e gestão das 18 bases descentralizadas, preservando a escala e a cobertura conquistadas pela rede.</p>
+      <div class="kv"><div class="r"><span class="k">Frota</span><span class="v">manutenção Samais</span></div><div class="r"><span class="k">Bases</span><span class="v">18</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 03 · Inteligência</span>
+      <h3>CoPilot OS</h3>
+      <p>CRU de Barbacena potencializada por IA: despacho otimizado por gravidade e geolocalização, prontuário e indicadores em tempo real, rastreabilidade 100% auditável.</p>
+      <div class="kv"><div class="r"><span class="k">Regulação</span><span class="v">IA assistida</span></div><div class="r"><span class="k">Gestão</span><span class="v">painel em tempo real</span></div></div>
+    </div>
+  </div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Leitura</strong> A escala da rede é mantida (~24 viaturas, 18 bases, central única). O salto é de desempenho e transparência: equipe estável, frota disponível e regulação assistida por IA, com indicadores auditáveis para a governança do consórcio.</div></div>
+</section>
+
+<!-- 05 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Viabilidade financeira</span>
+      <h2>Sustentável no custeio tripartite.</h2>
+      <p class="lede">O valor de referência preliminar fica em torno de R$ 3–4 milhões/mês (~R$ 36–48 mi/ano), equivalente a ~R$ 4,6/habitante/mês bruto — menor após o cofinanciamento federal da urgência. Valores a calibrar em diligência.</p>
+    </div>
+    <div class="right">Cofinanciamento federal<br/><span class="acc">PNAU</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Custeio tripartite da urgência</span><span class="s" style="color:#6b6358">CISRU · referência</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="50% cofinanciamento federal">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#8E7238" stroke-width="12"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="157.08" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle" style="fill:#8E7238">50%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">FEDERAL</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#8E7238"></i><b style="color:#2c281f">União</b> — cofinanciamento federal da urgência (PNAU)</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">Estado e municípios</b> — contrapartida do consórcio</div>
+          <em style="color:#8E7238">Custeio compartilhado entre os entes.</em>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Linha de viabilidade (preliminar)</th><th class="num">Referência</th></tr></thead>
+      <tbody>
+        <tr><td>Valor de referência mensal</td><td class="num">R$ 3–4 mi</td></tr>
+        <tr><td>Valor de referência anual</td><td class="num">R$ 36–48 mi</td></tr>
+        <tr><td>Por habitante/mês (bruto)</td><td class="num">~R$ 4,6</td></tr>
+        <tr class="sub"><td>Após cofinanciamento federal</td><td class="num">menor</td></tr>
+        <tr class="tot"><td>Base de cálculo</td><td class="num">a calibrar</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Base legal</strong> Custeio tripartite conforme a Portaria GM/MS 1.010/2012; cofinanciamento federal da urgência no âmbito da Política Nacional de Atenção às Urgências (PNAU); contratação por meio da Lei 14.133/2021 no contexto do consórcio. Os valores acima são projeção preliminar, a calibrar com as contas do consórcio em diligência.</div></div>
+</section>
+
+<!-- 06 MÉTODO -->
+<section class="wrap" id="metodo">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Método e rigor</span>
+      <h2>Números honestos, lastreados em fonte.</h2>
+      <p class="lede">A leitura nasce de uma metodologia própria de dimensionamento, calibrada com dados públicos e com a experiência de operação real da Samais. Cada número tem origem rastreável e, nesta fase, separação clara entre fato e premissa.</p>
+    </div>
+    <div class="right">Conformidade<br/><span class="acc">Lei 14.133/2021</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Cobertura 24/7 correta</h4>
+      <p>Dimensionamento de pessoal pelo fator de cobertura real de uma escala ininterrupta — não pela metade do turno. É o que separa um SAMU que funciona às 3h da manhã de um que existe só no papel.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 17V9M12 17V6M16 17v-5M20 17v-9"/></svg></div>
+      <h4>Parâmetros nacionais</h4>
+      <p>Frota e demanda referenciadas na Política Nacional de Atenção às Urgências (PNAU) e na produção histórica do consórcio. O escopo responde à demanda real estimada, não a um registro subdimensionado.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Operação comprovada</h4>
+      <p>A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal. Método validado em produção, não em teoria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PRÓXIMOS PASSOS -->
+<section class="wrap" id="passos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Próximos passos</span>
+      <h2>Como avançamos.</h2>
+      <p class="lede">Um caminho técnico e construtivo, da diligência à proposta formal — com transição planejada e sem interrupção do serviço, em alinhamento com a governança do consórcio.</p>
+    </div>
+    <div class="right">Início estimado<br/><span class="acc">após diligência</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Diligência</div>
+      <h3>Levantamento de campo</h3>
+      <p>Frota detalhada, atendimentos, CCT-MG e contas do consórcio. É aqui que cada premissa preliminar vira fato verificado.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">dados reais</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Alinhamento</div>
+      <h3>Governança do consórcio</h3>
+      <p>Alinhamento de escopo e expectativas com o Conselho Diretor e a Secretaria Executiva do CISRU.</p>
+      <div class="kv"><div class="r"><span class="k">Com</span><span class="v">Conselho · Secretaria</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Proposta</div>
+      <h3>Proposta formal</h3>
+      <p>Entrega formalizada com plano de transição sem interrupção do serviço, dimensionada ao dado verificado.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">proposta + transição</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold">
+  <blockquote>Cinquenta e um municípios, um padrão único — <em>e o socorro que chega a tempo.</em></blockquote>
+  <div class="s">CISRU · Macrorregião Centro-Sul de Minas</div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: por se tratar de um panorama preliminar, separamos o dado público verificável da estimativa de modelagem, a confirmar em diligência.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">Abrangência</div><div class="v">51 municípios · ~760 mil habitantes · 4 microrregiões<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Central de regulação</div><div class="v">CRU única em Barbacena · referência Hospital FOB (Ouro Branco)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Frota e bases</div><div class="v">24 ambulâncias · 18 bases · 16 viaturas novas em fev/2025<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Produção histórica</div><div class="v">1,13 mi de ligações e 156.716 saídas (2016–2022)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Demanda potencial</div><div class="v">~9–10 mil atend./mês pela referência de ~0,15/hab/ano<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Valor de referência</div><div class="v">R$ 3–4 mi/mês por modelagem própria; a calibrar em diligência<span class="tag amber">preliminar</span></div></div>
+    <div class="row"><div class="k">Composição da frota</div><div class="v">detalhamento USB/USA e equipes a verificar em campo<span class="tag amber">a validar</span></div></div>
+    <div class="row"><div class="k">CCT-MG e cofinanciamento</div><div class="v">piso da convenção e participação federal a confirmar<span class="tag amber">a confirmar</span></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="fechamento">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Skyline_com_o_Exuberante_Cristo_de_Conselheiro_Lafaiete_-_panoramio.jpg/1920px-Skyline_com_o_Exuberante_Cristo_de_Conselheiro_Lafaiete_-_panoramio.jpg')"></div>
+    <span class="sec-num">CISRU · Macrorregião Centro-Sul de Minas</span>
+    <h2>Uma decisão de escala regional.</h2>
+    <p class="lede">Rede consolidada, demanda dimensionada e custeio compartilhado — uma operação regional que pode ganhar padrão único, estabilidade de equipe e transparência. Os números desta leitura preliminar serão calibrados ao dado real do consórcio em diligência de campo.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · CISRU Centro-Sul/MG · panorama preliminar</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Barbacena e região/MG — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>
