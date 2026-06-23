@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Operação Regional MG — Base × Escalada (Confidencial) · Samais</title>
+<meta name="description" content="Documento de inteligência interna — não compartilhar.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+<style>
+  .conf-chip{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber);padding:7px 12px;border-radius:6px;white-space:nowrap}
+  .conf-ribbon{position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(184,128,78,.14);border-top:1px solid rgba(184,128,78,.4);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);text-align:center;padding:8px 16px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+  body{padding-bottom:42px}
+  .hero .tag{color:var(--amber)}
+  /* destaque do cartão escalada */
+  .opt-esc{box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 22px 56px rgba(0,0,0,.55),0 0 0 1px rgba(184,149,78,.35)!important}
+  .opt-tag{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#0A0A0A;background:var(--gold);padding:4px 10px;border-radius:5px}
+  .opt{position:relative}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#racional">Racional</a>
+    <a href="#opcoes">As opções</a>
+    <a href="#muda">O que muda</a>
+    <a href="#dimensionamento">Números</a>
+    <a href="#sequencia">Sequência</a>
+    <span class="conf-chip">Confidencial</span>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="hero-section" id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Cenário regional · Minas Gerais · Uso interno · Confidencial</div>
+      <h1>Base<br/>× Escalada</h1>
+      <div class="hero-sub">Em vez de atender 4 municípios soltos, operar os consórcios regionais inteiros. Duas formas: começar por um (Base) ou assumir os dois blocos (Escalada).</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Os quatro municípios da diretoria estão sob dois consórcios públicos diferentes (CISRU e CIAS), ambos de operação direta — sem operador privado intermediário. O valor não está em juntar os quatro, e sim em operar os consórcios que já existem. Este documento compara a opção de entrada e a de escala.</p>
+          <div class="src amber">Valores de referência preliminares · a calibrar em diligência</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">~R$ 3,5 mi</div><div class="l">Opção Base<br/>CISRU · por mês</div></div>
+        <div class="it"><div class="n">~R$ 5,5 mi</div><div class="l">Opção Escalada<br/>2 blocos · por mês</div></div>
+        <div class="it"><div class="n">~55</div><div class="l">Municípios<br/>na Escalada</div></div>
+        <div class="it"><div class="n">~1,07 mi</div><div class="l">Habitantes<br/>na Escalada</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 RACIONAL -->
+<section class="wrap" id="racional">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · O racional</span>
+      <h2>O valor não está nos 4 — está nos consórcios.</h2>
+      <p class="lede">Os quatro municípios pedidos pela diretoria caem em dois consórcios públicos distintos. Atendê-los soltos dá ~R$ 2,1 mi/mês e muita fricção. Operar os consórcios inteiros multiplica municípios e valor — e dispensa criar arranjo novo.</p>
+    </div>
+    <div class="right">Referência<br/><span class="acc">4 isolados ≈ R$ 2,1 mi</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Bloco 1 · Centro</div>
+      <h3>CIAS (sede BH)</h3>
+      <p>Consórcio público que opera o SAMU da microrregião de Ouro Preto (com Itabirito e Mariana). Operação direta, sem operador privado. Situação estável.</p>
+      <div class="specs"><div class="row"><span class="k">Membros</span><span class="v">32 municípios</span></div><div class="row"><span class="k">Operação própria</span><span class="v">~4 mun.</span></div></div>
+    </div>
+    <div class="card">
+      <div class="tag">Bloco 2 · Centro-Sul</div>
+      <h3>CISRU (sede Barbacena)</h3>
+      <p>Consórcio público que opera o SAMU de Congonhas e Ouro Branco (entre 51 municípios). Operação direta, em déficit estrutural — porta de entrada pela dor.</p>
+      <div class="specs"><div class="row"><span class="k">Municípios</span><span class="v">51</span></div><div class="row"><span class="k">População</span><span class="v">~760 mil</span></div></div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/></svg></div>
+      <div class="tag">Vantagem Samais</div>
+      <h3>Consórcio é nosso terreno</h3>
+      <p>Nenhum dos dois tem operador privado a deslocar. E operar SAMU de consórcio é o modelo que a Samais já comprovou — em Ourinhos e no CISNORPI, com atestados disponíveis para verificação formal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 AS OPÇÕES -->
+<section class="wrap" id="opcoes">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · As duas opções</span>
+      <h2>Entrar por um, ou assumir os dois.</h2>
+      <p class="lede">A Base é a entrada de menor atrito, pela crise do CISRU. A Escalada soma o segundo consórcio (CIAS) — mais municípios, mais valor, mais complexidade.</p>
+    </div>
+    <div class="right">Recomendado<br/><span class="acc">Base → Escalada</span></div>
+  </div>
+  <div class="g-2">
+    <div class="card opt">
+      <div class="tag">Opção Base</div>
+      <h3>Operar o CISRU</h3>
+      <div class="subtitle">Consórcio Centro-Sul · entrada pela dor</div>
+      <p>Assumir/qualificar a operação do consórcio que já existe e está em déficit. Um único ente, uma única central (Barbacena). Menor atrito, prova de modelo.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Municípios</span><span class="v">51</span></div>
+        <div class="row"><span class="k">População</span><span class="v">~760 mil</span></div>
+        <div class="row"><span class="k">Valor de referência</span><span class="v">~R$ 3–4 mi/mês</span></div>
+        <div class="row"><span class="k">Anual</span><span class="v">~R$ 36–48 mi</span></div>
+      </div>
+    </div>
+    <div class="card opt opt-esc">
+      <span class="opt-tag">Maior valor</span>
+      <div class="tag">Opção Escalada</div>
+      <h3>Operar os dois blocos</h3>
+      <div class="subtitle">CISRU + CIAS · escala regional</div>
+      <p>Somar a operação do CIAS (Centro) ao CISRU (Centro-Sul). Dezenas de municípios sob comando único de padrão e tecnologia, com duas centrais regionais.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Municípios</span><span class="v">~55</span></div>
+        <div class="row"><span class="k">População</span><span class="v">~1,07 milhão</span></div>
+        <div class="row"><span class="k">Valor de referência</span><span class="v">~R$ 5–6 mi/mês</span></div>
+        <div class="row"><span class="k">Anual</span><span class="v">~R$ 60–72 mi</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Upside</strong> A regulação ampliada da Macrorregião Centro alcança ~1,5 milhão de habitantes (excluída a capital, que tem SAMU próprio). No limite, a Escalada pode chegar a ~R$ 6–8 milhões/mês — a confirmar população e desenho com a SES-MG.</div></div>
+</section>
+
+<!-- 03 O QUE MUDA -->
+<section class="wrap" id="muda">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · O que muda entre as duas</span>
+      <h2>Base e Escalada, lado a lado.</h2>
+      <p class="lede">Mesma metodologia e mesma tecnologia nas duas. O que muda é a abrangência, o valor e — sobretudo — a complexidade de governança (um consórcio × dois).</p>
+    </div>
+    <div class="right">Diferença-chave<br/><span class="acc">1 ente × 2 entes</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Dimensão</th><th>Opção Base (CISRU)</th><th>Opção Escalada (2 blocos)</th></tr></thead>
+    <tbody>
+      <tr><td>Abrangência</td><td>51 municípios · ~760 mil hab</td><td>~55 municípios · ~1,07 mi hab</td></tr>
+      <tr class="sub"><td>Valor de referência (mês)</td><td class="num">~R$ 3–4 mi</td><td class="num">~R$ 5–6 mi</td></tr>
+      <tr><td>Valor anual</td><td class="num">~R$ 36–48 mi</td><td class="num">~R$ 60–72 mi</td></tr>
+      <tr><td>Consórcios envolvidos</td><td>1 (CISRU · Centro-Sul)</td><td>2 (CISRU + CIAS · Centro)</td></tr>
+      <tr><td>Macrorregiões / CIR</td><td>1</td><td>2</td></tr>
+      <tr><td>Centrais de regulação</td><td>1 (Barbacena)</td><td>2 (Barbacena + região de BH)</td></tr>
+      <tr><td>Porta de entrada</td><td>crise declarada do consórcio</td><td>crise + expansão por prova</td></tr>
+      <tr><td>Complexidade política</td><td>média</td><td>alta (duas governanças)</td></tr>
+      <tr><td>Tempo de maturação</td><td>menor</td><td>maior · faseado</td></tr>
+      <tr class="tot"><td>Por habitante/mês</td><td class="num">~R$ 4,6</td><td class="num">~R$ 5,1</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Em uma frase</strong> A Base é o mesmo serviço em um consórcio; a Escalada é o mesmo serviço em dois. O serviço, o método e a tecnologia não mudam — muda o tamanho do contrato e o número de mesas de negociação.</div></div>
+</section>
+
+<!-- 04 DIMENSIONAMENTO -->
+<section class="wrap fold-light" id="dimensionamento">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Dimensionamento</span>
+      <h2>Todos os recortes, para comparar.</h2>
+      <p class="lede">Do menor ao maior escopo. Valores de referência preliminares, por per capita de operação regional madura (~R$ 4–5/hab/mês); a calibrar com CCT-MG, frota e atendimentos reais em diligência.</p>
+    </div>
+    <div class="right">Per capita<br/><span class="acc">~R$ 4–5/hab/mês</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Recorte</th><th class="num">Municípios</th><th class="num">População</th><th class="num">Valor/mês</th><th class="num">Valor/ano</th></tr></thead>
+    <tbody>
+      <tr><td>Os 4 isolados (referência)</td><td class="num">4</td><td class="num">~230 mil</td><td class="num">~R$ 2,1 mi</td><td class="num">~R$ 25 mi</td></tr>
+      <tr><td>Novo consórcio dos 4</td><td class="num">4</td><td class="num">~230 mil</td><td class="num">~R$ 1,7–1,9 mi</td><td class="num">~R$ 20–23 mi</td></tr>
+      <tr class="sub"><td>Opção Base · CISRU</td><td class="num">51</td><td class="num">~760 mil</td><td class="num">~R$ 3–4 mi</td><td class="num">~R$ 36–48 mi</td></tr>
+      <tr><td>CIAS (operação própria)</td><td class="num">~4</td><td class="num">~315 mil</td><td class="num">~R$ 1,8–2,2 mi</td><td class="num">~R$ 22–26 mi</td></tr>
+      <tr class="tot"><td>Opção Escalada · CISRU + CIAS</td><td class="num">~55</td><td class="num">~1,07 mi</td><td class="num">~R$ 5–6 mi</td><td class="num">~R$ 60–72 mi</td></tr>
+      <tr><td>Upside · regulação Macro Centro</td><td class="num">~22</td><td class="num">~1,5 mi</td><td class="num">~R$ 6–8 mi</td><td class="num">~R$ 72–96 mi</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 05 GOVERNANÇA -->
+<section class="wrap" id="governanca">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Governança e viabilidade</span>
+      <h2>Sem contrato privado a vencer.</h2>
+      <p class="lede">Nos dois consórcios a operação é pública direta (pessoal por concurso/PSS). Não há operador privado incumbente: o que se negocia é a terceirização da operação para a Samais, por licitação (Lei 14.133/2021) ou no arranjo do consórcio.</p>
+    </div>
+    <div class="right">Incumbente privado<br/><span class="acc">nenhum</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Terreno conhecido</h4>
+      <p>Operar SAMU de consórcio é o modelo que a Samais já entregou em Ourinhos e no CISNORPI — atestados disponíveis para verificação formal.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Caminho jurídico</h4>
+      <p>Entrada por licitação (Lei 14.133/2021) ou chamamento, no contexto do consórcio. A Escalada exige pactuação em duas CIRs / CIB-SUS — daí o faseamento.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <h4>Cofinanciamento</h4>
+      <p>Custeio tripartite (União/Estado/municípios). O gargalo é o repasse federal defasado — exatamente a dor que a operação profissional ajuda a administrar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 SEQUÊNCIA -->
+<section class="wrap" id="sequencia">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Sequência recomendada</span>
+      <h2>Entrar pela dor, escalar pela prova.</h2>
+      <p class="lede">Não são caminhos excludentes: a Base é a fase 1 da Escalada. Começa-se onde a urgência é maior e a porta está aberta, e expande-se com resultado na mão.</p>
+    </div>
+    <div class="right">Horizonte<br/><span class="acc">~24 meses</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Fase 1</div>
+      <div class="pd">0–12 meses</div>
+      <h3>CISRU (Base)</h3>
+      <p>Diligência e entrada no consórcio Centro-Sul, em crise. Estabilizar e qualificar a operação. Provar o modelo Samais na região.</p>
+      <div class="kv"><div class="r"><span class="k">Valor</span><span class="v">~R$ 3–4 mi/mês</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Fase 2</div>
+      <div class="pd">12–24 meses</div>
+      <h3>+ CIAS (Escalada)</h3>
+      <p>Com resultado comprovado, oferecer o mesmo padrão ao consórcio do Centro (Ouro Preto, Itabirito, Mariana…). Duas centrais sob um padrão único.</p>
+      <div class="kv"><div class="r"><span class="k">Valor</span><span class="v">~R$ 5–6 mi/mês</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Fase 3</div>
+      <div class="pd">24+ meses</div>
+      <h3>Upside regional</h3>
+      <p>Ampliar para a regulação Macro Centro (ex-capital), aproximando ~1,5 mi de habitantes — a confirmar desenho com a SES-MG.</p>
+      <div class="kv"><div class="r"><span class="k">Valor</span><span class="v">~R$ 6–8 mi/mês</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Premissas e lacunas</span>
+      <h2>O que sustenta e o que confirmar.</h2>
+      <p class="lede">Procedência dos números e pendências de diligência antes de qualquer proposta formal.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a confirmar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">Consórcios e natureza</div><div class="v">CISRU (51 mun., ~760 mil hab) e CIAS (32 membros; operação própria ~4 mun.), ambos públicos de operação direta — sem operador privado<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Crise do CISRU</div><div class="v">Déficit ~R$ 9 mi (2025), subfinanciamento federal, risco de paralisação<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Valores de referência</div><div class="v">Projeção por per capita de operação regional madura (~R$ 4–5/hab/mês) e análogos Samais<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">População do CIAS / Macro Centro</div><div class="v">Operação própria ~315 mil; regulação ampliada ~1,5 mi (ex-BH) — a consolidar<span class="tag amber">a confirmar</span></div></div>
+    <div class="row"><div class="k">Frota e CCT-MG</div><div class="v">Composição USB/USA por consórcio e pisos da convenção local<span class="tag amber">a levantar</span></div></div>
+    <div class="row"><div class="k">Estatutos</div><div class="v">Cláusulas de entrada/retirada e regras de pactuação CIR/CIB para a Escalada<span class="tag amber">a levantar</span></div></div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="wrap pull fold-gold">
+  <blockquote>Não é atender quatro cidades — é <em>operar a região</em>. Começar por um consórcio, escalar para dois.</blockquote>
+  <div class="s">Cenário regional MG · uso interno</div>
+</section>
+
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Cenário regional MG · confidencial</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--amber)">Documento de inteligência interna — uso restrito Samais · não compartilhar · não indexado. Valores de referência preliminares (jun/2026), a calibrar em diligência.</p>
+</footer>
+
+<div class="conf-ribbon">Confidencial · uso interno Samais · não compartilhar</div>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>
