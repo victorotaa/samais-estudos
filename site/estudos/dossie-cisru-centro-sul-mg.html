@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>CISRU Centro-Sul — Dossiê Interno (Confidencial) · Samais</title>
+<meta name="description" content="Documento de inteligência interna — não compartilhar.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+<style>
+  /* marca de confidencialidade (só neste documento interno) */
+  .conf-chip{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber);padding:7px 12px;border-radius:6px;white-space:nowrap}
+  .conf-ribbon{position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(184,128,78,.14);border-top:1px solid rgba(184,128,78,.4);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);text-align:center;padding:8px 16px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+  body{padding-bottom:42px}
+  .hero .tag{color:var(--amber)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#identificacao">Identificação</a>
+    <a href="#operacao">Operação</a>
+    <a href="#financas">Finanças</a>
+    <a href="#governanca">Governança</a>
+    <a href="#leitura">Leitura</a>
+    <span class="conf-chip">Confidencial</span>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO (glass institucional, sem foto) -->
+<section class="hero-section" id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Dossiê de inteligência · Uso interno Samais · Confidencial</div>
+      <h1>CISRU<br/>Centro-Sul</h1>
+      <div class="hero-sub">O consórcio público que opera o SAMU 192 da Macrorregião Centro-Sul de Minas — e está em déficit estrutural. Inteligência para decidir o modelo de entrada no Bloco 2 (Congonhas + Ouro Branco).</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Documento baseado em fatos públicos (sites oficiais, imprensa, ALMG). Padrão de procedência: dado verificado com fonte × item a confirmar. A estratégia fina — precificação e abordagem política — não se registra aqui; trata-se em conversa.</p>
+          <div class="src amber">Documento interno · não compartilhar</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">~R$ 9 mi</div><div class="l">Déficit declarado<br/>exercício 2025</div></div>
+        <div class="it"><div class="n">~51</div><div class="l">Municípios consorciados<br/>4 microrregiões</div></div>
+        <div class="it"><div class="n">~760 mil</div><div class="l">Habitantes cobertos<br/>Macro Centro-Sul</div></div>
+        <div class="it"><div class="n">24</div><div class="l">Ambulâncias<br/>~18 bases descentralizadas</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 IDENTIFICAÇÃO -->
+<section class="wrap" id="identificacao">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Identificação</span>
+      <h2>O ente, em uma página.</h2>
+      <p class="lede">Consórcio público de saúde sediado em Barbacena que opera o SAMU 192 da Macrorregião Centro-Sul de Minas Gerais desde 2012.</p>
+    </div>
+    <div class="right">CNPJ<br/><span class="acc">11.938.399/0001-72</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Item</th><th>Dado</th><th>Procedência</th></tr></thead>
+    <tbody>
+      <tr><td>Nome oficial</td><td>Consórcio Intermunicipal de Saúde da Rede de Urgência do Centro-Sul (CISRU)</td><td>verificado</td></tr>
+      <tr><td>Natureza</td><td>Consórcio público de saúde (associação pública)</td><td>verificado</td></tr>
+      <tr><td>Sede</td><td>BR-265, 1501, Grogotó, Barbacena/MG</td><td>verificado</td></tr>
+      <tr><td>Início de operação</td><td>SAMU desde 02/03/2012 (CNPJ aberto em 2010)</td><td>verificado</td></tr>
+      <tr><td>Cobertura</td><td>Macro Centro-Sul · micros Barbacena, Congonhas, Conselheiro Lafaiete, São João del-Rei</td><td>verificado</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 02 ABRANGÊNCIA -->
+<section class="wrap" id="abrangencia">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Abrangência</span>
+      <h2>Quem está dentro.</h2>
+      <p class="lede">Cobre o par de interesse — Congonhas e Ouro Branco — na microrregião de Congonhas, ao lado de Barbacena, Conselheiro Lafaiete e São João del-Rei.</p>
+    </div>
+    <div class="right">População<br/><span class="acc">~760 mil hab</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Escopo</div>
+      <h3>~51 municípios</h3>
+      <p>Distribuídos em quatro microrregiões da Macro Centro-Sul. O consórcio nasceu com 50 municípios e ~730 mil habitantes em 2012.</p>
+      <div class="specs"><div class="row"><span class="k">Microrregiões</span><span class="v">4</span></div><div class="row"><span class="k">População</span><span class="v">~760 mil</span></div></div>
+    </div>
+    <div class="card">
+      <div class="tag">Alvo · Bloco 2</div>
+      <h3>Congonhas + Ouro Branco</h3>
+      <p>Ambos confirmados na microrregião de Congonhas. É o par que motiva este dossiê — onde uma operação dedicada e qualificada teria encaixe.</p>
+      <div class="specs"><div class="row"><span class="k">Congonhas</span><span class="v">~52,9 mil</span></div><div class="row"><span class="k">Ouro Branco</span><span class="v">~38,7 mil</span></div></div>
+    </div>
+    <div class="card">
+      <div class="tag">A confirmar</div>
+      <h3>51 × 61 municípios</h3>
+      <p>Divergência de fonte: o material institucional cita 51; a página "municípios consorciados" do próprio site lista 61. Confirmar o número vigente em diligência.</p>
+      <div class="specs"><div class="row"><span class="k">Institucional</span><span class="v">51</span></div><div class="row"><span class="k">Lista do site</span><span class="v">61</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 OPERAÇÃO -->
+<section class="wrap" id="operacao">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Operação do SAMU</span>
+      <h2>Estrutura e subdimensionamento na ponta.</h2>
+      <p class="lede">Central macrorregional em Barbacena e bases descentralizadas. A frota foi renovada em 2025, mas a ponta opera no limite — sinal claro na própria região do Bloco 2.</p>
+    </div>
+    <div class="right">CRU<br/><span class="acc">Barbacena</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Regulação</div>
+      <h3>Complexo em Barbacena</h3>
+      <p>Central de Regulação das Urgências macrorregional, com ~18 bases descentralizadas distribuídas pelas quatro microrregiões.</p>
+      <div class="specs"><div class="row"><span class="k">Bases</span><span class="v">~18</span></div><div class="row"><span class="k">Ambulâncias</span><span class="v">24</span></div></div>
+    </div>
+    <div class="card">
+      <div class="tag">Frota</div>
+      <h3>Renovada em 2025</h3>
+      <p>16 ambulâncias novas entregues em Barbacena em fev/2025, substituindo unidades com mais de 5 anos. Composição USB/USA/motolância por base a levantar.</p>
+      <div class="specs"><div class="row"><span class="k">Novas (2025)</span><span class="v">16</span></div><div class="row"><span class="k">Total</span><span class="v">24</span></div></div>
+    </div>
+    <div class="card">
+      <div class="tag">Ponta · alerta</div>
+      <h3>Lafaiete com 2 viaturas</h3>
+      <p>Em Conselheiro Lafaiete, apenas 1 USB (para 7 municípios) e 1 USA (para 13) em operação — subdimensionamento que pressiona o tempo-resposta na vizinhança de Congonhas.</p>
+      <div class="specs"><div class="row"><span class="k">USB</span><span class="v">1 · 7 mun.</span></div><div class="row"><span class="k">USA</span><span class="v">1 · 13 mun.</span></div></div>
+    </div>
+  </div>
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Produção acumulada (2016–2022)</th><th class="num">Volume</th></tr></thead>
+    <tbody>
+      <tr><td>Ligações recebidas</td><td class="num">1.131.326</td></tr>
+      <tr><td>Orientações médicas</td><td class="num">161.666</td></tr>
+      <tr class="tot"><td>Saídas de ambulância</td><td class="num">156.716</td></tr>
+      <tr><td>Profissionais capacitados</td><td class="num">3.882</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 04 FINANÇAS (fold-light) -->
+<section class="wrap fold-light" id="financas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Situação financeira</span>
+      <h2>O coração do problema: subfinanciamento federal.</h2>
+      <p class="lede">O modelo é tripartite e prevê 50% da União. Na prática, a União cobre cerca de metade disso — e Estado e municípios tapam o buraco. O resultado é um déficit declarado de cerca de R$ 9 milhões em 2025 e risco de paralisação anunciado publicamente.</p>
+    </div>
+    <div class="right">Déficit 2025<br/><span class="acc">~R$ 9 milhões</span></div>
+  </div>
+  <div class="g-2">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Participação federal no custeio</span><span class="s" style="color:#6b6358">praticado vs. devido</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="União cobre cerca de 26% do custeio">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#B8804E" stroke-width="12" stroke-linecap="round"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="232.5" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle" style="fill:#B8804E">~26%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">UNIÃO HOJE</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#B8804E"></i><b style="color:#2c281f">União ~26%</b> — paga cerca da metade do devido</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">Devido: 50%</b> — piso do modelo tripartite</div>
+          <em style="color:#8E7238">A diferença recai sobre Estado e municípios.</em>
+        </div>
+      </div>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>Custeio tripartite (SAMU)</th><th class="num">Devido</th><th class="num">Praticado*</th></tr></thead>
+      <tbody>
+        <tr><td>União (FNS)</td><td class="num">50%</td><td class="num">~26%</td></tr>
+        <tr><td>Estado (SES-MG)</td><td class="num">≥25%</td><td class="num">~48%</td></tr>
+        <tr><td>Municípios</td><td class="num">≤25%</td><td class="num">~26%</td></tr>
+        <tr class="tot"><td>Estado ao CISRU</td><td class="num">—</td><td class="num">~R$ 1,2 mi/mês</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Causa raiz</strong> A União congelou o repasse por dez anos (2012–2022); o reajuste de 2023 não fechou a conta. Salários defasados (~R$ 1.700) e ameaça de greve agravam. O presidente do consórcio declarou publicamente risco de paralisação do serviço (mai/2025).</div></div>
+</section>
+
+<!-- 05 GOVERNANÇA -->
+<section class="wrap" id="governanca">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Governança</span>
+      <h2>Quem decide.</h2>
+      <p class="lede">É uma estrutura política multi-prefeito: a decisão final é coletiva, na Assembleia. A porta de entrada técnica é a Secretaria Executiva.</p>
+    </div>
+    <div class="right">Presidência<br/><span class="acc">2025–2026</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Instância / cargo</th><th>Quem / o quê</th></tr></thead>
+    <tbody>
+      <tr><td>Presidente</td><td>Prefeito de Barbacena (“Carlos Du”) — mandato 2025–2026</td></tr>
+      <tr><td>Secretária Executiva</td><td>Ormesinda Maria Barbosa — porta de entrada técnica</td></tr>
+      <tr><td>Assembleia Geral</td><td>Todos os consorciados — instância máxima (decisão coletiva)</td></tr>
+      <tr><td>Conselhos</td><td>Diretor (prefeitos) · Técnico-Executivo (secretários de saúde) · Fiscal</td></tr>
+      <tr><td>Editais recentes</td><td>Concurso 10/2024 (operacional, 101 vagas, banca IBGP); PSS 002/2025</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 06 LINHA DO TEMPO -->
+<section class="wrap" id="timeline">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Linha do tempo</span>
+      <h2>Da criação à crise.</h2>
+      <p class="lede">A pressão financeira e política escalou ao longo de 2025 — e segue aberta em 2026.</p>
+    </div>
+    <div class="right">Janela<br/><span class="acc">aberta</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Quando</th><th>O quê</th></tr></thead>
+    <tbody>
+      <tr><td>2012</td><td>Início do SAMU consorciado (50 municípios, ~730 mil hab)</td></tr>
+      <tr><td>2012–2022</td><td>Repasse federal congelado por dez anos</td></tr>
+      <tr><td>jan/2025</td><td>Imprensa: “caos financeiro ameaça o SAMU em dezenas de municípios”</td></tr>
+      <tr><td>fev/2025</td><td>Entrega de 16 ambulâncias novas (renovação de frota), Barbacena</td></tr>
+      <tr class="sub"><td>mai/2025</td><td>Alerta de paralisação pelo presidente; déficit ~R$ 9 mi/2025</td></tr>
+      <tr><td>jun/2025</td><td>Ofício ao Ministério da Saúde; pressão na ALMG; ameaça de greve</td></tr>
+      <tr><td>nov/2025</td><td>Requerimento 861/2025: 13 vereadores de Lafaiete cobram falta de ambulâncias</td></tr>
+      <tr><td>2026</td><td>União segue abaixo do piso de 50% nos consórcios de MG</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 07 LEITURA ESTRATÉGICA -->
+<section class="wrap" id="leitura">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Leitura estratégica</span>
+      <h2>Por que isso interessa à Samais.</h2>
+      <p class="lede">Perfil clássico de dor: ente público sufocado por folha CLT e dependência de repasse federal defasado, com frota subdimensionada na ponta e pressão política crescente. É o cenário que a metodologia Samais endereça.</p>
+    </div>
+    <div class="right">Encaixe<br/><span class="acc">Bloco 2</span></div>
+  </div>
+  <div class="g-2">
+    <div class="card">
+      <div class="tag">Caminho A</div>
+      <h3>Operar dentro do consórcio</h3>
+      <p>Entrar como operador profissional do CISRU, aproveitando habilitações e repasses já existentes. Aderente à crise atual; exige negociar com a governança coletiva (prefeitos).</p>
+    </div>
+    <div class="card">
+      <div class="tag">Caminho B</div>
+      <h3>Micro-operação dedicada</h3>
+      <p>Operação focada no par Congonhas + Ouro Branco, com o alto PIB local como capacidade fiscal de contrapartida. Mais simples de pactuar, menor escala.</p>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Cautela</strong> Consórcio é decisão política multi-prefeito. Tratar a crise como diagnóstico construtivo (nunca denúncia) em qualquer material que saia da Samais. Precificação e abordagem política — só em conversa, fora deste arquivo.</div></div>
+</section>
+
+<!-- 08 LACUNAS / FONTES -->
+<section class="wrap" id="fontes">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Lacunas e fontes</span>
+      <h2>O que confirmar antes de propor.</h2>
+      <p class="lede">Itens a fechar em diligência e a procedência do que está aqui.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a confirmar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">Nº de municípios</div><div class="v">Divergência 51 (institucional) × 61 (lista do site)<span class="tag amber">a confirmar</span></div></div>
+    <div class="row"><div class="k">Frota detalhada</div><div class="v">Composição USB/USA/motolância e nº atual de bases<span class="tag amber">a confirmar</span></div></div>
+    <div class="row"><div class="k">Orçamento e quadro</div><div class="v">Orçamento anual consolidado e nº atual de colaboradores<span class="tag amber">a confirmar</span></div></div>
+    <div class="row"><div class="k">Identificação e crise</div><div class="v">CNPJ, sede, déficit ~R$ 9 mi, subfinanciamento federal, governança<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Fontes</div><div class="v">Site oficial CISRU · Agência Minas (16 ambulâncias) · Correio de Minas (crise, 22/05/2025) · ALMG (subfinanciamento) · IBGP (Edital 10/2024)<span class="tag">verificado</span></div></div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="wrap pull fold-gold">
+  <blockquote>Um ente sufocado pela conta da urgência — e uma <em>janela aberta</em> para quem opera de verdade.</blockquote>
+  <div class="s">CISRU Centro-Sul · uso interno</div>
+</section>
+
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Dossiê CISRU · confidencial</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--amber)">Documento de inteligência interna — uso restrito Samais · não compartilhar · não indexado. Base: fatos públicos (jun/2026).</p>
+</footer>
+
+<div class="conf-ribbon">Confidencial · uso interno Samais · não compartilhar</div>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>
