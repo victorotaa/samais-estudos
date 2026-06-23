@@ -48,6 +48,17 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   a navegação entre estudos vive só no hub `index.html`).
 - **Variar as fotos ao longo do documento** — não repetir a mesma imagem do
   município em hero, faixas e CTA. Buscar 3–4 fotos distintas e validadas.
+- **Valor + população juntos:** ao lado de cada valor de referência/ofertado,
+  repetir o número de habitantes declarado. Ancora o decisor (valor × população
+  lado a lado).
+- **Curadoria de fotos:** priorizar **paisagens e cartões-postais** (sobretudo no
+  hero). **Evitar** imagens religiosas, fotos de bairros sem destaque e ambientes
+  fechados/institucionais (prédios públicos, interiores). A foto compõe o estudo —
+  tem de "vender" o lugar.
+- **Contatos-chave após os valores:** incluir, em "próximos passos", os contatos
+  reais (presidentes de consórcio, secretários executivos, prefeitos, secretários
+  de saúde, SES-MG), com selo de procedência (✓ verificado / ⚠ a reconfirmar).
+  Nomes voláteis (secretários) sempre marcados para reconfirmar por telefone.
 
 ## Imagens
 
