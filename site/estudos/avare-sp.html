@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Avaré, SP — Estudo Técnico de SAMU 192</title>
+<meta name="description" content="Estudo técnico e operacional da Samais para a municipalização do SAMU 192 de Avaré — frota com redundância, USA e Central próprias e custo transparente.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#sumario">Sumário</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#criticos">Pontos críticos</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Antonio_Salim_Curiati_em_Avar%C3%A9_210706_REFON.jpg')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Estudo Técnico · SAMU 192 · Municipalização</div>
+      <h1>Avaré</h1>
+      <div class="hero-sub">Avaré paga por um SAMU regional e recebe um terço dele.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Avaré é o maior município e a maior demanda da região AMVAPA, mas opera com uma única ambulância de suporte básico em condições de rodar e divide uma USA e uma Central regionais com outros 16 municípios. O custo aparente do serviço não reflete o custo real — frota, combustível, imóvel e coordenação estão diluídos em outras pastas. Este estudo separa o que é fato do que é premissa e desenha a municipalização do serviço.</p>
+          <div class="src">Dados — questionário da SMS de Avaré, IBGE, portarias GM/MS e contrato AMVAPA</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">96.450 hab</div><div class="l">Avaré<br/>IBGE</div></div>
+        <div class="it"><div class="n">312.109 hab</div><div class="l">Região AMVAPA<br/>17 municípios</div></div>
+        <div class="it"><div class="n">1 de 3</div><div class="l">Ambulâncias<br/>operacional</div></div>
+        <div class="it"><div class="n">R$ 491 mil</div><div class="l">Por mês<br/>custo atual</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>O custo aparente não é o custo real.</h2>
+      <p class="lede">Avaré declara gastar R$ 491.417,77 por mês — cerca de R$ 5,9 milhões por ano — com o SAMU. Mas esse número é parcial: manutenção da frota, combustível, imóvel e coordenação estão espalhados por outras rubricas do orçamento. O resultado é uma operação que parece barata no papel e insuficiente na rua.</p>
+    </div>
+    <div class="right">Custo atual declarado<br/><span class="acc">R$ 491 mil / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>Maior município da região</h3>
+      <div class="subtitle">Financia 17 cidades, recebe um terço</div>
+      <p>Avaré tem 96.450 habitantes e a maior demanda de urgência da AMVAPA, mas opera com uma única USB em condições de rodar e divide USA e Central regionais com mais 16 municípios.</p>
+      <div class="specs">
+        <div class="row"><span class="k">População Avaré</span><span class="v">96.450</span></div>
+        <div class="row"><span class="k">População AMVAPA</span><span class="v">312.109</span></div>
+        <div class="row"><span class="k">Municípios</span><span class="v">17</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Problema</div>
+      <h3>Custo diluído e oculto</h3>
+      <div class="subtitle">Frota, combustível, imóvel, coordenação</div>
+      <p>O custo declarado de R$ 491 mil/mês não inclui manutenção da frota, combustível, despesas do imóvel nem a coordenação cedida. O gasto real é maior e está fragmentado entre pastas.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Custo declarado</span><span class="v">R$ 491 mil/mês</span></div>
+        <div class="row"><span class="k">Custo declarado/ano</span><span class="v">R$ 5,9 mi</span></div>
+        <div class="row"><span class="k">Ocultos</span><span class="v">a levantar</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>Municipalização dedicada</h3>
+      <div class="subtitle">Operador único · custo transparente</div>
+      <p>Um operador único e dedicado, frota com redundância, USA e Central próprias sob comando municipal e o custo consolidado em um único contrato auditável.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Operação</span><span class="v">dedicada a Avaré</span></div>
+        <div class="row"><span class="k">Repasse federal</span><span class="v">R$ 159,6 mil/mês</span></div>
+        <div class="row"><span class="k">Custo</span><span class="v">consolidado · aberto</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Represa_Jurumirim_REFON_1.JPG/1920px-Represa_Jurumirim_REFON_1.JPG" alt="Represa de Jurumirim, Avaré/SP" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Avaré · São Paulo</div>
+    <div class="t">A maior cidade da região, às margens de Jurumirim — financiando um SAMU que não controla.</div>
+  </div></div>
+</div>
+
+<!-- 02 DIAGNÓSTICO -->
+<section class="wrap" id="diagnostico">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Diagnóstico da realidade atual</span>
+      <h2>Uma ambulância operante para 96 mil pessoas.</h2>
+      <p class="lede">A frota declarada tem três Unidades de Suporte Básico, mas só uma está em condições de rodar. A USA é única e regional, dividida entre os 17 municípios. O custo aparece menor do que é porque a operação está fragmentada em várias pastas do orçamento.</p>
+    </div>
+    <div class="right">Frota operante<br/><span class="acc">1 de 3 USB</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>Unidade</th><th>Ano / modelo</th><th>Situação</th></tr></thead>
+    <tbody>
+      <tr><td>USB 01</td><td>2012 · Peugeot Boxer</td><td>Parada</td></tr>
+      <tr><td>USB 02</td><td>2015 · Renault Master</td><td>Parada</td></tr>
+      <tr><td>USB 03</td><td>2024 · Renault Master</td><td>Operante</td></tr>
+      <tr><td>USA regional</td><td>Suporte avançado</td><td>Única para os 17 municípios</td></tr>
+      <tr><td>Regime de escala</td><td>12×36</td><td>Combustível 349,8 litros/mês</td></tr>
+    </tbody>
+  </table>
+
+  <div class="g-3" style="margin-top:28px">
+    <div class="card">
+      <div class="tag">Hoje · Frota</div>
+      <h3>Sem redundância</h3>
+      <p>Das três USB declaradas, apenas a Renault Master 2024 está operante. As de 2012 e 2015 estão paradas. Quando a única viatura está empenhada, Avaré fica sem cobertura própria de suporte básico.</p>
+      <div class="specs">
+        <div class="row"><span class="k">USB total</span><span class="v">3</span></div>
+        <div class="row"><span class="k">USB operante</span><span class="v">1</span></div>
+        <div class="row"><span class="k">USA própria</span><span class="v">0</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Equipe</div>
+      <h3>16 colaboradores na base</h3>
+      <p>A base reúne condutores socorristas, técnicos de enfermagem, enfermeiro, auxiliares de serviços gerais, técnica auxiliar de RM e um coordenador cedido — em escala 12×36.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Condutores socorristas</span><span class="v">6</span></div>
+        <div class="row"><span class="k">Téc. enfermagem</span><span class="v">5</span></div>
+        <div class="row"><span class="k">Enfermeiro 30h</span><span class="v">1</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Demanda</div>
+      <h3>152 atendimentos/mês</h3>
+      <p>A USB de Avaré realiza em média 152 atendimentos por mês (faixa 131–168). No período de referência, o perfil foi de maioria clínica, seguido de trauma, psiquiátrico e obstétrico.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Clínicas</span><span class="v">1.385</span></div>
+        <div class="row"><span class="k">Trauma</span><span class="v">540</span></div>
+        <div class="row"><span class="k">Psiquiátricas</span><span class="v">124</span></div>
+      </div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Equipe da base</th><th class="num">Quantidade</th><th>Observação</th></tr></thead>
+    <tbody>
+      <tr><td>Condutores socorristas</td><td class="num">6</td><td>Escala 12×36</td></tr>
+      <tr><td>Técnicos de enfermagem</td><td class="num">5</td><td>Assistência direta</td></tr>
+      <tr><td>Enfermeiro</td><td class="num">1</td><td>Carga de 30h</td></tr>
+      <tr><td>Auxiliares de serviços gerais</td><td class="num">2</td><td>Apoio</td></tr>
+      <tr><td>Técnica auxiliar de RM</td><td class="num">1</td><td>Apoio administrativo</td></tr>
+      <tr><td>Coordenador de base</td><td class="num">1</td><td>Servidor cedido</td></tr>
+      <tr class="tot"><td>Total na base</td><td class="num">16</td><td>Obstétricas no período: 38</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Repasse federal vinculado</strong> O serviço recebe R$ 159.568,50 por mês — cerca de R$ 1,9 milhão por ano — do Fundo Nacional de Saúde, referentes às habilitações de USA, USB e Central. Base: Portarias GM/MS 1.631/2023, 1.816/2023 e 10.850/2026.</div></div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Rateio injusto</strong> Avaré é o maior município (96.450 hab) e a maior demanda da região, mas financia uma USA e uma Central compartilhadas por 312.109 habitantes e 17 cidades — e fica com apenas 1 de 3 ambulâncias e uma única USA regional.</div></div>
+</section>
+
+<!-- 03 PONTOS CRÍTICOS -->
+<section class="wrap" id="criticos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Pontos críticos</span>
+      <h2>O risco é assistencial, não só financeiro.</h2>
+      <p class="lede">A fragilidade da operação atual aparece onde mais importa: na hora de chegar ao paciente grave. Frota insuficiente, suporte avançado único e falhas de regulação se somam — com um óbito já documentado pela própria Secretaria de Saúde.</p>
+    </div>
+    <div class="right">Natureza do risco<br/><span class="acc">vidas, não só verba</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Crítico 01</div>
+      <h3>Frota insuficiente</h3>
+      <p>Com uma única viatura operante e sem reserva, quando a USB de Avaré é empenhada o município fica sem cobertura própria de suporte básico até que ela se libere.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Operante</span><span class="v">1 USB</span></div>
+        <div class="row"><span class="k">Reserva</span><span class="v">0</span></div>
+        <div class="row"><span class="k">Risco</span><span class="v">vazio de cobertura</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Crítico 02</div>
+      <h3>USA única regional</h3>
+      <p>Um só suporte avançado para 17 municípios e 312 mil habitantes. Cada acionamento grave depende da disponibilidade dessa única unidade — impacto direto no tempo-resposta.</p>
+      <div class="specs">
+        <div class="row"><span class="k">USA na região</span><span class="v">1</span></div>
+        <div class="row"><span class="k">Municípios</span><span class="v">17</span></div>
+        <div class="row"><span class="k">Efeito</span><span class="v">tempo-resposta</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Crítico 03</div>
+      <h3>Falhas de regulação</h3>
+      <p>Casos graves sem liberação de viatura, com óbito documentado pela própria SMS. A não-liberação em situações críticas é a expressão mais grave da fragilidade do modelo atual.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Registro</span><span class="v">óbito documentado</span></div>
+        <div class="row"><span class="k">Fonte</span><span class="v">SMS Avaré</span></div>
+        <div class="row"><span class="k">Causa</span><span class="v">não-liberação</span></div>
+      </div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Custo oculto</th><th>Onde está hoje</th><th>Efeito</th></tr></thead>
+    <tbody>
+      <tr><td>Manutenção da frota</td><td>Diluída na "frota geral" do município</td><td>Não aparece no custo do SAMU</td></tr>
+      <tr><td>Combustível</td><td>Garagem da Prefeitura</td><td>Consumo do SAMU não isolado</td></tr>
+      <tr><td>Imóvel</td><td>Água, luz, IPTU e manutenção</td><td>Despesa fixa fora da rubrica</td></tr>
+      <tr><td>Coordenação</td><td>Servidor cedido</td><td>Custo de pessoal em outra pasta</td></tr>
+      <tr><td>Passivo trabalhista</td><td>TAC firmado com o MPT</td><td>Risco e exposição não precificados</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Leitura</strong> Cada item acima existe e é pago — só não aparece somado no custo do SAMU. O valor real isolado de cada um é um dado a levantar em diligência, mas a existência deles já desmonta a ideia de que o custo atual é R$ 491 mil.</div></div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Barragem_Jurumirim_REFON_%281%29.JPG/1920px-Barragem_Jurumirim_REFON_%281%29.JPG" alt="Barragem de Jurumirim, Avaré/SP" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">Proposta operacional</div>
+    <div class="t">Operador único dedicado, frota com redundância e USA e Central sob comando municipal.</div>
+  </div></div>
+</div>
+
+<!-- 04 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Proposta — municipalização</span>
+      <h2>O SAMU de Avaré sob comando de Avaré.</h2>
+      <p class="lede">A municipalização entrega um operador único e dedicado, frota com redundância, USA e Central próprias sob comando do município e o custo consolidado em um único contrato transparente. Três cenários de dimensionamento, todos com custo total aberto.</p>
+    </div>
+    <div class="right">Modelo<br/><span class="acc">operação dedicada</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo da municipalização</span>
+    <h4>Operação dedicada do SAMU 192 — Avaré</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Operador</span><span class="v">único e dedicado a Avaré</span></div>
+      <div class="row"><span class="k">Frota</span><span class="v">com redundância · reserva ativa</span></div>
+      <div class="row"><span class="k">USA</span><span class="v">própria · sob comando municipal</span></div>
+      <div class="row"><span class="k">Central</span><span class="v">própria · regulação municipal</span></div>
+      <div class="row"><span class="k">Custo</span><span class="v">consolidado e transparente</span></div>
+      <div class="row"><span class="k">Conformidade</span><span class="v">CLT · fim dos passivos</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Cenário · Mínimo</span>
+      <h3>Operação enxuta</h3>
+      <p>2 USB mais 1 reserva, USA regional e central integrada, com 21 pessoas na equipe. Custo total menor que o atual — porque consolida e elimina a fragmentação.</p>
+      <div class="kv"><div class="r"><span class="k">Total/mês</span><span class="v">R$ 330 mil</span></div><div class="r"><span class="k">vs atual</span><span class="v">−33%</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Cenário · Base ★</span>
+      <h3>Operação dedicada</h3>
+      <p>2 USB mais 1 reserva, USA própria 24/7 e central municipal, com 45+ pessoas. Custa mais que o aparente atual porque entrega o que hoje não existe: suporte avançado e regulação próprios.</p>
+      <div class="kv"><div class="r"><span class="k">Total/mês</span><span class="v">R$ 907 mil</span></div><div class="r"><span class="k">Total/ano</span><span class="v">R$ 10,9 mi</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Cenário · Amplo</span>
+      <h3>Operação ampliada</h3>
+      <p>3 USB mais motolância, USA própria e central completa, com 59 pessoas na equipe. Máxima cobertura e menor tempo-resposta para o município.</p>
+      <div class="kv"><div class="r"><span class="k">Total/mês</span><span class="v">R$ 1,15 mi</span></div><div class="r"><span class="k">vs Base</span><span class="v">+27%</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Viabilidade e cenários</span>
+      <h2>Três cenários, todos com custo total aberto.</h2>
+      <p class="lede">Os valores abaixo são custos totais por cenário — sem rubricas escondidas. O repasse federal vinculado já existente abate o custo. A contratação pode seguir a Lei 14.133/2021 ou chamamento público, sempre com referência nos parâmetros nacionais.</p>
+    </div>
+    <div class="right">Repasse federal vinculado<br/><span class="acc">R$ 159,6 mil / mês</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>Cenário</th><th class="num">Total/mês</th><th class="num">Total/ano</th><th>Frota e equipe</th></tr></thead>
+    <tbody>
+      <tr><td>Mínimo (enxuta)</td><td class="num">R$ 330 mil</td><td class="num">R$ 4,0 mi</td><td>2 USB + 1 reserva · USA regional · central integrada · 21 na equipe</td></tr>
+      <tr class="sub"><td>Base ★ (dedicada)</td><td class="num">R$ 907 mil</td><td class="num">R$ 10,9 mi</td><td>2 USB + 1 reserva · USA própria 24/7 · central municipal · 45+ na equipe</td></tr>
+      <tr><td>Amplo (ampliada)</td><td class="num">R$ 1,15 mi</td><td class="num">R$ 13,8 mi</td><td>3 USB + motolância · USA própria · central completa · 59 na equipe</td></tr>
+    </tbody>
+  </table>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Referência de financiamento</th><th class="num">Mensal</th><th class="num">Anual</th></tr></thead>
+    <tbody>
+      <tr><td>Custo atual declarado (parcial)</td><td class="num">R$ 491 mil</td><td class="num">R$ 5,9 mi</td></tr>
+      <tr><td>Repasse federal vinculado (FNS)</td><td class="num">R$ 159,6 mil</td><td class="num">R$ 1,9 mi</td></tr>
+      <tr class="tot"><td>Cenário Base (operação dedicada)</td><td class="num">R$ 907 mil</td><td class="num">R$ 10,9 mi</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Leitura honesta</strong> O cenário Base custa mais que o custo aparente atual (R$ 907 mil contra R$ 491 mil) porque o atual é parcial e diluído. O cenário Base entrega operação dedicada, USA e Central próprias e o fim dos custos ocultos. O ganho não é economia — é transparência, redundância e qualidade assistencial.</div></div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Base legal</strong> Repasse federal vinculado já existente (R$ 159.568,50/mês via Fundo Nacional de Saúde) abate o custo. Contratação por Lei 14.133/2021 ou chamamento público, referenciada nos parâmetros nacionais (PNAU) e na Portaria GM/MS 1.010/2012.</div></div>
+</section>
+
+<!-- 06 DIFERENCIAIS -->
+<section class="wrap" id="diferenciais">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Diferenciais</span>
+      <h2>Operação real, não consultoria.</h2>
+      <p class="lede">A diferença está em entregar a operação funcionando, com custo aberto e conformidade plena — não um relatório. Cada diferencial responde a um ponto crítico da operação atual de Avaré.</p>
+    </div>
+    <div class="right">Operação comprovada<br/><span class="acc">atestados disponíveis</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Operação real e transparência</h4>
+      <p>A Samais opera o serviço, não vende consultoria. O custo é aberto em 66 itens, sem rubricas escondidas — o gestor enxerga cada linha do que paga.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <h4>Tecnologia própria</h4>
+      <p>Regulação, despacho e telemetria em plataforma própria, com rastreabilidade em tempo real — atacando diretamente as falhas de regulação que hoje custam vidas.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Conformidade e NEP</h4>
+      <p>Equipe CLT no piso, com fim dos passivos trabalhistas, e Núcleo de Educação Permanente estruturado (NR-32, SAVC). Autonomia municipal sobre o próprio serviço.</p>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Operação comprovada</strong> A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal.</div></div>
+
+  <h3 style="margin-top:40px">Próximos passos</h3>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Reunião técnica</div>
+      <h3>Dimensionamento</h3>
+      <p>Reunião técnica para dimensionar a operação ao dado real de Avaré — frota, equipe e demanda.</p>
+      <div class="kv"><div class="r"><span class="k">Com</span><span class="v">SMS · SAMU</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Diligência</div>
+      <h3>Custos ocultos</h3>
+      <p>Validação dos custos ocultos — manutenção, combustível, imóvel e coordenação — isolando o gasto real do SAMU.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">custo real</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Modelo</div>
+      <h3>Forma de contratação</h3>
+      <p>Definição do modelo de contratação — Lei 14.133/2021 ou chamamento público — conforme a escolha do município.</p>
+      <div class="kv"><div class="r"><span class="k">Base</span><span class="v">Lei 14.133/2021</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 04</div>
+      <div class="pd">Documentos</div>
+      <h3>Consolidação</h3>
+      <p>Consolidação de documentos: portarias, produção de 12 meses, folha, contrato AMVAPA, repasses e CCT.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">dossiê completo</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold" id="fechamento">
+  <blockquote>Avaré financia um SAMU regional e fica com um terço dele. <em>É hora de ter o seu.</em></blockquote>
+  <div class="s">Avaré · São Paulo</div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: separamos o dado público e oficial verificável da estimativa de modelagem, a confirmar em diligência.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">Pisos e equipe</div><div class="v">Questionário da SMS de Avaré (21/05/2026) — pisos, frota e composição da base<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Repasse federal</div><div class="v">R$ 159.568,50/mês via FNS · Portarias GM/MS 1.631/2023, 1.816/2023 e 10.850/2026<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">População</div><div class="v">Avaré 96.450 · AMVAPA 312.109 (17 municípios) — IBGE<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Passivo trabalhista</div><div class="v">TAC firmado com o MPT; dados operacionais do questionário da SMS<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Itens de custo</div><div class="v">Linhas de custo por benchmark Samais/mercado, a calibrar em diligência<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Custos ocultos e plurianual</div><div class="v">Custo isolado dos ocultos e projeção plurianual: a levantar<span class="tag amber">a levantar</span></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="cta">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Jurumirim_La_laguna_100606_REFON.JPG/1920px-Jurumirim_La_laguna_100606_REFON.JPG')"></div>
+    <span class="sec-num">Avaré · São Paulo</span>
+    <h2>Avaré pode ter o seu próprio SAMU.</h2>
+    <p class="lede">Custo real consolidado e transparente, frota com redundância, USA e Central sob comando municipal — calibrado ao dado real do município em diligência de campo.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Avaré/SP · documento de proposta</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Avaré e Represa de Jurumirim/SP — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>

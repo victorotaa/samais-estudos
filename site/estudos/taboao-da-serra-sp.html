@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Taboão da Serra, SP — Proposta Técnica de SAMU 192</title>
+<meta name="description" content="Proposta técnica e operacional da Samais para o SAMU 192 de Taboão da Serra — gestão profissional integrada, central de regulação digital e IA embarcada para o município mais denso do Brasil.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#sumario">Sumário</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#demanda">Demanda</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#metodo">Método</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sao_Paulo_Brazil_Skyline_Aerial%2C_December_2024.jpg/1920px-Sao_Paulo_Brazil_Skyline_Aerial%2C_December_2024.jpg')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Proposta Técnica e Operacional · SAMU 192</div>
+      <h1>Taboão da Serra</h1>
+      <div class="hero-sub">Gestão profissional integrada do SAMU para o município mais denso do Brasil — central de regulação digital, frota habilitada, equipes especializadas e IA embarcada.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Taboão da Serra concentra mais de 273 mil habitantes em pouco mais de 20 km² — a maior densidade demográfica do país. Conurbado com São Paulo e cortado pela BR-116, exige uma urgência que chegue rápido em qualquer ponto. O município já terceiriza com sucesso três equipamentos de urgência há mais de dez anos; o SAMU é a única exceção em gestão direta. A Samais propõe levá-lo ao mesmo padrão: equipe própria, frota dimensionada e a central de regulação inteligente CoPilot OS.</p>
+          <div class="src">Indicadores municipais — IBGE, Secretaria Municipal de Saúde e Ministério da Saúde</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">273 mil</div><div class="l">Habitantes<br/>Censo IBGE 2022</div></div>
+        <div class="it"><div class="n">14 mil+/km²</div><div class="l">1ª densidade<br/>do Brasil</div></div>
+        <div class="it"><div class="n">R$ 1,25</div><div class="l">Por habitante/mês<br/>pós-cofinanciamento federal</div></div>
+        <div class="it"><div class="n">≤8 min</div><div class="l">Meta de resposta<br/>em ambiente urbano</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>A oportunidade de Taboão da Serra.</h2>
+      <p class="lede">O município mais denso do Brasil já confia à gestão profissional três de seus quatro equipamentos de urgência — com mais de dez anos de bons resultados. O SAMU é a única peça que segue em gestão direta, com central analógica e frota recém-renovada porém sem inteligência operacional. É a hora de fechar esse vão, e fazê-lo com padrão nacional.</p>
+    </div>
+    <div class="right">Valor de referência · ~285 mil hab<br/><span class="acc">R$ 1,8 mi / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>O município mais denso do país</h3>
+      <div class="subtitle">14 mil+ habitantes por km²</div>
+      <p>Conurbado com a capital e cortado pela BR-116, Taboão concentra demanda de urgência num território minúsculo. Densidade é, ao mesmo tempo, desafio logístico e oportunidade: bem regulado, o tempo-resposta despenca.</p>
+      <div class="specs">
+        <div class="row"><span class="k">População (Censo 2022)</span><span class="v">273.542</span></div>
+        <div class="row"><span class="k">Área territorial</span><span class="v">20,38 km²</span></div>
+        <div class="row"><span class="k">Urbanização</span><span class="v">100%</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Momento</div>
+      <h3>Terceirização já comprovada</h3>
+      <div class="subtitle">3 de 4 equipamentos sob gestão privada</div>
+      <p>O HGP, a UPA 24h e o PS Infantil já operam sob gestão da SPDM há mais de uma década, com bons resultados. O modelo de gestão profissional da urgência já é a prática consolidada do município — falta estendê-lo ao SAMU.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Equipamentos terceirizados</span><span class="v">3</span></div>
+        <div class="row"><span class="k">Tempo de operação</span><span class="v">+10 anos</span></div>
+        <div class="row"><span class="k">SAMU hoje</span><span class="v">gestão direta</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>Gestão profissional + IA</h3>
+      <div class="subtitle">Central digital e frota habilitada</div>
+      <p>Frota habilitada, equipes certificadas e a central de regulação CoPilot OS — para 273 mil pessoas, por cerca de uma passagem de ônibus por mês, depois do cofinanciamento federal.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Valor de referência</span><span class="v">R$ 1,8 mi/mês</span></div>
+        <div class="row"><span class="k">Cofinanciamento federal</span><span class="v">50% (est.)</span></div>
+        <div class="row"><span class="k">Por habitante/mês</span><span class="v">R$ 1,25</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Tabo%C3%A3o_da_Serra.jpg" alt="Vista panorâmica de Taboão da Serra, São Paulo" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Taboão da Serra · São Paulo</div>
+    <div class="t">A maior densidade demográfica do Brasil — onde cada minuto de resposta conta por muitos.</div>
+  </div></div>
+</div>
+
+<!-- 02 TERRITÓRIO -->
+<section class="wrap" id="territorio">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Território e contexto</span>
+      <h2>O perfil de uma cidade vertical.</h2>
+      <p class="lede">Pequena em área, gigantesca em densidade e totalmente conurbada com a capital, Taboão impõe requisitos de urgência que poucos municípios brasileiros enfrentam — agravados pela BR-116, uma das rodovias mais movimentadas e acidentais do país.</p>
+    </div>
+    <div class="right">Área · 20,38 km²<br/><span class="acc">100% urbano</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Indicador</th><th class="num">Taboão da Serra</th><th>Leitura estratégica</th></tr></thead>
+    <tbody>
+      <tr><td>População (Censo 2022)</td><td class="num">273.542</td><td>Porte de cidade média densa — demanda de urgência concentrada</td></tr>
+      <tr><td>População (est. 2025)</td><td class="num">~285.000</td><td>Crescimento de 18,4% na década pressiona a rede</td></tr>
+      <tr><td>Densidade demográfica</td><td class="num">14.000+/km²</td><td>1ª do Brasil — capital SP tem 7.398/km²</td></tr>
+      <tr><td>Área territorial</td><td class="num">20,38 km²</td><td>Território compacto favorece tempo-resposta curto</td></tr>
+      <tr><td>Grau de urbanização</td><td class="num">100%</td><td>Toda a demanda é urbana e conurbada com São Paulo</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>BR-116 · Régis Bittencourt</strong> A rodovia que corta o município é uma das de maior acidentalidade do país. Soma à demanda clínica de uma cidade adensada um fluxo constante de trauma rodoviário — exigindo suporte avançado e resposta rápida na porta de entrada da Grande São Paulo.</div></div>
+</section>
+
+<!-- 03 DIAGNÓSTICO -->
+<section class="wrap" id="diagnostico">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Rede e diagnóstico do SAMU</span>
+      <h2>Uma rede madura, um SAMU analógico.</h2>
+      <p class="lede">Taboão tem rede de urgência consolidada e majoritariamente gerida por parceiro profissional. O SAMU, porém, segue em gestão direta, com central 100% analógica, sem sistema informatizado — e indícios claros de demanda reprimida.</p>
+    </div>
+    <div class="right">SAMU em gestão direta<br/><span class="acc">Prefeitura</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>Estabelecimento</th><th>Gestor</th><th>Papel na urgência</th></tr></thead>
+    <tbody>
+      <tr><td>Hospital Geral de Pirajussara (HGP)</td><td>Estado / SPDM</td><td>282 leitos SUS · referência para 8 municípios</td></tr>
+      <tr><td>UPA 24h</td><td>SPDM</td><td>Porta de urgência adulto · gestão profissional</td></tr>
+      <tr><td>Pronto-Socorro Infantil</td><td>SPDM</td><td>Urgência pediátrica</td></tr>
+      <tr><td>Unidade Mista / Antena</td><td>SPDM</td><td>Retaguarda e apoio à rede</td></tr>
+      <tr><td>SAMU 192</td><td>Prefeitura (direta)</td><td>Pré-hospitalar móvel — alvo da proposta</td></tr>
+    </tbody>
+  </table>
+
+  <div class="g-3" style="margin-top:28px">
+    <div class="card">
+      <div class="tag">Hoje · Frota</div>
+      <h3>Frota nova, gestão analógica</h3>
+      <p>A operação conta com 1 USA (7 anos), 3 USB recebidas em 2025 e 2 motolâncias. A frota foi renovada — mas sem telemetria, GPS de gestão ou despacho assistido, o ganho operacional fica na mesa.</p>
+      <div class="specs">
+        <div class="row"><span class="k">USA</span><span class="v">1 (7 anos)</span></div>
+        <div class="row"><span class="k">USB</span><span class="v">3 (2025)</span></div>
+        <div class="row"><span class="k">Motolâncias</span><span class="v">2</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Regulação</div>
+      <h3>Central 100% analógica</h3>
+      <p>A regulação opera sem sistema informatizado: chamados, despacho e registro são manuais. Não há rastreabilidade nem indicadores em tempo real — o gestor não enxerga a própria operação.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Sistema</span><span class="v">analógico</span></div>
+        <div class="row"><span class="k">Rastreabilidade</span><span class="v">inexistente</span></div>
+        <div class="row"><span class="k">Equipe / plantão</span><span class="v">29 profissionais</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Registro</div>
+      <h3>676 atendimentos/mês</h3>
+      <p>São 2.531 ligações ao 192 por mês, mas apenas 676 atendimentos efetivados (~22/dia). A diferença é um forte indício de demanda reprimida — chamados que não viram atendimento por limitação operacional.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Ligações 192/mês</span><span class="v">2.531</span></div>
+        <div class="row"><span class="k">Atendimentos/mês</span><span class="v">676</span></div>
+        <div class="row"><span class="k">Servidores</span><span class="v">145 estatutários</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Quadro atual</strong> 145 servidores estatutários (33 condutores, 69 técnicos e enfermeiros, 21 médicos), com 29 profissionais por plantão. A estrutura humana existe — falta a inteligência que transforma chamada em atendimento rápido e rastreável.</div></div>
+</section>
+
+<!-- 04 DEMANDA -->
+<section class="wrap" id="demanda">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Demanda e perfil epidemiológico</span>
+      <h2>Demanda reprimida e perfil urbano-rodoviário.</h2>
+      <p class="lede">A lacuna entre 2.531 ligações e 676 atendimentos por mês aponta demanda que não está sendo absorvida. O perfil epidemiológico combina a carga clínica de uma cidade adensada com o trauma rodoviário da BR-116.</p>
+    </div>
+    <div class="right">Meta de resposta<br/><span class="acc">≤8 min · urbano</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="donutviz">
+      <div class="sv-head"><span class="t">Conversão de chamados em atendimento</span><span class="s">ligações 192 vs. atendimentos efetivados</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Lacuna de conversão de 73%">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#2a2a2a" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#B8954E" stroke-width="12" stroke-linecap="round"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="84.8" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle">73%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle">LACUNA</text>
+        </svg>
+        <div class="leg">
+          <div class="l"><i class="g"></i><b>~73% das ligações</b> não se convertem em atendimento registrado hoje</div>
+          <div class="l"><i class="m"></i><b>~27%</b> (676/mês) é o que a operação efetiva</div>
+          <em>Fechar essa lacuna é o ganho assistencial central da proposta.</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="splitviz">
+      <div class="sv-head"><span class="t">Distribuição por tipo de ocorrência</span><span class="s">estimativa sobre perfil epidemiológico</span></div>
+      <div class="bar">
+        <div class="seg gld" style="flex-basis:57%">Clínica 55–60%</div>
+        <div class="seg mul" style="flex-basis:27%;background:#3a3a3a;color:#e7e1d6">Trauma 25–30%</div>
+        <div class="seg mul" style="flex-basis:10%">Psiq. 8–12%</div>
+        <div class="seg mul" style="flex-basis:6%;background:#1a1a1a">Outras 5–9%</div>
+      </div>
+      <div class="legend">
+        <span><i class="g"></i>Clínica — exige USA com médico</span>
+        <span><i class="m"></i>Trauma — motolância e USA (BR-116)</span>
+        <span><i class="m"></i>Psiquiátrica/social · obstétrica · pediátrica</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Tempo-resposta</strong> A OMS recomenda chegada em menos de 10 minutos; a média nacional passa de 45. Em território compacto e bem regulado, a meta Samais é de até 8 minutos. Onde a Samais já opera com o CoPilot OS, os KPIs comprovam: −23% no tempo de despacho, 91% dos despachos em menos de 4 minutos e 100% de rastreabilidade.</div></div>
+
+  <div class="opsviz">
+    <div class="t">Fatores de risco epidemiológico predominantes</div>
+    <div class="cap">
+      <b>Cardiovascular e AVC</b> (principal demanda clínica de cidade adensada) · <b>trauma rodoviário</b> na BR-116 e <b>violência urbana</b> (principal trauma) · <b>urgência psiquiátrica e social</b> em alta · <b>obstétrica e pediátrica</b> com peso relevante. O perfil exige equipe especializada, motolância para resposta rápida e suporte avançado com médico.
+    </div>
+  </div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Panoramic_view_of_S%C3%A3o_Paulo_City.jpg/1920px-Panoramic_view_of_S%C3%A3o_Paulo_City.jpg" alt="Paisagem urbana da Grande São Paulo" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">Proposta operacional</div>
+    <div class="t">Frota habilitada, regulação digital e inteligência embarcada — do chamado ao atendimento, rastreável.</div>
+  </div></div>
+</div>
+
+<!-- 05 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Proposta operacional</span>
+      <h2>O escopo que Taboão merece.</h2>
+      <p class="lede">Uma operação completa e integrada: frota habilitada com telemetria, central de regulação por IA, bases descentralizadas e equipe própria certificada — calibrada para a densidade e o perfil do município mais adensado do Brasil.</p>
+    </div>
+    <div class="right">Cenário ofertado<br/><span class="acc">Operação integral</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo ofertado</span>
+    <h4>Operação integral do SAMU 192 — Taboão da Serra</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Frota</span><span class="v">3 USB · 1 USA · 2 motolâncias</span></div>
+      <div class="row"><span class="k">Central</span><span class="v">Regulação digital CoPilot OS</span></div>
+      <div class="row"><span class="k">Bases</span><span class="v">7 + reserva técnica</span></div>
+      <div class="row"><span class="k">Pessoal</span><span class="v">~128 a 145 profissionais</span></div>
+      <div class="row"><span class="k">Certificações</span><span class="v">ACLS · PHTLS · ATLS · NR-32</span></div>
+      <div class="row"><span class="k">Frota inteligente</span><span class="v">GPS · telemetria · rastreabilidade</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Bloco 01 · Pessoas</span>
+      <h3>Equipe própria CLT</h3>
+      <p>Médicos reguladores, enfermeiros, técnicos e condutores — contratados, treinados e fixados, com escala 24/7 honesta e Núcleo de Educação Permanente (NEP) ativo. Sem turnos descobertos.</p>
+      <div class="kv"><div class="r"><span class="k">Regime</span><span class="v">CLT · piso CCT</span></div><div class="r"><span class="k">Formação</span><span class="v">NEP · certificações</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 02 · Operação</span>
+      <h3>Frota e 7 bases</h3>
+      <p>Manutenção, reativação e gestão da frota cedida pelo ente; 7 bases descentralizadas e reserva técnica para reduzir o tempo-resposta num território compacto e adensado.</p>
+      <div class="kv"><div class="r"><span class="k">Frota</span><span class="v">manutenção Samais</span></div><div class="r"><span class="k">Bases</span><span class="v">7 + reserva</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 03 · Inteligência</span>
+      <h3>CoPilot OS</h3>
+      <p>Central de regulação assistida por IA: triagem, despacho otimizado, painel do gestor 24h e integração com a RNDS — transparência e rastreabilidade total da operação.</p>
+      <div class="kv"><div class="r"><span class="k">Regulação</span><span class="v">IA assistida</span></div><div class="r"><span class="k">Gestão</span><span class="v">painel 24h · RNDS</span></div></div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Parâmetro</th><th>Gestão direta atual</th><th>Proposta Samais</th></tr></thead>
+    <tbody>
+      <tr><td>População coberta</td><td>273.542</td><td>273.542</td></tr>
+      <tr><td>Frota (USB / USA / moto)</td><td>3 / 1 / 2</td><td>3 / 1 / 2 + telemetria</td></tr>
+      <tr><td>Central de regulação</td><td>100% analógica</td><td>Digital · CoPilot OS · IA</td></tr>
+      <tr><td>Rastreabilidade</td><td>inexistente</td><td>tempo real · 100%</td></tr>
+      <tr class="sub"><td>Valor de referência mensal</td><td class="num">R$ 2,1–2,3 mi</td><td class="num">R$ 1,8 mi</td></tr>
+      <tr class="tot"><td>Por habitante/mês (pós-federal)</td><td class="num">—</td><td class="num">R$ 1,25</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Leitura</strong> Uma operação mais qualificada — digital, rastreável e certificada — por um valor de referência menor do que o custo atual estimado da gestão direta. Mais resultado, com menos comprometimento orçamentário.</div></div>
+</section>
+
+<!-- 06 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Viabilidade financeira</span>
+      <h2>Custa menos do que a operação atual.</h2>
+      <p class="lede">A proposta substitui um custo atual estimado em R$ 2,1–2,3 milhões/mês por um valor de referência de R$ 1,8 milhão/mês. Com o cofinanciamento federal, a contrapartida municipal equivale a cerca de 4% do orçamento de saúde — e a uma passagem de ônibus por habitante.</p>
+    </div>
+    <div class="right">Cofinanciamento federal<br/><span class="acc">50% · estimado</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Quem paga o valor de referência</span><span class="s" style="color:#6b6358">mensal</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="50% federal, 50% municipal">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#8E7238" stroke-width="12"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="157.08" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle" style="fill:#8E7238">50%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">FEDERAL</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#8E7238"></i><b style="color:#2c281f">União · R$ 900 mil/mês</b> — cofinanciamento PNAU (est.)</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">Município · R$ 900 mil/mês</b> — contrapartida</div>
+          <em style="color:#8E7238">A União divide a conta ao meio.</em>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Linha de viabilidade</th><th class="num">Valor</th><th class="num">% orç. saúde</th></tr></thead>
+      <tbody>
+        <tr><td>População atendida</td><td class="num">~285 mil hab</td><td class="num">—</td></tr>
+        <tr><td>Valor de referência mensal</td><td class="num">R$ 1,8 mi</td><td class="num">—</td></tr>
+        <tr><td>Participação federal (50%, est.)</td><td class="num">R$ 900 mil</td><td class="num">~4,1%</td></tr>
+        <tr class="sub"><td>Contrapartida municipal (mês)</td><td class="num">R$ 900 mil</td><td class="num">~4,1%</td></tr>
+        <tr><td>Valor de referência anual</td><td class="num">R$ 21,6 mi</td><td class="num">—</td></tr>
+        <tr class="tot"><td>Por habitante/mês (pós-federal)</td><td class="num">R$ 1,25</td><td class="num">trivial</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Custo atual vs. proposta</th><th class="num">Mensal</th><th class="num">Anual</th><th class="num">5 anos</th></tr></thead>
+    <tbody>
+      <tr><td>Custo real atual estimado (gestão direta)</td><td class="num">R$ 2,1–2,3 mi</td><td class="num">~R$ 26 mi</td><td class="num">~R$ 130 mi</td></tr>
+      <tr><td>Proposta Samais</td><td class="num">R$ 1,8 mi</td><td class="num">R$ 21,6 mi</td><td class="num">R$ 108 mi</td></tr>
+      <tr class="tot"><td>Economia estimada</td><td class="num">~R$ 357 mil</td><td class="num">~R$ 4,28 mi</td><td class="num">~R$ 21,4 mi</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Base legal e orçamentária</strong> Cofinanciamento federal da urgência conforme a Política Nacional de Atenção às Urgências — Portarias GM/MS 1.010/2012, 530/2023 (reajuste de +30%) e 1.600/2011 — e contratação pela Lei 14.133/2021. A contrapartida estimada equivale a ~4,1% do orçamento da Saúde de 2025 (LOA de R$ 264,1 mi; a saúde respondeu por 33,35% das receitas em 2023). Per capita pós-cofinanciamento: R$ 1,25/hab/mês — o preço de uma passagem de ônibus.</div></div>
+</section>
+
+<!-- 07 MÉTODO -->
+<section class="wrap" id="metodo">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Método e rigor</span>
+      <h2>Números honestos, lastreados em fonte.</h2>
+      <p class="lede">A proposta nasce de uma metodologia própria de dimensionamento, calibrada com dados públicos oficiais e com a experiência de operação real da Samais. Cada número tem origem rastreável.</p>
+    </div>
+    <div class="right">Conformidade<br/><span class="acc">Lei 14.133/2021</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Cobertura 24/7 correta</h4>
+      <p>Dimensionamento de pessoal pelo fator de cobertura real de uma escala ininterrupta — não pela metade do turno. É o que separa um SAMU que funciona às 3h da manhã de um que existe só no papel.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 17V9M12 17V6M16 17v-5M20 17v-9"/></svg></div>
+      <h4>Parâmetros nacionais</h4>
+      <p>Frota e demanda referenciadas na Política Nacional de Atenção às Urgências (PNAU) e na taxa nacional de acionamento. O escopo responde à demanda real estimada, não ao histórico subdimensionado.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Operação comprovada</h4>
+      <p>A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados de capacidade técnica disponíveis para verificação formal. Implantação em 90–120 dias, em 4 fases, com zero interrupção do serviço.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold">
+  <blockquote>O município mais denso do Brasil merece o SAMU mais inteligente — <em>por uma passagem de ônibus</em> por habitante.</blockquote>
+  <div class="s">Taboão da Serra · São Paulo</div>
+</section>
+
+<!-- 08 PRÓXIMOS PASSOS -->
+<section class="wrap" id="passos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Próximos passos</span>
+      <h2>Como começamos.</h2>
+      <p class="lede">Um caminho curto e técnico, do primeiro encontro à proposta formal — com diligência de campo para calibrar cada número ao dado real de Taboão da Serra.</p>
+    </div>
+    <div class="right">Início estimado<br/><span class="acc">após diligência</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Semana 1–2</div>
+      <h3>Diagnóstico técnico</h3>
+      <p>Visita à base do SAMU e auditoria da central de regulação. Levantamento de frota, escala e do quadro real de servidores.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">base · central</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Semana 2–4</div>
+      <h3>Dimensionamento e validação</h3>
+      <p>Calibração do escopo, da frota e do quadro ao dado verificado. É aqui que cada premissa vira fato.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">dados reais</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Semana 4–6</div>
+      <h3>Proposta formal + transição</h3>
+      <p>Entrega formalizada com cronograma de implantação e plano de transição — em 4 fases, sem interrupção do serviço.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">proposta + plano</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">09 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: separamos o dado público verificável da estimativa de modelagem, a confirmar em diligência.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">População</div><div class="v">273.542 (Censo IBGE 2022); densidade e área conforme IBGE<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Orçamento da Saúde</div><div class="v">LOA 2025 de R$ 264,1 mi; 33,35% das receitas em saúde (2023)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">SAMU atual</div><div class="v">Frota, quadro de 145 servidores, 2.531 ligações e 676 atendimentos/mês, central analógica<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Normativos</div><div class="v">Portarias GM/MS 1.010/2012, 530/2023 e 1.600/2011; Lei 14.133/2021<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">KPIs de operação Samais</div><div class="v">−23% no despacho, 91% &lt;4 min, 100% de rastreabilidade<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Custo atual e cenário B</div><div class="v">Custo atual R$ 2,1–2,3 mi/mês; população 2025 ~285 mil; distribuição epidemiológica<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Cofinanciamento e per capita</div><div class="v">50% federal (a confirmar habilitação); per capita R$ 1,25/hab/mês pós-federal<span class="tag amber">estimativa</span></div></div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="wrap cta" id="fechamento">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/S%C3%A3o_Paulo_skyline_at_Vila_Mariana.jpg/1920px-S%C3%A3o_Paulo_skyline_at_Vila_Mariana.jpg')"></div>
+    <span class="sec-num">Taboão da Serra · São Paulo</span>
+    <h2>A decisão que coloca o SAMU no padrão da rede.</h2>
+    <p class="lede">O município já confia à gestão profissional o coração de sua urgência. Estender esse padrão ao SAMU é dar a 273 mil pessoas uma resposta digital, rastreável e mais rápida — por menos do que se gasta hoje, e por uma passagem de ônibus por habitante.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Taboão da Serra/SP · documento de proposta</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Taboão da Serra / Grande São Paulo — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>

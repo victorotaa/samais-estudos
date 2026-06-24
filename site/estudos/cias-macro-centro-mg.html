@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · SAMU Macro Centro / Consórcio CIAS — Panorama Preliminar</title>
+<meta name="description" content="Panorama preliminar da Samais sobre operar e qualificar o SAMU Regional Macro Centro do consórcio CIAS — do núcleo histórico de Ouro Preto e Mariana à escala regional, com regulação assistida por IA.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+<style>
+/* fotos protagonistas — escopo deste estudo (novo padrão) */
+.hero-bg{opacity:.52}
+.hero-bg::after{background:linear-gradient(180deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.40) 46%,rgba(10,10,10,.93) 100%)}
+.band{height:clamp(320px,46vw,560px)}
+.band img{opacity:.72}
+.band::after{background:linear-gradient(90deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.34) 56%,rgba(10,10,10,.72) 100%)}
+.cta-bg{opacity:.5}
+.focus-photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:6px 0 24px}
+.focus-photos figure{position:relative;margin:0;height:clamp(200px,26vw,300px);overflow:hidden;border:1px solid var(--divider)}
+.focus-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,.7,.3,1)}
+.focus-photos figure:hover img{transform:scale(1.05)}
+.focus-photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(8,8,8,.9),rgba(8,8,8,.35) 60%,transparent);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.focus-photos figcaption b{display:block;font-family:var(--display);font-size:17px;letter-spacing:0;text-transform:none;color:#fff;margin-top:3px;font-weight:600}
+@media(max-width:720px){.focus-photos{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#quem">O bloco</a>
+    <a href="#sumario">Sumário</a>
+    <a href="#territorio">Território</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#metodo">Método</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('../assets/fotos/cias-hero-bh.jpg')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Consórcio CIAS · SAMU 192 Regional · Panorama Preliminar</div>
+      <h1>SAMU<br/>Macro Centro</h1>
+      <div class="hero-sub">Operar e qualificar o SAMU Regional Macro Centro — do núcleo histórico (Ouro Preto e Mariana) à escala regional, com regulação assistida por IA.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>O Consórcio CIAS já opera diretamente o SAMU de um núcleo de municípios da microrregião de Ouro Preto e participa da regulação regional do Macro Centro. Este documento é um panorama <strong>preliminar</strong>: organiza o que é público sobre a operação, dimensiona faixas de referência por cenário e aponta a diligência necessária para calibrar cada número ao dado real do consórcio.</p>
+          <div class="src">Documento preliminar — premissas a validar em diligência junto à governança do consórcio</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">22</div><div class="l">Cidades na operação<br/>(região, sem a capital)</div></div>
+        <div class="it"><div class="n">~93</div><div class="l">Ambulâncias<br/>frota anunciada</div></div>
+        <div class="it"><div class="n">~1,5 mi</div><div class="l">Habitantes<br/>na operação regional</div></div>
+        <div class="it"><div class="n">R$ 6–8 mi</div><div class="l">Por mês<br/>valor de referência</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 00 QUEM FAZ PARTE -->
+<section class="wrap" id="quem">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">O bloco · quem faz parte</span>
+      <h2>O bloco de saúde, em uma olhada.</h2>
+      <p class="lede">As urgências — o SAMU 192 — da região Central de Minas são atendidas por uma única central em Belo Horizonte, o "SAMU Regional Macro Centro", tocado em conjunto pela capital e pelo consórcio CIAS. Tirando a capital, que tem SAMU próprio, a operação regional cobre 22 cidades (~1,5 milhão de habitantes). É dentro desse grupo que estão as duas cidades no foco desta conversa.</p>
+    </div>
+    <div class="right">Cidades-foco<br/><span class="acc">Ouro Preto · Itabirito</span></div>
+  </div>
+
+  <div class="focus-photos">
+    <figure><img src="../assets/fotos/foco-ouropreto.jpg" alt="Vista panorâmica de Ouro Preto, Minas Gerais" loading="lazy"><figcaption>Cidade-foco<b>Ouro Preto</b></figcaption></figure>
+    <figure><img src="../assets/fotos/foco-itabirito.jpg" alt="Pico do Itabirito, Minas Gerais" loading="lazy"><figcaption>Cidade-foco<b>Itabirito</b></figcaption></figure>
+  </div>
+
+  <div class="g-2">
+    <div class="card">
+      <div class="tag">Cidades-foco</div>
+      <h3>Ouro Preto e Itabirito</h3>
+      <p>São as duas cidades no centro desta conversa. Em Ouro Preto, o SAMU já é tocado pelo consórcio CIAS. Itabirito já é atendida pela central regional de Belo Horizonte, mas ainda não tem o serviço próprio habilitado — é a oportunidade clara de avançar.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Ouro Preto</span><span class="v">~78 mil hab</span></div>
+        <div class="row"><span class="k">Itabirito</span><span class="v">~56 mil hab</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Central de chamados (CRU)</div>
+      <h3>Fica em Belo Horizonte</h3>
+      <p>É para lá que vão as ligações 192 da região. A central é compartilhada pela capital e pelo CIAS — é quem recebe o chamado e decide qual ambulância vai atender. Ouro Preto e Itabirito já são atendidas por ela.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Onde fica</span><span class="v">Belo Horizonte</span></div>
+        <div class="row"><span class="k">Cidades na operação</span><span class="v">22 (sem a capital)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:18px"><span class="arrow">↳</span><div><strong>As 22 cidades da operação regional</strong> (sem a capital; as duas cidades-foco em destaque): Belo Vale · Caeté · Confins · <strong>Itabirito</strong> · Jaboticatubas · Lagoa Santa · Mariana · Matozinhos · Moeda · Nova Lima · Nova União · <strong>Ouro Preto</strong> · Pedro Leopoldo · Raposos · Ribeirão das Neves · Rio Acima · Sabará · Santa Luzia · Santana do Riacho · São José da Lapa · Taquaraçu de Minas · Vespasiano.<br/><br/>A capital, <strong>Belo Horizonte</strong>, ajuda a tocar a central, mas tem SAMU próprio e fica fora desta operação. O consórcio CIAS, por sua vez, reúne <strong>84 cidades</strong> da região Central de Minas (sede em Belo Horizonte) — esse é o universo institucional mais amplo.</div></div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>Uma operação madura, pronta para ganhar escala.</h2>
+      <p class="lede">O CIAS é um consórcio público que já opera o SAMU diretamente em parte da região e participa da regulação regional do Macro Centro. A proposta é uma só: assumir e qualificar a operação regional inteira — as 22 cidades atendidas pela central (~1,5 milhão de habitantes) — com tecnologia e equipe própria, começando por onde o consórcio já opera e implantando o restante por fases.</p>
+    </div>
+    <div class="right">Valor de referência<br/><span class="acc">R$ 6–8 mi / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>Consórcio em operação direta</h3>
+      <div class="subtitle">CIAS · sede em Belo Horizonte</div>
+      <p>O Consórcio Intermunicipal Aliança para a Saúde reúne 84 cidades da região Central de Minas e já opera o SAMU de um núcleo (Ouro Preto, Mariana, Caeté e Sabará), além de tocar, junto com a capital, a central regional de chamados do Macro Centro.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Cidades no consórcio</span><span class="v">84</span></div>
+        <div class="row"><span class="k">Sede administrativa</span><span class="v">Belo Horizonte</span></div>
+        <div class="row"><span class="k">SAMU já tocado pelo CIAS</span><span class="v">4 cidades</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Momento</div>
+      <h3>Frota em forte expansão</h3>
+      <div class="subtitle">~93 ambulâncias e até 35 bases</div>
+      <p>À frota existente somam-se ambulâncias novas anunciadas em dez/2023, levando o consórcio a cerca de 93 unidades e até 35 bases descentralizadas — base operacional ampla para qualificar a resposta.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Frota existente</span><span class="v">41</span></div>
+        <div class="row"><span class="k">Novas (dez/2023)</span><span class="v">+52</span></div>
+        <div class="row"><span class="k">Bases descentralizadas</span><span class="v">até 35</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>Qualificar com tecnologia</h3>
+      <div class="subtitle">Padrão Samais · CoPilot OS</div>
+      <p>Operar e qualificar o serviço com equipe própria CLT, frota gerida e a central de regulação assistida por IA — despacho otimizado, rastreabilidade e indicadores auditáveis, na operação regional inteira.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Escopo</span><span class="v">operação regional inteira</span></div>
+        <div class="row"><span class="k">Valor de referência</span><span class="v">~R$ 6–8 mi/mês</span></div>
+        <div class="row"><span class="k">Tecnologia</span><span class="v">regulação por IA</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Documento preliminar</strong> Os valores aqui são faixas de referência por modelagem, não preço. Servem para enquadrar a ordem de grandeza e orientar a diligência — cada número será calibrado ao dado real do consórcio (frota, atendimentos, CCT-MG e população dos membros).</div></div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="../assets/fotos/cias-band-ouropreto.jpg" alt="Ouro Preto, Minas Gerais — centro histórico" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Ouro Preto · Minas Gerais</div>
+    <div class="t">Sede da microrregião e núcleo da operação própria — ruas estreitas que pedem resposta ágil.</div>
+  </div></div>
+</div>
+
+<!-- 02 TERRITÓRIO -->
+<section class="wrap" id="territorio">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Território e contexto</span>
+      <h2>Do núcleo histórico à escala regional.</h2>
+      <p class="lede">O CIAS opera diretamente o SAMU de um núcleo da microrregião de Ouro Preto e participa da regulação do SAMU Macro Centro. Entender o que está dentro e fora desta operação é o primeiro passo para dimensionar com honestidade.</p>
+    </div>
+    <div class="right">Sede · Belo Horizonte<br/><span class="acc">84 cidades no consórcio</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Camada</th><th>Composição</th><th>Leitura estratégica</th></tr></thead>
+    <tbody>
+      <tr><td>Consórcio CIAS</td><td>84 cidades consorciadas · sede em Belo Horizonte</td><td>Governança consorciada já constituída — base institucional pronta</td></tr>
+      <tr><td>Núcleo já tocado pelo CIAS</td><td>Ouro Preto (sede), Mariana, Caeté e Sabará · ~315 mil hab</td><td>Operação direta já madura — ponto de partida natural</td></tr>
+      <tr><td>Central de chamados (CRU)</td><td>Em Belo Horizonte · tocada por BH + CIAS · 22 cidades sem a capital</td><td>É quem já atende Ouro Preto e Itabirito hoje</td></tr>
+      <tr><td>População operável (ex-capital)</td><td>~1,5 milhão de habitantes</td><td>Potencial de cobertura regional sem a capital</td></tr>
+      <tr><td>Belo Horizonte</td><td>SAMU municipal próprio</td><td><strong>Fora desta operação</strong> — capital não entra no escopo</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Atenção · a capital fica fora</strong> Belo Horizonte mantém SAMU municipal próprio e <strong>não integra</strong> esta operação, embora o consórcio tenha sede administrativa na cidade. A população operável regional, descontada a capital, chega a cerca de 1,5 milhão de habitantes — esse é o universo desta operação.</div></div>
+</section>
+
+<!-- 03 DIAGNÓSTICO -->
+<section class="wrap" id="diagnostico">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Diagnóstico da operação</span>
+      <h2>Operação direta consolidada, em expansão.</h2>
+      <p class="lede">Diferente de um SAMU subdimensionado, o CIAS opera com frota robusta e bases descentralizadas. A oportunidade aqui é de qualificação: tecnologia de regulação, rastreabilidade, indicadores e ganho de eficiência conforme a operação cresce em escala.</p>
+    </div>
+    <div class="right">Operação direta<br/><span class="acc">consórcio público</span></div>
+  </div>
+
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Hoje · Frota</div>
+      <h3>Frota robusta em expansão</h3>
+      <p>O consórcio reúne cerca de 93 ambulâncias — 41 existentes mais 52 novas anunciadas em dez/2023 — e prevê até 35 bases descentralizadas. É uma base operacional ampla, raramente vista em SAMU consorciado.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Frota total</span><span class="v">~93</span></div>
+        <div class="row"><span class="k">Novas unidades</span><span class="v">52</span></div>
+        <div class="row"><span class="k">Bases</span><span class="v">até 35</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Regulação</div>
+      <h3>Operação madura</h3>
+      <p>A operação direta do núcleo está consolidada e a regulação regional do Macro Centro está em curso. O salto está em assistir essa regulação com tecnologia — triagem, despacho otimizado e rastreabilidade em tempo real.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Operação própria</span><span class="v">consolidada</span></div>
+        <div class="row"><span class="k">Regulação regional</span><span class="v">em curso</span></div>
+        <div class="row"><span class="k">Tecnologia</span><span class="v">a qualificar</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Geografia</div>
+      <h3>Terreno diverso</h3>
+      <p>Centro histórico de Ouro Preto e Mariana com ruas estreitas e relevo acidentado, somado ao eixo rodoviário da BR-356. Esse perfil aponta papel relevante da motolância para reduzir o tempo-resposta.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Centro histórico</span><span class="v">ruas estreitas</span></div>
+        <div class="row"><span class="k">Eixo rodoviário</span><span class="v">BR-356</span></div>
+        <div class="row"><span class="k">Resposta</span><span class="v">motolância</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Leitura</strong> O ponto de partida é favorável: frota, bases e governança já existem. O valor da Samais é converter essa estrutura em resultado mensurável — regulação assistida, indicadores auditáveis e eficiência de escala — sem reconstruir o que já funciona.</div></div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="../assets/fotos/cias-band-mariana.jpg" alt="Mariana, Minas Gerais — centro histórico" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">Mariana · Minas Gerais</div>
+    <div class="t">Qualificar a operação direta com regulação por IA, rastreabilidade e indicadores auditáveis.</div>
+  </div></div>
+</div>
+
+<!-- 04 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Proposta operacional</span>
+      <h2>Operar e qualificar a operação regional inteira.</h2>
+      <p class="lede">A proposta é uma só: operar e qualificar todo o SAMU regional com o padrão Samais — equipe própria CLT, frota gerida e central CoPilot OS. A implantação é feita por fases — começa pelas cidades que o consórcio já opera e avança para as demais — mas o escopo contratado é a região inteira.</p>
+    </div>
+    <div class="right">Escopo<br/><span class="acc">operação regional inteira</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo proposto</span>
+    <h4>Operação e qualificação do SAMU Regional Macro Centro — padrão Samais</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Pessoal</span><span class="v">equipe própria CLT · piso CCT-MG</span></div>
+      <div class="row"><span class="k">Frota</span><span class="v">gestão, manutenção e reativação da frota do consórcio</span></div>
+      <div class="row"><span class="k">Central</span><span class="v">CoPilot OS · regulação assistida por IA</span></div>
+      <div class="row"><span class="k">Despacho</span><span class="v">otimizado · motolância no terreno histórico</span></div>
+      <div class="row"><span class="k">Rastreabilidade</span><span class="v">tempo real · indicadores auditáveis</span></div>
+      <div class="row"><span class="k">Cobertura</span><span class="v">24/7 real · sem turnos descobertos</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Bloco 01 · Pessoas</span>
+      <h3>Equipe própria CLT</h3>
+      <p>Médicos reguladores, enfermeiros, técnicos e condutores contratados no piso da CCT-MG, treinados e fixados, com cobertura 24/7 honesta — sem escala descoberta na madrugada.</p>
+      <div class="kv"><div class="r"><span class="k">Regime</span><span class="v">CLT · piso CCT-MG</span></div><div class="r"><span class="k">Cobertura</span><span class="v">24/7 real</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 02 · Operação</span>
+      <h3>Frota e bases</h3>
+      <p>Gestão, manutenção e reativação da frota do consórcio; bases descentralizadas para reduzir o tempo-resposta; motolância para o terreno histórico de ruas estreitas.</p>
+      <div class="kv"><div class="r"><span class="k">Frota</span><span class="v">gestão Samais</span></div><div class="r"><span class="k">Bases</span><span class="v">descentralizadas</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 03 · Inteligência</span>
+      <h3>CoPilot OS</h3>
+      <p>Central de regulação assistida por IA: triagem, despacho otimizado, prontuário e indicadores em tempo real — transparência total para a governança do consórcio.</p>
+      <div class="kv"><div class="r"><span class="k">Regulação</span><span class="v">IA assistida</span></div><div class="r"><span class="k">Gestão</span><span class="v">painel em tempo real</span></div></div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Escopo contratado</th><th class="num">Operação regional inteira</th></tr></thead>
+    <tbody>
+      <tr><td>Abrangência</td><td class="num">SAMU Regional Macro Centro · sem a capital</td></tr>
+      <tr><td>Municípios atendidos</td><td class="num">22 cidades</td></tr>
+      <tr><td>População coberta</td><td class="num">~1,5 milhão hab</td></tr>
+      <tr><td>Implantação</td><td class="num">por fases · começa pelo que já é operado</td></tr>
+      <tr class="sub"><td>Valor de referência mensal</td><td class="num">~R$ 6–8 mi</td></tr>
+      <tr class="tot"><td>Valor de referência anual</td><td class="num">~R$ 72–96 mi</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Um único contrato, implantado por fases</strong> O escopo é a operação regional inteira. Para não interromper o serviço, a entrada começa pelas cidades que o consórcio já opera e avança para as demais em cronograma — mas é uma só contratação. Os valores são preliminares e serão calibrados ao dado real (população, frota e atendimentos) em diligência.</div></div>
+</section>
+
+<!-- 05 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Viabilidade financeira</span>
+      <h2>Custeio tripartite e cofinanciamento federal.</h2>
+      <p class="lede">A urgência tem custeio compartilhado entre União, estado e municípios. O cofinanciamento federal da atenção às urgências reduz a contrapartida local — e a contratação se dá pela Lei 14.133/2021. Os valores são preliminares, a calibrar.</p>
+    </div>
+    <div class="right">Cofinanciamento<br/><span class="acc">federal · PNAU</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Estrutura ilustrativa de cofinanciamento</span><span class="s" style="color:#6b6358">federal · contrapartida local</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Cofinanciamento federal ilustrativo de 50%">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#8E7238" stroke-width="12"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="157.08" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle" style="fill:#8E7238">50%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">FEDERAL</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#8E7238"></i><b style="color:#2c281f">União</b> — cofinanciamento federal da urgência (PNAU)</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">Estado e municípios</b> — contrapartida do consórcio</div>
+          <em style="color:#8E7238">Custeio compartilhado — a União divide a conta.</em>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Indicador preliminar</th><th class="num">Operação regional inteira<br/><span style="font-weight:400;opacity:.7">~1,5 mi hab · 22 cidades</span></th></tr></thead>
+      <tbody>
+        <tr><td>População coberta</td><td class="num">~1,5 mi</td></tr>
+        <tr><td>Valor de referência mensal</td><td class="num">~R$ 6–8 mi</td></tr>
+        <tr class="sub"><td>Por morador (mês)</td><td class="num">~R$ 5–6</td></tr>
+        <tr class="tot"><td>Por morador, após a verba federal</td><td class="num">menor</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Base legal</strong> Custeio tripartite da urgência conforme a Portaria GM/MS 1.010/2012 e o cofinanciamento federal da Política Nacional de Atenção às Urgências (PNAU); contratação pela Lei 14.133/2021. A população consolidada dos membros é premissa a confirmar — todas as faixas serão calibradas em diligência.</div></div>
+</section>
+
+<!-- 06 MÉTODO -->
+<section class="wrap" id="metodo">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Método e rigor</span>
+      <h2>Faixas honestas, lastreadas em fonte.</h2>
+      <p class="lede">Este panorama nasce de uma metodologia própria de dimensionamento, calibrada com dados públicos e com experiência de operação real da Samais. Por ser preliminar, separa com clareza o que é fato verificável do que ainda é premissa.</p>
+    </div>
+    <div class="right">Conformidade<br/><span class="acc">Lei 14.133/2021</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Cobertura 24/7 correta</h4>
+      <p>Dimensionamento de pessoal pelo fator de cobertura real de uma escala ininterrupta — não pela metade do turno. É o que separa um SAMU que funciona às 3h da manhã de um que existe só no papel.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 17V9M12 17V6M16 17v-5M20 17v-9"/></svg></div>
+      <h4>Parâmetros nacionais</h4>
+      <p>Frota e demanda referenciadas na Política Nacional de Atenção às Urgências (PNAU). As faixas respondem a parâmetros nacionais e serão ajustadas ao histórico real de atendimentos do consórcio.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Operação comprovada</h4>
+      <p>A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal. Método validado em produção, não em teoria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold">
+  <blockquote>Das Minas históricas à escala regional, um socorro <em>de padrão único</em>.</blockquote>
+  <div class="s">Consórcio CIAS · SAMU Macro Centro</div>
+</section>
+
+<!-- 07 PRÓXIMOS PASSOS -->
+<section class="wrap" id="passos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Próximos passos</span>
+      <h2>Como avançamos.</h2>
+      <p class="lede">Um caminho técnico e curto, do levantamento de dados à proposta formal do contrato regional — com implantação por fases para não interromper o serviço, começando pelas cidades já operadas e avançando para as demais.</p>
+    </div>
+    <div class="right">Início estimado<br/><span class="acc">após diligência</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Diligência</div>
+      <h3>Levantamento de dados</h3>
+      <p>Frota, histórico de atendimentos, CCT-MG e população consolidada dos membros. É aqui que cada premissa preliminar vira fato verificado.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">dados reais</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Alinhamento</div>
+      <h3>Governança e regional</h3>
+      <p>Alinhamento do contrato regional com a governança do consórcio e a regional de saúde — e do cronograma de implantação por fases.</p>
+      <div class="kv"><div class="r"><span class="k">Com</span><span class="v">CIAS · regional</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Proposta</div>
+      <h3>Proposta por fases</h3>
+      <p>Entrega formalizada do contrato regional inteiro, com cronograma de implantação por fases e plano de transição, dimensionada ao dado verificado.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">contrato regional</span></div></div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Interlocução · portas de entrada</th><th>Quem</th><th>Contato</th></tr></thead>
+    <tbody>
+      <tr><td>CIAS · Presidência</td><td>Marcílio Bezerra da Cruz — prefeito de Taquaraçu de Minas <span class="tag">✓</span></td><td>Belo Horizonte/MG</td></tr>
+      <tr><td>CIAS · Secretaria Executiva</td><td>Diran Rodrigues de Souza Filho <span class="tag">✓</span></td><td>(31) 97302-1692</td></tr>
+      <tr><td>CIAS · Gerência de Urgência</td><td>Natalia Las Cazas Monteiro <span class="tag">✓</span></td><td>cias.mg.gov.br</td></tr>
+      <tr><td>SES-MG · SRS Belo Horizonte</td><td>Superintendente Débora Marques Tavares <span class="tag amber">⚠</span></td><td>(31) 3915-0471</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Diligência de contatos</strong> Reconfirmar nomes de cargos comissionados/secretários por telefone antes de abordagem formal.</div></div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: por ser um panorama preliminar, separamos o dado público verificável da estimativa de modelagem, a confirmar em diligência.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">Consórcio CIAS</div><div class="v">84 cidades consorciadas na região Central de Minas · sede em Belo Horizonte<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Operação própria</div><div class="v">SAMU tocado diretamente pelo CIAS em 4 cidades (Ouro Preto, Mariana, Caeté, Sabará)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Central de chamados</div><div class="v">em Belo Horizonte, compartilhada BH + CIAS — já atende Ouro Preto e Itabirito<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Frota</div><div class="v">~93 ambulâncias (41 existentes + 52 novas anunciadas em dez/2023)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Belo Horizonte</div><div class="v">capital tem SAMU municipal próprio — fora desta operação<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">População consolidada</div><div class="v">membros e regional ex-capital (~1,5 mi) — premissa a confirmar<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Faixas de referência</div><div class="v">valores por cenário por modelagem própria; a calibrar em diligência<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">CCT-MG e cofinanciamento</div><div class="v">piso da convenção e cofinanciamento federal (PNAU) a confirmar<span class="tag amber">a confirmar</span></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="fechamento">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('../assets/fotos/cias-cta-pampulha.jpg')"></div>
+    <span class="sec-num">Consórcio CIAS · SAMU Macro Centro</span>
+    <h2>Uma operação madura, pronta para ganhar padrão.</h2>
+    <p class="lede">Frota robusta, governança consorciada e operação direta já consolidada — a oportunidade é qualificar com tecnologia e escalar do núcleo histórico ao regional, com cada faixa calibrada ao dado real em diligência. Este é um panorama preliminar para subsidiar a decisão.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · CIAS Macro Centro/MG · panorama preliminar</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Belo Horizonte, Ouro Preto, Mariana e Itabirito/MG — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>

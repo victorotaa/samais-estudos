@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Ji-Paraná, RO — Proposta de SAMU Regional</title>
+<meta name="description" content="Proposta técnica e operacional da Samais para o SAMU 192 Regional de Ji-Paraná e da Região Central de Rondônia — gestão profissional, regulação por IA e operação regionalizada.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#sumario">Sumário</a>
+    <a href="#territorio">Território</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/d/d1/Ji-Parana_027.jpg')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">SAMU Regional · Região Central de Rondônia</div>
+      <h1>Ji-Paraná</h1>
+      <div class="hero-sub">Ji-Paraná tem o SAMU. Falta a operação de padrão nacional que a região merece.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Ji-Paraná é o coração da Região Central de Rondônia: sede da 1ª Gerência Regional de Saúde, polo hospitalar de uma rede que serve cerca de 290 mil habitantes em 17 municípios. O SAMU já existe — inaugurado em 2024 — mas opera abaixo do seu potencial de captação e despacho. A Samais propõe uma operação regional profissional: equipe própria, frota dimensionada à demanda real e a central de regulação inteligente CoPilot OS.</p>
+          <div class="src">Indicadores municipais e regionais — IBGE, 1ª GRS/SESAU-RO e Ministério da Saúde</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">~290 mil</div><div class="l">Habitantes<br/>rede regional</div></div>
+        <div class="it"><div class="n">17</div><div class="l">Municípios<br/>Região Central de RO</div></div>
+        <div class="it"><div class="n">R$ 3,02</div><div class="l">Por habitante/mês<br/>rede regional</div></div>
+        <div class="it"><div class="n">0,046</div><div class="l">Atend./hab./ano<br/>captação atual</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>A oportunidade de Ji-Paraná.</h2>
+      <p class="lede">Ji-Paraná reúne três condições ao mesmo tempo: papel de polo regional de saúde, um SAMU já implantado e a estrutura administrativa da 1ª Gerência Regional de Saúde. É a hora de transformar um serviço existente em uma operação regional de padrão nacional — com captação qualificada, despacho inteligente e custo único auditável.</p>
+    </div>
+    <div class="right">Valor de referência<br/><span class="acc">R$ 875 mil / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>Polo de saúde da Região Central</h3>
+      <div class="subtitle">Referência para ~290 mil habitantes</div>
+      <p>Ji-Paraná é a porta de entrada da urgência da Região Central de Rondônia: o Hospital Municipal Dr. Claudionor Couto Roriz atende a sede e mais 16 municípios. Um SAMU regional à altura é infraestrutura de Estado, não só do município.</p>
+      <div class="specs">
+        <div class="row"><span class="k">População Ji-Paraná</span><span class="v">124.333</span></div>
+        <div class="row"><span class="k">Rede regional</span><span class="v">~290.000</span></div>
+        <div class="row"><span class="k">Municípios</span><span class="v">17</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Momento</div>
+      <h3>Rede de urgência em expansão</h3>
+      <div class="subtitle">Estrutura regional ancorável</div>
+      <p>O Hospital Regional de 150 leitos está em construção e a UPA foi habilitada pelo Ministério da Saúde em junho de 2025 — base de ancoragem natural para a operação regional de urgência. O momento de estruturar o SAMU regional é agora.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Hospital Regional</span><span class="v">150 leitos</span></div>
+        <div class="row"><span class="k">UPA habilitada</span><span class="v">jun/2025</span></div>
+        <div class="row"><span class="k">Sede da</span><span class="v">1ª GRS</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>Gestão profissional + IA</h3>
+      <div class="subtitle">Operação regional em hub Ji-Paraná</div>
+      <p>Central de Regulação 24/7 regulando os 17 municípios, frota dimensionada, equipe própria CLT e a central de regulação CoPilot OS — para ~290 mil pessoas, por cerca de R$ 3 por habitante/mês.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Valor de referência</span><span class="v">R$ 875 mil/mês</span></div>
+        <div class="row"><span class="k">Cofinanciamento</span><span class="v">federal + estadual</span></div>
+        <div class="row"><span class="k">Por habitante/mês</span><span class="v">R$ 3,02</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Ji-Parana04.jpg" alt="Ji-Paraná, Rondônia" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Ji-Paraná · Rondônia</div>
+    <div class="t">O coração da Região Central — onde a urgência precisa alcançar 17 municípios com o mesmo padrão.</div>
+  </div></div>
+</div>
+
+<!-- 02 TERRITÓRIO -->
+<section class="wrap" id="territorio">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Território e contexto</span>
+      <h2>O perfil de um polo regional.</h2>
+      <p class="lede">Segunda cidade de Rondônia, sede de gerência regional de saúde e referência hospitalar para uma rede dispersa em grandes distâncias, Ji-Paraná impõe um requisito claro: urgência que funcione no município e em toda a região.</p>
+    </div>
+    <div class="right">Área · 6.897 km²<br/><span class="acc">~18 hab/km²</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Indicador</th><th class="num">Ji-Paraná</th><th>Leitura estratégica</th></tr></thead>
+    <tbody>
+      <tr><td>População municipal (Censo 2022)</td><td class="num">124.333</td><td>Porte médio — base da demanda de urgência local</td></tr>
+      <tr><td>Rede regional</td><td class="num">~290.000</td><td>Base natural para uma central de regulação regional</td></tr>
+      <tr><td>Municípios na rede</td><td class="num">17</td><td>Comando único de despacho para toda a Região Central</td></tr>
+      <tr><td>Área territorial</td><td class="num">6.897 km²</td><td>Grandes distâncias — tempo-resposta é o desafio operacional</td></tr>
+      <tr><td>Densidade demográfica</td><td class="num">~18 hab/km²</td><td>Demanda dispersa exige regulação inteligente de frota</td></tr>
+      <tr><td>IDH-M</td><td class="num">0,714</td><td>Alto, com desigualdades intermunicipais na rede</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>1ª Gerência Regional de Saúde</strong> Ji-Paraná é sede da 1ª GRS da SESAU-RO. O Hospital Municipal Dr. Claudionor Couto Roriz atende a sede e mais 16 municípios; o Hospital Regional de 150 leitos está em construção e a UPA foi habilitada pelo Ministério da Saúde em junho de 2025 — base de ancoragem natural para a operação regional de urgência.</div></div>
+</section>
+
+<!-- 03 DIAGNÓSTICO -->
+<section class="wrap" id="diagnostico">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Rede e diagnóstico do SAMU</span>
+      <h2>Um serviço implantado, uma captação subdimensionada.</h2>
+      <p class="lede">Ji-Paraná inaugurou o SAMU em junho de 2024 e já tem equipe e frota em operação. Mas a taxa de atendimento por habitante está muito abaixo do esperado — não por falta de necessidade, e sim por captação, triagem qualificada e tecnologia de despacho.</p>
+    </div>
+    <div class="right">SAMU inaugurado<br/><span class="acc">jun/2024</span></div>
+  </div>
+
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Hoje · Volume</div>
+      <h3>980 ligações/mês</h3>
+      <p>A central recebe cerca de 980 ligações por mês e converte 536 em atendimentos efetivos — aproximadamente 45 por dia. A taxa de conversão de 54,7% mostra que parte relevante da demanda se perde antes do despacho.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Ligações/mês</span><span class="v">980</span></div>
+        <div class="row"><span class="k">Atendimentos/mês</span><span class="v">536</span></div>
+        <div class="row"><span class="k">Conversão</span><span class="v">54,7%</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Captação</div>
+      <h3>0,046 atend./hab./ano</h3>
+      <p>A taxa atual é de 0,046 atendimento por habitante/ano, contra um benchmark esperado de 0,12 a 0,18. Não é falta de necessidade — é falta de captação, triagem qualificada e tecnologia de despacho.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Atual</span><span class="v">0,046</span></div>
+        <div class="row"><span class="k">Esperado</span><span class="v">0,12–0,18</span></div>
+        <div class="row"><span class="k">Diagnóstico</span><span class="v">captação</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Estrutura</div>
+      <h3>44 colaboradores CLT</h3>
+      <p>A operação atual conta com 44 colaboradores em regime CLT, escala 12×36, e duas USA (UTI móvel) mais uma reserva técnica. A base existe — falta o modelo regional que a coloque em padrão nacional.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Equipe</span><span class="v">44 CLT · 12×36</span></div>
+        <div class="row"><span class="k">USA</span><span class="v">2 + 1 reserva</span></div>
+        <div class="row"><span class="k">Regulação</span><span class="v">a qualificar</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-2" style="margin-top:28px">
+    <div class="donutviz">
+      <div class="sv-head"><span class="t">Captação atual vs. potencial</span><span class="s">atendimentos sobre o benchmark</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Captação atual de cerca de 38% do potencial">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#2a2a2a" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#B8954E" stroke-width="12" stroke-linecap="round"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="194.78" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle">~38%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle">CAPTADO</text>
+        </svg>
+        <div class="leg">
+          <div class="l"><i class="g"></i><b>~38% do potencial</b> de atendimentos é captado hoje</div>
+          <div class="l"><i class="m"></i><b>~62%</b> da demanda esperada ainda não chega à central</div>
+          <em>Fechar essa lacuna é o ganho assistencial central da proposta.</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="splitviz">
+      <div class="sv-head"><span class="t">Onde a demanda se perde</span><span class="s">leitura da operação atual</span></div>
+      <div class="bar">
+        <div class="seg gld" style="flex-basis:55%">Atendido 55%</div>
+        <div class="seg mul" style="flex-basis:30%;background:#3a3a3a;color:#e7e1d6">Não convertido 30%</div>
+        <div class="seg mul" style="flex-basis:15%;background:#1a1a1a">Não captado 15%</div>
+      </div>
+      <div class="legend">
+        <span><i class="g"></i>Convertido em atendimento efetivo</span>
+        <span><i class="m"></i>Ligação sem despacho — triagem a qualificar</span>
+        <span><i class="m"></i>Demanda que não chega à central</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Ji-Paran%C3%A1_-_Rond%C3%B4nia%2C_Brasil_-_RO-472_-_Linha_94_-_Projeto_Riachuelo_-_panoramio.jpg/1920px-Ji-Paran%C3%A1_-_Rond%C3%B4nia%2C_Brasil_-_RO-472_-_Linha_94_-_Projeto_Riachuelo_-_panoramio.jpg" alt="Estrada rural na região de Ji-Paraná, Rondônia" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">Proposta operacional</div>
+    <div class="t">Frota dimensionada, regulação inteligente e comando único para os 17 municípios.</div>
+  </div></div>
+</div>
+
+<!-- 04 CUSTO INVISÍVEL -->
+<section class="wrap" id="custo">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · O custo que não se vê</span>
+      <h2>Hoje o município já paga — só não enxerga o quanto.</h2>
+      <p class="lede">Parte relevante do custo do SAMU está diluída em outras rubricas do orçamento e não aparece como gasto do serviço. A gestão profissional consolida tudo em um contrato único, visível e auditável.</p>
+    </div>
+    <div class="right">Consolidação<br/><span class="acc">contrato único</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>O que não se vê hoje</th><th>Onde está diluído</th><th>Efeito na gestão</th></tr></thead>
+    <tbody>
+      <tr><td>Insumos e medicamentos</td><td>Almoxarifado central, sem requisição por centro de custo</td><td>Consumo do SAMU não é mensurável</td></tr>
+      <tr><td>Manutenção e combustível</td><td>Diluídos na frota geral do município</td><td>Custo real da operação fica invisível</td></tr>
+      <tr><td>Pessoal de apoio</td><td>Lotado em outros departamentos</td><td>Headcount efetivo subnotificado</td></tr>
+      <tr><td>Provisões trabalhistas</td><td>Não provisionadas — viram passivo nas rescisões</td><td>Risco financeiro acumulado e oculto</td></tr>
+      <tr><td>Absenteísmo e cobertura</td><td>Sem rubrica própria</td><td>Escala descoberta e custo não rastreado</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Tese</strong> Hoje o município já paga — só não enxerga o quanto. A gestão profissional consolida insumos, frota, pessoal, provisões e cobertura em um único contrato visível e auditável, com custo aberto linha a linha.</div></div>
+</section>
+
+<!-- 05 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Proposta operacional</span>
+      <h2>O escopo que a Região Central merece.</h2>
+      <p class="lede">Uma operação regional completa, ancorada em Ji-Paraná: Central de Regulação 24/7 regulando os 17 municípios, frota dimensionada à demanda real, equipe própria CLT, qualificação permanente e custo único auditável — em conformidade com os parâmetros nacionais de urgência.</p>
+    </div>
+    <div class="right">Cenário ofertado<br/><span class="acc">Regional · hub Ji-Paraná</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo ofertado</span>
+    <h4>Operação integral do SAMU 192 — Região Central de Rondônia</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Central</span><span class="v">CRU Regional 24/7 em Ji-Paraná · 17 municípios</span></div>
+      <div class="row"><span class="k">Frota</span><span class="v">2 USA + reserva · USB municipais integradas</span></div>
+      <div class="row"><span class="k">Pessoal</span><span class="v">44 CLT · escala 12×36</span></div>
+      <div class="row"><span class="k">Corpo clínico</span><span class="v">reguladores e intervencionistas credenciados 24/7</span></div>
+      <div class="row"><span class="k">Tecnologia</span><span class="v">CoPilot OS · regulação e despacho por IA</span></div>
+      <div class="row"><span class="k">Transparência</span><span class="v">custo único auditável aberto em 66 itens</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Bloco 01 · Pessoas</span>
+      <h3>Equipe própria CLT</h3>
+      <p>44 colaboradores em escala 12×36, com médicos reguladores e intervencionistas por credenciamento 24/7. Programa de qualificação permanente: BLS, ACLS, PHTLS e AMLS. CLT pleno, zero passivo trabalhista.</p>
+      <div class="kv"><div class="r"><span class="k">Regime</span><span class="v">CLT · piso CCT</span></div><div class="r"><span class="k">Cobertura</span><span class="v">24/7 real</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 02 · Operação</span>
+      <h3>Frota e insumos</h3>
+      <p>2 USA mais reserva e USB municipais integradas à rede regional; insumos 100% no contrato, geridos por central de compras regional. Manutenção e reativação da frota cedida pelo ente.</p>
+      <div class="kv"><div class="r"><span class="k">Insumos</span><span class="v">100% no contrato</span></div><div class="r"><span class="k">Frota</span><span class="v">USA + USB integradas</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 03 · Inteligência</span>
+      <h3>CoPilot OS</h3>
+      <p>Central de regulação assistida por IA: triagem, despacho otimizado e indicadores em tempo real disponíveis a gestores e ao TCE. Conformidade com a PNAU e a Portaria GM/MS 1.010/2012.</p>
+      <div class="kv"><div class="r"><span class="k">Regulação</span><span class="v">IA assistida</span></div><div class="r"><span class="k">Gestão</span><span class="v">indicadores em tempo real</span></div></div>
+    </div>
+  </div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Conformidade</strong> Operação alinhada à Política Nacional de Atenção às Urgências e à Portaria GM/MS 1.010/2012, com custo único auditável aberto em 66 itens, indicadores em tempo real para gestores e Tribunal de Contas, e equipe CLT plena — zero passivo trabalhista para o ente.</div></div>
+</section>
+
+<!-- 06 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Viabilidade financeira</span>
+      <h2>Sustentável e cofinanciada por três entes.</h2>
+      <p class="lede">A urgência regionalizada da Região Central conta com cofinanciamento federal e estadual. Após o cofinanciamento estruturado, o desembolso efetivo de cada município cai de forma relevante — com contrapartida previsível, rateada por população entre os 17.</p>
+    </div>
+    <div class="right">Per capita<br/><span class="acc">R$ 3,02 / hab / mês</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Como se sustenta o valor de referência</span><span class="s" style="color:#6b6358">rede regional · mensal</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Cofinanciamento federal e estadual reduzem o desembolso municipal">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#8E7238" stroke-width="12"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="157.08" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle" style="fill:#8E7238">3 entes</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">PARTILHAM</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#8E7238"></i><b style="color:#2c281f">União</b> — Fundo Nacional de Saúde custeia por unidade habilitada</div>
+          <div class="l" style="color:#3a352d"><i style="background:#b89a5e"></i><b style="color:#2c281f">Estado · SESAU-RO</b> — cofinancia a rede regionalizada</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">Municípios</b> — contrapartida rateada por população entre os 17</div>
+          <em style="color:#8E7238">Após o cofinanciamento, o desembolso de cada município cai de forma relevante.</em>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Linha de viabilidade</th><th class="num">Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Valor de referência mensal (rede)</td><td class="num">R$ 875 mil</td></tr>
+        <tr><td>Valor de referência anual</td><td class="num">R$ 10,5 mi</td></tr>
+        <tr><td>Projeção 60 meses (5 anos)</td><td class="num">R$ 52,5 mi</td></tr>
+        <tr class="sub"><td>Per capita (rede ~290 mil)</td><td class="num">R$ 3,02 / mês</td></tr>
+        <tr class="tot"><td>Cofinanciamento</td><td class="num">federal + estadual</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Projeção plurianual · rede regional</th><th class="num">Mensal</th><th class="num">Anual</th><th class="num">5 anos</th></tr></thead>
+    <tbody>
+      <tr><td>Valor de referência total</td><td class="num">R$ 875 mil</td><td class="num">R$ 10,5 mi</td><td class="num">R$ 52,5 mi</td></tr>
+      <tr><td>Per capita (rede ~290 mil)</td><td class="num">R$ 3,02</td><td class="num">R$ 36,2</td><td class="num">R$ 181</td></tr>
+      <tr class="tot"><td>Desembolso municipal após cofinanciamento</td><td class="num" colspan="3" style="text-align:right">cai de forma relevante — detalhamento em reunião técnica</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Financiamento</strong> A União (Fundo Nacional de Saúde) custeia por unidade habilitada, reduzindo o desembolso líquido; o Estado (SESAU-RO) cofinancia a rede de urgência regionalizada da Região Central; os municípios entram com contrapartida previsível, rateada por população entre os 17. O detalhamento do cofinanciamento é apresentado em reunião técnica.</div></div>
+</section>
+
+<!-- 07 TECNOLOGIA -->
+<section class="wrap" id="tecnologia">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Tecnologia</span>
+      <h2>Regulação assistida por inteligência artificial.</h2>
+      <p class="lede">O CoPilot OS é a camada de inteligência da operação Samais: despacho otimizado por gravidade, distância e disponibilidade, rastreabilidade total georreferenciada e dataset proprietário. Incluído em qualquer contrato Samais, sem custo adicional.</p>
+    </div>
+    <div class="right">Plataforma<br/><span class="acc">CoPilot OS</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <h4>Despacho inteligente</h4>
+      <p>O CoPilot OS recomenda a unidade ideal por gravidade da ocorrência, distância e disponibilidade da frota — reduzindo o tempo-resposta numa rede de grandes distâncias como a Região Central.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <h4>Rastreabilidade total</h4>
+      <p>Cada acionamento é 100% georreferenciado e auditável, do chamado à finalização. Indicadores em tempo real ficam disponíveis a gestores e ao Tribunal de Contas, com total transparência.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 17V9M12 17V6M16 17v-5M20 17v-9"/></svg></div>
+      <h4>Dataset proprietário</h4>
+      <p>A operação alimenta um dataset proprietário que aprende com a demanda regional e qualifica o despacho ao longo do tempo. Incluído em qualquer contrato Samais.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 DIFERENCIAIS -->
+<section class="wrap" id="diferenciais">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Diferenciais</span>
+      <h2>Por que a Samais.</h2>
+      <p class="lede">Operação real, escala regional, transparência total e método comprovado em produção. A diferença entre um SAMU que existe no papel e um que funciona às 3h da manhã em qualquer um dos 17 municípios.</p>
+    </div>
+    <div class="right">Conformidade<br/><span class="acc">Lei 14.133/2021</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Operação real e escala regional</h4>
+      <p>Equipe, frota e regulação próprias, com comando único de 2 a 17 municípios. Não é consultoria: é operação que funciona em produção, todos os dias, em toda a região.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Conformidade e transparência</h4>
+      <p>Custo aberto linha a linha, em 66 itens, conformidade com a PNAU e contratação pela Lei 14.133/2021. Indicadores em tempo real para gestores e Tribunal de Contas.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Operação comprovada</h4>
+      <p>A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal. Transição sem ruptura: migração 24/7, zero interrupção do serviço.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 09 PRÓXIMOS PASSOS -->
+<section class="wrap" id="passos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">09 · Próximos passos</span>
+      <h2>Como começamos.</h2>
+      <p class="lede">Um caminho curto e técnico, do primeiro encontro à proposta formal — com diligência de campo para calibrar cada número ao dado real de Ji-Paraná e da rede regional.</p>
+    </div>
+    <div class="right">Início estimado<br/><span class="acc">após diligência</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Semana 1–2</div>
+      <h3>Reunião técnica</h3>
+      <p>Encontro com a Prefeitura, a Semusa, a 1ª GRS/SESAU-RO e a Coordenação do SAMU. Apresentação do CoPilot OS e alinhamento de escopo regional.</p>
+      <div class="kv"><div class="r"><span class="k">Com</span><span class="v">Prefeitura · Semusa · 1ª GRS · SAMU</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Semana 2–4</div>
+      <h3>Consolidação dos dados</h3>
+      <p>Levantamento do custo real, frota, escalas, demanda e conversão, além das habilitações. É aqui que cada premissa vira fato verificado.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">custo real · demanda</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Semana 4–6</div>
+      <h3>Pactuação e proposta</h3>
+      <p>Pactuação regional dos 17 municípios e proposta formal, com cronograma de implantação e plano de transição dimensionados ao dado verificado.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">pactuação + proposta</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold" id="fechamento">
+  <blockquote>A região já paga pela urgência. Falta <em>enxergá-la e operá-la</em> com padrão nacional.</blockquote>
+  <div class="s">Ji-Paraná · Região Central de Rondônia</div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">10 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: separamos o dado público verificável da estimativa de modelagem, a confirmar em diligência.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">População / rede</div><div class="v">Ji-Paraná 124.333 (Censo 2022) · rede regional ~290 mil em 17 municípios (IBGE 2025)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Estrutura de saúde</div><div class="v">Sede da 1ª GRS/SESAU-RO · Hospital Regional 150 leitos em obras · UPA habilitada jun/2025 (CNES/DATASUS)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Marco legal</div><div class="v">Portaria GM/MS 1.010/2012 · Lei 14.133/2021<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Conversão da central</div><div class="v">54,7% (980 ligações → 536 atendimentos/mês na CRU atual)<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Benchmark de captação</div><div class="v">0,12–0,18 atend./hab./ano vs. 0,046 atual<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Componentes de custo</div><div class="v">Escopo e valor de referência por modelagem própria; a calibrar em diligência<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Cofinanciamento</div><div class="v">Federal (FNS) e estadual (SESAU-RO); detalhes em reunião técnica<span class="tag amber">a confirmar</span></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="cta">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ji-Paran%C3%A1_-_Rond%C3%B4nia%2C_Brasil_-_RO-480_-_Linha_128_Tress%C3%A3o_-_Projeto_Riachuelo_-_panoramio.jpg/1920px-Ji-Paran%C3%A1_-_Rond%C3%B4nia%2C_Brasil_-_RO-480_-_Linha_128_Tress%C3%A3o_-_Projeto_Riachuelo_-_panoramio.jpg')"></div>
+    <span class="sec-num">Ji-Paraná · Região Central de Rondônia</span>
+    <h2>Ji-Paraná pode ter o SAMU referência da Região Central.</h2>
+    <p class="lede">Captação qualificada, despacho inteligente, custo único auditável e cofinanciamento de três entes — calibrados ao dado real do município e da rede em diligência de campo.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Ji-Paraná/RO · documento de proposta</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Ji-Paraná — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Congonhas + Ouro Branco, MG — Panorama Preliminar de SAMU 192</title>
+<meta name="description" content="Panorama preliminar da Samais para uma operação de urgência dedicada em Congonhas e Ouro Branco, no Alto Paraopeba — estudo de viabilidade a calibrar em diligência.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#sumario">Sumário</a>
+    <a href="#territorio">Território</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#metodo">Método</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Serra_de_Ouro_Branco_%2C_Ouro_Branco%2C_MG.jpg/1920px-Serra_de_Ouro_Branco_%2C_Ouro_Branco%2C_MG.jpg')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Alto Paraopeba · SAMU 192 Regional · Panorama Preliminar</div>
+      <h1>Congonhas<br/>&amp; Ouro Branco</h1>
+      <div class="hero-sub">Duas cidades de alto PIB minero-siderúrgico no Alto Paraopeba, com potencial para uma operação de urgência dedicada e qualificada.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Congonhas e Ouro Branco somam cerca de 96 mil habitantes, alta capacidade fiscal e um hospital regional de referência. Hoje a urgência é atendida por uma rede regional consorciada que opera sob forte pressão operacional, com frota limitada para uma área extensa. A Samais apresenta, em caráter preliminar, o desenho de uma operação dedicada — equipe própria, frota dimensionada e a central de regulação inteligente CoPilot OS — para qualificar o tempo-resposta local.</p>
+          <div class="src">Indicadores municipais — IBGE; rede de saúde — microrregião / macrorregião Centro-Sul</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">96 mil</div><div class="l">Habitantes<br/>bloco (estimado)</div></div>
+        <div class="it"><div class="n">2</div><div class="l">Municípios<br/>microrregião de Congonhas</div></div>
+        <div class="it"><div class="n">~R$ 4,7</div><div class="l">Por habitante/mês<br/>pós-federal (estimado)</div></div>
+        <div class="it"><div class="n">UTI móvel</div><div class="l">Já operante<br/>base avançada · Congonhas</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>A oportunidade do Alto Paraopeba.</h2>
+      <p class="lede">Congonhas e Ouro Branco reúnem três condições favoráveis: alto PIB per capita e boa capacidade fiscal, um hospital regional de referência e uma base avançada com UTI móvel já operante. É o terreno certo para uma operação de urgência dedicada e qualificada — desenhada aqui em caráter preliminar, a calibrar em diligência.</p>
+    </div>
+    <div class="right">Valor de referência · ~96 mil hab<br/><span class="acc">~R$ 0,9 mi / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>Eixo minero-siderúrgico</h3>
+      <div class="subtitle">~96 mil habitantes · alta capacidade fiscal</div>
+      <p>Congonhas (mineração e turismo religioso) e Ouro Branco (siderurgia) formam um bloco de alto PIB no Alto Paraopeba, a ~21–23 km de Conselheiro Lafaiete, polo regional de saúde.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Congonhas</span><span class="v">55.272</span></div>
+        <div class="row"><span class="k">Ouro Branco</span><span class="v">40.638</span></div>
+        <div class="row"><span class="k">Bloco</span><span class="v">~95,9 mil</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Momento</div>
+      <h3>Rede regional sob pressão</h3>
+      <div class="subtitle">Frota limitada para área extensa</div>
+      <p>A urgência é hoje regional e consorciada, com regulação em Conselheiro Lafaiete. A rede opera sob forte pressão operacional — o que pesa no tempo-resposta local e abre espaço para uma operação dedicada.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Regulação</span><span class="v">C. Lafaiete</span></div>
+        <div class="row"><span class="k">UTI móvel</span><span class="v">desde 2019</span></div>
+        <div class="row"><span class="k">Hospital ref.</span><span class="v">FOB · ONA-2</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>Operação dedicada + IA</h3>
+      <div class="subtitle">Dimensionamento PNAU</div>
+      <p>2 USB, 1 USA, 1 motolância e regulação integrada e qualificada, com equipe própria CLT e a central inteligente CoPilot OS — partindo da UTI móvel já operante em Congonhas.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Valor de referência</span><span class="v">~R$ 0,9 mi/mês</span></div>
+        <div class="row"><span class="k">Cofinanc. federal</span><span class="v">50% (est.)</span></div>
+        <div class="row"><span class="k">Por hab./mês</span><span class="v">~R$ 4,7</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Estudo preliminar</strong> Todos os números deste documento são projeção de viabilidade, a calibrar em diligência de campo. Nenhuma cifra representa contrato fechado, proposta formal ou valor contratado. Os valores monetários são apresentados em faixa de referência.</div></div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Vista_Panor%C3%A2mica_da_Cidade_de_Congonhas_-_MG.jpg/1920px-Vista_Panor%C3%A2mica_da_Cidade_de_Congonhas_-_MG.jpg" alt="Vista panorâmica da cidade de Congonhas, MG" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">Congonhas · Minas Gerais</div>
+    <div class="t">Da cidade histórica às minas — um polo que recebe o mundo e precisa de urgência à altura.</div>
+  </div></div>
+</div>
+
+<!-- 02 TERRITÓRIO -->
+<section class="wrap" id="territorio">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Território e contexto</span>
+      <h2>Duas cidades, um eixo de alto PIB.</h2>
+      <p class="lede">Congonhas e Ouro Branco partilham a microrregião de saúde de Congonhas, na Macrorregião Centro-Sul e na CIR de Congonhas. São economias robustas — mineração, siderurgia e turismo religioso — com capacidade fiscal acima da média mineira.</p>
+    </div>
+    <div class="right">Eixo Alto Paraopeba<br/><span class="acc">~21–23 km do polo</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Indicador</th><th class="num">Congonhas</th><th class="num">Ouro Branco</th><th>Leitura estratégica</th></tr></thead>
+    <tbody>
+      <tr><td>População (IBGE)</td><td class="num">55.272</td><td class="num">40.638</td><td>Bloco de ~96 mil — escala para operação dedicada</td></tr>
+      <tr><td>Área territorial</td><td class="num">304,07 km²</td><td class="num">258,73 km²</td><td>Cobertura de área extensa exige bases bem posicionadas</td></tr>
+      <tr><td>PIB per capita</td><td class="num">R$ 145.468</td><td class="num">R$ 111.320</td><td>Alta capacidade fiscal — financiamento sustentável</td></tr>
+      <tr><td>Base econômica</td><td class="num">Mineração / turismo</td><td class="num">Siderurgia</td><td>CSN e Vale · Gerdau Açominas · serviços</td></tr>
+      <tr><td>Rede de saúde</td><td class="num" colspan="2">Microrregião de Congonhas · Macro Centro-Sul · CIR Congonhas</td><td>Polo de referência em Conselheiro Lafaiete</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Turismo religioso</strong> Congonhas abriga o Santuário Bom Jesus de Matosinhos e os Doze Profetas de Aleijadinho, conjunto Patrimônio Mundial da UNESCO. As romarias geram picos sazonais de população flutuante — um fator de demanda que uma operação dedicada absorve melhor que uma rede compartilhada e sobrecarregada.</div></div>
+</section>
+
+<!-- 03 DIAGNÓSTICO -->
+<section class="wrap" id="diagnostico">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Rede e diagnóstico do SAMU</span>
+      <h2>Uma rede regional sob forte pressão.</h2>
+      <p class="lede">A região conta com hospital de referência de bom padrão e uma base avançada com UTI móvel em Congonhas. Mas a urgência é operada de forma regional e consorciada, com frota limitada para uma área extensa — um diagnóstico construtivo: há estrutura para qualificar, e espaço para fazê-lo.</p>
+    </div>
+    <div class="right">SAMU regional<br/><span class="acc">consórcio · C. Lafaiete</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>Elemento da rede</th><th>Situação</th><th>Papel na urgência</th></tr></thead>
+    <tbody>
+      <tr><td>Regulação médica</td><td>Regional · Conselheiro Lafaiete</td><td>Central consorciada para vários municípios</td></tr>
+      <tr><td>Base avançada Congonhas</td><td>UTI móvel · operante desde 2019</td><td>Suporte avançado local (custeio da ordem de R$ 168 mil/mês)</td></tr>
+      <tr><td>Hospital FOB (Fundação Ouro Branco)</td><td>UTI · hemodinâmica · ONA-2</td><td>Referência regional · unidades em Ouro Branco e C. Lafaiete</td></tr>
+      <tr><td>Frota regional</td><td>Limitada para área extensa</td><td>Pressão operacional sobre o tempo-resposta local</td></tr>
+      <tr><td>Cobertura Ouro Branco</td><td>A levantar</td><td>Frota e base física a confirmar em diligência</td></tr>
+    </tbody>
+  </table>
+
+  <div class="g-3" style="margin-top:28px">
+    <div class="card">
+      <div class="tag">Hoje · Estrutura</div>
+      <h3>UTI móvel já operante</h3>
+      <p>Congonhas mantém base avançada com UTI móvel desde 2019, com custeio da ordem de R$ 168 mil/mês. É um ativo valioso: a operação dedicada parte dessa estrutura, em vez de começar do zero.</p>
+      <div class="specs">
+        <div class="row"><span class="k">UTI móvel</span><span class="v">desde 2019</span></div>
+        <div class="row"><span class="k">Custeio atual</span><span class="v">~R$ 168 mil/mês</span></div>
+        <div class="row"><span class="k">Base</span><span class="v">avançada</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Rede regional</div>
+      <h3>Frota limitada para área extensa</h3>
+      <p>A rede consorciada cobre muitos municípios com frota limitada. A pressão operacional recai sobre o tempo-resposta nas pontas — exatamente onde uma operação dedicada agrega valor.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Modelo</span><span class="v">consorciado</span></div>
+        <div class="row"><span class="k">Regulação</span><span class="v">C. Lafaiete</span></div>
+        <div class="row"><span class="k">Tempo-resposta</span><span class="v">a qualificar</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Hoje · Demanda</div>
+      <h3>~1.200 atendimentos/mês</h3>
+      <p>Pela taxa de referência de 0,15 atendimento/habitante/ano sobre o bloco de ~96 mil, estima-se cerca de 1.200 atendimentos por mês — base a confirmar com o histórico real em diligência.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Estimativa</span><span class="v">~1.200/mês</span></div>
+        <div class="row"><span class="k">Taxa</span><span class="v">0,15/hab/ano</span></div>
+        <div class="row"><span class="k">Histórico</span><span class="v">a levantar</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>A levantar em diligência</strong> Frota e base física em Ouro Branco, atendimentos por mês, tempo-resposta atual e a CCT-MG vigente. São os dados que transformam cada premissa deste panorama em fato verificado — e que ajustam o dimensionamento à realidade local.</div></div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ouro_Branco_MG_Brasil_-_Vista_a_partir_da_Serra_de_Ouro_Branco_-_panoramio.jpg/1920px-Ouro_Branco_MG_Brasil_-_Vista_a_partir_da_Serra_de_Ouro_Branco_-_panoramio.jpg" alt="Vista de Ouro Branco a partir da Serra de Ouro Branco, MG" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Ouro Branco · Minas Gerais</div>
+    <div class="t">Cidade da siderurgia, vista da serra — área extensa que pede bases bem posicionadas e tempo-resposta curto.</div>
+  </div></div>
+</div>
+
+<!-- 04 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Proposta operacional</span>
+      <h2>Uma operação dedicada ao bloco.</h2>
+      <p class="lede">O desenho preliminar dimensiona uma operação enxuta e dedicada, pelos parâmetros nacionais (PNAU): suporte básico e avançado, motolância para resposta rápida e regulação integrada e qualificada — aproveitando a UTI móvel de Congonhas como base de partida, com equipe própria CLT.</p>
+    </div>
+    <div class="right">Cenário preliminar<br/><span class="acc">bloco · 2 municípios</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo desenhado (preliminar)</span>
+    <h4>Operação dedicada do SAMU 192 — Congonhas + Ouro Branco</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Frota</span><span class="v">2 USB · 1 USA · 1 motolância</span></div>
+      <div class="row"><span class="k">Central</span><span class="v">regulação integrada e qualificada</span></div>
+      <div class="row"><span class="k">Bases</span><span class="v">2 (partindo da UTI móvel de Congonhas)</span></div>
+      <div class="row"><span class="k">Pessoal</span><span class="v">equipe própria CLT · cobertura 24/7</span></div>
+      <div class="row"><span class="k">Tecnologia</span><span class="v">CoPilot OS · regulação e despacho por IA</span></div>
+      <div class="row"><span class="k">Rastreabilidade</span><span class="v">tempo real · indicadores auditáveis</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Bloco 01 · Pessoas</span>
+      <h3>Equipe própria CLT</h3>
+      <p>Médicos reguladores, enfermeiros, técnicos e condutores contratados no piso, com cobertura 24/7 honesta, fim de passivo trabalhista e programa de educação permanente (NEP).</p>
+      <div class="kv"><div class="r"><span class="k">Regime</span><span class="v">CLT · piso CCT</span></div><div class="r"><span class="k">Cobertura</span><span class="v">24/7 real</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 02 · Operação</span>
+      <h3>2 bases · USA · motolância</h3>
+      <p>Duas bases bem posicionadas no eixo, suporte avançado e motolância para resposta rápida em área extensa. Frota cedida pelo ente, com manutenção e reativação pela Samais.</p>
+      <div class="kv"><div class="r"><span class="k">Bases</span><span class="v">2 no eixo</span></div><div class="r"><span class="k">Frota</span><span class="v">manutenção Samais</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 03 · Inteligência</span>
+      <h3>CoPilot OS</h3>
+      <p>Central de regulação assistida por IA: triagem, despacho otimizado, prontuário e indicadores em tempo real — transparência total para o gestor e tempo-resposta auditável.</p>
+      <div class="kv"><div class="r"><span class="k">Regulação</span><span class="v">IA assistida</span></div><div class="r"><span class="k">Gestão</span><span class="v">painel em tempo real</span></div></div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Ponto de partida</strong> A UTI móvel já operante em Congonhas é a âncora do desenho: a operação dedicada qualifica e amplia o que existe, em vez de recomeçar. O modelo de entrada — operar via consórcio regional ou como micro-operação dedicada ao bloco — será definido em diligência.</div></div>
+</section>
+
+<!-- 05 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Viabilidade financeira</span>
+      <h2>Sustentável para um bloco de alto PIB.</h2>
+      <p class="lede">Em caráter preliminar, o valor de referência da operação dedicada fica em torno de R$ 0,9 milhão por mês (faixa R$ 0,8–1,0 mi). Com o cofinanciamento federal da urgência estimado em 50%, a contrapartida local cai pela metade — trivial diante do alto PIB per capita da região.</p>
+    </div>
+    <div class="right">Cofinanciamento federal<br/><span class="acc">~50% · PNAU (est.)</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Quem paga o valor de referência</span><span class="s" style="color:#6b6358">bloco · mensal (estimado)</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="50% federal, 50% local">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#8E7238" stroke-width="12"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="157.08" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle" style="fill:#8E7238">50%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">FEDERAL</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#8E7238"></i><b style="color:#2c281f">União · ~R$ 0,45 mi/mês</b> — cofinanciamento PNAU (estimado)</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">Local · ~R$ 0,45 mi/mês</b> — contrapartida do bloco</div>
+          <em style="color:#8E7238">A União divide a conta ao meio.</em>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Linha de viabilidade (preliminar)</th><th class="num">Valor</th></tr></thead>
+      <tbody>
+        <tr><td>População atendida</td><td class="num">~96 mil hab</td></tr>
+        <tr><td>Valor de referência mensal</td><td class="num">~R$ 0,9 mi</td></tr>
+        <tr><td>Faixa de referência</td><td class="num">R$ 0,8–1,0 mi</td></tr>
+        <tr><td>Valor de referência anual</td><td class="num">~R$ 10,8 mi</td></tr>
+        <tr><td>Por habitante/mês (bruto)</td><td class="num">~R$ 9,4</td></tr>
+        <tr class="tot"><td>Por habitante/mês (pós-federal)</td><td class="num">~R$ 4,7</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Projeção · bloco (preliminar)</th><th class="num">Mensal</th><th class="num">Anual</th></tr></thead>
+    <tbody>
+      <tr><td>Valor de referência total</td><td class="num">~R$ 0,9 mi</td><td class="num">~R$ 10,8 mi</td></tr>
+      <tr><td>Participação federal (~50%, est.)</td><td class="num">~R$ 0,45 mi</td><td class="num">~R$ 5,4 mi</td></tr>
+      <tr class="tot"><td>Contrapartida local líquida</td><td class="num">~R$ 0,45 mi</td><td class="num">~R$ 5,4 mi</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Financiamento e base legal</strong> Cofinanciamento federal da urgência conforme a Política Nacional de Atenção às Urgências (PNAU). Contratação pela Lei 14.133/2021 ou no contexto do consórcio regional. O alto PIB per capita da região indica boa capacidade fiscal para a contrapartida. <strong>Todos os valores são de referência, preliminares e a calibrar em diligência.</strong></div></div>
+</section>
+
+<!-- 06 MÉTODO -->
+<section class="wrap" id="metodo">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Metodologia e rigor</span>
+      <h2>Números honestos, lastreados em fonte.</h2>
+      <p class="lede">Este panorama nasce de uma metodologia própria de dimensionamento, calibrada com dados públicos oficiais e com a experiência de operação real da Samais. Cada número tem origem rastreável — e cada premissa fica explícita.</p>
+    </div>
+    <div class="right">Conformidade<br/><span class="acc">Lei 14.133/2021</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Cobertura 24/7 correta</h4>
+      <p>Dimensionamento de pessoal pelo fator de cobertura real de uma escala ininterrupta — não pela metade do turno. É o que separa um SAMU que funciona às 3h da manhã de um que existe só no papel.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 17V9M12 17V6M16 17v-5M20 17v-9"/></svg></div>
+      <h4>Parâmetros nacionais</h4>
+      <p>Frota e demanda referenciadas na Política Nacional de Atenção às Urgências (PNAU). O escopo responde aos parâmetros nacionais e à demanda estimada para o bloco, a confirmar com o histórico real.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Operação comprovada</h4>
+      <p>A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal. Método validado em produção, não em teoria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASSOS -->
+<section class="wrap" id="passos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Próximos passos</span>
+      <h2>Como avançamos.</h2>
+      <p class="lede">Um caminho curto e técnico, da diligência de campo à proposta formal — para calibrar cada número ao dado real do bloco e definir o melhor modelo de entrada.</p>
+    </div>
+    <div class="right">Início estimado<br/><span class="acc">após diligência</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Diligência de campo</div>
+      <h3>Levantar o dado real</h3>
+      <p>Frota e base em Ouro Branco, atendimentos por mês, tempo-resposta, CCT-MG e a situação do consórcio regional. É aqui que cada premissa vira fato.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">dados reais</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Dimensionamento</div>
+      <h3>Calibrar o escopo</h3>
+      <p>Ajuste de frota, bases e pessoal ao dado verificado, com valor de referência refinado a partir da CCT-MG e do histórico de atendimentos.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">escopo calibrado</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Proposta formal</div>
+      <h3>Modelo de entrada</h3>
+      <p>Proposta formalizada com o modelo de entrada definido — operar via consórcio regional ou como micro-operação dedicada ao bloco — e plano de implantação.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">proposta + plano</span></div></div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Interlocução · portas de entrada</th><th>Nome / cargo</th><th class="num">Situação</th></tr></thead>
+    <tbody>
+      <tr><td>CISRU (consórcio) · Presidência</td><td>Carlos Augusto S. do Nascimento ("Carlos Du") — prefeito de Barbacena</td><td class="num"><span>✓</span></td></tr>
+      <tr><td>CISRU (consórcio) · Secretaria Executiva</td><td>Ormesinda Maria Barbosa</td><td class="num"><span>✓</span></td></tr>
+      <tr><td>Congonhas · Prefeitura</td><td>Anderson Cabido — prefeito (também 2º vice do CISRU)</td><td class="num"><span>✓</span></td></tr>
+      <tr><td>Congonhas · Saúde</td><td>Secretário(a) de Saúde — a confirmar (troca recente)</td><td class="num"><span>⚠</span></td></tr>
+      <tr><td>Ouro Branco · Prefeitura</td><td>Sávio Fontes — prefeito</td><td class="num"><span>✓</span></td></tr>
+      <tr><td>Ouro Branco · Saúde</td><td>Wellington dos Reis Coelho — secretário de Saúde (reconfirmar)</td><td class="num"><span>⚠</span></td></tr>
+      <tr><td>SES-MG · SRS Barbacena</td><td>Renato Soares dos Reis — superintendente</td><td class="num"><span>⚠</span></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Cargos de secretário são voláteis</strong> — reconfirmar por telefone antes de abordagem formal.</div></div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold" id="fechamento">
+  <blockquote>Do Santuário às siderúrgicas, um tempo-resposta <em>à altura</em> do Alto Paraopeba.</blockquote>
+  <div class="s">Congonhas + Ouro Branco · Minas Gerais</div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: separamos o dado público verificável da estimativa de modelagem, a confirmar em diligência. Este é um estudo preliminar — nada aqui é contrato fechado.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">População / área / PIB</div><div class="v">Congonhas 55.272 hab · 304,07 km² · R$ 145.468 · Ouro Branco 40.638 hab · 258,73 km² · R$ 111.320 (IBGE)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Rede de saúde</div><div class="v">Microrregião de Congonhas · Macrorregião Centro-Sul · CIR de Congonhas<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">SAMU regional</div><div class="v">Operação consorciada com regulação em Conselheiro Lafaiete<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Base avançada Congonhas</div><div class="v">UTI móvel operante desde 2019 · custeio da ordem de R$ 168 mil/mês<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Hospital de referência</div><div class="v">Hospital FOB (Fundação Ouro Branco) · UTI · hemodinâmica · ONA-2<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Frota e base Ouro Branco</div><div class="v">Frota, base física, atendimentos/mês e tempo-resposta a confirmar em diligência<span class="tag amber">a levantar</span></div></div>
+    <div class="row"><div class="k">Demanda estimada</div><div class="v">~1.200 atendimentos/mês pela taxa de 0,15/hab/ano sobre o bloco<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">CCT-MG</div><div class="v">Convenção coletiva vigente a confirmar para calibrar pessoal e valor de referência<span class="tag amber">a levantar</span></div></div>
+    <div class="row"><div class="k">Valor de referência</div><div class="v">~R$ 0,9 mi/mês (faixa R$ 0,8–1,0 mi) por modelagem própria · preliminar<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Cofinanciamento federal</div><div class="v">~50% conforme PNAU · a confirmar habilitação<span class="tag amber">a confirmar</span></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="cta">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ouro_Branco%2C_State_of_Minas_Gerais%2C_Brazil_-_panoramio.jpg/1920px-Ouro_Branco%2C_State_of_Minas_Gerais%2C_Brazil_-_panoramio.jpg')"></div>
+    <span class="sec-num">Congonhas + Ouro Branco · Alto Paraopeba</span>
+    <h2>Uma operação de urgência à altura do Alto Paraopeba.</h2>
+    <p class="lede">Bloco de alto PIB, hospital de referência e UTI móvel já operante: a base para uma operação dedicada que qualifica o tempo-resposta local. Os números deste panorama são preliminares, a calibrar ao dado real em diligência de campo.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Congonhas + Ouro Branco/MG · panorama preliminar</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Congonhas e Ouro Branco/MG — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>

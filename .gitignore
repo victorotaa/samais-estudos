@@ -1,0 +1,12 @@
+# Vercel
+.vercel
+
+# Segredos — NUNCA commitar tokens
+*.token
+.env
+.env.*
+
+# Sistema / dependências
+node_modules/
+.DS_Store
+*.log

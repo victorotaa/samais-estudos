@@ -40,9 +40,24 @@ use o que está aqui.
 
 ## Saída
 
-- Salvar cada estudo em `estudos/<municipio-uf>.md` (ver
-  [`estudos/belem-pa.md`](estudos/belem-pa.md) como modelo de formato).
+Cada estudo gera **dois artefatos**:
+
+1. **Markdown interno** em `estudos/<municipio-uf>.md` (ver
+   [`estudos/belem-pa.md`](estudos/belem-pa.md)) — o cálculo completo, com margem,
+   composição custo→preço e todas as premissas. **Uso interno.**
+2. **Página HTML de apresentação** em `site/estudos/<municipio-uf>.html` +
+   cartão em `site/index.html`, publicada na Vercel. **Cliente-facing.** Seguir
+   [`referencias/apresentacao-html.md`](referencias/apresentacao-html.md).
+
+> ⚠️ O HTML é visto pelo cliente (gestores/secretários/políticos). **Nunca** expor
+> nele margem (35%), bridge custo→preço, benchmark desfavorável ou estratégia
+> jurídico-tributária. Isso vive só no markdown interno e em conversa.
+
 - Sempre marcar a procedência de cada dado: ✅ real (com fonte) × ⚠️ premissa a validar.
+- **Identidade visual Samais:** preto `#0A0A0A` · dourado `#B8954E` · branco;
+  marcas em `site/assets/brand/`; estilo único em `site/css/samais.css`.
+- **Publicar:** `TOK=<vercel_token> node scripts/deploy-vercel.mjs` (token **nunca**
+  versionado — variável de ambiente; rotacionar se exposto).
 
 ## Observações de manutenção
 
@@ -57,5 +72,6 @@ use o que está aqui.
 
 ## Git
 
-- O trabalho vive na branch **`claude/kind-davinci-jjlfnq`** (a `main` ainda está
-  vazia). Desenvolver e commitar nesta branch; abrir/atualizar o PR para a `main`.
+- A `main` já contém a Fórmula Mestre (PR #1 mergeado). Para mudanças novas,
+  trabalhar em branch própria e abrir PR para a `main`.
+- **Nunca** commitar segredos (tokens Vercel etc.) — ver `.gitignore`.

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Sorriso, MT — Estudo de Viabilidade do SAMU Regional</title>
+<meta name="description" content="Estudo de viabilidade da Samais para um SAMU regional ancorado em Sorriso (MT) — Central de Regulação das Urgências para o Vale do Teles Pires.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#sumario">Sumário</a>
+    <a href="#territorio">Território</a>
+    <a href="#diagnostico">Diagnóstico</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#cenarios">Cenários</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/18/Imagem_de_Sorriso_-_MT.jpg')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">SAMU Regional · Vale do Teles Pires</div>
+      <h1>Sorriso</h1>
+      <div class="hero-sub">O norte de Mato Grosso não tem regulação de urgência. Sorriso pode ancorá-la.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Uma das regiões mais ricas e extensas do país opera sem nenhuma Central de Regulação das Urgências regional. O consórcio de 16 municípios já existe e está em expansão; o território, a instituição e o dinheiro já estão postos. A Samais propõe a operação que falta — um SAMU regional ancorado em Sorriso, com central 24/7, frota dedicada e equipe própria.</p>
+          <div class="src">Indicadores regionais — IBGE 2024, consórcio intermunicipal e SES-MT</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">120.985 hab</div><div class="l">Sorriso<br/>IBGE 2024</div></div>
+        <div class="it"><div class="n">~600 mil hab</div><div class="l">16 municípios<br/>consórcio regional</div></div>
+        <div class="it"><div class="n">0</div><div class="l">Central de regulação<br/>regional hoje</div></div>
+        <div class="it"><div class="n">R$ 4,60</div><div class="l">Por habitante/mês<br/>cenário base</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>A oportunidade do Teles Pires.</h2>
+      <p class="lede">O Vale do Teles Pires reúne riqueza, território e instituição — mas opera a urgência fragmentada em dezenas de orçamentos municipais, sem nenhuma regulação regional. Sorriso, sede do consórcio, é o ponto natural para ancorar o SAMU regional que falta.</p>
+    </div>
+    <div class="right">Cenário base<br/><span class="acc">R$ 2,76 mi / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>Vazio de regulação regional</h3>
+      <div class="subtitle">~600 mil habitantes, zero CRU regional</div>
+      <p>Uma das regiões mais ricas e extensas do país não tem nenhuma Central de Regulação das Urgências regional. O vazio assistencial custa vidas — e a região já paga por ele, só não enxerga.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Sorriso (IBGE 2024)</span><span class="v">120.985</span></div>
+        <div class="row"><span class="k">16 municípios</span><span class="v">~600 mil</span></div>
+        <div class="row"><span class="k">CRU regional</span><span class="v">0</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Momento</div>
+      <h3>Consórcio já existe e se expande</h3>
+      <div class="subtitle">Instituição e recurso já postos</div>
+      <p>O consórcio de 16 municípios está em expansão, com investimento de R$ 85,7 milhões em 2025. Sorriso, sede do consórcio, aportou R$ 3 milhões. A rede ampliada possível alcança 33 municípios.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Invest. consórcio 2025</span><span class="v">R$ 85,7 mi</span></div>
+        <div class="row"><span class="k">Aporte Sorriso</span><span class="v">R$ 3 mi</span></div>
+        <div class="row"><span class="k">Rede ampliada</span><span class="v">33 municípios</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>A operação que falta</h3>
+      <div class="subtitle">SAMU regional ancorado em Sorriso</div>
+      <p>CRU regional 24/7, frota dedicada e equipe própria CLT para o Vale do Teles Pires — território, instituição e dinheiro já existem, falta a operação.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Cenário base (mês)</span><span class="v">R$ 2,76 mi</span></div>
+        <div class="row"><span class="k">Cenário base (ano)</span><span class="v">R$ 33,1 mi</span></div>
+        <div class="row"><span class="k">Por habitante/mês</span><span class="v">R$ 4,60</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Aeroporto_Regional_de_Sorriso_Adolino_Bedin_%28Mato_Grosso%2C_Brasil%29.jpg/1920px-Aeroporto_Regional_de_Sorriso_Adolino_Bedin_%28Mato_Grosso%2C_Brasil%29.jpg" alt="Aeroporto Regional de Sorriso, Mato Grosso" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Sorriso · Mato Grosso</div>
+    <div class="t">Um polo regional do agronegócio — com território e dinheiro, mas sem a operação de urgência que o coordene.</div>
+  </div></div>
+</div>
+
+<!-- 02 TERRITÓRIO -->
+<section class="wrap" id="territorio">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Território e contexto</span>
+      <h2>Território, instituição e dinheiro já existem.</h2>
+      <p class="lede">Uma das regiões mais ricas e extensas do país opera sem nenhuma Central de Regulação das Urgências regional — um vazio assistencial que custa vidas. O consórcio de 16 municípios já existe e está em expansão. Falta a operação.</p>
+    </div>
+    <div class="right">Consórcio · 16 municípios<br/><span class="acc">sede em Sorriso</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Indicador</th><th class="num">Região</th><th>Leitura estratégica</th></tr></thead>
+    <tbody>
+      <tr><td>População Sorriso (IBGE 2024)</td><td class="num">120.985</td><td>Sede do consórcio — ponto natural para ancorar a CRU</td></tr>
+      <tr><td>População do consórcio</td><td class="num">~600 mil</td><td>Base regional para uma central única de regulação</td></tr>
+      <tr><td>Municípios consorciados</td><td class="num">16</td><td>Instituição já constituída e em expansão</td></tr>
+      <tr><td>Investimento do consórcio (2025)</td><td class="num">R$ 85,7 mi</td><td>Recurso regional já mobilizado</td></tr>
+      <tr><td>Aporte de Sorriso (sede)</td><td class="num">R$ 3 mi</td><td>Compromisso financeiro já firmado pela sede</td></tr>
+      <tr><td>Rede ampliada possível</td><td class="num">33 municípios</td><td>Norte de MT — escala para o cenário amplo</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>O que falta</strong> Território, instituição e dinheiro já existem — falta a operação. O consórcio mobilizou recurso e adesão, mas a urgência segue sem regulação regional. É exatamente essa lacuna operacional que a Samais se propõe a fechar.</div></div>
+</section>
+
+<!-- 03 DIAGNÓSTICO -->
+<section class="wrap" id="diagnostico">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Diagnóstico do custo invisível</span>
+      <h2>Hoje a região já paga — só não enxerga.</h2>
+      <p class="lede">Sem regulação regional, cada município mantém ambulâncias e plantões isolados, sem escala compartilhada. O custo da urgência existe — está diluído, fragmentado e invisível em dezenas de orçamentos separados.</p>
+    </div>
+    <div class="right">16 orçamentos<br/><span class="acc">sem escala</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>O custo da urgência hoje</th><th>Como aparece</th><th>Por que pesa</th></tr></thead>
+    <tbody>
+      <tr><td>Ambulâncias e plantões isolados</td><td>16 orçamentos separados</td><td>Sem escala compartilhada — capacidade ociosa e descoberta ao mesmo tempo</td></tr>
+      <tr><td>Manutenção da frota</td><td>Diluída em cada município</td><td>Sem gestão única, custo unitário maior e disponibilidade menor</td></tr>
+      <tr><td>Combustível</td><td>Garagens e postos municipais</td><td>Compra pulverizada, sem ganho de escala nem rastreabilidade</td></tr>
+      <tr><td>Transferências inter-hospitalares</td><td>Custo de oportunidade</td><td>Desgaste de frota e horas de equipe não contabilizados</td></tr>
+      <tr><td>Ausência de regulação</td><td>Desfechos clínicos piores</td><td>Sem despacho coordenado, o tempo-resposta e a vida pagam a conta</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note" style="margin-top:24px"><span class="arrow">↳</span><div><strong>Tese central</strong> O gasto com urgência não é novo — ele já acontece, fragmentado em ambulâncias municipais, manutenção diluída, combustível pulverizado e transferências sem custo medido. Regionalizar é tornar visível, auditável e eficiente o que a região já desembolsa às cegas.</div></div>
+</section>
+
+<!-- 04 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Proposta operacional</span>
+      <h2>O SAMU regional, operado de ponta a ponta.</h2>
+      <p class="lede">Uma operação completa ancorada em Sorriso: Central de Regulação das Urgências regional 24/7 regulando os municípios do Vale do Teles Pires, frota dedicada e equipe própria CLT — com governança aberta e despacho assistido por tecnologia.</p>
+    </div>
+    <div class="right">Cenário base<br/><span class="acc">Regional Teles Pires</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo ofertado</span>
+    <h4>Operação integral do SAMU regional — Vale do Teles Pires, ancorado em Sorriso</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Central</span><span class="v">CRU regional 24/7 em Sorriso</span></div>
+      <div class="row"><span class="k">Cobertura</span><span class="v">municípios do Vale do Teles Pires</span></div>
+      <div class="row"><span class="k">Frota</span><span class="v">dedicada · USB · USA · motolância</span></div>
+      <div class="row"><span class="k">Pessoal</span><span class="v">equipe própria CLT · escala 12×36 · médicos</span></div>
+      <div class="row"><span class="k">Governança</span><span class="v">metodologia aberta em 66 itens</span></div>
+      <div class="row"><span class="k">Tecnologia</span><span class="v">despacho assistido · indicadores auditáveis</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Bloco 01 · Regulação</span>
+      <h3>CRU regional 24/7</h3>
+      <p>Central de Regulação das Urgências em Sorriso regulando os municípios do Vale do Teles Pires, com despacho assistido por tecnologia — uma porta única para toda a região.</p>
+      <div class="kv"><div class="r"><span class="k">Sede</span><span class="v">Sorriso</span></div><div class="r"><span class="k">Cobertura</span><span class="v">24/7 real</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 02 · Operação</span>
+      <h3>Frota e equipe própria</h3>
+      <p>Frota dedicada e equipe própria CLT em escala 12×36, com médicos reguladores e de intervenção — contratada, treinada e fixada, sem turnos descobertos.</p>
+      <div class="kv"><div class="r"><span class="k">Regime</span><span class="v">CLT · piso CCT</span></div><div class="r"><span class="k">Escala</span><span class="v">12×36</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Bloco 03 · Governança</span>
+      <h3>Transparência aberta</h3>
+      <p>Metodologia aberta em 66 itens e indicadores em tempo real — um custo único, auditável, com governança que o consórcio pode acompanhar a qualquer momento.</p>
+      <div class="kv"><div class="r"><span class="k">Método</span><span class="v">66 itens abertos</span></div><div class="r"><span class="k">Gestão</span><span class="v">indicadores em tempo real</span></div></div>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:28px"><span class="arrow">↳</span><div><strong>Financiamento</strong> A regionalização permite cofinanciamento e rateio por população, com custo único auditável. O modelo segue os parâmetros nacionais (PNAU) e a Portaria GM/MS 1.010/2012, em conformidade com a Lei 14.133/2021.</div></div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Aeroporto_Regional_de_Sorriso_Adolino_Bedin_%28Mato_Grosso%2C_Brasil%29_3.jpg/1920px-Aeroporto_Regional_de_Sorriso_Adolino_Bedin_%28Mato_Grosso%2C_Brasil%29_3.jpg" alt="Aeroporto Regional de Sorriso, Mato Grosso" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">Proposta operacional</div>
+    <div class="t">Uma central única, frota dedicada e equipe própria — a operação regional que o consórcio ainda não tem.</div>
+  </div></div>
+</div>
+
+<!-- 05 CENÁRIOS (light fold) -->
+<section class="wrap fold-light" id="cenarios">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Cenários e viabilidade</span>
+      <h2>Três escalas, um mesmo motor.</h2>
+      <p class="lede">Do município isolado à rede ampliada do norte de Mato Grosso, o estudo apresenta três cenários de custo total. O cenário base — regional, ancorado em Sorriso — é o que melhor aproveita o consórcio já existente.</p>
+    </div>
+    <div class="right">Cenário base<br/><span class="acc">R$ 4,60 / hab / mês</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>Cenário</th><th>Cobertura</th><th>Frota</th><th>Equipe</th><th class="num">Mensal</th><th class="num">Anual</th></tr></thead>
+    <tbody>
+      <tr><td>Mínimo · Municipal Sorriso</td><td>Sorriso (120.985 hab)</td><td>2 USB + 1 motolância</td><td>23 colaboradores</td><td class="num">R$ 394 mil</td><td class="num">R$ 4,7 mi</td></tr>
+      <tr class="sub"><td>Base ★ · Regional Teles Pires</td><td>16 municípios (~600 mil hab)</td><td>6 USB + 2 USB descentralizadas + 2 USA + 1 motolância</td><td>91 colaboradores + médicos</td><td class="num">R$ 2,76 mi</td><td class="num">R$ 33,1 mi</td></tr>
+      <tr><td>Amplo · Rede Ampliada</td><td>33 municípios (norte de MT)</td><td>10 USB + 4 USA + 2 motolâncias</td><td>146 colaboradores + médicos</td><td class="num">R$ 4,54 mi</td><td class="num">R$ 54,5 mi</td></tr>
+    </tbody>
+  </table>
+
+  <div class="g-2" style="margin-top:28px">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Cenário base · per capita</span><span class="s" style="color:#6b6358">16 municípios · mensal</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="R$ 4,60 por habitante ao mês">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#8E7238" stroke-width="12" stroke-linecap="round"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="220" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="56" text-anchor="middle" style="fill:#8E7238;font-size:18px">R$4,60</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">HAB/MÊS</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#8E7238"></i><b style="color:#2c281f">R$ 2,76 mi/mês</b> — custo total do cenário base, 16 municípios</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">~600 mil habitantes</b> — base de rateio por população</div>
+          <em style="color:#8E7238">Custo único, dividido por quem é atendido.</em>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Linha do cenário base · regional</th><th class="num">Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Custo total mensal</td><td class="num">R$ 2,76 mi</td></tr>
+        <tr><td>Custo total anual</td><td class="num">R$ 33,1 mi</td></tr>
+        <tr><td>População coberta</td><td class="num">~600 mil</td></tr>
+        <tr><td>Frota dedicada (USB+USA+moto)</td><td class="num">10 + 1</td></tr>
+        <tr><td>Colaboradores</td><td class="num">91 + médicos</td></tr>
+        <tr class="tot"><td>Por habitante/mês</td><td class="num">R$ 4,60</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note" style="margin-top:28px"><span class="arrow">↳</span><div><strong>Cofinanciamento</strong> A regionalização permite cofinanciamento e rateio por população, com custo único auditável. Os valores seguem parâmetros nacionais (PNAU) e a Portaria GM/MS 1.010/2012, em conformidade com a Lei 14.133/2021. Os cenários são projeção defensável de viabilidade, não contrato.</div></div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold">
+  <blockquote>O território, a instituição e o dinheiro já existem. <em>Falta a operação.</em></blockquote>
+  <div class="s">Sorriso · Vale do Teles Pires</div>
+</section>
+
+<!-- 06 DIFERENCIAIS -->
+<section class="wrap" id="diferenciais">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Diferenciais</span>
+      <h2>O que a Samais traz que o consórcio ainda não tem.</h2>
+      <p class="lede">Não é um plano de prateleira. É operação real, ponta a ponta, em escala regional sob comando único — com transparência total e histórico verificável em produção.</p>
+    </div>
+    <div class="right">Operação<br/><span class="acc">comprovada</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Operação real ponta a ponta</h4>
+      <p>Da regulação ao atendimento, sob comando único e escala regional. Uma só central, uma só frota gerida, uma só conta — não dezenas de operações municipais desconexas.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Transparência</h4>
+      <p>Metodologia aberta em 66 itens e indicadores em tempo real. O consórcio acompanha cada número, cada tempo-resposta e cada custo — gestão que se mede, não que se promete.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 17V9M12 17V6M16 17v-5M20 17v-9"/></svg></div>
+      <h4>Operação comprovada</h4>
+      <p>A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal. Método validado em produção, não em teoria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PRÓXIMOS PASSOS -->
+<section class="wrap" id="passos">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Próximos passos</span>
+      <h2>Como começamos.</h2>
+      <p class="lede">Um caminho curto e técnico, da primeira conversa à proposta formal — com levantamento de campo para calibrar cada número ao dado real do consórcio.</p>
+    </div>
+    <div class="right">Início estimado<br/><span class="acc">após levantamento</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Abertura</div>
+      <h3>Abrir a conversa</h3>
+      <p>Apresentação a interlocutores naturais: consórcio, SES-MT e prefeituras. Alinhamento de escopo, escala e expectativas regionais.</p>
+      <div class="kv"><div class="r"><span class="k">Com</span><span class="v">consórcio · SES-MT · prefeituras</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Levantamento</div>
+      <h3>Consolidar dados locais</h3>
+      <p>Levantamento de frota existente, escalas e demanda real por município. É aqui que cada premissa do estudo vira fato verificado.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">frota · escalas · demanda</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Proposta</div>
+      <h3>Dimensionamento formal</h3>
+      <p>Dimensionamento final e proposta formal, calibrada ao dado verificado, com cronograma de implantação e plano de transição.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">proposta + plano</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: este é um estudo de viabilidade — uma projeção defensável, não um contrato. Separamos o dado público verificável da estimativa de modelagem, a confirmar em levantamento.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">População de Sorriso</div><div class="v">120.985 habitantes (IBGE 2024)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Dados do consórcio</div><div class="v">16 municípios · ~600 mil hab · invest. R$ 85,7 mi (2025) · aporte Sorriso R$ 3 mi<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Rede regional</div><div class="v">Consórcio em expansão · rede ampliada possível de 33 municípios (SES-MT)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Cenários de custo</div><div class="v">Frota, equipe e valores mensais por modelagem própria — projeção defensável, não contrato<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Chamados/mês</div><div class="v">Volume de acionamento por município ainda não consolidado<span class="tag amber">a levantar</span></div></div>
+    <div class="row"><div class="k">% do orçamento de saúde</div><div class="v">Comprometimento por ente a apurar com dados locais<span class="tag amber">a levantar</span></div></div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="wrap cta" id="fechamento">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Microgera%C3%A7%C3%A3o_fotovoltaica_em_Mato_Grosso.jpg')"></div>
+    <span class="sec-num">Sorriso · Vale do Teles Pires</span>
+    <h2>O território, a instituição e o dinheiro já existem. Falta a operação.</h2>
+    <p class="lede">Um SAMU regional ancorado em Sorriso, com central única, frota dedicada e equipe própria — projeção defensável de viabilidade, a calibrar ao dado real do consórcio em levantamento de campo.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Sorriso/MT · documento de proposta</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Sorriso/MT — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>

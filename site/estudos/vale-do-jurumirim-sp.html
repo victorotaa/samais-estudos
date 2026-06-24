@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Vale do Jurumirim, SP — Proposta Técnica de SAMU 192 Regional</title>
+<meta name="description" content="Proposta técnica e operacional da Samais para o SAMU 192 da Região de Saúde Vale do Jurumirim — operador único, regulação assistida por IA e frota dedicada para 17 municípios.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#sumario">Sumário</a>
+    <a href="#territorio">Território</a>
+    <a href="#demanda">Demanda</a>
+    <a href="#proposta">Proposta</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#implantacao">Implantação</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Represa_Jurumirim_REFON_1.JPG/1920px-Represa_Jurumirim_REFON_1.JPG')"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">SAMU Regional · Avaré / SP · DRS-VI Bauru</div>
+      <h1>Vale do Jurumirim</h1>
+      <div class="hero-sub">Gestão profissional integrada do SAMU 192 para os 17 municípios da Região de Saúde Vale do Jurumirim — operador único, regulação assistida por IA e frota dedicada.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>A Região de Saúde Vale do Jurumirim reúne 17 municípios em torno de Avaré, com a Central de Regulação das Urgências regional, hospital de referência e habilitação federal confirmada. A Samais propõe um operador único de urgência — equipe própria, frota dimensionada para a demanda real e a central de regulação inteligente CoPilot OS — substituindo a fragmentação por um padrão único.</p>
+          <div class="src">Indicadores municipais — IBGE, SES-SP e Ministério da Saúde</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">~290 mil</div><div class="l">Habitantes protegidos<br/>Região de Saúde</div></div>
+        <div class="it"><div class="n">17</div><div class="l">Municípios<br/>operador único</div></div>
+        <div class="it"><div class="n">R$ 3,07</div><div class="l">Por habitante/mês<br/>cenário recomendado</div></div>
+        <div class="it"><div class="n">≤8 min</div><div class="l">Tempo-resposta<br/>meta urbana</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SUMÁRIO -->
+<section class="wrap" id="sumario">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · Sumário executivo</span>
+      <h2>Dezessete municípios, um padrão único.</h2>
+      <p class="lede">O Vale do Jurumirim já tem o que falta a muitas regiões: habilitação federal confirmada, central de regulação regional e pactuação na CIR. O que falta é um operador único, profissional, que transforme estrutura existente em serviço uniforme — chegando a cada município com o mesmo padrão de urgência.</p>
+    </div>
+    <div class="right">Cenário recomendado<br/><span class="acc">R$ 1,78 mi / mês</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/></svg></div>
+      <div class="tag">Contexto</div>
+      <h3>Região de saúde estruturada</h3>
+      <div class="subtitle">17 municípios em torno de Avaré</div>
+      <p>Avaré sedia a CRU regional, o hospital de referência e o AME Vale do Jurumirim. A região concentra rodovias de trauma, presídios e turismo sazonal — um perfil de demanda exigente que pede operador único, não 17 operações isoladas.</p>
+      <div class="specs">
+        <div class="row"><span class="k">População regional</span><span class="v">~290.000</span></div>
+        <div class="row"><span class="k">Municípios</span><span class="v">17</span></div>
+        <div class="row"><span class="k">Sede</span><span class="v">Avaré</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div class="tag">Momento</div>
+      <h3>Habilitação federal confirmada</h3>
+      <div class="subtitle">Portarias GM/MS 3.041 e 3.240/2024</div>
+      <p>A habilitação federal do SAMU Vale do Jurumirim está confirmada e pactuada na CIR Vale do Jurumirim junto à SES-SP. Isso abre cofinanciamento federal e cria a janela para profissionalizar a operação agora.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Habilitação</span><span class="v">confirmada</span></div>
+        <div class="row"><span class="k">Pactuação</span><span class="v">CIR · SES-SP</span></div>
+        <div class="row"><span class="k">Cofinanciamento</span><span class="v">tripartite</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="tag">Proposta</div>
+      <h3>Operador único + IA</h3>
+      <div class="subtitle">Cenário recomendado · 17 municípios</div>
+      <p>14 USB, 2 USA, motolância no urbano de Avaré, CRU reforçada e 16 bases — central de regulação CoPilot OS e frota dedicada para ~290 mil pessoas, por um cafezinho por habitante/mês.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Cenário recomendado</span><span class="v">R$ 1,78 mi/mês</span></div>
+        <div class="row"><span class="k">Cofinanciamento federal</span><span class="v">até 50%</span></div>
+        <div class="row"><span class="k">Por habitante/mês</span><span class="v">R$ 3,07</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Represa_Jurumirim_REFON_2.jpg/1920px-Represa_Jurumirim_REFON_2.jpg" alt="Represa de Jurumirim, Avaré/SP" loading="lazy" style="object-position:center 55%">
+  <div class="cap"><div class="in">
+    <div class="e">Vale do Jurumirim · São Paulo</div>
+    <div class="t">Uma região de represa, rodovias e turismo — onde a urgência precisa chegar com o mesmo padrão a 17 municípios.</div>
+  </div></div>
+</div>
+
+<!-- 02 TERRITÓRIO -->
+<section class="wrap" id="territorio">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Território e contexto</span>
+      <h2>O perfil de uma região de saúde do interior paulista.</h2>
+      <p class="lede">Polarizada por Avaré, a Região de Saúde Vale do Jurumirim combina sede com hospital de referência, municípios pequenos e médios, rodovias de trauma, presídios e turismo sazonal — um conjunto que só um operador único cobre com padrão uniforme.</p>
+    </div>
+    <div class="right">Avaré · 1.213 km²<br/><span class="acc">76,51 hab/km²</span></div>
+  </div>
+  <table class="tbl">
+    <thead><tr><th>Município</th><th class="num">População</th><th>Papel na rede regional</th></tr></thead>
+    <tbody>
+      <tr><td>Avaré</td><td class="num">96.098</td><td>Sede da CRU + hospital regional (Santa Casa) + AME</td></tr>
+      <tr><td>Piraju</td><td class="num">30.294</td><td>Polo secundário · turismo náutico no rio</td></tr>
+      <tr><td>Itaí</td><td class="num">25.930</td><td>Polo secundário · unidade prisional (protocolo dedicado)</td></tr>
+      <tr><td>Taquarituba</td><td class="num">22.000</td><td>Município de médio porte · retaguarda local</td></tr>
+      <tr><td>Paranapanema</td><td class="num">19.799</td><td>Turismo sazonal · afogamentos e náutica</td></tr>
+      <tr><td>Cerqueira César</td><td class="num">18.000</td><td>Corredor rodoviário · acidentes de trânsito</td></tr>
+      <tr><td>Fartura</td><td class="num">16.000</td><td>Município de pequeno-médio porte</td></tr>
+      <tr><td>Itaporanga</td><td class="num">15.500</td><td>Município de pequeno-médio porte</td></tr>
+      <tr><td>Taguaí</td><td class="num">10.500</td><td>Pequeno porte · acesso rural</td></tr>
+      <tr><td>Manduri</td><td class="num">9.000</td><td>Pequeno porte</td></tr>
+      <tr><td>Iaras</td><td class="num">6.500</td><td>Pequeno porte · unidade prisional (protocolo dedicado)</td></tr>
+      <tr><td>Arandu</td><td class="num">6.500</td><td>Pequeno porte · acesso rural</td></tr>
+      <tr><td>Águas de Santa Bárbara</td><td class="num">6.000</td><td>Pequeno porte · estância turística</td></tr>
+      <tr><td>Coronel Macedo</td><td class="num">4.500</td><td>Pequeno porte · áreas remotas</td></tr>
+      <tr><td>Tejupá</td><td class="num">4.500</td><td>Pequeno porte · áreas remotas</td></tr>
+      <tr><td>Sarutaiá</td><td class="num">3.700</td><td>Pequeno porte · acesso rural</td></tr>
+      <tr><td>Barão de Antonina</td><td class="num">3.200</td><td>Menor município · áreas remotas</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Avaré — sede</strong> 96.098 habitantes (IBGE 2024); área de 1.213 km²; densidade de 76,51 hab/km²; IDH-M de 0,767; PIB per capita de R$ 47.503 (2023). Concentra a CRU regional, a Santa Casa (>70% SUS) e o AME Vale do Jurumirim — o ponto natural do hub de regulação.</div></div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Fatores de risco do território</strong> As rodovias SP-255, SP-258 e SP-270 geram trauma e despachos de USA; os presídios de Itaí e Iaras pedem protocolo de atendimento dedicado; o turismo sazonal em Paranapanema, Piraju e Avaré eleva afogamentos e ocorrências náuticas; e os acidentes rurais em áreas remotas exigem cobertura descentralizada com tempo-resposta calibrado.</div></div>
+</section>
+
+<!-- 03 DEMANDA -->
+<section class="wrap" id="demanda">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Demanda e perfil epidemiológico</span>
+      <h2>Uma demanda regional de porte médio, com picos sazonais.</h2>
+      <p class="lede">Pelo parâmetro de 0,12 a 0,18 chamado por habitante/ano para um perfil misto urbano-rural, a região tende a 35 mil a 52 mil ocorrências por ano — com picos de verão pelo turismo e demanda contínua de trauma rodoviário.</p>
+    </div>
+    <div class="right">Parâmetro de referência<br/><span class="acc">0,12–0,18 / hab / ano</span></div>
+  </div>
+
+  <div class="g-3">
+    <div class="card">
+      <div class="tag">Volume · ano</div>
+      <h3>35 mil a 52 mil ocorrências</h3>
+      <p>A faixa anual estimada para a Região de Saúde reflete um perfil misto, com sede urbana e municípios rurais. O operador único concentra o registro em uma só central, fechando lacunas de subregistro.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Mínimo/ano</span><span class="v">~35.000</span></div>
+        <div class="row"><span class="k">Máximo/ano</span><span class="v">~52.000</span></div>
+        <div class="row"><span class="k">Parâmetro</span><span class="v">0,12–0,18/hab</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Volume · mês</div>
+      <h3>2.900 a 4.350 / mês</h3>
+      <p>A média mensal projetada dá a base para o dimensionamento de frota e escala. Os picos sazonais de verão, ligados ao turismo na represa, são absorvidos pela frota dedicada e pela motolância urbana.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Média mínima</span><span class="v">~2.900/mês</span></div>
+        <div class="row"><span class="k">Média máxima</span><span class="v">~4.350/mês</span></div>
+        <div class="row"><span class="k">Pico</span><span class="v">verão · turismo</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Perfil</div>
+      <h3>Misto urbano-rural</h3>
+      <p>Emergências clínicas predominam, seguidas de trauma rodoviário e rural. O componente psiquiátrico/social e o obstétrico completam o quadro — perfil que pede USA com médico, motolância e bases descentralizadas.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Clínicas</span><span class="v">55–60%</span></div>
+        <div class="row"><span class="k">Trauma</span><span class="v">25–30%</span></div>
+        <div class="row"><span class="k">Psiq./social</span><span class="v">8–12%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-2" style="margin-top:24px">
+    <div class="splitviz">
+      <div class="sv-head"><span class="t">Distribuição por tipo de ocorrência</span><span class="s">estimativa · perfil misto regional</span></div>
+      <div class="bar">
+        <div class="seg gld" style="flex-basis:58%">Clínica 55–60%</div>
+        <div class="seg mul" style="flex-basis:27%;background:#3a3a3a;color:#e7e1d6">Trauma 25–30%</div>
+        <div class="seg mul" style="flex-basis:10%">Psiq. 8–12%</div>
+        <div class="seg mul" style="flex-basis:5%;background:#1a1a1a">Obst. 2–4%</div>
+      </div>
+      <div class="legend">
+        <span><i class="g"></i>Clínica — exige USA com médico</span>
+        <span><i class="m"></i>Trauma — motolância e USA (rodovias e rural)</span>
+        <span><i class="m"></i>Psiquiátrica · social · obstétrica</span>
+      </div>
+    </div>
+
+    <div class="splitviz">
+      <div class="sv-head"><span class="t">Vetores de demanda</span><span class="s">o que move as ocorrências</span></div>
+      <div class="bar">
+        <div class="seg gld" style="flex-basis:40%">Rodovias</div>
+        <div class="seg mul" style="flex-basis:25%;background:#3a3a3a;color:#e7e1d6">Rural remoto</div>
+        <div class="seg mul" style="flex-basis:20%">Turismo</div>
+        <div class="seg mul" style="flex-basis:15%;background:#1a1a1a">Presídios</div>
+      </div>
+      <div class="legend">
+        <span><i class="g"></i>SP-255 / 258 / 270 — trauma e despacho de USA</span>
+        <span><i class="m"></i>Acidentes rurais em áreas remotas</span>
+        <span><i class="m"></i>Turismo náutico · afogamentos · protocolo prisional</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="opsviz">
+    <div class="t">Fatores de risco epidemiológico predominantes</div>
+    <div class="cap">
+      <b>Cardiovascular e AVC</b> (principal demanda clínica) · <b>trauma rodoviário</b> nas SP-255/258/270 · <b>acidentes rurais</b> em áreas remotas · <b>afogamentos e ocorrências náuticas</b> no verão (represa de Jurumirim) · <b>protocolo prisional</b> em Itaí e Iaras. O perfil exige equipe especializada, motolância para resposta rápida no urbano e suporte avançado com médico.
+    </div>
+  </div>
+</section>
+
+<!-- BAND 2 -->
+<div class="band">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Barragem_Jurumirim_REFON_%281%29.JPG/1920px-Barragem_Jurumirim_REFON_%281%29.JPG" alt="Barragem de Jurumirim, Avaré/SP" loading="lazy" style="object-position:center 50%">
+  <div class="cap"><div class="in">
+    <div class="e">Proposta operacional</div>
+    <div class="t">Frota dedicada, regulação inteligente e um operador único para os 17 municípios.</div>
+  </div></div>
+</div>
+
+<!-- 04 PROPOSTA -->
+<section class="wrap" id="proposta">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Proposta operacional</span>
+      <h2>Três cenários, um padrão único.</h2>
+      <p class="lede">A operação é dimensionada em três cenários — do mínimo regulatório ao máximo expandido — todos ancorados em Avaré, com central de regulação por IA, bases descentralizadas e equipe própria registrada e treinada. O cenário recomendado equilibra cobertura e sustentabilidade.</p>
+    </div>
+    <div class="right">Cenário recomendado<br/><span class="acc">B ★</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo recomendado · cenário B</span>
+    <h4>Operação integral do SAMU 192 — Região de Saúde Vale do Jurumirim</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Frota</span><span class="v">14 USB · 2 USA · 1 motolância (Avaré urbano)</span></div>
+      <div class="row"><span class="k">Central</span><span class="v">CRU regional reforçada (hub Avaré)</span></div>
+      <div class="row"><span class="k">Bases</span><span class="v">16 bases + reforço de Avaré</span></div>
+      <div class="row"><span class="k">Pessoal</span><span class="v">~175 profissionais · 3 turnos</span></div>
+      <div class="row"><span class="k">Tecnologia</span><span class="v">CoPilot OS · regulação e despacho por IA</span></div>
+      <div class="row"><span class="k">Rastreabilidade</span><span class="v">tempo real · indicadores auditáveis</span></div>
+    </div>
+  </div>
+
+  <div class="sku-grid" style="margin-top:24px">
+    <div class="sku">
+      <span class="badge">Cenário A · Mínimo regulatório</span>
+      <h3>Cobertura essencial</h3>
+      <p>11 USB, 1 USA, sem motolância, CRU completa e 16 bases. Atende o piso regulatório com ~140 profissionais — a base de partida para a região habilitada.</p>
+      <div class="kv"><div class="r"><span class="k">Frota</span><span class="v">11 USB · 1 USA</span></div><div class="r"><span class="k">Profissionais</span><span class="v">~140</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Cenário B ★ · Recomendado</span>
+      <h3>Equilíbrio cobertura-custo</h3>
+      <p>14 USB, 2 USA, 1 motolância no urbano de Avaré, CRU reforçada e 16 bases com reforço de Avaré. ~175 profissionais — o ponto ótimo entre cobertura e sustentabilidade.</p>
+      <div class="kv"><div class="r"><span class="k">Frota</span><span class="v">14 USB · 2 USA · 1 moto</span></div><div class="r"><span class="k">Profissionais</span><span class="v">~175</span></div></div>
+    </div>
+    <div class="sku">
+      <span class="badge">Cenário C · Máximo expandido</span>
+      <h3>Cobertura ampliada</h3>
+      <p>17 USB, 3 USA, 2 motolâncias, CRU ampliada e 17 bases — uma por município. ~215 profissionais para a cobertura mais densa possível da região.</p>
+      <div class="kv"><div class="r"><span class="k">Frota</span><span class="v">17 USB · 3 USA · 2 moto</span></div><div class="r"><span class="k">Profissionais</span><span class="v">~215</span></div></div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Parâmetro</th><th class="num">A · Mínimo</th><th class="num">B ★ Recomendado</th><th class="num">C · Máximo</th></tr></thead>
+    <tbody>
+      <tr><td>USB</td><td class="num">11</td><td class="num">14</td><td class="num">17</td></tr>
+      <tr><td>USA</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+      <tr><td>Motolância</td><td class="num">0</td><td class="num">1</td><td class="num">2</td></tr>
+      <tr><td>Bases</td><td class="num">16</td><td class="num">16 + reforço</td><td class="num">17</td></tr>
+      <tr><td>Profissionais</td><td class="num">~140</td><td class="num">~175</td><td class="num">~215</td></tr>
+      <tr class="sub"><td>Custo total mensal</td><td class="num">R$ 1,182 mi</td><td class="num">R$ 1,780 mi</td><td class="num">R$ 2,410 mi</td></tr>
+      <tr class="tot"><td>Custo total anual</td><td class="num">R$ 14,184 mi</td><td class="num">R$ 21,360 mi</td><td class="num">R$ 28,920 mi</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Contrato de 5 anos · cenário recomendado</strong> No cenário B, o horizonte plurianual de 5 anos totaliza R$ 106.800.000 — operação completa e estável para os 17 municípios, com padrão único de urgência ao longo de todo o período.</div></div>
+
+  <div class="bring" style="margin-top:24px">
+    <span class="lbl">Garantias de serviço</span>
+    <h4>O padrão que a região passa a exigir do operador</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Tempo-resposta urbano</span><span class="v">≤ 8 minutos</span></div>
+      <div class="row"><span class="k">Tempo-resposta rural</span><span class="v">≤ 20 minutos</span></div>
+      <div class="row"><span class="k">Disponibilidade de frota</span><span class="v">≥ 95%</span></div>
+      <div class="row"><span class="k">Regulação médica</span><span class="v">100% das chamadas</span></div>
+      <div class="row"><span class="k">CRU</span><span class="v">24h ininterrupta</span></div>
+      <div class="row"><span class="k">Transparência</span><span class="v">dashboard mensal + reunião bimestral</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Viabilidade financeira</span>
+      <h2>Um cafezinho por habitante, com a conta dividida.</h2>
+      <p class="lede">O financiamento da urgência é tripartite: a União cofinancia até 50% do custo operacional, o Estado de São Paulo participa de forma complementar e os municípios entram com a contrapartida via Bloco de Manutenção. No cenário recomendado, o custo líquido por habitante fica em R$ 3,07 por mês.</p>
+    </div>
+    <div class="right">Cofinanciamento federal<br/><span class="acc">até 50%</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="donutviz" style="background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.12);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 12px 34px rgba(0,0,0,.08)">
+      <div class="sv-head"><span class="t" style="color:#8E7238">Quem paga o custo operacional</span><span class="s" style="color:#6b6358">cenário recomendado · mensal</span></div>
+      <div class="row">
+        <svg viewBox="0 0 120 120" role="img" aria-label="50% federal, 50% local">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#d9cfb8" stroke-width="12"/>
+          <circle class="arc" cx="60" cy="60" r="50" fill="none" stroke="#8E7238" stroke-width="12"
+            stroke-dasharray="314.16" stroke-dashoffset="314.16" data-offset="157.08" transform="rotate(-90 60 60)"/>
+          <text class="dlabel" x="60" y="58" text-anchor="middle" style="fill:#8E7238">50%</text>
+          <text class="dsub" x="60" y="74" text-anchor="middle" style="fill:#6b6358">FEDERAL</text>
+        </svg>
+        <div class="leg">
+          <div class="l" style="color:#3a352d"><i style="background:#8E7238"></i><b style="color:#2c281f">União · ~R$ 890 mil/mês</b> — cofinanciamento federal (50%)</div>
+          <div class="l" style="color:#3a352d"><i style="background:#d9cfb8"></i><b style="color:#2c281f">Estado + municípios · ~R$ 890 mil/mês</b> — participação complementar e contrapartida</div>
+          <em style="color:#8E7238">A União divide a conta ao meio.</em>
+        </div>
+      </div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Linha de viabilidade · cenário B</th><th class="num">Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Custo operacional mensal</td><td class="num">R$ 1,78 mi</td></tr>
+        <tr><td>Cofinanciamento federal estimado (50%)</td><td class="num">~R$ 890 mil</td></tr>
+        <tr class="sub"><td>Custo líquido dos municípios (mês)</td><td class="num">~R$ 890 mil</td></tr>
+        <tr><td>Rateio entre os 17 municípios</td><td class="num">por população</td></tr>
+        <tr class="tot"><td>Por habitante/mês (líquido)</td><td class="num">R$ 3,07</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>O custo de um cafezinho</strong> No cenário recomendado, o cofinanciamento federal estimado leva o custo líquido dos municípios a cerca de R$ 890 mil/mês, rateado entre os 17 municípios — o equivalente a R$ 3,07 por habitante/mês. O Bloco de Manutenção da urgência é direcionado ao Fundo Municipal de Saúde de cada ente.</div></div>
+
+  <div class="note"><span class="arrow">↳</span><div><strong>Base legal</strong> Cofinanciamento federal da urgência conforme a Portaria GM/MS 1.010/2012 e a Portaria GM/MS 530/2023 (que ampliou em 30% o cofinanciamento); habilitação do SAMU Avaré/Vale do Jurumirim pelas Portarias GM/MS 3.041/2024 e 3.240/2024. Contratação pela Lei 14.133/2021.</div></div>
+</section>
+
+<!-- 06 DIFERENCIAIS -->
+<section class="wrap" id="diferenciais">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">06 · Diferenciais e rigor</span>
+      <h2>O que o operador único entrega de fábrica.</h2>
+      <p class="lede">A proposta nasce de uma metodologia própria de dimensionamento, calibrada com dados públicos oficiais e com a experiência de operação real da Samais. Cada elemento operacional tem padrão definido e auditável.</p>
+    </div>
+    <div class="right">Conformidade<br/><span class="acc">Lei 14.133/2021</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <h4>CoPilot OS · regulação por IA</h4>
+      <p>Regulação assistida por IA: triagem, roteamento por geolocalização, protocolos clínicos e histórico do paciente em cena. Despacho otimizado e indicadores em tempo real — transparência total para o gestor.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5h11l3 5M5 13h14v4H5z"/><circle cx="8" cy="17" r="1.5"/><circle cx="16" cy="17" r="1.5"/></svg></div>
+      <h4>Gestão unificada de frota</h4>
+      <p>DEA, monitores, ventiladores, telemedicina embarcada e rastreamento em todas as unidades. Manutenção, reativação e gestão da frota cedida pelo ente, com padrão único nas 16 bases.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Certificação contínua</h4>
+      <p>Equipe certificada e recertificada em BLS, ACLS, ATLS e PHTLS — com PALS e AMLS para os perfis pediátrico e clínico. Padrão de competência mantido em produção, não apenas na admissão.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <h4>Dashboard transparente</h4>
+      <p>Painel de indicadores em tempo real, dashboard mensal e reunião bimestral. O gestor enxerga tempo-resposta, disponibilidade e regulação de forma auditável, a qualquer momento.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Conformidade e cofinanciamento</h4>
+      <p>Conformidade regulatória assumida e apoio ativo ao acesso do cofinanciamento federal — habilitação, prestação de contas e relação com SES-SP e Ministério da Saúde dentro do padrão exigido.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h4>Continuidade garantida</h4>
+      <p>Frota reserva acionável em até 4 horas e estoque de insumos de 30 dias. Operação comprovada: a Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold" id="fechamento">
+  <blockquote>Dezessete municípios, um padrão único de urgência — <em>por um cafezinho</em> por habitante.</blockquote>
+  <div class="s">Vale do Jurumirim · São Paulo</div>
+</section>
+
+<!-- 07 IMPLANTAÇÃO -->
+<section class="wrap" id="implantacao">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">07 · Implantação</span>
+      <h2>De 90 a 120 dias, em quatro fases.</h2>
+      <p class="lede">A transição é planejada para não interromper o atendimento: substituição gradual das bases, operação supervisionada e, ao fim, operação plena nas 16 bases e na CRU regional — com cada premissa calibrada ao dado real do território.</p>
+    </div>
+    <div class="right">Implantação<br/><span class="acc">90–120 dias</span></div>
+  </div>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Fase 01</div>
+      <div class="pd">Dias 1–30</div>
+      <h3>Diagnóstico e planejamento</h3>
+      <p>Levantamento de frota, headcount real, bases e CRU; calibração das premissas ao dado verificado e desenho do plano de transição.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">dados reais</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Fase 02</div>
+      <div class="pd">Dias 31–60</div>
+      <h3>Equipe e tecnologia</h3>
+      <p>Contratação e treinamento da equipe própria; instalação do CoPilot OS e do rastreamento; certificação BLS/ACLS/ATLS/PHTLS.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">equipe + CoPilot OS</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Fase 03</div>
+      <div class="pd">Dias 61–90</div>
+      <h3>Operação supervisionada</h3>
+      <p>Substituição gradual das bases, com operação supervisionada e indicadores acompanhados em tempo real — sem descontinuidade de atendimento.</p>
+      <div class="kv"><div class="r"><span class="k">Modo</span><span class="v">transição gradual</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Fase 04</div>
+      <div class="pd">Dias 91–120</div>
+      <h3>Operação plena</h3>
+      <p>Operação plena nas 16 bases e na CRU regional, com garantias de serviço ativas e dashboard de transparência em produção.</p>
+      <div class="kv"><div class="r"><span class="k">Resultado</span><span class="v">16 bases + CRU</span></div></div>
+    </div>
+  </div>
+
+  <div class="hz" style="margin-top:24px">
+    <div class="h">
+      <div class="t">Passo 01</div>
+      <div class="pd">Próximo passo</div>
+      <h3>Apresentação técnica</h3>
+      <p>Apresentação do escopo à Secretaria de Saúde de Avaré e aos 17 municípios, com alinhamento de expectativas e cenários.</p>
+      <div class="kv"><div class="r"><span class="k">Com</span><span class="v">SMS Avaré · municípios</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Passo 02</div>
+      <div class="pd">Diligência</div>
+      <h3>Visita diagnóstica</h3>
+      <p>Visita à CRU e às bases para levantamento de frota, headcount e infraestrutura — onde cada premissa vira fato.</p>
+      <div class="kv"><div class="r"><span class="k">Foco</span><span class="v">CRU + bases</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Passo 03</div>
+      <div class="pd">Refinamento</div>
+      <h3>Dimensionamento</h3>
+      <p>Refinamento do dimensionamento ao dado verificado e seleção do cenário, com apoio ao processo licitatório pela Lei 14.133/2021.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">cenário + apoio licitação</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Passo 04</div>
+      <div class="pd">Contrato</div>
+      <h3>Contrato e cronograma</h3>
+      <p>Formalização do contrato e do cronograma de implantação de 90 a 120 dias, com plano de transição detalhado.</p>
+      <div class="kv"><div class="r"><span class="k">Resultado</span><span class="v">contrato + cronograma</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMISSAS -->
+<section class="wrap" id="premissas">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">08 · Premissas e fontes</span>
+      <h2>O que é fato e o que é premissa.</h2>
+      <p class="lede">Transparência metodológica: separamos o dado público verificável da estimativa de modelagem, a confirmar em diligência de campo.</p>
+    </div>
+    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
+  </div>
+  <div class="sources">
+    <div class="row"><div class="k">Avaré · sede</div><div class="v">96.098 habitantes (IBGE 2024); área 1.213 km²; densidade 76,51 hab/km²; IDH-M 0,767; PIB per capita R$ 47.503 (2023)<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Habilitação federal</div><div class="v">SAMU Avaré/Vale do Jurumirim habilitado pelas Portarias GM/MS 3.041 e 3.240/2024; pactuação na CIR Vale do Jurumirim / SES-SP<span class="tag">verificado</span></div></div>
+    <div class="row"><div class="k">Populações dos demais municípios</div><div class="v">Valores arredondados para os 16 demais municípios da Região de Saúde<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Volume de chamados</div><div class="v">35 mil a 52 mil ocorrências/ano pela faixa de 0,12–0,18/hab/ano (perfil misto)<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Pessoal por cenário</div><div class="v">~140 / ~175 / ~215 profissionais por modelagem própria, a calibrar em diligência<span class="tag amber">estimativa</span></div></div>
+    <div class="row"><div class="k">Custos e cofinanciamento</div><div class="v">Custos totais por cenário e cofinanciamento federal de 50% por modelagem, a confirmar em diligência<span class="tag amber">estimativa</span></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="cta">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/7d/Represa_de_Jurumirim%2C_Avar%C3%A9-SP_-_panoramio.jpg')"></div>
+    <span class="sec-num">Vale do Jurumirim · São Paulo</span>
+    <h2>A região pode ter um padrão único de urgência.</h2>
+    <p class="lede">Habilitação confirmada, demanda regional dimensionada e cofinanciamento tripartite — para os 17 municípios, por um cafezinho por habitante/mês, calibrado ao dado real do território em diligência de campo.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Vale do Jurumirim · Avaré/SP · documento de proposta</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Represa de Jurumirim, Avaré/SP — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>
