@@ -11,6 +11,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/samais.css">
+<style>
+/* fotos protagonistas — escopo deste estudo (novo padrão) */
+.hero-bg{opacity:.52}
+.hero-bg::after{background:linear-gradient(180deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.40) 46%,rgba(10,10,10,.93) 100%)}
+.band{height:clamp(320px,46vw,560px)}
+.band img{opacity:.72}
+.band::after{background:linear-gradient(90deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.34) 56%,rgba(10,10,10,.72) 100%)}
+.cta-bg{opacity:.5}
+.focus-photos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:6px 0 24px}
+.focus-photos figure{position:relative;margin:0;height:clamp(200px,26vw,300px);overflow:hidden;border:1px solid var(--divider)}
+.focus-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,.7,.3,1)}
+.focus-photos figure:hover img{transform:scale(1.05)}
+.focus-photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(8,8,8,.9),rgba(8,8,8,.35) 60%,transparent);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.focus-photos figcaption b{display:block;font-family:var(--display);font-size:17px;letter-spacing:0;text-transform:none;color:#fff;margin-top:3px;font-weight:600}
+@media(max-width:720px){.focus-photos{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -44,7 +60,7 @@
 
 <!-- HERO -->
 <section class="hero-section" id="top">
-  <div class="hero-bg" data-px="0.12" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Belo_Horizonte_Brazil_Skyline_Aerial%2C_December_2024.jpg/1920px-Belo_Horizonte_Brazil_Skyline_Aerial%2C_December_2024.jpg')"></div>
+  <div class="hero-bg" data-px="0.12" style="background-image:url('../assets/fotos/cias-hero-bh.jpg')"></div>
   <div class="wrap">
     <div class="hero">
       <div class="tag">Consórcio CIAS · SAMU 192 Regional · Panorama Preliminar</div>
@@ -78,6 +94,11 @@
       <p class="lede">As urgências — o SAMU 192 — da região Central de Minas são atendidas por uma única central em Belo Horizonte, o "SAMU Regional Macro Centro", tocado em conjunto pela capital e pelo consórcio CIAS. Tirando a capital, que tem SAMU próprio, a operação regional cobre 22 cidades (~1,5 milhão de habitantes). É dentro desse grupo que estão as duas cidades no foco desta conversa.</p>
     </div>
     <div class="right">Cidades-foco<br/><span class="acc">Ouro Preto · Itabirito</span></div>
+  </div>
+
+  <div class="focus-photos">
+    <figure><img src="../assets/fotos/foco-ouropreto.jpg" alt="Vista panorâmica de Ouro Preto, Minas Gerais" loading="lazy"><figcaption>Cidade-foco<b>Ouro Preto</b></figcaption></figure>
+    <figure><img src="../assets/fotos/foco-itabirito.jpg" alt="Pico do Itabirito, Minas Gerais" loading="lazy"><figcaption>Cidade-foco<b>Itabirito</b></figcaption></figure>
   </div>
 
   <div class="g-2">
@@ -157,7 +178,7 @@
 
 <!-- BAND -->
 <div class="band">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Ouro_Preto_November_2009-10a.jpg/1920px-Ouro_Preto_November_2009-10a.jpg" alt="Ouro Preto, Minas Gerais — centro histórico" loading="lazy" style="object-position:center 55%">
+  <img src="../assets/fotos/cias-band-ouropreto.jpg" alt="Ouro Preto, Minas Gerais — centro histórico" loading="lazy" style="object-position:center 55%">
   <div class="cap"><div class="in">
     <div class="e">Ouro Preto · Minas Gerais</div>
     <div class="t">Sede da microrregião e núcleo da operação própria — ruas estreitas que pedem resposta ágil.</div>
@@ -235,7 +256,7 @@
 
 <!-- BAND 2 -->
 <div class="band">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mariana%2C_Minas_Gerais_-_2016-09-23.jpg/1920px-Mariana%2C_Minas_Gerais_-_2016-09-23.jpg" alt="Mariana, Minas Gerais — centro histórico" loading="lazy" style="object-position:center 50%">
+  <img src="../assets/fotos/cias-band-mariana.jpg" alt="Mariana, Minas Gerais — centro histórico" loading="lazy" style="object-position:center 50%">
   <div class="cap"><div class="in">
     <div class="e">Mariana · Minas Gerais</div>
     <div class="t">Qualificar a operação direta com regulação por IA, rastreabilidade e indicadores auditáveis.</div>
@@ -451,7 +472,7 @@
 <!-- CTA -->
 <section class="wrap cta" id="fechamento">
   <div class="cta-box">
-    <div class="cta-bg" data-px="0.10" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Por_do_sol_Lagoa_da_Pampulha_Belo_Horizonte.jpg/1920px-Por_do_sol_Lagoa_da_Pampulha_Belo_Horizonte.jpg')"></div>
+    <div class="cta-bg" data-px="0.10" style="background-image:url('../assets/fotos/cias-cta-pampulha.jpg')"></div>
     <span class="sec-num">Consórcio CIAS · SAMU Macro Centro</span>
     <h2>Uma operação madura, pronta para ganhar padrão.</h2>
     <p class="lede">Frota robusta, governança consorciada e operação direta já consolidada — a oportunidade é qualificar com tecnologia e escalar do núcleo histórico ao regional, com cada faixa calibrada ao dado real em diligência. Este é um panorama preliminar para subsidiar a decisão.</p>
@@ -464,7 +485,7 @@
     <div class="tl">Onde gestão se mede em vidas.</div>
     <div class="pg">Samais · CIAS Macro Centro/MG · panorama preliminar</div>
   </div>
-  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Belo Horizonte e região/MG — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Belo Horizonte, Ouro Preto, Mariana e Itabirito/MG — Wikimedia Commons (CC). Documento de uso restrito · não indexado.</p>
 </footer>
 
 <script src="../js/samais.js"></script>
