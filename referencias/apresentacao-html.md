@@ -55,6 +55,16 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   hero). **Evitar** imagens religiosas, fotos de bairros sem destaque e ambientes
   fechados/institucionais (prédios públicos, interiores). A foto compõe o estudo —
   tem de "vender" o lugar.
+- **Critério de resolução mínima** (somos muito visuais — foto ruim derruba o estudo):
+  hero com fonte ≥ **2000px** de largura (ideal 2400px+); bandas e CTA ≥ **1600px**.
+  **Nunca ampliar** imagem pequena; orientação sempre **paisagem**; sem
+  texto/marca-d'água/logo embutidos; nítida e bem exposta. Servir em ~1920px no web.
+- **Fotos protagonistas:** a imagem deve estar **aparente**, não só decorativa —
+  bandas generosas, hero com escurecimento contido (legibilidade × visibilidade) e,
+  quando houver cidades-foco, mostrar uma foto de cada logo no início.
+- **Fonte das imagens:** preferir **licença livre + URL estável** (Wikimedia Commons)
+  por ser cliente-facing publicado. Imagens de busca genérica (Google) só se
+  **baixadas e hospedadas no próprio site** após checagem de uso — nunca hotlink.
 - **Contatos-chave após os valores:** incluir, em "próximos passos", os contatos
   reais (presidentes de consórcio, secretários executivos, prefeitos, secretários
   de saúde, SES-MG), com selo de procedência (✓ verificado / ⚠ a reconfirmar).
