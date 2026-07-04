@@ -128,16 +128,16 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
 - **Banco de imagens Samais** (viaturas etc.) está no Drive da Samais; quando
   embutir, salvar em `site/assets/img/` (arquivos grandes não cabem no contexto da
   sessão — baixar fora ou pedir o anexo).
-- **Imagens geradas (IA) — sempre pequenas e discretas.** Quando o CEO indicar um
-  banco de imagens geradas (ex.: storyboard de vídeo), usá-las é válido, mas
-  **nunca** como hero/banda full-bleed (esse protagonismo é reservado a fotos
-  **reais**, licenciadas). Uma imagem "ilustrativa" deve aparecer **pequena e com
-  pouco destaque** — o suficiente para cumprir a normativa de disclosure, nunca
-  para dominar a página. Padrão: componente `.mini-illustration` (thumbnail
-  ~52×52px + legenda de 8-9px "imagem ilustrativa" / "não retrata a operação
-  real"), inserido dentro de um card ou nota, nunca como seção própria em largura
-  total. Real (Wikimedia, licença livre) = grande, hero/banda/CTA. Gerada por IA =
-  pequena, acessória. Ver `site/estudos/avare-sp.html` para o padrão de referência.
+- **Imagens geradas (IA): a imagem pode e deve ser grande (hero/banda/CTA em
+  tamanho normal) — só o TEXTO de disclosure é que fica pequeno e discreto.**
+  Quando o CEO indicar um banco de imagens geradas (ex.: storyboard de vídeo),
+  usá-las em tamanho pleno é válido e esperado; a norma de transparência é
+  satisfeita com um selo mínimo, não com uma imagem minúscula. Padrão: componente
+  `.illustrative-tag` — uma etiqueta pequena (8px, mono, fundo escuro translúcido)
+  posicionada no canto inferior direito da própria imagem grande, com o texto
+  "Imagem ilustrativa". A legenda principal (eyebrow/título da banda) fica limpa,
+  sem menção a "ilustrativa" — só a etiqueta de canto carrega essa informação.
+  Ver `site/estudos/avare-sp.html` para o padrão de referência.
 
 ## Publicação na Vercel
 
