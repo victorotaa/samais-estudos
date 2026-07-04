@@ -69,6 +69,40 @@ uniformes 11.800 (1.667/pessoa/ano × 85, base questionário).
 | ÷ [1 − (16,33% trib. + 35% margem)] = ÷ 0,4867 | |
 | **Preço** | **2.340.495 → ofertar R$ 2,35 mi/mês** (R$ 28,2 mi/ano) |
 
+### Auditoria v3→v4 — por que 3 cidades custam mais que 17 (pergunta do Victor, validada)
+
+O v3 (regional, R$ 2,0 mi) **não incluía USB em nenhuma cidade além de Avaré** —
+as bases dos demais 16 municípios eram "a dimensionar em diligência" (+R$ 184k
+cada, régua interna). Itaí e Cerqueira César **pertencem aos 17** da regional,
+mas no v3 só tinham central + fatia da USA no preço; nenhuma ambulância local
+precificada. O v4 entrega mais para menos gente.
+
+**Ponte em preço (2.001.087 → 2.340.496):**
+
+| Movimento | R$/mês |
+|---|---|
+| (−) CRU menor: 2 postos TARM p/ 143 mil hab (v3: 3 p/ 312 mil) | −67.001 |
+| (+) USB Itaí completa 24/7 (10 CLT + operação) | +201.173 |
+| (+) USB Cerqueira César completa 24/7 (idem) | +201.173 |
+| (+) resíduo não-pessoal (uniformes 85, O₂, seguro extra) | +4.064 |
+| **Δ total** | **+339.409** ✓ |
+
+**Ponte de equipe:** 70 CLT (v3) − 5 TARM + 10 (USB Itaí) + 10 (USB CC) = **85 CLT**.
+Todo o resto (regulação, USA, base Avaré, apoio) é idêntico nos dois estudos.
+
+**Razão estrutural:** o núcleo indivisível CRU+USA ≈ **R$ 1,16 mi de preço,
+invariante à população** (médico regulador 24/7 não encolhe com menos habitantes).
+No v3 diluía em 312 mil hab (6,41/hab); no v4, em 143 mil (16,36/hab).
+
+**Prova dos nove:** o trio com o MESMO escopo do v3 (sem as 2 USBs locais)
+custaria ~R$ 1,94 mi — menos que o regional, como esperado.
+
+**Alavancas de corte** (não recomendadas; decisão CEO): sem motolância →
+~R$ 2,24 mi · moto fora + 2ª USB Avaré em 12h → ~R$ 2,16 mi.
+
+⚠️ Usar a comparação v3×v4 **só em conversa** (nunca no HTML): o v3 tinha escopo
+menor do que aparentava, e expor isso por escrito enfraquece o estudo anterior.
+
 ### Rateio ilustrativo por população (a pactuar no protocolo do consórcio)
 
 | Município | % pop | R$/mês |
