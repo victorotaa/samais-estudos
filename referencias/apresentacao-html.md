@@ -69,6 +69,41 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   reais (presidentes de consórcio, secretários executivos, prefeitos, secretários
   de saúde, SES-MG), com selo de procedência (✓ verificado / ⚠ a reconfirmar).
   Nomes voláteis (secretários) sempre marcados para reconfirmar por telefone.
+  **Exceção:** se o documento é uma **proposta entregue diretamente** aos próprios
+  interlocutores listados (ex.: HTML enviado à governança do consórcio-alvo), **não**
+  incluir a tabela de Interlocução — soa estranho mostrar "a quem ligar" sobre a
+  própria organização do leitor. A tabela vale para documentos internos/prospecção,
+  não para a peça final entregue ao próprio contato.
+- **O valor da proposta é o objeto central do documento — na seção de
+  Viabilidade, ele deve ser o elemento visualmente mais alto de todo o estudo.**
+  Não embutir o valor mensal como mais uma linha de tabela: usar um componente de
+  destaque (`.value-hero`: número grande, `clamp(46px,9vw,100px)`, cor de destaque,
+  centralizado, com label acima e sub-info de população/escopo abaixo). Valor
+  anual e por-morador ficam **secundários** (menores, ao lado, tratados como
+  `.value-secondary`). A dedução da verba federal e o valor líquido final ficam
+  **visíveis mas discretos** (fonte pequena, mono, `.value-federal`) — aparecem,
+  mas não competem com o número principal. Ver `site/estudos/avare-sp.html` §05
+  como referência de implementação.
+- **Responsividade é obrigatória, não opcional.** Testar sempre a versão mobile
+  antes de publicar (ou pelo menos revisar a folha de estilo). Problemas recorrentes
+  já corrigidos globalmente em `samais.css` (não reintroduzir):
+  - `.bring .row` (escopo/rows de 2 colunas) deve empilhar em coluna única e
+    alinhar à esquerda abaixo de 720px — senão o texto do valor sobrepõe o da
+    chave (bug visual sério, texto ilegível).
+  - Tabelas (`.tbl`) reduzem padding/fonte abaixo de 720px para caber mais sem
+    depender só do scroll horizontal.
+  Quando um estudo usa o bloco inline `<style>` de "fotos protagonistas" (hero/band
+  com opacidade e altura customizadas), **sempre** incluir dentro dele a media
+  query mobile:
+  ```css
+  @media (max-width:720px){
+    .hero-bg{opacity:.58}
+    .band{height:clamp(220px,58vw,340px)}
+  }
+  ```
+  Herói/bandas com opacidade "mais aparente" (~.50–.52) em telas grandes ficam
+  claras demais e cortam mal em telas estreitas; no mobile sobe a opacidade e
+  reduz a altura da banda para manter legibilidade e enquadramento.
 
 ## Imagens
 
@@ -79,6 +114,13 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
 - **Banco de imagens Samais** (viaturas etc.) está no Drive da Samais; quando
   embutir, salvar em `site/assets/img/` (arquivos grandes não cabem no contexto da
   sessão — baixar fora ou pedir o anexo).
+- **Imagens geradas (IA)**: quando o CEO indicar um banco de imagens geradas
+  (ex.: storyboard de vídeo), usá-las é válido e pode substituir integralmente as
+  fotos reais de um estudo específico — mas **sempre** sinalizar no próprio
+  documento que é ilustrativa: eyebrow da banda com "· imagem ilustrativa" e o
+  crédito do rodapé ajustado (não atribuir a Wikimedia/fonte real quando a imagem
+  é gerada). Aplicar o mesmo filtro de curadoria (sem religião, sem texto
+  dominante, paisagem quando possível) e o mesmo critério de resolução.
 
 ## Publicação na Vercel
 

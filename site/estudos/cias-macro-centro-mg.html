@@ -25,7 +25,11 @@
 .focus-photos figure:hover img{transform:scale(1.05)}
 .focus-photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(8,8,8,.9),rgba(8,8,8,.35) 60%,transparent);font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .focus-photos figcaption b{display:block;font-family:var(--display);font-size:17px;letter-spacing:0;text-transform:none;color:#fff;margin-top:3px;font-weight:600}
-@media(max-width:720px){.focus-photos{grid-template-columns:1fr}}
+@media(max-width:720px){
+  .focus-photos{grid-template-columns:1fr}
+  .hero-bg{opacity:.58}
+  .band{height:clamp(220px,58vw,340px)}
+}
 </style>
 </head>
 <body>

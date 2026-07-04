@@ -19,6 +19,26 @@
 .band img{opacity:.72}
 .band::after{background:linear-gradient(90deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.34) 56%,rgba(10,10,10,.72) 100%)}
 .cta-bg{opacity:.5}
+/* valor da proposta — o número que mais importa no documento */
+.value-hero{text-align:center;padding:56px 24px 44px;border:1px solid rgba(0,0,0,.12);background:rgba(0,0,0,.02);margin-bottom:10px}
+.value-hero .vh-label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8E7238;margin-bottom:20px}
+.value-hero .vh-number{font-family:var(--display);font-weight:800;font-size:clamp(46px,9vw,100px);line-height:1;color:#8E7238;letter-spacing:-.02em}
+.value-hero .vh-sub{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:#6b6358;margin-top:20px}
+.value-secondary{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;padding:26px 4px;border-bottom:1px solid rgba(0,0,0,.12)}
+.value-secondary .vs-item{text-align:center}
+.value-secondary .vs-item .k{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6b6358;margin-bottom:7px}
+.value-secondary .vs-item .v{font-family:var(--display);font-weight:600;font-size:22px;color:#3a352d}
+.value-federal{display:flex;justify-content:center;gap:8px 40px;flex-wrap:wrap;padding:20px 4px;font-family:var(--mono);font-size:12px;color:#6b6358}
+.value-federal .it{display:flex;align-items:baseline;gap:8px}
+.value-federal .v{font-size:13px}
+.value-federal .tot .v{color:#8E7238;font-weight:600;font-size:14.5px}
+@media (max-width:720px){
+  .hero-bg{opacity:.58}
+  .band{height:clamp(220px,58vw,340px)}
+  .value-hero{padding:40px 18px 32px}
+  .value-secondary{gap:28px;padding:20px 4px}
+  .value-federal{flex-direction:column;align-items:center;gap:10px}
+}
 </style>
 </head>
 <body>
@@ -53,7 +73,7 @@
 
 <!-- HERO -->
 <section class="hero-section" id="top">
-  <div class="hero-bg" data-px="0.12" style="background-image:url('../assets/fotos/avare-hero-vista.jpg')"></div>
+  <div class="hero-bg" data-px="0.12" style="background-image:url('../assets/fotos/avare-band-jurumirim-ponte.png')"></div>
   <div class="wrap">
     <div class="hero">
       <div class="tag">AMVAPA · SAMU 192 Regional Vale do Jurumirim · Proposta</div>
@@ -167,10 +187,10 @@
 
 <!-- BAND -->
 <div class="band">
-  <img src="../assets/fotos/avare-band-jurumirim1.jpg" alt="Praia da Represa de Jurumirim, Avaré/SP" loading="lazy" style="object-position:center 55%">
+  <img src="../assets/fotos/avare-band-largo.png" alt="Praça central de Avaré ao amanhecer — imagem ilustrativa" loading="lazy" style="object-position:center 40%">
   <div class="cap"><div class="in">
-    <div class="e">Avaré · São Paulo</div>
-    <div class="t">A maior cidade da região, às margens de Jurumirim — financiando um SAMU que não controla.</div>
+    <div class="e">Avaré · cidade-sede · imagem ilustrativa</div>
+    <div class="t">A maior cidade da região, sede da central e da UTI móvel — correndo para atender 17 municípios.</div>
   </div></div>
 </div>
 
@@ -305,6 +325,15 @@
   <div class="note"><span class="arrow">↳</span><div><strong>Leitura</strong> Cada item acima existe e é pago por alguém — só não aparece somado na conta do SAMU. E há um ponto de justiça operacional: o SAMU é urgência e emergência; não deveria dividir fila de oficina e de almoxarifado com operações que podem esperar. Na proposta, tudo entra no contrato com linha própria — sem rubricas escondidas.</div></div>
 </section>
 
+<!-- BAND · MACA/PORTAS -->
+<div class="band">
+  <img src="../assets/fotos/avare-band-maca-portas.png" alt="Equipe SAMU 192 socorrendo paciente na porta da ambulância — imagem ilustrativa" loading="lazy" style="object-position:center 42%">
+  <div class="cap"><div class="in">
+    <div class="e">O que está em jogo · imagem ilustrativa</div>
+    <div class="t">Cada minuto de frota parada é um paciente esperando mais tempo por socorro.</div>
+  </div></div>
+</div>
+
 <!-- BAND 2 · MOTOLÂNCIA -->
 <div class="band">
   <img src="../assets/fotos/avare-band-motolancia.png" alt="Motolância SAMU 192 em deslocamento urbano — imagem ilustrativa" loading="lazy" style="object-position:center 45%">
@@ -381,21 +410,22 @@
     <div class="right">Verba federal já existente<br/><span class="acc">R$ 159,6 mil / mês</span></div>
   </div>
 
-  <table class="tbl">
-    <thead><tr><th>Proposta única — operação regional completa</th><th class="num">Referência</th></tr></thead>
-    <tbody>
-      <tr><td>População atendida</td><td class="num">312.109 hab · 17 cidades</td></tr>
-      <tr><td>Escopo</td><td class="num">central 24h + UTI móvel 24h + 2 ambulâncias + reserva + motolância</td></tr>
-      <tr><td>Equipe</td><td class="num">~70 profissionais CLT + treinamento contínuo</td></tr>
-      <tr class="sub"><td>Valor da proposta (mensal)</td><td class="num">R$ 2,0 mi</td></tr>
-      <tr><td>Valor da proposta (anual)</td><td class="num">R$ 24 mi</td></tr>
-      <tr><td>Por morador da região, por mês</td><td class="num">~R$ 6,40</td></tr>
-      <tr><td>(−) verba federal já existente</td><td class="num">− R$ 159,6 mil/mês</td></tr>
-      <tr class="tot"><td>Líquido para rateio entre as 17 cidades</td><td class="num">~R$ 1,84 mi/mês</td></tr>
-    </tbody>
-  </table>
+  <div class="value-hero">
+    <div class="vh-label">Valor da proposta · mensal</div>
+    <div class="vh-number">R$ 2,0 mi</div>
+    <div class="vh-sub">312.109 habitantes · 17 cidades · operação regional completa</div>
+  </div>
+  <div class="value-secondary">
+    <div class="vs-item"><span class="k">Valor anual</span><span class="v">R$ 24 mi</span></div>
+    <div class="vs-item"><span class="k">Por morador da região / mês</span><span class="v">~R$ 6,40</span></div>
+    <div class="vs-item"><span class="k">Equipe</span><span class="v">~70 CLT</span></div>
+  </div>
+  <div class="value-federal">
+    <div class="it"><span class="k">(−) verba federal já existente</span><span class="v">− R$ 159,6 mil/mês</span></div>
+    <div class="it tot"><span class="k">Líquido para rateio entre as 17 cidades</span><span class="v">~R$ 1,84 mi/mês</span></div>
+  </div>
 
-  <table class="tbl" style="margin-top:28px">
+  <table class="tbl" style="margin-top:36px">
     <thead><tr><th>Comparação honesta</th><th class="num">Hoje</th><th class="num">Com a proposta</th></tr></thead>
     <tbody>
       <tr><td>Ambulâncias de Avaré em condições de rodar</td><td class="num">1 (sem reserva)</td><td class="num">2 + 1 reserva + motolância</td></tr>
@@ -469,17 +499,6 @@
       <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">dossiê completo</span></div></div>
     </div>
   </div>
-
-  <table class="tbl" style="margin-top:28px">
-    <thead><tr><th>Interlocução · portas de entrada</th><th>Referência</th><th class="num">Status</th></tr></thead>
-    <tbody>
-      <tr><td>AMVAPA · Presidência</td><td>José Ramiro — prefeito de Itaí (eleito 01/2025)</td><td class="num">✓</td></tr>
-      <tr><td>AMVAPA · Consórcio</td><td>(14) 3351-1358 · contato@amvapa.com.br · Piraju/SP</td><td class="num">✓</td></tr>
-      <tr><td>Avaré · SMS / Planejamento</td><td>Rodrigo Silvestre — respondeu o levantamento oficial (21/05/2026)</td><td class="num">✓</td></tr>
-      <tr><td>Avaré · Prefeitura</td><td>Prefeito(a) e Secretário(a) de Saúde — cidade-sede, maior cotista</td><td class="num">⚠</td></tr>
-    </tbody>
-  </table>
-  <div class="note"><span class="arrow">↳</span><div><strong>Interlocução</strong> A decisão é colegiada — os prefeitos do consórcio deliberam em assembleia. Reconfirmar titulares por telefone antes de abordagem formal.</div></div>
 </section>
 
 <!-- PULL (gold fold) -->
@@ -529,7 +548,7 @@
     <div class="tl">Onde gestão se mede em vidas.</div>
     <div class="pg">Samais · SAMU Regional Vale do Jurumirim (AMVAPA) · documento de proposta</div>
   </div>
-  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Avaré e Represa de Jurumirim/SP — Wikimedia Commons (CC). Imagens de operação: ilustrativas, geradas digitalmente. Documento de uso restrito · não indexado.</p>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Imagens ilustrativas, geradas digitalmente para este estudo — Avaré, Represa de Jurumirim e cenas de operação do SAMU 192. Documento de uso restrito · não indexado.</p>
 </footer>
 
 <script src="../js/samais.js"></script>
