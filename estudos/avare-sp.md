@@ -1,149 +1,172 @@
-# Avaré/SP — Estudo de Municipalização do SAMU 192 (v2, Fórmula Mestre)
+# Avaré & Vale do Jurumirim — SAMU Regional AMVAPA (v3, Fórmula Mestre)
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Cálculo completo com margem, bridge
 > custo→preço e benchmark. O HTML cliente-facing (`site/estudos/avare-sp.html`)
-> **não** expõe nada desta seção financeira interna.
+> **não** expõe nada da seção financeira interna.
 >
-> **v2 (jul/2026):** recalculado pela Fórmula Mestre atual (FC 4,5 · encargos
-> 68,24% · gross-up margem 35% + tributos 16,33%), substituindo a metodologia da
-> sessão de mai/2026 (BDI 42%, encargos 66,52%, cenários Mín/Base/Amplo).
-> **Decisão do CEO: entregar UMA proposta única.**
+> **v3 (jul/2026) — pivô de escopo definido pelo CEO:** o cliente é a **AMVAPA**
+> (consórcio contrata a Samais para operar **toda a área SAMU regional** — CRU +
+> USA + base de Avaré reforçada), e não Avaré municipalizando isoladamente.
+> Substitui a v2 (execução municipal) e a v1 (mai/2026, BDI 42%, 3 cenários).
+> **Uma proposta única.**
 
 ## 1. Fontes e procedência
 
-- ✅ **Questionário oficial da SMS Avaré** (21/05/2026, Rodrigo Silvestre — Chefe de
-  Planejamento Estratégico e Gestão de Políticas Públicas). Dado primário.
-- ✅ Print do sistema (sys4web): TR médio **20:18** · 1.820 atendimentos (22/05/25–22/05/26).
-- ✅ IBGE (populações declaradas no questionário).
-- ⚠️ Itens sem dado local: unitários §9 de `parametros-base.md` (calibração Belém/André).
+- ✅ Questionário oficial SMS Avaré (21/05/2026, Rodrigo Silvestre) + print sys4web
+  (TR médio 20:18 · 1.820 atendimentos regionais em 12 meses).
+- ✅ IBGE (populações declaradas). ⚠️ Unitários sem dado local: §9 `parametros-base.md`.
+- ✅ Pesquisa pública (jul/2026): **AMVAPA = Consórcio Intermunicipal do Alto Vale do
+  Paranapanema**, CNPJ 03.753.263/0001-60, sede **Piraju/SP** (R. Cap. Maximiano dos
+  Santos Guerra, 552), tel. (14) 3351-1358, contato@amvapa.com.br. **19 consorciadas**;
+  a CRU Vale do Jurumirim cobre **17** (região de saúde, DRS-VI Bauru) = as 19 menos
+  Angatuba e Riversul ⚠️ a reconfirmar: Águas de Santa Bárbara · Arandu · **Avaré
+  (sede)** · Barão de Antonina · Cerqueira César · Coronel Macedo · Fartura · Iaras ·
+  Itaí · Itaporanga · Manduri · Paranapanema · Piraju · Sarutaiá · Taguaí ·
+  Taquarituba · Tejupá. Bases fora de Avaré existem (Fartura ✅, Taquarituba ✅ —
+  PT 522/2012); mapa completo via CNES ⚠️. Fontes: amvapa.com.br, Econodata,
+  prefeitura de Fartura, Conasems. Obs.: DRS-VI cita ~285 mil hab p/ a região ⚠️ vs
+  312.109 do questionário (usar o declarado ✅; conciliar em diligência).
 
-## 2. Fatos do questionário (todos ✅)
+## 2. Fatos-chave (questionário — ✅)
 
-| Item | Dado |
+Ver detalhamento na v2 (histórico git). Essenciais para o desenho v3:
+
+- CRU regional Vale do Jurumirim: **17 municípios · 312.109 hab**, sediada em Avaré,
+  **imóvel próprio da Prefeitura com manutenção predial dela**; habilitada e
+  **qualificada 04/2026–04/2029** (PT 10.850). Administrada hoje pela AMVAPA.
+- USA regional única (também em Avaré). Base Avaré: 3 USB, **só 1 operante**.
+- **Médicos efetivos de Avaré cedidos à CRU e à USA** + consórcio contrata médicos
+  complementares (custo oculto de pessoal municipal fora da conta SAMU).
+- Insumos via **Almoxarifado Central da saúde** (compartilhado); manutenção junto à
+  **frota municipal geral**; combustível na garagem da Prefeitura (**349,8 L/mês** —
+  retrato da operação mirrada: ~1 viatura rodando).
+- Custo declarado Avaré: R$ 491.417,77/mês (parcial) · repasse federal R$ 159.568,50/mês.
+- TAC MPT 194.218.001.15/0-34 (ver §7).
+
+## 3. Escopo da proposta única (contratante: AMVAPA)
+
+**A Samais opera toda a área de atendimento do SAMU regional AMVAPA:**
+
+| Componente | Entrega | Observação |
+|---|---|---|
+| **CRU regional 24/7** | operação completa (méd. regulador, TARM, rádio-op, supervisão) + CoPilot OS | imóvel e manutenção predial seguem com o ente (Regra Operacional); administração da operação sob Samais |
+| **USA regional 24/7** | equipe própria completa | fim da dependência de cedidos + contratações avulsas do consórcio |
+| **Base Avaré** | 2 USB ativas 24/7 + 1 reserva + **motolância diurna** | laudo técnico e **reativação das 2 USB paradas** no mês 1 |
+| **Frota** | gestão/manutenção dedicada — fila própria, não a fila geral da Prefeitura | frota é do ente; moto a ser adquirida pelo ente (~R$ 60–80k, fora do mensal) |
+| **Insumos** | almoxarifado/logística **dedicados ao SAMU** | sai do "balaio" do almoxarifado central |
+| **NEP** | treinamentos mensais, cursos e workshops contínuos | linha explícita (compromisso Samais) |
+| **Bases dos demais municípios** | a dimensionar em diligência com a AMVAPA | régua interna: +1 USB 24/7 ≈ **R$ 184 mil/mês** (preço) |
+
+## 4. Cálculo v3 (FC 4,5 · encargos 68,24% · pisos = maior entre local e §9)
+
+### RH — R$ 783.140/mês · ~70 CLT + RT rateado
+
+| Função | Dimensionamento | Total/mês |
+|---|---|---|
+| Médico regulador CRU (posto 24/7; CLT 24h/sem → 7) | 7 × 25.472 | 178.304 |
+| TARM (3 postos 24/7 — 312 mil hab, teto da Portaria) | 14 × 5.929 | 83.010 |
+| Rádio-operador (1 posto) | 5 × 5.310 | 26.552 |
+| Supervisor operacional CRU | 1 × 9.271 | 9.271 |
+| Médico intervencionista USA (posto 24/7) | 7 × 27.272 | 190.904 |
+| Enfermeiro USA (1 posto) | 5 × 10.832 | 54.162 |
+| Téc. enfermagem USB (2 postos) | 9 × 8.177 | 73.594 |
+| Téc. enfermagem motolância (diurno 12h) | 3 × 8.177 | 24.531 |
+| Condutores (3 postos: 2 USB + USA) | 14 × 6.951 | 97.311 |
+| ASG 2 · coord. base · enf. supervisor/RT · aux. adm. | — | 34.821 |
+| RT médico (rateio 50%) | — | 10.680 |
+
+### Não-pessoal — R$ 102.250/mês
+
+Combustível 4 viaturas+moto 14.400 (vs 349,8 L ≈ R$ 2,1 mil atuais — retrato da
+subutilização) · manutenção 15.800 · seguro/IPVA 5.850 · insumos 18.700 · O₂ 3.500 ·
+**almox./logística dedicados 6.000** · **CoPilot OS (infra+IA+licenças) 12.000 ⚠️
+estimativa interna a calibrar** · telefonia/conectividade 192 6.000 · **NEP 10.000** ·
+**uniformes 10.000** (base real: fardamento 26.676/ano p/ 16 pessoas = R$ 1.667/
+pessoa/ano × ~70; kit/ano por operacional: 5 camisetas + 2 conjuntos operacionais
+(macacão/calça+jaqueta) + bota + boné; EPIs nos insumos por viatura).
+
+### Bridge custo → preço (INTERNO)
+
+| Linha | R$/mês |
 |---|---|
-| População Avaré / região AMVAPA | 96.450 / 312.109 hab (17 municípios) |
-| Modelo atual | misto — base municipal + AMVAPA gerencia CRU regional e USA (ambas **sediadas em Avaré**) |
-| CRU | regional Vale do Jurumirim, habilitada e **qualificada 04/2026–04/2029** (PT 10.850/GM/MS) |
-| Frota | 3 USB: 2012 Boxer **parada** · 2015 Master **parada** · 2024 Master operante → **1 de 3 operante** |
-| Equipe da base | 16 pessoas (6 cond., 5 téc. enf., 1 enf. 30h, 2 ASG, 1 téc. RM, 1 coord. cedido) |
-| Salários locais | cond. 2.643,79 · téc. enf. 3.314,34 · ASG 2.272,62 · enf. 3.935,10 (30h) · téc. RM 2.643,79 · coord. 3.660,37 |
-| Demanda USB | 152 atend./mês (131–168) · ano: 1.385 clín. + 540 trauma + 124 psiq. + 38 obst. |
-| TR / qualidade | TR médio 20:18 · máx 2:52:58 · TARM 1:59 · VTR 10:54 |
-| Custo declarado | **R$ 491.417,77/mês** (média jan–mar/2026) — *não confirmado se inclui rateio AMVAPA* ⚠️ |
-| Repasse federal | **R$ 159.568,50/mês** (PT 1.631/23: 71.662,50 USA · PT 1.816/23: 50.050 USA · PT 10.850/26: 13.786,50 CRU + 12.637,30 USA + 11.432,20 USB) |
-| Custos ocultos | manutenção na frota municipal · combustível na garagem da Prefeitura (349,8 L/mês) · imóvel próprio custeado pela PM · coordenador cedido |
-| Passivo | **TAC MPT** — procedimento 194.218.001.15/0-34 |
-| Dores declaradas | frota insuficiente · USA única p/ 17 municípios · falhas de regulação **com óbito documentado** |
-| Intenção política | **municipalizar** — "maior município e maior demanda da região" (resposta 7.5) |
+| Direto (RH + não-pessoal) | 885.390 |
+| Indiretos 10% (7% adm. + 3% op.) | 88.539 |
+| **Custo total** | **973.929** |
+| ÷ [1 − (16,33% trib. + 35% margem)] = ÷ 0,4867 | |
+| **Preço** | **2.001.086 → ofertar R$ 2,0 mi/mês** (R$ 24 mi/ano) |
+| (−) repasse federal vigente | −159.569 |
+| **Líquido para rateio AMVAPA** | **~R$ 1,84 mi/mês** |
 
-## 3. Decisão de escopo da proposta única
+Rateio ilustrativo por população (a definir pela AMVAPA): Avaré (30,9%) ≈ **R$ 569
+mil/mês** — hoje declara R$ 491 mil parciais por 1 USB operante e sem os ocultos.
+Municípios pequenos: ~R$ 5,90/hab/mês líquido.
 
-**Municipalizar a EXECUÇÃO; não duplicar a regulação.**
+### Implantação (one-off, fora do mensal)
 
-- A CRU regional **já fica em Avaré**, habilitada e qualificada até 2029. Criar CRU
-  municipal própria p/ 96 mil hab: (a) foge do desenho regional do normativo e
-  arrisca habilitação federal; (b) duplica estrutura existente na própria cidade;
-  (c) custaria **+R$ ~600 mil/mês** (cálculo abaixo). A dor de regulação se ataca
-  com camada de despacho local + telemetria + dados (CoPilot OS), não com CRU nova.
-- **USA própria 24/7**: acima do parâmetro (1/400–450 mil hab), mas justificada pela
-  dor documentada (USA única p/ 17 municípios, óbito) e pelas habilitações USA já
-  vigentes. É o coração assistencial da proposta.
-- **2 USB ativas + 1 reserva técnica**: normativo daria 1 USB (96 mil hab); demanda
-  reprimida documentada (USB inoperante em intrajornada, viatura única sem reserva)
-  justifica 2 + reserva. Frota é do ente (Regra Operacional: sem CAPEX; Samais
-  mantém e reativa as 2 paradas — a de 2015 vira ativa ou reserva após avaliação).
+- Laudo + **reativação das 2 USB paradas**: a precificar após laudo (⚠️ provisão de
+  referência interna R$ 30–60k). Motolância: aquisição pelo ente.
+- Mobilização/uniformização/treinamento inicial: dentro do 1º mês (adm. central).
 
-## 4. Cálculo (Fórmula Mestre · FC 4,5 · encargos 68,24%)
+## 5. Custos ocultos → onde entram na proposta (mapa)
 
-Custo/posto = (base + insalub. 40%SM + noturno ~7%) × 1,6824 + R$ 1.170 benefícios.
-Pisos: **maior entre questionário local e §9** (projeção conservadora).
-
-### RH (43 pessoas, sendo RT médico rateado 50%)
-
-| Função | Postos 24/7 | Headcount | Custo/pessoa | Total/mês |
-|---|---|---|---|---|
-| Condutor socorrista | 3 (2 USB + USA) | 14 (3×4,5↑) | 6.951 | 97.311 |
-| Técnico de enfermagem | 2 (USB) | 9 | 8.177 | 73.594 |
-| Enfermeiro USA | 1 | 5 | 10.832 | 54.162 |
-| Médico intervencionista USA (CLT 24h/sem) | 1 | **7** (730,5h ÷ 104,3h) | 27.272 | 190.904 |
-| Téc. despacho/interface CRU (12×36 diurno) | — | 2 | 5.929 | 11.859 |
-| ASG | — | 2 | 6.015 | 12.030 |
-| Coordenador de base | — | 1 | 7.328 | 7.328 |
-| Enfermeiro supervisor / RT enf. | — | 1 | 10.928 | 10.928 |
-| Auxiliar administrativo | — | 1 | 4.535 | 4.535 |
-| RT médico (rateio 50%) | — | 0,5 | 21.359 | 10.680 |
-| **Subtotal RH** | | **~43** | | **473.330** |
-
-### Não-pessoal (§9; frota e base do ente)
-
-Combustível 13.800 · manutenção (3 USB+USA, incl. reativação) 15.000 · seguro 3.400 ·
-IPVA 1.280 · insumos USB 8.400 · insumos USA 9.500 · O₂ 3.000 · almox./logística
-5.000 · tecnologia despacho/telemetria 8.000 · telefonia/conectividade 3.000 ·
-uniformes/EPI 3.800 (fardamento questionário 26.676/ano + EPI) = **74.180**
-
-### Bridge custo → preço (INTERNO — nunca no HTML)
-
-| Linha | Valor/mês |
+| Oculto hoje (fora da conta do ente) | Na proposta Samais |
 |---|---|
-| Custo direto (RH + não-pessoal) | 547.510 |
-| Indiretos 10% (7% adm. central + 3% operacional) | 54.751 |
-| **Custo total** | **602.261** |
-| Gross-up: ÷ [1 − (16,33% tributos + 35% margem)] = ÷ 0,4867 | |
-| **Preço** | **1.237.438** → **ofertar R$ 1,24 mi/mês** |
-| Preço anual | **R$ 14,9 mi** |
-| (−) repasse federal vinculado | −159.569 |
-| **Custo líquido municipal** | **~R$ 1,08 mi/mês** |
+| Manutenção na frota municipal geral ("balaio") | linha própria: manutenção dedicada 15.800 |
+| Combustível na garagem da Prefeitura | linha própria: 14.400 (frota completa rodando) |
+| **Médicos efetivos cedidos à CRU/USA** + contratações avulsas do consórcio | equipe própria CLT: méd. regulador 178.304 + méd. USA 190.904 |
+| Insumos no Almoxarifado Central compartilhado | almox. dedicado 6.000 + insumos 18.700 |
+| Imóvel (água/luz/IPTU/manutenção predial) | **permanece com o ente** (Regra Operacional — bases/CRU do ente) |
+| Coordenador cedido | coordenação própria na folha |
+| Fardamento avulso | uniformes dimensionados por colaborador 10.000 |
+| TAC/passivo trabalhista | ver §7 — não é rubrica de preço |
 
-Margem embutida ≈ 35% do contrato (~R$ 433 k/mês). Tributos 16,33% (Presumido:
-PIS 0,65 + COFINS 3 + IRPJ 4,8 + CSLL 2,88 + ISS 5 teto — ISS Avaré a confirmar).
+**Resposta à pergunta do CEO:** os ocultos **não** estão nos R$ 491 mil declarados
+(por isso "parcial"); na proposta, **todos internalizados** com linha própria — é o
+argumento "custo aparente × custo real" da tese Samais.
 
-### Referência interna (NÃO ofertar): escopo com CRU municipal própria
+## 6. Benchmark (validação — nunca expor)
 
-+1 posto médico regulador 24/7 (7×25.472) + 2 postos TARM (9×5.929) + 1 posto
-rádio-op (5×5.310) + sistema → preço ≈ **R$ 1,84 mi/mês**. Registrado como expansão
-futura caso o município insista em regulação própria; não recomendado (§3).
+- **R$/hab/mês: 6,41** — na faixa saudável dos regionais (CISRU 4,6 · CIAS 5–6).
+  O pivô regional CONSERTOU o benchmark da v2 municipal (12,83). ✓
+- Peso da folha 80% — acima da faixa 55–70%, coerente: frota/imóveis do ente e
+  CRU intensiva em pessoal. Documentado.
+- Por viatura não é a régua certa aqui (CRU regional inclusa); usar per capita.
 
-## 5. Confronto metodológico (v1 mai/2026 × v2 Fórmula Mestre)
+## 7. TAC MPT 194.218.001.15/0-34 — tratamento
 
-| Item | v1 (sessão antiga) | v2 (atual) | Efeito |
-|---|---|---|---|
-| Encargos | 66,52% | **68,24%** calibrado | +1,7 pp |
-| Tributos | 8,65% (IRPJ/CSLL "na margem") | **16,33%** Presumido pleno | mais conservador |
-| Margem 35% | composta dentro do BDI 42% | **travada via gross-up explícito** | margem líquida real |
-| FC 24/7 | não explícito por função | **4,5** (12×36) · **7** médicos/posto (24h/sem) | headcount honesto |
-| Cenários | Mín 330k / Base 907k / Amplo 1,15 mi | **UMA proposta: 1,24 mi** | pedido do CEO |
-| Central | "central municipal" no Base | regulação permanece regional; despacho local | −600 k/mês e menor risco |
+- **Não entra como rubrica no preço.** É passivo contingente do ENTE (multas/
+  obrigações por descumprimento trabalhista da operação atual). A proposta CLT
+  Samais **elimina a causa raiz** (jornadas, vínculos, EPI, escala descoberta) — é
+  argumento de conformidade, não custo nosso.
+- Entra: (a) no diagnóstico (risco atual não precificado); (b) na diligência
+  (obter cópia; mapear obrigações que a operação deve cumprir — ex.: se o TAC
+  exige adicional/escala específica, isso JÁ está coberto por encargos 68,24% +
+  FC 4,5); (c) em conversa comercial.
+- ⚠️ Pesquisa pública (jul/2026): **documento não indexado publicamente** — objeto,
+  cláusulas e multas não localizados. Jurisdição compatível: PTM Bauru (PRT-15).
+  Obter cópia via busca oficial: mpt.mp.br/MPTransparencia (busca de TACs) e
+  consulta de procedimentos da PRT-15. Por analogia (casos públicos: MPMG
+  G. Valadares 2010; MPT-PB EPIs; PTM Varginha jornada), TACs de SAMU tipicamente
+  exigem regularização de vínculos, dimensionamento de equipe, EPIs e respeito a
+  jornada/intervalos — tudo já coberto pela proposta CLT (encargos 68,24% + FC 4,5
+  + NEP + uniformes/EPI). **Analogia ≠ documento**: confirmar na diligência.
 
-O Base v1 (907 k) com o MESMO escopo v1 (central municipal inclusa) recalculado
-honestamente custaria 1,84 mi — o v1 subdimensionava médicos e tributos. O v2 a
-1,24 mi entrega mais execução por menos risco regulatório.
+## 8. Riscos e pendências (diligência)
 
-## 6. Benchmark (validação §8)
+1. ⚠️ Lista oficial dos 17 municípios + estatuto/contrato de rateio AMVAPA.
+2. ⚠️ Bases/USBs existentes nos demais 16 municípios (dimensionar expansão pela régua).
+3. ⚠️ O custo declarado de Avaré inclui rateio AMVAPA? Memória de cálculo.
+4. ⚠️ Migração/manutenção das habilitações federais na troca de operador.
+5. ⚠️ ISS (usamos teto 5%) e CCT-SP da categoria (data-base).
+6. ⚠️ Cópia do TAC. 7. ⚠️ Laudo das USB 2012/2015. 8. ⚠️ Custo CoPilot OS calibrado.
+9. ⚠️ Governança: decisão colegiada dos prefeitos da AMVAPA (não só Avaré).
 
-- **R$/viatura ativa (3): ~412 k** — acima do mercado (93–159 k). Esperado e
-  documentado (§8 parametros-base): FC honesto + USA própria p/ 96 mil hab + margem
-  35%. Viável apenas em **contrato dirigido** (que é o caso: questionário oficial,
-  relação construída, intenção declarada de municipalizar). ⚠️ **Nunca expor.**
-- **R$/hab/mês: 12,83** (vs CISRU 4,6 — que dilui em 760 mil hab, sem USA dedicada).
-- **Peso da folha: 78,6%** — acima da faixa 55–70%, coerente: frota e base são do
-  ente (sem CAPEX/aluguel), não-pessoal naturalmente baixo.
-- **R$/atendimento potencial**: capacidade ~3× a atual (2 USB + USA vs 1 USB).
+## 9. Interlocução
 
-## 7. Riscos e pendências (diligência)
-
-1. ⚠️ O custo declarado (491 k) inclui o rateio AMVAPA? Pedir memória de cálculo.
-2. ⚠️ Habilitações federais na municipalização: USB/USA migram para gestão municipal
-   (processo junto ao MS); CRU permanece regional. Mapear portaria a portaria.
-3. ⚠️ ISS de Avaré (usamos teto 5%).
-4. ⚠️ CCT-SP da categoria (usamos questionário/§9 — validar dissídio e data-base).
-5. ⚠️ TAC MPT 194.218.001.15/0-34 — obter cópia; vira argumento de conformidade CLT.
-6. ⚠️ Estado da USB 2015 (reativável como 2ª ativa ou reserva?) e da 2012 (baixa?).
-7. ⚠️ Reação política da AMVAPA/16 municípios — saída de Avaré desfinancia a região;
-   enquadrar como "fortalecimento da rede" (Avaré libera capacidade regional).
-
-## 8. Interlocução
-
-- ✅ **Rodrigo Silvestre** — Chefe de Planejamento Estratégico e Gestão de Políticas
-  Públicas (respondeu o questionário; porta de entrada técnica).
-- ⚠️ Secretário(a) Municipal de Saúde — reconfirmar titular por telefone.
-- ⚠️ Prefeito de Avaré — decisor final da municipalização.
+- ✅ **José Ramiro** — prefeito de Itaí, presidente da AMVAPA (eleito 30/01/2025).
+- ⚠️ Diretoria a reconfirmar: vice Diego Augusto Berti Cinto (Cerqueira César) ·
+  tesoureiro Carlos Alberto Camargo Lima (Piraju) · secretário Éder Miano (Taquarituba).
+- ✅ AMVAPA institucional: (14) 3351-1358 · contato@amvapa.com.br · Piraju/SP.
+- ✅ Rodrigo Silvestre — Planejamento Estratégico SMS Avaré (respondeu o questionário).
+- ⚠️ SMS Avaré (titular) e Prefeito de Avaré — maior cotista e sede da CRU/USA.
+- Secretário(a) executivo(a) do consórcio: não localizado publicamente ⚠️.
