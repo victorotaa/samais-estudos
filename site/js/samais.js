@@ -35,6 +35,19 @@
     document.querySelectorAll('section[id]').forEach(function(s){if(map[s.id])ob.observe(s);});
   }
 
+  /* tabelas responsivas: rotula cada célula com o header da coluna,
+     para o CSS mobile empilhar em cartão sem nunca precisar de scroll horizontal */
+  document.querySelectorAll('table.tbl').forEach(function(table){
+    var ths=table.querySelectorAll('thead th');
+    if(!ths.length)return;
+    var labels=[].map.call(ths,function(th){return th.textContent.trim();});
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      [].forEach.call(tr.children,function(td,i){
+        if(i>0&&labels[i])td.setAttribute('data-label',labels[i]);
+      });
+    });
+  });
+
   var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 
   /* parallax */

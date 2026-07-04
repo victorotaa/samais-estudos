@@ -40,6 +40,10 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
 9. **Próximos passos** (diligência, mobilização, início).
 10. **Footer** com identidade + crédito da foto.
 
+> **Não incluir seção "Premissas e fontes".** Decisão do CEO: separação fato ×
+> premissa não é relevante comercialmente numa apresentação digital — é tratativa
+> verbal/interna. Se o rascunho gerar essa seção, remover antes de publicar.
+
 ## Preferências fixas (CEO)
 
 - **CTA final sem contato e sem botão.** A dobra de fechamento é uma afirmação
@@ -84,14 +88,24 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   **visíveis mas discretos** (fonte pequena, mono, `.value-federal`) — aparecem,
   mas não competem com o número principal. Ver `site/estudos/avare-sp.html` §05
   como referência de implementação.
-- **Responsividade é obrigatória, não opcional.** Testar sempre a versão mobile
-  antes de publicar (ou pelo menos revisar a folha de estilo). Problemas recorrentes
-  já corrigidos globalmente em `samais.css` (não reintroduzir):
-  - `.bring .row` (escopo/rows de 2 colunas) deve empilhar em coluna única e
-    alinhar à esquerda abaixo de 720px — senão o texto do valor sobrepõe o da
-    chave (bug visual sério, texto ilegível).
-  - Tabelas (`.tbl`) reduzem padding/fonte abaixo de 720px para caber mais sem
-    depender só do scroll horizontal.
+- **Responsividade é obrigatória, não opcional — e regra vale para TODA criação
+  nossa: nunca recorrer a barra de rolagem horizontal.** Toda informação deve
+  ficar sempre visível na tela, com baixo atrito cognitivo — o usuário não deve
+  ter que arrastar o dedo lateralmente para ler um valor.
+  - **Tabelas (`.tbl`) nunca mais fazem scroll horizontal.** O mecanismo é
+    **automático e global** (não precisa de nada extra por estudo): `samais.js`
+    injeta `data-label` em cada célula (a partir do header da coluna) e, abaixo
+    de 720px, `samais.css` empilha cada linha em um cartão (título em negrito +
+    pares rótulo/valor abaixo) — funciona para qualquer tabela, de 2 a 5+
+    colunas, mesmo com texto longo (ex.: tabelas de "comparação honesta" com
+    frases inteiras por célula). Basta usar `<table class="tbl">` com
+    `<thead><tr><th>...</th></tr></thead>` normalmente; nada a configurar.
+  - `.bring .row` (blocos de escopo) empilha em coluna única abaixo de 720px —
+    already corrigido globalmente (antes o texto do valor sobrepunha o da chave).
+  - **Antes de publicar, sempre testar a versão mobile de verdade** (Playwright
+    num viewport ~390px, ou o navegador do celular) — não basta revisar o CSS de
+    olho; capturar print da seção crítica (hero, tabelas, blocos de escopo) e
+    conferir que nada corta, sobrepõe ou exige scroll lateral.
   Quando um estudo usa o bloco inline `<style>` de "fotos protagonistas" (hero/band
   com opacidade e altura customizadas), **sempre** incluir dentro dele a media
   query mobile:
@@ -114,13 +128,16 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
 - **Banco de imagens Samais** (viaturas etc.) está no Drive da Samais; quando
   embutir, salvar em `site/assets/img/` (arquivos grandes não cabem no contexto da
   sessão — baixar fora ou pedir o anexo).
-- **Imagens geradas (IA)**: quando o CEO indicar um banco de imagens geradas
-  (ex.: storyboard de vídeo), usá-las é válido e pode substituir integralmente as
-  fotos reais de um estudo específico — mas **sempre** sinalizar no próprio
-  documento que é ilustrativa: eyebrow da banda com "· imagem ilustrativa" e o
-  crédito do rodapé ajustado (não atribuir a Wikimedia/fonte real quando a imagem
-  é gerada). Aplicar o mesmo filtro de curadoria (sem religião, sem texto
-  dominante, paisagem quando possível) e o mesmo critério de resolução.
+- **Imagens geradas (IA) — sempre pequenas e discretas.** Quando o CEO indicar um
+  banco de imagens geradas (ex.: storyboard de vídeo), usá-las é válido, mas
+  **nunca** como hero/banda full-bleed (esse protagonismo é reservado a fotos
+  **reais**, licenciadas). Uma imagem "ilustrativa" deve aparecer **pequena e com
+  pouco destaque** — o suficiente para cumprir a normativa de disclosure, nunca
+  para dominar a página. Padrão: componente `.mini-illustration` (thumbnail
+  ~52×52px + legenda de 8-9px "imagem ilustrativa" / "não retrata a operação
+  real"), inserido dentro de um card ou nota, nunca como seção própria em largura
+  total. Real (Wikimedia, licença livre) = grande, hero/banda/CTA. Gerada por IA =
+  pequena, acessória. Ver `site/estudos/avare-sp.html` para o padrão de referência.
 
 ## Publicação na Vercel
 

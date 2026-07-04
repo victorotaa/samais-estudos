@@ -313,8 +313,21 @@ footer{padding:48px 0 60px;border-top:1px solid var(--divider);margin-top:88px}
   .strip{grid-template-columns:1fr}
   .uof .r{grid-template-columns:1.8fr 0.6fr;gap:14px}
   .uof .track{display:none}
-  .tbl{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .tbl th,.tbl td{padding:12px 14px;font-size:12px}
+  /* tabelas: nunca scroll horizontal — empilha cada linha em cartão, com o
+     header da coluna virando rótulo (data-label injetado por samais.js) */
+  .tbl{display:block;overflow-x:visible;border:1px solid var(--divider)}
+  .tbl thead tr{display:block}
+  .tbl thead th{display:none}
+  .tbl thead th:first-child{display:block;padding:14px 16px;background:var(--s1);border-bottom:1px solid var(--divider);white-space:normal}
+  .tbl tbody{display:block}
+  .tbl tr{display:block;padding:14px 16px;border-bottom:1px solid var(--divider)}
+  .tbl tr:last-child{border-bottom:none}
+  .tbl td{display:block;border:none;padding:3px 0;font-size:12.5px;line-height:1.5;white-space:normal;text-align:left}
+  .tbl td:first-child{font-weight:600;color:var(--text);font-size:13px;margin-bottom:4px}
+  .tbl td:not(:first-child){display:flex;justify-content:space-between;align-items:baseline;gap:12px;color:var(--text-2)}
+  .tbl td:not(:first-child)::before{content:attr(data-label);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+  .tbl td.num{white-space:normal;text-align:right}
+  .tbl tr.sub,.tbl tr.tot{background:var(--s1)}
   .bring .row{flex-direction:column;align-items:flex-start;gap:6px}
   .bring .row .v{text-align:left;white-space:normal;font-size:10.5px}
   .band .cap .in{padding:0 28px 26px}

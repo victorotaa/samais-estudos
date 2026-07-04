@@ -32,6 +32,10 @@
 .value-federal .it{display:flex;align-items:baseline;gap:8px}
 .value-federal .v{font-size:13px}
 .value-federal .tot .v{color:#8E7238;font-weight:600;font-size:14.5px}
+/* imagens ilustrativas (IA): pequenas e discretas — só cumprem a normativa de disclosure */
+.mini-illustration{display:flex;align-items:center;gap:10px;margin-top:16px}
+.mini-illustration img{width:52px;height:52px;object-fit:cover;border-radius:8px;border:1px solid var(--divider);opacity:.85;flex-shrink:0}
+.mini-illustration span{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--dim);line-height:1.4}
 @media (max-width:720px){
   .hero-bg{opacity:.58}
   .band{height:clamp(220px,58vw,340px)}
@@ -73,7 +77,7 @@
 
 <!-- HERO -->
 <section class="hero-section" id="top">
-  <div class="hero-bg" data-px="0.12" style="background-image:url('../assets/fotos/avare-band-jurumirim-ponte.png')"></div>
+  <div class="hero-bg" data-px="0.12" style="background-image:url('../assets/fotos/avare-band-jurumirim2.jpg')"></div>
   <div class="wrap">
     <div class="hero">
       <div class="tag">AMVAPA · SAMU 192 Regional Vale do Jurumirim · Proposta</div>
@@ -187,9 +191,9 @@
 
 <!-- BAND -->
 <div class="band">
-  <img src="../assets/fotos/avare-band-largo.png" alt="Praça central de Avaré ao amanhecer — imagem ilustrativa" loading="lazy" style="object-position:center 40%">
+  <img src="../assets/fotos/avare-band-jurumirim1.jpg" alt="Represa de Jurumirim, Avaré/SP" loading="lazy" style="object-position:center 55%">
   <div class="cap"><div class="in">
-    <div class="e">Avaré · cidade-sede · imagem ilustrativa</div>
+    <div class="e">Avaré · cidade-sede</div>
     <div class="t">A maior cidade da região, sede da central e da UTI móvel — correndo para atender 17 municípios.</div>
   </div></div>
 </div>
@@ -323,25 +327,11 @@
     </tbody>
   </table>
   <div class="note"><span class="arrow">↳</span><div><strong>Leitura</strong> Cada item acima existe e é pago por alguém — só não aparece somado na conta do SAMU. E há um ponto de justiça operacional: o SAMU é urgência e emergência; não deveria dividir fila de oficina e de almoxarifado com operações que podem esperar. Na proposta, tudo entra no contrato com linha própria — sem rubricas escondidas.</div></div>
+  <div class="mini-illustration">
+    <img src="../assets/fotos/avare-band-maca-portas.png" alt="Imagem ilustrativa de atendimento SAMU 192">
+    <span>Imagem ilustrativa —<br/>não retrata a operação real de Avaré</span>
+  </div>
 </section>
-
-<!-- BAND · MACA/PORTAS -->
-<div class="band">
-  <img src="../assets/fotos/avare-band-maca-portas.png" alt="Equipe SAMU 192 socorrendo paciente na porta da ambulância — imagem ilustrativa" loading="lazy" style="object-position:center 42%">
-  <div class="cap"><div class="in">
-    <div class="e">O que está em jogo · imagem ilustrativa</div>
-    <div class="t">Cada minuto de frota parada é um paciente esperando mais tempo por socorro.</div>
-  </div></div>
-</div>
-
-<!-- BAND 2 · MOTOLÂNCIA -->
-<div class="band">
-  <img src="../assets/fotos/avare-band-motolancia.png" alt="Motolância SAMU 192 em deslocamento urbano — imagem ilustrativa" loading="lazy" style="object-position:center 45%">
-  <div class="cap"><div class="in">
-    <div class="e">Proposta operacional · imagem ilustrativa</div>
-    <div class="t">Frota completa rodando — ambulâncias reativadas, UTI móvel com equipe e motolância furando o trânsito.</div>
-  </div></div>
-</div>
 
 <!-- 04 PROPOSTA -->
 <section class="wrap" id="proposta">
@@ -379,25 +369,24 @@
       <h3>Frota que funciona</h3>
       <p>As viaturas paradas passam por laudo técnico e voltam a rodar. Duas ambulâncias ativas mais reserva em Avaré, UTI móvel com equipe própria e motolância para resposta rápida — com manutenção, combustível e insumos dedicados, fora da fila geral.</p>
       <div class="kv"><div class="r"><span class="k">Na rua</span><span class="v">2 USB + UTI móvel + moto</span></div><div class="r"><span class="k">Reserva</span><span class="v">1 USB</span></div></div>
+      <div class="mini-illustration">
+        <img src="../assets/fotos/avare-band-motolancia.png" alt="Imagem ilustrativa de motolância SAMU 192">
+        <span>Imagem ilustrativa</span>
+      </div>
     </div>
     <div class="sku">
       <span class="badge">Bloco 03 · Inteligência</span>
       <h3>Central potencializada</h3>
       <p>A central segue no prédio público de Avaré — e ganha a operação Samais com o CoPilot: triagem apoiada por tecnologia, despacho otimizado, cada viatura rastreada em tempo real e painel aberto para o consórcio e as secretarias.</p>
       <div class="kv"><div class="r"><span class="k">Rastreamento</span><span class="v">tempo real</span></div><div class="r"><span class="k">Gestão</span><span class="v">painel para a AMVAPA</span></div></div>
+      <div class="mini-illustration">
+        <img src="../assets/fotos/avare-band-cru-copilot.png" alt="Imagem ilustrativa de central de regulação">
+        <span>Imagem ilustrativa</span>
+      </div>
     </div>
   </div>
   <div class="note"><span class="arrow">↳</span><div><strong>O que fica com o poder público</strong> Os prédios da central e das bases (e sua manutenção predial) seguem com o poder público, assim como a propriedade das viaturas — a proposta não tem compra de frota nem obra embutida no valor mensal. A motolância é adquirida pelo ente (investimento pontual, fora da mensalidade). O que a Samais entrega é a operação completa funcionando.</div></div>
 </section>
-
-<!-- BAND 3 · CRU COPILOT -->
-<div class="band">
-  <img src="../assets/fotos/avare-band-cru-copilot.png" alt="Atendente TARM na central de regulação com painel CoPilot — imagem ilustrativa" loading="lazy" style="object-position:center 40%">
-  <div class="cap"><div class="in">
-    <div class="e">Central de chamados · imagem ilustrativa</div>
-    <div class="t">A mesma central, no mesmo prédio — com equipe completa, tecnologia e cada chamado rastreado.</div>
-  </div></div>
-</div>
 
 <!-- 05 VIABILIDADE (light fold) -->
 <section class="wrap fold-light" id="viabilidade">
@@ -507,35 +496,11 @@
   <div class="s">SAMU 192 Regional · Vale do Jurumirim · AMVAPA</div>
 </section>
 
-<!-- PREMISSAS -->
-<section class="wrap" id="premissas">
-  <div class="sec-head">
-    <div class="left">
-      <span class="sec-num">07 · Premissas e fontes</span>
-      <h2>O que é fato e o que é premissa.</h2>
-      <p class="lede">Transparência metodológica: separamos o dado público e oficial verificável da estimativa de modelagem, a confirmar em diligência.</p>
-    </div>
-    <div class="right"><span class="acc">verde = verificado<br/>âmbar = a validar</span></div>
-  </div>
-  <div class="sources">
-    <div class="row"><div class="k">Pisos e equipe</div><div class="v">Questionário da SMS de Avaré (21/05/2026) — pisos, frota e composição da base<span class="tag">verificado</span></div></div>
-    <div class="row"><div class="k">Repasse federal</div><div class="v">R$ 159.568,50/mês via FNS · Portarias GM/MS 1.631/2023, 1.816/2023 e 10.850/2026<span class="tag">verificado</span></div></div>
-    <div class="row"><div class="k">População</div><div class="v">Avaré 96.450 · regional 312.109 (17 cidades) — IBGE, via levantamento da SMS<span class="tag">verificado</span></div></div>
-    <div class="row"><div class="k">AMVAPA</div><div class="v">Consórcio Intermunicipal do Alto Vale do Paranapanema · sede Piraju · 19 consorciadas · presidência José Ramiro (Itaí)<span class="tag">verificado</span></div></div>
-    <div class="row"><div class="k">Lista das 17 cidades</div><div class="v">região de saúde Vale do Jurumirim — lista nominal a reconfirmar com a AMVAPA/DRS-VI<span class="tag amber">a validar</span></div></div>
-    <div class="row"><div class="k">Bases das demais cidades</div><div class="v">mapa de bases fora de Avaré em consolidação (CNES/AMVAPA) — dimensionamento na diligência<span class="tag amber">a levantar</span></div></div>
-    <div class="row"><div class="k">Passivo trabalhista</div><div class="v">TAC firmado com o MPT; dados operacionais do questionário da SMS<span class="tag">verificado</span></div></div>
-    <div class="row"><div class="k">Valor da proposta</div><div class="v">R$ 2,0 mi/mês por modelagem própria (equipe, frota e insumos da operação regional), a calibrar em diligência<span class="tag amber">estimativa</span></div></div>
-    <div class="row"><div class="k">Central de chamados</div><div class="v">Sediada em Avaré, prédio da Prefeitura, requalificada pelo MS (04/2026–04/2029)<span class="tag">verificado</span></div></div>
-    <div class="row"><div class="k">TAC com o MPT</div><div class="v">Procedimento 194.218.001.15/0-34 informado pela SMS — cópia e teor a obter na diligência<span class="tag amber">a levantar</span></div></div>
-    <div class="row"><div class="k">Custos ocultos e plurianual</div><div class="v">Custo isolado dos ocultos e projeção plurianual: a levantar<span class="tag amber">a levantar</span></div></div>
-  </div>
-</section>
 
 <!-- CTA -->
 <section class="wrap cta" id="cta">
   <div class="cta-box">
-    <div class="cta-bg" data-px="0.10" style="background-image:url('../assets/fotos/avare-cta-socorrista.png')"></div>
+    <div class="cta-bg" data-px="0.10" style="background-image:url('../assets/fotos/avare-cta-jurumirim.jpg')"></div>
     <span class="sec-num">SAMU 192 Regional · Vale do Jurumirim</span>
     <h2>A região pode ter o SAMU que merece.</h2>
     <p class="lede">Frota inteira rodando, UTI móvel com equipe completa dia e noite, central potencializada e um único contrato com o custo todo aberto — calibrado ao dado real do consórcio em diligência de campo.</p>
@@ -548,7 +513,7 @@
     <div class="tl">Onde gestão se mede em vidas.</div>
     <div class="pg">Samais · SAMU Regional Vale do Jurumirim (AMVAPA) · documento de proposta</div>
   </div>
-  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Imagens ilustrativas, geradas digitalmente para este estudo — Avaré, Represa de Jurumirim e cenas de operação do SAMU 192. Documento de uso restrito · não indexado.</p>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Fotos: Avaré e Represa de Jurumirim/SP — Wikimedia Commons (CC). Pequenas imagens de operação: ilustrativas, geradas digitalmente. Documento de uso restrito · não indexado.</p>
 </footer>
 
 <script src="../js/samais.js"></script>
