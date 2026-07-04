@@ -1,172 +1,131 @@
-# Avaré & Vale do Jurumirim — SAMU Regional AMVAPA (v3, Fórmula Mestre)
+# Avaré + Itaí + Cerqueira César — Novo Consórcio SAMU (v4, Fórmula Mestre)
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Cálculo completo com margem, bridge
 > custo→preço e benchmark. O HTML cliente-facing (`site/estudos/avare-sp.html`)
-> **não** expõe nada da seção financeira interna.
+> **não** expõe nada desta seção financeira interna.
 >
-> **v3 (jul/2026) — pivô de escopo definido pelo CEO:** o cliente é a **AMVAPA**
-> (consórcio contrata a Samais para operar **toda a área SAMU regional** — CRU +
-> USA + base de Avaré reforçada), e não Avaré municipalizando isoladamente.
-> Substitui a v2 (execução municipal) e a v1 (mai/2026, BDI 42%, 3 cenários).
-> **Uma proposta única.**
+> **v4 (jul/2026) — pivô por áudios do CEO (André):** Avaré **sai da estrutura
+> AMVAPA** e forma um **novo consórcio com 2 municípios**, com **CRU própria em
+> Avaré** e a Samais operando tudo. Substitui a v3 (proposta à AMVAPA, R$ 2,0 mi /
+> 312 mil hab). Trio definido com o CEO: **Avaré + Itaí + Cerqueira César**
+> (⚠️ composição a confirmar politicamente — ver §7). Proposta única.
 
-## 1. Fontes e procedência
+## 1. O trio (procedência)
 
-- ✅ Questionário oficial SMS Avaré (21/05/2026, Rodrigo Silvestre) + print sys4web
-  (TR médio 20:18 · 1.820 atendimentos regionais em 12 meses).
-- ✅ IBGE (populações declaradas). ⚠️ Unitários sem dado local: §9 `parametros-base.md`.
-- ✅ Pesquisa pública (jul/2026): **AMVAPA = Consórcio Intermunicipal do Alto Vale do
-  Paranapanema**, CNPJ 03.753.263/0001-60, sede **Piraju/SP** (R. Cap. Maximiano dos
-  Santos Guerra, 552), tel. (14) 3351-1358, contato@amvapa.com.br. **19 consorciadas**;
-  a CRU Vale do Jurumirim cobre **17** (região de saúde, DRS-VI Bauru) = as 19 menos
-  Angatuba e Riversul ⚠️ a reconfirmar: Águas de Santa Bárbara · Arandu · **Avaré
-  (sede)** · Barão de Antonina · Cerqueira César · Coronel Macedo · Fartura · Iaras ·
-  Itaí · Itaporanga · Manduri · Paranapanema · Piraju · Sarutaiá · Taguaí ·
-  Taquarituba · Tejupá. Bases fora de Avaré existem (Fartura ✅, Taquarituba ✅ —
-  PT 522/2012); mapa completo via CNES ⚠️. Fontes: amvapa.com.br, Econodata,
-  prefeitura de Fartura, Conasems. Obs.: DRS-VI cita ~285 mil hab p/ a região ⚠️ vs
-  312.109 do questionário (usar o declarado ✅; conciliar em diligência).
+| Município | População | Fonte | Papel |
+|---|---|---|---|
+| **Avaré** | 96.450 | SMS/IBGE (questionário 21/05/2026) ✅ | **sede**: CRU + USA + 2 USB ativas + reserva + motolância |
+| **Itaí** | 25.180 | IBGE Censo 2022 ✅ | 1 USB 24/7 local |
+| **Cerqueira César** | 21.469 | IBGE Censo 2022 ✅ | 1 USB 24/7 local |
+| **Total** | **143.099** | | 4 USB ativas + 1 reserva + 1 USA + 1 moto |
 
-## 2. Fatos-chave (questionário — ✅)
+Alternativas avaliadas (mecânica idêntica, trocam população/nome): Paranapanema
+(~21 mil) no lugar de Itaí se a política travar (§7); Águas de Santa Bárbara
+(~6 mil) soma pouco à escala.
 
-Ver detalhamento na v2 (histórico git). Essenciais para o desenho v3:
+Sugestão do Victor de "média populacional de raio próximo": superada — com os 2
+municípios nomeados, o cálculo é exato pela Fórmula Mestre (população dimensiona;
+o preço sai do escopo).
 
-- CRU regional Vale do Jurumirim: **17 municípios · 312.109 hab**, sediada em Avaré,
-  **imóvel próprio da Prefeitura com manutenção predial dela**; habilitada e
-  **qualificada 04/2026–04/2029** (PT 10.850). Administrada hoje pela AMVAPA.
-- USA regional única (também em Avaré). Base Avaré: 3 USB, **só 1 operante**.
-- **Médicos efetivos de Avaré cedidos à CRU e à USA** + consórcio contrata médicos
-  complementares (custo oculto de pessoal municipal fora da conta SAMU).
-- Insumos via **Almoxarifado Central da saúde** (compartilhado); manutenção junto à
-  **frota municipal geral**; combustível na garagem da Prefeitura (**349,8 L/mês** —
-  retrato da operação mirrada: ~1 viatura rodando).
-- Custo declarado Avaré: R$ 491.417,77/mês (parcial) · repasse federal R$ 159.568,50/mês.
-- TAC MPT 194.218.001.15/0-34 (ver §7).
+## 2. Fatos herdados do questionário (v2/v3 — todos ✅)
 
-## 3. Escopo da proposta única (contratante: AMVAPA)
+Frota Avaré 1/3 operante · USA regional única p/ 17 municípios · TR médio 20:18 ·
+óbito documentado por não-liberação · custo declarado Avaré R$ 491.417,77/mês
+(parcial) · custos ocultos (manutenção na frota geral, combustível na garagem,
+médicos cedidos à CRU/USA, almoxarifado compartilhado, imóvel, coordenador cedido)
+· TAC MPT 194.218.001.15/0-34 (não público; obter cópia) · salários locais.
 
-**A Samais opera toda a área de atendimento do SAMU regional AMVAPA:**
+## 3. Cálculo v4 (FC 4,5 · encargos 68,24% · pisos = maior entre local e §9)
 
-| Componente | Entrega | Observação |
+### RH — R$ 904.773/mês · 85 CLT + RT médico rateado
+
+| Bloco | Composição | Total/mês |
 |---|---|---|
-| **CRU regional 24/7** | operação completa (méd. regulador, TARM, rádio-op, supervisão) + CoPilot OS | imóvel e manutenção predial seguem com o ente (Regra Operacional); administração da operação sob Samais |
-| **USA regional 24/7** | equipe própria completa | fim da dependência de cedidos + contratações avulsas do consórcio |
-| **Base Avaré** | 2 USB ativas 24/7 + 1 reserva + **motolância diurna** | laudo técnico e **reativação das 2 USB paradas** no mês 1 |
-| **Frota** | gestão/manutenção dedicada — fila própria, não a fila geral da Prefeitura | frota é do ente; moto a ser adquirida pelo ente (~R$ 60–80k, fora do mensal) |
-| **Insumos** | almoxarifado/logística **dedicados ao SAMU** | sai do "balaio" do almoxarifado central |
-| **NEP** | treinamentos mensais, cursos e workshops contínuos | linha explícita (compromisso Samais) |
-| **Bases dos demais municípios** | a dimensionar em diligência com a AMVAPA | régua interna: +1 USB 24/7 ≈ **R$ 184 mil/mês** (preço) |
+| **CRU própria (Avaré-sede)** | méd. regulador 7×25.472 + TARM 2 postos (9×5.929) + rádio-op 5×5.310 + supervisor 9.271 | 267.490 |
+| **USA 24/7** | méd. 7×27.272 + enf. 5×10.832 | 245.066 |
+| **USB Avaré (2 ativas)** | téc. 9×8.177 | 73.594 |
+| **USB Itaí (1)** | cond. 5×6.951 + téc. 5×8.177 | 75.640 |
+| **USB Cerqueira César (1)** | cond. 5×6.951 + téc. 5×8.177 | 75.640 |
+| **Motolância (diurna)** | téc. 3×8.177 | 24.531 |
+| **Condutores pool Avaré** | 3 postos (2 USB + USA) → 14×6.951 | 97.311 |
+| **Apoio** | 2 ASG + coord. base + enf. sup./RT + aux. adm. + RT méd. 50% | 45.501 |
 
-## 4. Cálculo v3 (FC 4,5 · encargos 68,24% · pisos = maior entre local e §9)
+TARM: 2 postos (Portaria: 2–3 até 350 mil hab; 143 mil → 2, mantendo margem).
 
-### RH — R$ 783.140/mês · ~70 CLT + RT rateado
+### Não-pessoal — R$ 130.790/mês
 
-| Função | Dimensionamento | Total/mês |
-|---|---|---|
-| Médico regulador CRU (posto 24/7; CLT 24h/sem → 7) | 7 × 25.472 | 178.304 |
-| TARM (3 postos 24/7 — 312 mil hab, teto da Portaria) | 14 × 5.929 | 83.010 |
-| Rádio-operador (1 posto) | 5 × 5.310 | 26.552 |
-| Supervisor operacional CRU | 1 × 9.271 | 9.271 |
-| Médico intervencionista USA (posto 24/7) | 7 × 27.272 | 190.904 |
-| Enfermeiro USA (1 posto) | 5 × 10.832 | 54.162 |
-| Téc. enfermagem USB (2 postos) | 9 × 8.177 | 73.594 |
-| Téc. enfermagem motolância (diurno 12h) | 3 × 8.177 | 24.531 |
-| Condutores (3 postos: 2 USB + USA) | 14 × 6.951 | 97.311 |
-| ASG 2 · coord. base · enf. supervisor/RT · aux. adm. | — | 34.821 |
-| RT médico (rateio 50%) | — | 10.680 |
+Combustível (4 USB + USA + moto) 23.400 · manutenção (5 USB incl. reserva + USA +
+moto) 22.800 · seguro 5.950 · IPVA 2.240 · insumos 27.100 · O₂ 3.500 · almox.
+dedicado 6.000 · CoPilot OS 12.000 ⚠️ · telefonia/192 6.000 · NEP 10.000 ·
+uniformes 11.800 (1.667/pessoa/ano × 85, base questionário).
 
-### Não-pessoal — R$ 102.250/mês
-
-Combustível 4 viaturas+moto 14.400 (vs 349,8 L ≈ R$ 2,1 mil atuais — retrato da
-subutilização) · manutenção 15.800 · seguro/IPVA 5.850 · insumos 18.700 · O₂ 3.500 ·
-**almox./logística dedicados 6.000** · **CoPilot OS (infra+IA+licenças) 12.000 ⚠️
-estimativa interna a calibrar** · telefonia/conectividade 192 6.000 · **NEP 10.000** ·
-**uniformes 10.000** (base real: fardamento 26.676/ano p/ 16 pessoas = R$ 1.667/
-pessoa/ano × ~70; kit/ano por operacional: 5 camisetas + 2 conjuntos operacionais
-(macacão/calça+jaqueta) + bota + boné; EPIs nos insumos por viatura).
-
-### Bridge custo → preço (INTERNO)
+### Bridge custo → preço (INTERNO — nunca no HTML)
 
 | Linha | R$/mês |
 |---|---|
-| Direto (RH + não-pessoal) | 885.390 |
-| Indiretos 10% (7% adm. + 3% op.) | 88.539 |
-| **Custo total** | **973.929** |
+| Direto (RH + não-pessoal) | 1.035.563 |
+| Indiretos 10% (7% adm. + 3% op.) | 103.556 |
+| **Custo total** | **1.139.119** |
 | ÷ [1 − (16,33% trib. + 35% margem)] = ÷ 0,4867 | |
-| **Preço** | **2.001.086 → ofertar R$ 2,0 mi/mês** (R$ 24 mi/ano) |
-| (−) repasse federal vigente | −159.569 |
-| **Líquido para rateio AMVAPA** | **~R$ 1,84 mi/mês** |
+| **Preço** | **2.340.495 → ofertar R$ 2,35 mi/mês** (R$ 28,2 mi/ano) |
 
-Rateio ilustrativo por população (a definir pela AMVAPA): Avaré (30,9%) ≈ **R$ 569
-mil/mês** — hoje declara R$ 491 mil parciais por 1 USB operante e sem os ocultos.
-Municípios pequenos: ~R$ 5,90/hab/mês líquido.
+### Rateio ilustrativo por população (a pactuar no protocolo do consórcio)
 
-### Implantação (one-off, fora do mensal)
+| Município | % pop | R$/mês |
+|---|---|---|
+| Avaré | 67,4% | **1.577.515** (hoje declara 491 mil parciais por 1 USB sem USA) |
+| Itaí | 17,6% | **411.838** (ganha USB local 24/7 + USA + CRU) |
+| Cerqueira César | 15,0% | **351.142** (idem) |
 
-- Laudo + **reativação das 2 USB paradas**: a precificar após laudo (⚠️ provisão de
-  referência interna R$ 30–60k). Motolância: aquisição pelo ente.
-- Mobilização/uniformização/treinamento inicial: dentro do 1º mês (adm. central).
+## 4. Benchmark (validação — nunca expor)
 
-## 5. Custos ocultos → onde entram na proposta (mapa)
+- **R$/hab/mês: 16,36** — ~2,5× o regional (AMVAPA v3: 6,41; CISRU 4,6; CIAS 5–6).
+  É o preço estrutural da autonomia: CRU + USA próprias diluídas em só 143 mil
+  hab. Defensável apenas em **contrato dirigido com decisão política tomada**
+  (que é o caso: o trio quer sair). Argumento de venda: não comparar per capita
+  com regionais; comparar **entrega** (hoje o trio tem 1 USB operante + fatias de
+  USA/CRU distantes; passa a ter 4 USB + USA + CRU próprias).
+- **Peso da folha: 79%** — coerente (frota/imóveis do ente).
+- Por viatura ativa: ~390 mil (informativo; régua per capita é a melhor aqui).
+- Expansão: cada município adicional que aderir com 1 USB 24/7 ≈ **+R$ 184 mil/mês**
+  de preço e dilui a CRU/USA — o per capita CAI com cada adesão. Argumento para
+  crescer o consórcio depois (Arandu, Iaras, Paranapanema, Águas de Sta Bárbara).
 
-| Oculto hoje (fora da conta do ente) | Na proposta Samais |
-|---|---|
-| Manutenção na frota municipal geral ("balaio") | linha própria: manutenção dedicada 15.800 |
-| Combustível na garagem da Prefeitura | linha própria: 14.400 (frota completa rodando) |
-| **Médicos efetivos cedidos à CRU/USA** + contratações avulsas do consórcio | equipe própria CLT: méd. regulador 178.304 + méd. USA 190.904 |
-| Insumos no Almoxarifado Central compartilhado | almox. dedicado 6.000 + insumos 18.700 |
-| Imóvel (água/luz/IPTU/manutenção predial) | **permanece com o ente** (Regra Operacional — bases/CRU do ente) |
-| Coordenador cedido | coordenação própria na folha |
-| Fardamento avulso | uniformes dimensionados por colaborador 10.000 |
-| TAC/passivo trabalhista | ver §7 — não é rubrica de preço |
+## 5. Federal (tratamento honesto)
 
-**Resposta à pergunta do CEO:** os ocultos **não** estão nos R$ 491 mil declarados
-(por isso "parcial"); na proposta, **todos internalizados** com linha própria — é o
-argumento "custo aparente × custo real" da tese Samais.
+O repasse atual (R$ 159,6 mil/mês) pertence às habilitações da estrutura regional
+AMVAPA. O **novo consórcio precisa de habilitações próprias** (CRU, USA, USBs)
+junto ao MS — processo com cronograma e risco. No HTML: não abater os 159,6 mil
+como certos; exibir "verba federal a habilitar pelo novo consórcio" (referência
+de potencial: USB ~11,4 mil + USA ~124 mil? — usar somente as parcelas por
+unidade da PT 10.850/26 como referência de potencial ⚠️, sem somar no preço).
+Na diligência: mapear portaria a portaria o que migra, o que se pleiteia novo e
+o prazo típico de habilitação.
 
-## 6. Benchmark (validação — nunca expor)
+## 6. Constituição do consórcio (caminho)
 
-- **R$/hab/mês: 6,41** — na faixa saudável dos regionais (CISRU 4,6 · CIAS 5–6).
-  O pivô regional CONSERTOU o benchmark da v2 municipal (12,83). ✓
-- Peso da folha 80% — acima da faixa 55–70%, coerente: frota/imóveis do ente e
-  CRU intensiva em pessoal. Documentado.
-- Por viatura não é a régua certa aqui (CRU regional inclusa); usar per capita.
+Protocolo de intenções entre os 3 prefeitos → autorização legislativa (lei em
+cada câmara) → contrato de consórcio + estatuto → CNPJ → contrato de rateio →
+habilitações MS → contratação da operação (Lei 14.133 no âmbito do consórcio).
+A Samais acompanha tecnicamente todas as etapas (é diferencial da proposta).
 
-## 7. TAC MPT 194.218.001.15/0-34 — tratamento
+## 7. Riscos e pendências
 
-- **Não entra como rubrica no preço.** É passivo contingente do ENTE (multas/
-  obrigações por descumprimento trabalhista da operação atual). A proposta CLT
-  Samais **elimina a causa raiz** (jornadas, vínculos, EPI, escala descoberta) — é
-  argumento de conformidade, não custo nosso.
-- Entra: (a) no diagnóstico (risco atual não precificado); (b) na diligência
-  (obter cópia; mapear obrigações que a operação deve cumprir — ex.: se o TAC
-  exige adicional/escala específica, isso JÁ está coberto por encargos 68,24% +
-  FC 4,5); (c) em conversa comercial.
-- ⚠️ Pesquisa pública (jul/2026): **documento não indexado publicamente** — objeto,
-  cláusulas e multas não localizados. Jurisdição compatível: PTM Bauru (PRT-15).
-  Obter cópia via busca oficial: mpt.mp.br/MPTransparencia (busca de TACs) e
-  consulta de procedimentos da PRT-15. Por analogia (casos públicos: MPMG
-  G. Valadares 2010; MPT-PB EPIs; PTM Varginha jornada), TACs de SAMU tipicamente
-  exigem regularização de vínculos, dimensionamento de equipe, EPIs e respeito a
-  jornada/intervalos — tudo já coberto pela proposta CLT (encargos 68,24% + FC 4,5
-  + NEP + uniformes/EPI). **Analogia ≠ documento**: confirmar na diligência.
+1. ⚠️ **Composição do trio**: Itaí é presidido (prefeitura) por **José Ramiro,
+   atual presidente da AMVAPA** — a saída dele da regional é politicamente
+   delicada (ou é ele quem lidera a debandada; validar com o CEO/campo).
+   Plano B: Paranapanema no lugar de Itaí (~138 mil hab; recalcular é trivial).
+2. ⚠️ Reação da AMVAPA: perder Avaré (31% da pop. regional) + 2 desfinancia a
+   CRU regional — antecipar narrativa construtiva ("gestão de proximidade",
+   regional segue com os demais; Samais pode operar os dois lados).
+3. ⚠️ Habilitações federais novas (§5) — cronograma e interinidade.
+4. ⚠️ ISS dos 3 municípios (usamos teto 5%); CCT-SP; TAC (cópia); laudo USBs
+   paradas; custo CoPilot a calibrar.
+5. ⚠️ Populações: Avaré usa o declarado da SMS (96.450); Itaí/Cerqueira Censo
+   2022 — atualizar por estimativas IBGE mais recentes na diligência.
 
-## 8. Riscos e pendências (diligência)
+## 8. Interlocução
 
-1. ⚠️ Lista oficial dos 17 municípios + estatuto/contrato de rateio AMVAPA.
-2. ⚠️ Bases/USBs existentes nos demais 16 municípios (dimensionar expansão pela régua).
-3. ⚠️ O custo declarado de Avaré inclui rateio AMVAPA? Memória de cálculo.
-4. ⚠️ Migração/manutenção das habilitações federais na troca de operador.
-5. ⚠️ ISS (usamos teto 5%) e CCT-SP da categoria (data-base).
-6. ⚠️ Cópia do TAC. 7. ⚠️ Laudo das USB 2012/2015. 8. ⚠️ Custo CoPilot OS calibrado.
-9. ⚠️ Governança: decisão colegiada dos prefeitos da AMVAPA (não só Avaré).
-
-## 9. Interlocução
-
-- ✅ **José Ramiro** — prefeito de Itaí, presidente da AMVAPA (eleito 30/01/2025).
-- ⚠️ Diretoria a reconfirmar: vice Diego Augusto Berti Cinto (Cerqueira César) ·
-  tesoureiro Carlos Alberto Camargo Lima (Piraju) · secretário Éder Miano (Taquarituba).
-- ✅ AMVAPA institucional: (14) 3351-1358 · contato@amvapa.com.br · Piraju/SP.
-- ✅ Rodrigo Silvestre — Planejamento Estratégico SMS Avaré (respondeu o questionário).
-- ⚠️ SMS Avaré (titular) e Prefeito de Avaré — maior cotista e sede da CRU/USA.
-- Secretário(a) executivo(a) do consórcio: não localizado publicamente ⚠️.
+- ✅ Rodrigo Silvestre — Planejamento Estratégico SMS Avaré (questionário).
+- ⚠️ Prefeitos de Avaré, Itaí e Cerqueira César — os 3 assinam o protocolo.
+- ⚠️ José Ramiro (Itaí): duplo papel (prefeito do trio × presidente da AMVAPA).
