@@ -40,8 +40,20 @@ use o que está aqui.
   gross-up `Preço = Custo ÷ [1 − (Trib% + Margem%)]` vira conferência. Estudos
   publicados antes da régua não são recalculados retroativamente, salvo pedido.
 - **Regras Operacionais:** frota é do ente (sem CAPEX de aquisição; Samais faz
-  manutenção + reativação; aluguel só como contingência); equipe própria CLT no
-  piso; bases/CRU e suas obras são do ente; atendimentos por histórico.
+  manutenção + reativação; **inclusão de viatura nova via locação+equipação só por
+  aditivo de contrato**, fora do objeto do estudo-base); equipe própria CLT no
+  piso; bases/CRU e suas obras são do ente; atendimentos por histórico. **USA/USB
+  são ativos do ente**; a USA existente fica e é administrada pelo maior município
+  da regional de saúde — precificada dentro da proposta pela régua Ourinhos, com o
+  **repasse tripartite (federal ~R$ 134k/USA) voltando ao município** como desconto.
+- **Custo aparente × custo real (obrigatório em todo estudo):** Cenário A não é só
+  o declarado — somar os ocultos (frota na pasta geral, combustível, insumos no
+  almox central, imóvel, coordenação e, o maior, **médicos cedidos à USA/CRU**).
+  Fator de referência calibrado em Avaré: **declarado × 1,38 ≈ real**. Comparar 3
+  níveis: declarado × custo real hoje × **autogestão da estrutura cheia** × oferta
+  Samais. **Honestidade:** a Samais não é "mais barata" que a autogestão (preço tem
+  tributo+margem); o argumento é **empate em custo real + sem passivo + tecnologia +
+  chave-na-mão**. Cabe na página-mãe multi-cenário.
 - **Validar por benchmark** antes de entregar (per capita vs R$ 5,20/hab — régua
   principal; custo/viatura mercado ~R$ 93–159k/mês; peso da folha ~55–70%). Fora
   da faixa = investigar. **Per capita sempre exibido no estudo** (pedido do CEO).

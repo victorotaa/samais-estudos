@@ -64,6 +64,30 @@
 - **Custeio federal (PT Consolidação 6/2017 + 958/2023 + 10.850/2026):** USB
   qualificada ~R$ 11,4k/mês; migração p/ gestão municipal na diligência.
 
+## 4-ter. Custo aparente × custo real × autogestão (argumento-mãe, validado)
+
+Projeção defensável para o CEO/decisor (números de referência, a fechar em diligência):
+
+| Referência (Avaré) | R$/mês | Entrega |
+|---|---|---|
+| Declarado na rubrica do SAMU | 491.418 | reduzida (1 USB operante) |
+| **Custo real hoje** (com ocultos; médicos cedidos ~120k à frente) | **~678.000** | mesma reduzida, somada |
+| **Autogestão da estrutura cheia** (custo real: folha pública + ocultos +38% + passivo) | **~804.000** | tudo, mas com passivo, sem tecnologia |
+| **Samais completa, líq. repasse federal** (bruto R$ 1,0 mi − ~134k federal) | **~866.000** | tudo, chave-na-mão, sem passivo, com IA |
+
+**Honestidade obrigatória (não errar na frente do André):** a Samais **NÃO é mais
+barata** que a autogestão em custo de caixa direto (nosso preço carrega tributo
+16,33% + margem 33%). O argumento vencedor é **custo real + risco**: autogestão da
+estrutura cheia (~804k) **empata** com a Samais líquida (~866k), mas o município
+carrega passivo (o TAC é a prova), não tem tecnologia e assume a gestão. Frase:
+*"pelo custo real que você já pratica, entregamos a operação inteira, sem passivo
+e com IA."* O fator +38% de ocultos vem do próprio dado de Avaré (491k→678k).
+
+> **Regra de skill:** este bloco (custo aparente × custo real × autogestão) é
+> reutilizável em qualquer estudo e cabe na página-mãe quando há multi-cenário —
+> mas SEMPRE na versão honesta (empate + risco/passivo/tecnologia), nunca "mais
+> barato". Já publicado na página mãe (`avare-cenarios.html`, seção "custo real").
+
 ## 5. Riscos/pendências
 
 1. ⚠️ A dor "USA única regional / óbito" NÃO é resolvida neste cenário (só
