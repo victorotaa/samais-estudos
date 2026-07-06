@@ -88,6 +88,10 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   **visíveis mas discretos** (fonte pequena, mono, `.value-federal`) — aparecem,
   mas não competem com o número principal. Ver `site/estudos/avare-sp.html` §05
   como referência de implementação.
+- **Per capita sempre exibido** (pedido do CEO, jul/2026): todo estudo mostra
+  `valor mensal ÷ população` como "R$ X por morador, por mês" — no strip do
+  hero ou no bloco de valor da Viabilidade (idealmente ambos). Nunca acompanhar
+  de comparações com médias de mercado no HTML.
 - **Responsividade é obrigatória, não opcional — e regra vale para TODA criação
   nossa: nunca recorrer a barra de rolagem horizontal.** Toda informação deve
   ficar sempre visível na tela, com baixo atrito cognitivo — o usuário não deve

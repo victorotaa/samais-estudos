@@ -71,16 +71,53 @@
 > rádio-operador, administrativo) vêm da **Convenção Coletiva vigente** da região
 > do estudo. Manter aqui uma tabela por estudo.
 
-## 5. BDI, margem e tributos (Cenário B)
+## 5. Preço, margem e tributos (Cenário B)
+
+### 5a. MÉTRICA DE OURO — teto per capita (CEO, handoff jul/2026) ⭐
 
 | Item | Valor | Status |
 |---|---|---|
-| **Margem-alvo Samais** | **35% (arredondar para mais)** | política interna |
-| ⚠️ Conflito a resolver | modelo preliminar do André usa **18%** (faixa 15–22%) | André × política 35% |
-| Forma de embutir | distribuída no BDI (despesas indiretas, reserva técnica, risco, remuneração da gestão) — **não** como linha "lucro" isolada | política |
+| **VCM alvo (teto de preço)** | **`População coberta × R$ 5,20/hab/mês`** | **calibrado (CEO)** — média de mercado hoje |
+| Lógica | preço ancorado no **mercado**, não no custo; a margem é **extraída da otimização interna (Lean Sizing)**, nunca da inflação do preço | handoff Delta Zero (`referencias/handoff-parametrico-avare-v2.md`) |
+| Margem resultante | validar internamente: alvo ≥ ~30–35%; se não fechar, **enxugar escopo** (não subir preço) ou escalonar por **gatilhos** | política |
+| O que NÃO cabe no teto p/ municípios pequenos | USA própria CLT (~R$ 245k custo/mês) e CRU própria CLT (~R$ 267k) não fecham a 5,2 p/ <200 mil hab → entram como **gatilho/fase 2 (Smart Growth)**: ativam quando a demanda real ou novas adesões justificarem | calibrado (Avaré, jul/2026) |
+| **Per capita SEMPRE exibido** no estudo | `valor mensal ÷ população` ao lado do valor (pedido do CEO) | regra de apresentação |
+| Referência interna Ourinhos (real Samais) | R$ 950k p/ ~103k hab = **R$ 9,22/hab** (1 USA + 2 USB + reserva + 2 motos) — a régua 5,2 é mais dura que o histórico próprio; **nunca expor** | interno |
+
+### 5b. Lean Sizing — dimensionar pela operação real (CEO, handoff jul/2026)
+
+- **Equipe pela demanda real, não pelo máximo normativo.** Âncoras, em ordem:
+  (1) equipe local atual (ex.: Avaré = 16 p/ 1 USB 24/7 + apoio — dado real);
+  (2) volume de atendimentos/chamados (razão por turno: 1 TARM ≈ 50–70
+  chamadas/dia; méd. regulador e rádio conforme Portaria 1.010 — mínimo
+  normativo, não acima); (3) população e frota.
+- **FC 4,5 permanece para POSTOS 24/7** (honestidade de escala — inegociável),
+  mas o número e o regime dos postos seguem a demanda: **posto 12h no pico é
+  válido** (FC ≈ 2,25) para 2ª USB, motolância etc. Não abrir posto 24/7 que a
+  demanda não sustenta.
+- **Frota — perfil de consumo por tipo:** ancorar no consumo REAL local quando
+  houver (Avaré: 349,8 L/mês ≈ R$ 2,1k por USB ativa); motolância tem rodagem
+  muito menor que USB; **reserva técnica = combustível zero** (só manutenção
+  preventiva + depreciação). Não aplicar unitários "regionais" (§9 Belém) a
+  operações municipais enxutas sem ajuste.
+- CoPilot OS/tecnologia: mantém na composição (vantagem competitiva), diluído.
+- **Cruzar sempre com o normativo MS (§1/§2 desta página):** o teto per capita
+  costuma CONVERGIR com a norma — ex.: PT 1.010/2012 só exige USA a partir de
+  ~400 mil hab, logo municípios pequenos sem USA própria estão corretos
+  financeira E normativamente. Escopo lean nunca pode ficar ABAIXO do normativo
+  (1 USB/100–150 mil etc.); acima é mérito.
+- **Vigência:** régua válida de Avaré (jul/2026) em diante; estudos publicados
+  antes não são recalculados retroativamente, salvo pedido.
+
+### 5c. Tributos e mecânica
+
+| Item | Valor | Status |
+|---|---|---|
+| Forma de embutir margem | distribuída (despesas indiretas, reserva técnica, risco, remuneração) — **não** como linha "lucro" isolada | política |
 | Regime tributário | quando indefinido, projetar **sempre o de MAIOR carga** (mais caro) | política conservadora |
-| Fator K de referência (serviços, MPU) | 2,5–2,7 (faixa de mercado p/ serviços; ver fonte) | validação |
-| Gross-up correto | `Preço = Custo ÷ [1 − (Tributos% + Margem%)]` | método |
+| Fator K de referência (serviços, MPU) | 2,5–2,7 | validação |
+| Gross-up (uso: conferência de custo↔preço) | `Preço = Custo ÷ [1 − (Tributos% + Margem%)]` | método |
+| ⚠️ Histórico | a política anterior (custo cheio FC 4,5 em tudo + margem 35% via gross-up) gerava ~2× mercado e assustou o teto de viabilidade — substituída pela Métrica de Ouro em jul/2026 (episódio Avaré: 1,33 mi → 500k) | registro |
 
 ### Tributos sobre faturamento — referência por regime
 

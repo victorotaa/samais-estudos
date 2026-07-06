@@ -23,20 +23,28 @@ use o que está aqui.
 - **Princípio da Realidade:** nunca inventar dado inexistente. Sem dado → marcar
   "a levantar"/premissa a validar; jamais apresentar premissa como fato.
 - **Projeção conservadora:** na dúvida, sempre o **mais caro** (regime, faixas → teto).
-- **Fator de Cobertura 24/7 = ~4,5** por posto (12×36), **NUNCA 2,2**. O 2,2 cobre
-  só um turno e subdimensiona pela metade (é o erro histórico — lição Taboão
-  148 vs 80). Não duplicar férias/13º: se já estão nos encargos (~68%), o FC é só
-  o headcount físico (~4,5).
+- **Fator de Cobertura 24/7 = ~4,5** por posto (12×36), **NUNCA 2,2 para cobrir
+  24/7**. O 2,2 cobre só um turno e subdimensiona pela metade (erro histórico —
+  lição Taboão 148 vs 80). Não duplicar férias/13º: se já estão nos encargos
+  (~68%), o FC é só o headcount físico (~4,5). *Nuance Lean Sizing:* um **posto
+  deliberadamente de 12h** (2ª USB no pico, motolância diurna) usa FC ≈ 2,25 e é
+  legítimo — o proibido é usar 2,2 achando que cobre 24h.
 - **Encargos e FC são multiplicativos** sobre o salário — esquecer um (ou os dois)
   produz os "valores muito errados" que originaram esta fórmula.
 - **Dois cenários sempre:** A = Custo Real Atual (com os invisíveis públicos
-  somados) · B = Proposta Samais (margem-alvo **35%**, definida pelo CEO, embutida
-  no gross-up `Preço = Custo ÷ [1 − (Tributos% + Margem%)]`).
+  somados) · B = Proposta Samais. **Preço do B pela Métrica de Ouro (CEO,
+  jul/2026, válida de Avaré em diante): `VCM = população × R$ 5,20/hab/mês`
+  (teto)** — preço ancorado no mercado; a margem (alvo interno ≥ ~30–35%) sai do
+  **Lean Sizing** do escopo, nunca de inflar o preço. Se o escopo não couber no
+  teto, enxugar ou escalonar por gatilhos (`parametros-base.md` §5a/5b). O
+  gross-up `Preço = Custo ÷ [1 − (Trib% + Margem%)]` vira conferência. Estudos
+  publicados antes da régua não são recalculados retroativamente, salvo pedido.
 - **Regras Operacionais:** frota é do ente (sem CAPEX de aquisição; Samais faz
   manutenção + reativação; aluguel só como contingência); equipe própria CLT no
   piso; bases/CRU e suas obras são do ente; atendimentos por histórico.
-- **Validar por benchmark** antes de entregar (custo/habitante, /viatura — mercado
-  ~R$ 93–159k/viatura/mês; peso da folha ~55–70%). Fora da faixa = investigar.
+- **Validar por benchmark** antes de entregar (per capita vs R$ 5,20/hab — régua
+  principal; custo/viatura mercado ~R$ 93–159k/mês; peso da folha ~55–70%). Fora
+  da faixa = investigar. **Per capita sempre exibido no estudo** (pedido do CEO).
 
 ## Saída
 
