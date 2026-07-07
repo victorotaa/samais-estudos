@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add('js')</script>
+<title>SAMU Co-piloto — Samais · Inteligência clínico-operacional para o 192</title>
+<meta name="description" content="O SAMU Co-piloto é uma infraestrutura de inteligência clínico-operacional para a regulação de urgência, aderente à Portaria 2048. Máquinas escutam e sugerem; humanos decidem.">
+<meta name="theme-color" content="#04060C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SAMU Co-piloto — Samais">
+<meta property="og:description" content="A infraestrutura que faz o socorro de emergência brasileiro entrar no século XXI.">
+<meta property="og:image" content="assets/img/copilot-dashboard.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="scrollbar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav scrolled" id="nav">
+  <div class="nav__in">
+    <a class="nav__logo" href="index.html" aria-label="Samais — início">
+      <svg viewBox="0 0 595.3 175.9" role="img" aria-label="Samais"><path fill="currentColor" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a class="nav__link" href="index.html#samais">A Samais</a>
+      <a class="nav__link" href="index.html#atuacao">Atuação</a>
+      <a class="nav__link active" href="copiloto.html">SAMU Co-piloto</a>
+      <a class="nav__link" href="index.html#portfolio">Portfólio</a>
+      <a class="nav__link" href="index.html#tech">Tecnologia</a>
+      <span class="mag"><a class="btn btn--gold nav__cta" href="index.html#contato">Falar com a Samais</a></span>
+    </nav>
+    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="cphero">
+  <div class="cphero__bg"><img src="assets/img/regulacao.jpg" alt="Operadora da central de regulação do SAMU 192 atendendo com dois monitores" fetchpriority="high"></div>
+  <div class="cphero__scrim"></div>
+  <div class="cphero__mesh"></div>
+  <div class="wrap">
+    <a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Samais</a>
+    <div style="margin-top:26px"><span class="pill"><i style="width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block"></i>Produto Samais · Infraestrutura clínico-operacional</span></div>
+    <h1 class="h1">SAMU Co-piloto</h1>
+    <p class="lead" style="max-width:52ch">Não é telefonia, nem despacho. É uma camada de inteligência que acompanha a ocorrência do milissegundo em que o telefone toca até a ficha médica assinada — desenhada para o SUS e aderente à <span class="gold">Portaria 2048</span>.</p>
+    <div class="hero__ctas" style="opacity:1;transform:none;margin-top:34px">
+      <span class="mag"><a class="btn btn--gold" href="#jornada">Ver a jornada operacional
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></span>
+      <span class="mag"><a class="btn btn--ghost" href="index.html#contato">Falar com a Samais</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- TESE / PILARES -->
+<section class="section" id="tese">
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead__l">
+        <span class="eyebrow"><span class="sec-index">01</span>&nbsp;&nbsp;A tese do produto</span>
+        <h2 class="h2 mt-s reveal">O gargalo do APH não é falta de gente. É perda de informação sob pressão.</h2>
+        <p class="muted reveal" data-d="1">Segundos perdidos na coleta de um dado ou na leitura de um sintoma custam vidas e geram passivos milionários para o Estado. O Co-piloto ataca isso em três frentes.</p>
+      </div>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <div class="pillar__n">01</div>
+        <h3>Fim da fricção cognitiva</h3>
+        <p class="muted">As máquinas escutam, transcrevem e sugerem. O TARM foca 100% em acolher e extrair — não em digitar.</p>
+        <ul>
+          <li>Regulação média de ~105s para ~38s</li>
+          <li>87% do briefing pré-preenchido antes do handoff</li>
+          <li>Transcrição ao vivo com 94–96% de confiança</li>
+        </ul>
+      </article>
+      <article class="pillar reveal" data-d="1">
+        <div class="pillar__n">02</div>
+        <h3>Handoff assíncrono perfeito</h3>
+        <p class="muted">O médico regulador acompanha o caso em tempo real, via websocket, antes da transferência. O handoff vira confirmação, não briefing do zero.</p>
+        <ul>
+          <li>Fila multimonitor com criticidade C1–C4</li>
+          <li>Briefing na viatura antes de chegar à cena</li>
+          <li>Atualização de status síncrona em trânsito</li>
+        </ul>
+      </article>
+      <article class="pillar reveal" data-d="2">
+        <div class="pillar__n">03</div>
+        <h3>Cadeia de custódia</h3>
+        <p class="muted">Cada evento recebe hash imutável e assinatura digital. O dado blinda juridicamente o gestor público e vira inteligência epidemiológica.</p>
+        <ul>
+          <li>Distinção explícita entre IA e decisão humana</li>
+          <li>Conformidade nativa com a LGPD</li>
+          <li>Lastro para auditoria de TCU e Ministério Público</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- JORNADA (sticky) -->
+<section class="section tech" id="jornada">
+  <div class="tech__glow"></div>
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead__l">
+        <span class="eyebrow"><span class="sec-index">02</span>&nbsp;&nbsp;Jornada operacional</span>
+        <h2 class="h2 mt-s reveal">Da ligação de desespero<br>à ficha assinada.</h2>
+      </div>
+    </div>
+    <div class="journey">
+      <div class="journey__media">
+        <figure data-shot="aml"><img src="assets/img/copilot-aml.webp" alt="Tela de localização AML do Co-piloto"><figcaption>Fase 0 · Pré-chamada · AML</figcaption></figure>
+        <figure data-shot="tarm"><img src="assets/img/copilot-tarm.webp" alt="Painel do TARM com transcrição ao vivo"><figcaption>Fase 1 · Painel TARM</figcaption></figure>
+        <figure data-shot="dash"><img src="assets/img/copilot-dashboard.webp" alt="Fila de regulação médica com criticidade"><figcaption>Fase 2 · Regulação médica</figcaption></figure>
+        <figure data-shot="viatura"><img src="assets/img/viatura-deslocamento.jpg" alt="Viatura do SAMU em deslocamento"><figcaption>Fase 3 · Viatura inteligente</figcaption></figure>
+        <figure data-shot="pos"><img src="assets/img/medica.jpg" alt="Médica do SAMU após atendimento"><figcaption>Fase 4 · Pós-atendimento</figcaption></figure>
+      </div>
+      <div class="journey__steps">
+        <div class="step" data-shot="aml">
+          <span class="step__ph">Fase 0 — Antes do TARM atender</span>
+          <h3>A pré-chamada</h3>
+          <p>O sistema age antes do “alô”. O número de origem já carrega contexto.</p>
+          <ul>
+            <li><b>AML</b> — coordenadas GPS do solicitante em background, cruzadas com a base de logradouros.</li>
+            <li><b>Filtro anti-trote</b> — histórico do número + modulação de voz geram um score de confiança.</li>
+            <li><b>Pré-carga de histórico</b> — ocorrências anteriores no endereço e HMP do paciente cadastrado.</li>
+          </ul>
+        </div>
+        <div class="step" data-shot="tarm">
+          <span class="step__ph">Fase 1 — Atendimento ao vivo</span>
+          <h3>O TARM deixa de ser digitador</h3>
+          <p>Todo o áudio é transcrito ao vivo; o TARM foca no acolhimento humano.</p>
+          <ul>
+            <li><b>STT de baixa latência</b> com correção in-line por toque, gerando corpus supervisionado.</li>
+            <li><b>Extração cognitiva</b> — idade, sintomas, localização e HMP viram card estruturado.</li>
+            <li><b>Protocolo adaptativo</b> (Portaria 2048) sugere a árvore correta durante a chamada.</li>
+          </ul>
+        </div>
+        <div class="step" data-shot="dash">
+          <span class="step__ph">Fase 2 — Regulação médica</span>
+          <h3>O médico chega informado</h3>
+          <p>Via websocket, o regulador acompanha o caso desde os primeiros 30 segundos.</p>
+          <ul>
+            <li><b>Fila multimonitor</b> com classificação de criticidade e tempo de cada caso.</li>
+            <li><b>Sugestão com confiança</b> — classificação e recurso (USB/USA); o médico decide soberanamente.</li>
+            <li><b>Delta IA × decisão</b> — a discordância vira o dado mais valioso para calibrar o modelo.</li>
+          </ul>
+        </div>
+        <div class="step" data-shot="viatura">
+          <span class="step__ph">Fase 3 — Viatura inteligente</span>
+          <h3>Fim do apagão de informação</h3>
+          <p>A equipe deixa de ir para a rua com um “motivo geral”.</p>
+          <ul>
+            <li><b>Tablet embarcado</b> com handoff clínico: HMP, alergias, sintomas e histórico do endereço.</li>
+            <li><b>Roteamento dinâmico</b> com ETA preciso retroalimentando o regulador.</li>
+            <li><b>Status síncrono</b> — se vira PCR em trânsito, a equipe prepara o desfibrilador antes de abrir a porta.</li>
+          </ul>
+        </div>
+        <div class="step" data-shot="pos">
+          <span class="step__ph">Fase 4 — Pós-atendimento</span>
+          <h3>O loop de aprendizagem fecha</h3>
+          <p>O fechamento gera o ciclo de inteligência do produto.</p>
+          <ul>
+            <li><b>Ficha APH 80% pré-preenchida</b> a partir da transcrição e do handoff.</li>
+            <li><b>Ajuste de desfecho real</b> — o que a equipe encontrou retroalimenta o algoritmo.</li>
+            <li><b>Fechamento com hash imutável</b> para fins jurídicos e de auditoria.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOTOR DE IA -->
+<section class="section" id="ia">
+  <div class="wrap">
+    <div class="frow">
+      <div class="frow__media reveal"><img src="assets/img/copilot-tarm.webp" alt="Transcrição e extração clínica em tempo real no painel do TARM"></div>
+      <div class="reveal" data-d="1">
+        <span class="eyebrow"><span class="sec-index">03</span>&nbsp;&nbsp;Motor de IA &amp; autoaprendizagem</span>
+        <h2 class="h2 mt-s">Um data lake que nenhum laboratório consegue montar.</h2>
+        <p class="muted mt-m">O Brasil tem dimensões continentais e uma língua clínica própria — “apagão” por síncope, “faca na carne” por dor intensa. Cada contrato tem uma equipe de implementação que treina o modelo com os termos e sotaques da região.</p>
+        <div class="tags">
+          <span>Corpus supervisionado</span><span>Fine-tuning regional</span><span>Dicionário APH-BR</span><span>Delta médico</span><span>Ground truth de desfecho</span>
+        </div>
+      </div>
+    </div>
+    <div class="frow frow--rev">
+      <div class="frow__media reveal"><img src="assets/img/copilot-aml.webp" alt="Tela de localização e cadeia de custódia do Co-piloto"></div>
+      <div class="reveal" data-d="1">
+        <span class="eyebrow"><span class="sec-index">04</span>&nbsp;&nbsp;Segurança &amp; conformidade</span>
+        <h2 class="h2 mt-s">Feito para lidar com vidas e com o erário.</h2>
+        <p class="muted mt-m">A separação entre o que a IA gerou e o que o humano decidiu é crítica — e está na interface e no banco de dados. Cada registro carrega origem, timestamp, identificador do operador e justificativa.</p>
+        <div class="tags">
+          <span>LGPD nativa</span><span>Anonimização de PII</span><span>Assinatura digital</span><span>Hash imutável</span><span>Retenção por criticidade</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BI -->
+<section class="section tech" id="bi">
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead__l">
+        <span class="eyebrow"><span class="sec-index">05</span>&nbsp;&nbsp;Inteligência de gestão</span>
+        <h2 class="h2 mt-s reveal">Não é relatório de fim de mês. É vigilância em tempo real.</h2>
+      </div>
+    </div>
+    <div class="tech__grid">
+      <div class="tblock reveal">
+        <span class="n">01</span>
+        <h3>Operação ao vivo</h3>
+        <p class="muted">Tempo de atendimento por tipo, tempo de regulação por médico, completude do handoff, ETA por região e acionamento do kill switch como indicador de qualidade.</p>
+      </div>
+      <div class="tblock reveal" data-d="1">
+        <span class="n">02</span>
+        <h3>Epidemiologia preditiva</h3>
+        <p class="muted">Alertas de cluster geográfico (ex.: +30% de gastroenterite em 2 km), padrões sazonais e pré-posicionamento de recursos antes de a demanda estourar.</p>
+      </div>
+      <div class="tblock reveal" data-d="2">
+        <span class="n">03</span>
+        <h3>Proteção institucional</h3>
+        <p class="muted">Lastro completo contra processos de má-prática ou omissão de socorro, auditoria de protocolo e benchmarking entre centrais com dados anonimizados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section" id="roadmap">
+  <div class="wrap">
+    <div class="shead">
+      <div class="shead__l">
+        <span class="eyebrow"><span class="sec-index">06</span>&nbsp;&nbsp;Roadmap</span>
+        <h2 class="h2 mt-s reveal">Da base operacional à barreira intransponível.</h2>
+      </div>
+    </div>
+    <div class="road reveal">
+      <div class="road__c"><span class="p">Meses 1–3</span><p>STT, NLP, painel TARM, handoff do regulador e painel da viatura. Redução de tempo de regulação mensurável.</p></div>
+      <div class="road__c"><span class="p">Meses 4–6</span><p>Equipe de implementação regional ativa. Corpus de regionalismos em construção. Delta médico coletado sistematicamente.</p></div>
+      <div class="road__c"><span class="p">Meses 7–9</span><p>BI operacional em produção. Primeiros alertas epidemiológicos. STT calibrado para a região do contrato.</p></div>
+      <div class="road__c"><span class="p">Meses 10–12</span><p>Modelo APH-BR próprio com primeira versão de fine-tuning regional. Dashboard gerencial completo.</p></div>
+      <div class="road__c"><span class="p">Ano 2+</span><p>Dataset sem equivalente no Brasil. BI preditivo ativo. Discussão de expansão e Vaga Zero.</p></div>
+    </div>
+    <p class="disclaimer mt-l reveal">Roadmap de desenvolvimento do produto. Funcionalidades como AML dependem de homologação da Anatel e parceria com operadoras; marcos são de referência e evoluem por contrato.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Posicionamento estratégico</span>
+    <h2 class="contact__big mt-m reveal" data-d="1">Não é só<br>uma ferramenta.</h2>
+    <p class="lead muted mt-m reveal" data-d="2" style="max-width:60ch">Nas licitações, a proposta técnica da Samais deixa de ser avaliada só por frota e headcount: passa a oferecer virtualização inteligente da regulação, redução de envios desnecessários, blindagem jurídica do município e um dashboard em tempo real para a Secretaria — com sofisticação de plataforma global, desenhada para o SUS.</p>
+    <div class="mt-l reveal" data-d="3">
+      <span class="mag"><a class="btn btn--gold" href="index.html#contato">Levar o Co-piloto ao seu município
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="foot__logo" href="index.html" aria-label="Samais">
+      <svg viewBox="0 0 595.3 175.9" role="img" aria-label="Samais"><path fill="currentColor" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    </a>
+    <small>© <span data-year>2026</span> Samais Gestão em Saúde · SAMU Co-piloto</small>
+    <a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Voltar ao site</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
