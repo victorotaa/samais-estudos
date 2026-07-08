@@ -1,4 +1,4 @@
-# Avaré + Itaí + Cerqueira César — Novo Consórcio SAMU (cenário 2, modelo USA+5,2)
+# Avaré + Arandu — Novo Consórcio SAMU (cenário 2, modelo USA+5,2)
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém margem, bridge custo→preço e
 > benchmark — não circular fora da equipe. HTML cliente-facing:
@@ -11,15 +11,16 @@
 
 ## 1. Escopo
 
-- **Trio — 143.099 hab** (IBGE Censo 2022): Avaré 96.450 + Itaí 25.180 +
-  Cerqueira César 21.469.
-- **3 USB 24/7** (1 por cidade) + **reserva** + **motolância** (Avaré) +
-  **UTI móvel (USA) própria, operada pela Samais**, servindo as 3 cidades.
+- **Dupla — 103.335 hab** (IBGE Censo 2022): Avaré 96.450 + Arandu 6.885.
+- **2 USB 24/7** (cobrem o par — cidades vizinhas) + **reserva** +
+  **motolância** (Avaré) + **UTI móvel (USA) própria, operada pela Samais**.
+  Arandu ganha ponto de apoio + acesso à USA e à regulação; **não** tem
+  ambulância 24/7 dedicada (população pequena não justifica).
 - **Central de Regulação (CRU) permanece regional.**
 - **Contratante:** novo consórcio intermunicipal — caminho de constituição:
-  protocolo → leis nas 3 câmaras → CNPJ/rateio → habilitações no MS →
+  protocolo → leis nas 2 câmaras → CNPJ/rateio → habilitações no MS →
   contratação via Lei 14.133/2021.
-- **Equipe:** ~65 CLT, piso CCT-SP.
+- **Equipe:** ~50 CLT, piso CCT-SP.
 - **Regra de ativos:** USB e USA são ativos do **ente** (frota do consórcio/
   municípios); a Samais opera, mantém e reativa — sem CAPEX de aquisição.
   Inclusão de viatura nova (locação + equipação) só por aditivo de contrato,
@@ -38,7 +39,7 @@
 
 ## 3. Preço
 
-**R$ 1.250.000/mês** (R$ 8,74/hab) · **R$ 15.000.000/ano**.
+**R$ 990.000/mês** (R$ 9,58/hab) · **R$ 11.880.000/ano** (≈ R$ 11,9 mi/ano).
 
 ## 4. Linha USA (fixa — idêntica nos 3 cenários)
 
@@ -52,55 +53,76 @@
 | ×1,10 indiretos | **222.418** |
 
 Repasse federal da USA (~R$ 134.350/mês) **volta ao ente** e funciona como
-desconto sobre o preço contratado (rateado entre os 3 municípios).
+desconto sobre o preço contratado (rateado entre os 2 municípios).
 
 ## 5. Bridge custo → preço
 
 | Componente | R$/mês |
 |---|---|
-| **Preço** = 5,2 × 143.099 hab (R$ 744.115, camada local) + linha USA (~R$ 457.000) | **1.250.000** |
-| (−) Custo total = camada local (377.777) + USA (222.418) | 600.195 |
-| (−) Tributos 16,33% s/ faturamento | 204.125 |
-| (−) Honorários advocatícios 2% s/ faturamento | 25.000 |
-| **= Margem** | **420.680 (34%)** |
+| **Preço** = 5,2 × 103.335 hab (R$ 537.342, camada local) + linha USA (~R$ 457.000) | **990.000** |
+| Custo local (camada 5,2, sem USA) | 279.866 |
+| Custo USA | 222.418 |
+| (−) Custo total = local (279.866) + USA (222.418) | 502.284 |
+| (−) Tributos 16,33% s/ faturamento | 161.700 |
+| (−) Honorários advocatícios 2% s/ faturamento | 19.800 |
+| **= Margem** | **≈ 306.216 (31%)** |
 
-**Líquido do repasse federal (USA): ~R$ 1.116.000/mês** (R$ 1.250.000 −
+**Líquido do repasse federal (USA): ~R$ 856.000/mês** (R$ 990.000 −
 R$ 134.350 de repasse que volta ao ente como desconto).
 
 ## 6. Rateio ilustrativo por população (a pactuar no protocolo)
 
 | Município | R$/mês | % |
 |---|---|---|
-| Avaré | ~830.000 | 67,4% |
-| Itaí | ~218.000 | 17,6% |
-| Cerqueira César | ~186.000 | 15,0% |
-| **Soma** | **≈ 1.250.000** | 100% |
+| Avaré | ~924.000 | 93,3% |
+| Arandu | ~66.000 | 6,7% |
+| **Soma** | **≈ 990.000** | 100% |
 
-## 7. Argumento de escala
+## 7. Argumento central — valor estrutural, não frota
 
-O per capita cai vs. o cenário Solo (R$ 10,37 → R$ 8,74) porque a linha USA
-(custo fixo) dilui sobre mais habitantes. Cada nova cidade que aderir ao
-consórcio soma **5,2 × população** de receita quase sem mexer no fixo (a USA
-já existe e serve o trio) — logo a margem sobe a cada adesão.
+O ganho de somar Arandu **não é frota** (Arandu não justifica ambulância 24/7
+própria) — é **estrutural**: dois municípios formam consórcio, e é o
+consórcio que habilita CRU/USA/USBs no Ministério da Saúde e traz de volta os
+repasses federais que hoje ficam presos na estrutura regional (Avaré carrega
+a operação da AMVAPA sem controlar a regulação). Ao entrar no par, **Avaré
+paga menos** (~R$ 924 mil) do que pagaria sozinha no cenário Solo (R$ 1,0
+mi) — o fixo da linha USA se dilui sobre mais população, e o consórcio
+destrava o repasse federal. Arandu, por sua vez, ganha acesso a um serviço
+que sozinha nunca teria: ponto de apoio, UTI móvel e regulação qualificada.
 
 ## 8. Validação (benchmark)
 
 Âncora: contrato **real** de Ourinhos (Samais, 2023) = R$ 950k / 106 mil hab =
 8,96/hab (~85 colaboradores, escopo USA + 2 USB + moto). Corrigido para 2026
 (~+18,5%: IPCA + piso enfermagem Lei 14.434) ≈ **10,6/hab**. Este cenário fecha
-em **8,74/hab**, abaixo da âncora corrigida — coerente com o efeito de escala
-descrito no §7 (mais população diluindo o fixo da USA).
+em **9,58/hab**, abaixo da âncora corrigida — 103.335 hab ≈ Ourinhos (106 mil),
+população comparável, coerente com o efeito de escala da linha USA fixa
+diluindo sobre a base populacional do par.
 
 ## 9. Riscos e pendências
 
-- **Composição do trio a validar politicamente:** Itaí é presidida por José
-  Ramiro, atual presidente da AMVAPA — a saída de Avaré da regional para um
-  consórcio próprio é politicamente delicada para ele.
-- **Plano B:** Paranapanema no lugar de Itaí (~138 mil hab no trio resultante).
-- **Reação da AMVAPA:** perde Avaré, que responde por ~31% da população
-  regional — risco de resistência institucional.
-- Habilitações federais novas para as USBs de Itaí e Cerqueira César (trâmite
-  MS).
+- **Arandu é pequena (6.885 hab):** o valor da adesão não é frota — é
+  estrutural (habilitação do consórcio no MS, repasses federais). Comunicar
+  esse racional é central para não parecer "cobrar mais por pouco".
+- **Habilitação federal do novo consórcio:** cronograma de registro de CRU/
+  USA/USBs junto ao Ministério da Saúde — trâmite a mapear com antecedência.
+- **Saída da AMVAPA:** Avaré carrega hoje a operação regional sem controlar a
+  regulação — os óbitos por regulação fora de padrão (já documentados pela
+  SMS de Avaré) são o gatilho político real para a mudança, mas o tema exige
+  cuidado na comunicação (não expor nomes/responsáveis, tratar apenas em
+  conversa com o cliente).
+- **Reação da AMVAPA:** perde Avaré, que responde por parcela relevante da
+  população regional — risco de resistência institucional.
+- Habilitação federal nova para o ponto de apoio de Arandu (trâmite MS).
 - TAC MPT 194.218.001.15/0-34 (a monitorar).
 - ISS municipal (cada ente) e enquadramento tributário do consórcio.
 - CCT-SP (piso, benefícios) — aplicar sem exceção.
+
+## 10. Registro de mudança
+
+Substitui a versão anterior do cenário 2 (trio Avaré + Itaí + Cerqueira César,
+143.099 hab, R$ 1,25 mi/mês, R$ 8,74/hab, ~65 CLT). Motivo: recalibração do
+consórcio para o par Avaré + Arandu (103.335 hab), com o argumento comercial
+migrando de "ambulância em cada cidade" para "valor estrutural do consórcio +
+repasse federal". Ver também `site/estudos/avare-sp.html` (HTML cliente-facing,
+já atualizado) e `site/estudos/avare-cenarios.html` (página-mãe, cenário 02).
