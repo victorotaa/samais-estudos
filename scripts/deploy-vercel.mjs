@@ -62,4 +62,17 @@ for (let i = 0; i < 40 && state !== "READY" && state !== "ERROR"; i++) {
     { headers: { Authorization: `Bearer ${TOKEN}` } })).json();
   state = sj.readyState || sj.status;
 }
-console.log(state === "READY" ? "PRONTO ✅ https://samais-estudos.vercel.app" : `Estado: ${state}`);
+if (state !== "READY") { console.error(`Deploy não ficou READY (estado: ${state}).`); process.exit(1); }
+
+// Promove o domínio de produção para este deployment. O target:production já
+// costuma auto-aliar, mas fixamos o alias explicitamente para garantir que o
+// domínio nunca fique preso num deployment antigo.
+const PROD_ALIAS = "samais-estudos.vercel.app";
+const ar = await fetch(`${API}/v2/deployments/${dj.id}/aliases?teamId=${TEAM}`, {
+  method: "POST",
+  headers: { Authorization: `Bearer ${TOKEN}`, "Content-Type": "application/json" },
+  body: JSON.stringify({ alias: PROD_ALIAS }),
+});
+const aj = await ar.json();
+if (!ar.ok) { console.error("alias falhou", ar.status, JSON.stringify(aj)); process.exit(1); }
+console.log(`PRONTO ✅ https://${PROD_ALIAS} (deployment ${dj.id})`);
