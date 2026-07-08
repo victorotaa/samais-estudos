@@ -1,99 +1,113 @@
-# Avaré Solo LEAN — Execução municipalizada (cenário 1, Métrica de Ouro)
+# Avaré Solo — SAMU Municipal (cenário 1, modelo USA+5,2)
 
-> **CONFIDENCIAL · USO INTERNO SAMAIS.** HTML: `site/estudos/avare-solo-sp.html`.
-> Página dos 3 cenários: `site/estudos/avare-cenarios.html`.
->
-> **v2-lean (jul/2026):** recalibrado pela **Métrica de Ouro do CEO**
-> (`VCM = pop × R$ 5,20/hab` — handoff Delta Zero,
-> `referencias/handoff-parametrico-avare-v2.md`) após o alerta do André com o
-> valor anterior (R$ 1,33 mi). Âncora real: Ourinhos = R$ 950k / ~103k hab
-> (9,22/hab, com USA + 2 USB + reserva + 2 motos) — a régua 5,2 é mais dura que
-> o histórico próprio. **Nunca expor per capita de referência nem margens.**
+> **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém margem, bridge custo→preço e
+> benchmark — não circular fora da equipe. HTML cliente-facing:
+> `site/estudos/avare-solo-sp.html` (não expõe nada desta seção financeira).
 
-## 1. Preço (Métrica de Ouro)
+> **Modelo "USA + 5,2" (Métrica de Ouro do CEO, jul/2026).** Preço = camada
+> local (USBs + motolância + gestão, precificada a **R$ 5,20/hab/mês**) +
+> **linha USA** operada 100% pela Samais. O preço é **teto de mercado**: custos
+> novos comem margem, não sobem o preço.
 
-**VCM = 96.450 × 5,20 = R$ 501.540 → ofertar R$ 500.000/mês** (R$ 5,18/hab ✓ teto)
-· R$ 6,0 mi/ano. Coincide com o gasto declarado atual (R$ 491k parcial) — venda:
-"pelo que a cidade já gasta, recebe o dobro de estrutura, com gestão profissional".
+## 1. Escopo
 
-## 2. Escopo lean (o que cabe em 5,2 — e fecha margem)
+- **Avaré — 96.450 hab** (IBGE).
+- **2 USB 24/7** + **1 reserva** (reativada por laudo técnico, sem CAPEX de
+  aquisição — só manutenção/preventiva) + **motolância 12h** (pico urbano).
+- **UTI móvel (USA) própria, operada pela Samais** — resolve a dor histórica de
+  USA compartilhada/óbito em rota. A USA não é exigida por norma para Avaré
+  (Portaria GM/MS 1.010/2012 pede >400 mil hab), mas **fica** e é administrada
+  pelo maior município da regional de saúde.
+- **Central de Regulação (CRU) permanece regional** — fora do objeto deste
+  contrato.
+- **Contratante:** Prefeitura de Avaré, Lei 14.133/2021.
+- **Equipe:** ~45 CLT, piso CCT-SP.
+- **Regra de ativos:** USB e USA são ativos do **ente** (frota da Prefeitura);
+  a Samais opera, mantém e reativa — sem CAPEX de aquisição. Inclusão de
+  viatura nova (locação + equipação) só por aditivo de contrato, fora do
+  objeto do estudo-base.
 
-- **2 USB**: 1 ativa 24/7 + **1 no pico (12h diurno)** — demanda real (152
-  atend./mês ≈ 5/dia) não sustenta 2ª USB 24/7; reserva reativada por laudo
-  (combustível zero, só preventiva).
-- **Motolância 12h** no pico urbano.
-- **Equipe 20 CLT** (âncora: equipe atual = 16 p/ 1 USB + apoio): 7 condutores
-  (posto 24/7 = 4,5 + posto 12h = 2,25) · 9 téc. enfermagem (24/7 + 12h + moto)
-  · enf. supervisor/RT · aux. adm/RM · ASG · coordenador.
-- **CoPilot** despacho/telemetria integrado à CRU regional.
-- **USA própria e CRU própria: FORA** (não cabem no teto — custo CLT de 245k e
-  267k/mês respectivamente). USA e regulação **seguem regionais**. Entram como
-  **gatilho/fase 2 (Smart Growth)** se demanda/receita crescerem.
+## 2. Parâmetros aplicados
 
-## 3. Cálculo (FC 4,5 nos postos 24/7 · 2,25 nos de 12h · encargos 68,24%)
-
-| Bloco | R$/mês |
+| Parâmetro | Valor |
 |---|---|
-| RH (20 CLT) | 151.056 |
-| Não-pessoal lean (combustível REAL 6,5k [âncora 349,8 L/USB] · manut. 6,4k · seguro/IPVA 4,7k · insumos 9,2k · O₂/almox/tel 6,5k · CoPilot 6k · NEP+uniformes 6,8k) | 46.080 |
-| **Custo (+10% indiretos)** | **216.849** |
-| Tributos 16,33% do VCM | 81.650 |
-| **Margem resultante** | **201.501 = 40,3% ✓** (≥ alvo 30–35) |
+| Encargos | 68,24% (Grupo C já cobre rescisão/demissão — sem duplicar) |
+| Fator de Cobertura (FC) | 4,5 para postos 24/7 (12×36) · 2,25 para postos 12h |
+| Médico da USA | Plantonista, ~R$ 125/h × 730,5h ≈ R$ 91.312/posto 24/7 (não CLT integral) |
+| Tributos s/ faturamento (Lucro Presumido) | 16,33% (PIS 0,65 + COFINS 3 + IRPJ 4,8 + CSLL 2,88 + ISS 5) |
+| Honorários advocatícios | 2% do faturamento (externo/contingência, pedido do CEO) |
+| Indiretos | 10% (7% overhead admin + 3% operacional) |
 
-## 4. O que mudou vs v2-full (1,33 mi) — para o CEO
+## 3. Preço
 
-| Item | v2-full | v2-lean | Δ preço |
-|---|---|---|---|
-| USA própria CLT (12 pessoas) | sim | **fora** (regional segue; gatilho) | −0,55 mi |
-| 2ª USB | 24/7 | 12h pico | −0,08 mi |
-| Equipe | 45 | **20** | — |
-| Combustível | unitários regionais (14,4k) | real local ×3 (6,5k) | — |
-| Preço | custo-cheio+35% | **teto mercado 5,2/hab** | 1,33 → 0,50 |
+**R$ 1.000.000/mês** (R$ 10,37/hab) · **R$ 12.000.000/ano**.
 
-## 4-bis. Conformidade normativa (MS/Governo — cruzamento validado)
+## 4. Linha USA (fixa — idêntica nos 3 cenários)
 
-- **Frota (PT GM/MS 1.010/2012):** 1 USB/100–150 mil hab → Avaré (96.450)
-  normativo = 1 USB. Lean entrega 1×24/7 + 1×12h + reserva = **acima do
-  normativo** ✓. **USA: 1/400–450 mil hab → o MS NÃO exige USA própria para
-  96 mil** — a USA regional cumpre a norma; o corte é financeiro E normativo ✓.
-- **Composição por viatura (1.010/2012):** USB = condutor + téc./aux. de
-  enfermagem por turno ✓ (exatamente o lean). Motolância: 1 profissional
-  habilitado ✓.
-- **Regulação:** obrigatória e existente (CRU regional habilitada/qualificada);
-  posto 12h não fere norma — a cobertura assistencial é da rede regulada.
-- **Custeio federal (PT Consolidação 6/2017 + 958/2023 + 10.850/2026):** USB
-  qualificada ~R$ 11,4k/mês; migração p/ gestão municipal na diligência.
+| Item | R$/mês |
+|---|---|
+| Médico plantonista (24/7) | 91.312 |
+| Enfermeiro | 54.162 |
+| Condutor | 34.754 |
+| Insumos UTI/O₂/seguro | 21.970 |
+| Subtotal | 202.198 |
+| ×1,10 indiretos | **222.418** |
 
-## 4-ter. Custo aparente × custo real × autogestão (argumento-mãe, validado)
+Repasse federal da USA (~R$ 134.350/mês) **volta ao ente** e funciona como
+desconto sobre o preço contratado.
 
-Projeção defensável para o CEO/decisor (números de referência, a fechar em diligência):
+## 5. Bridge custo → preço
 
-| Referência (Avaré) | R$/mês | Entrega |
+| Componente | R$/mês |
+|---|---|
+| **Preço** = 5,2 × 96.450 hab (R$ 501.540, camada local) + linha USA (~R$ 457.000) | **1.000.000** |
+| (−) Custo total = camada local (279.866) + USA (222.418) | 502.284 |
+| (−) Tributos 16,33% s/ faturamento | 163.300 |
+| (−) Honorários advocatícios 2% s/ faturamento | 20.000 |
+| **= Margem** | **314.416 (31%)** |
+
+**Líquido do repasse federal (USA): ~R$ 866.000/mês** (R$ 1.000.000 − R$ 134.350
+de repasse que volta ao ente como desconto).
+
+## 6. Custo aparente × custo real (obrigatório em todo estudo)
+
+Cenário A não é só o declarado — somam-se os ocultos (frota na pasta geral,
+combustível, insumos no almoxarifado central, imóvel, coordenação e, o maior,
+os médicos cedidos pela Prefeitura à USA/CRU).
+
+| Nível | R$/mês | Leitura |
 |---|---|---|
-| Declarado na rubrica do SAMU | 491.418 | reduzida (1 USB operante) |
-| **Custo real hoje** (com ocultos; médicos cedidos ~120k à frente) | **~678.000** | mesma reduzida, somada |
-| **Autogestão da estrutura cheia** (custo real: folha pública + ocultos +38% + passivo) | **~804.000** | tudo, mas com passivo, sem tecnologia |
-| **Samais completa, líq. repasse federal** (bruto R$ 1,0 mi − ~134k federal) | **~866.000** | tudo, chave-na-mão, sem passivo, com IA |
+| Declarado (rubrica oficial hoje) | 491.418 | O que a Prefeitura reporta na peça orçamentária |
+| Custo real hoje (com ocultos) | ~678.000 | Fator +38% (declarado × 1,38) — maior componente: médicos efetivos cedidos à USA/CRU (~120k) |
+| Autogestão da estrutura cheia (custo real) | ~804.000 | Com passivo trabalhista, sem tecnologia |
+| Samais (líquido do repasse federal) | ~866.000 | Preço com tributo + margem, sem passivo, com tecnologia e chave-na-mão |
 
-**Honestidade obrigatória (não errar na frente do André):** a Samais **NÃO é mais
-barata** que a autogestão em custo de caixa direto (nosso preço carrega tributo
-16,33% + margem 33%). O argumento vencedor é **custo real + risco**: autogestão da
-estrutura cheia (~804k) **empata** com a Samais líquida (~866k), mas o município
-carrega passivo (o TAC é a prova), não tem tecnologia e assume a gestão. Frase:
-*"pelo custo real que você já pratica, entregamos a operação inteira, sem passivo
-e com IA."* O fator +38% de ocultos vem do próprio dado de Avaré (491k→678k).
+**Honestidade obrigatória:** a Samais **não é mais barata** que a autogestão da
+estrutura cheia (o preço carrega tributo + margem). O argumento correto é
+**empate em custo real + sem passivo + tecnologia + operação chave-na-mão**.
 
-> **Regra de skill:** este bloco (custo aparente × custo real × autogestão) é
-> reutilizável em qualquer estudo e cabe na página-mãe quando há multi-cenário —
-> mas SEMPRE na versão honesta (empate + risco/passivo/tecnologia), nunca "mais
-> barato". Já publicado na página mãe (`avare-cenarios.html`, seção "custo real").
+## 7. Conformidade normativa
 
-## 5. Riscos/pendências
+- Norma pede 1 USB/100–150 mil hab → o lean entrega **2 USB + reserva**, acima
+  do mínimo.
+- USA não é exigida para 96 mil hab (norma pede >400 mil) — **fica por decisão
+  operacional/de conveniência**, não por obrigação normativa, e é operada pela
+  Samais dentro da proposta.
 
-1. ⚠️ A dor "USA única regional / óbito" NÃO é resolvida neste cenário (só
-   mitigada por frota + despacho) — deixar claro em conversa; é o trade-off do
-   preço. Gatilho de USA própria documentado para fase 2.
-2. ⚠️ Demanda: se atendimentos crescerem >~300/mês, o posto 12h vira 24/7
-   (gatilho contratual de reequilíbrio — prever no termo).
-3. Herdados: laudo USBs, migração habilitações USB p/ gestão municipal, TAC,
-   ISS, CCT-SP.
+## 8. Validação (benchmark)
+
+Âncora: contrato **real** de Ourinhos (Samais, 2023) = R$ 950k / 106 mil hab =
+8,96/hab (~85 colaboradores, escopo USA + 2 USB + moto). Corrigido para 2026
+(~+18,5%: IPCA + piso enfermagem Lei 14.434) ≈ **10,6/hab**. Este cenário fecha
+em **10,37/hab** — validação forte, não é chute.
+
+## 9. Riscos e pendências
+
+- A dor "USA compartilhada/óbito" **é resolvida** por este cenário (USA
+  própria a partir de agora).
+- Migração das habilitações USB/USA para a gestão municipal (trâmite MS).
+- TAC MPT 194.218.001.15/0-34 (a monitorar).
+- ISS municipal e enquadramento tributário.
+- CCT-SP (piso, benefícios) — aplicar sem exceção.
+- Headcount de 45 CLT a validar em diligência (dimensionamento fino por
+  turno/posto).
