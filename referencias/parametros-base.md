@@ -60,12 +60,14 @@
 | Encargos sociais sobre salário (CLT, APH) | **68,24%** (calibrado) | calibrado (modelo André, IN SEGES 05/2017); insalubridade à parte |
 | — Grupo A (INSS patronal, FGTS, RAT/SAT, terceiros) | ~36–38% | referência |
 | — Grupo B (férias, 13º, abono, licenças) | ~20–22% | referência |
-| — Grupo C (aviso prévio, multa FGTS, rescisão) | ~5–8% | referência |
+| — Grupo C (aviso prévio, multa FGTS, **rescisão/demissão**) | ~5–8% | referência |
 | — Grupo D (incidências de A sobre B) | ~7–9% | referência |
 | Adicional de insalubridade (saúde, grau médio) | 20% do salário-mín. ou base CCT | normativo/CCT |
 | Adicional noturno | ≥ 20% sobre hora noturna | normativo/CCT |
 | Sobreaviso médico | conforme CCT | a calibrar |
 | Piso salarial por função | **da CCT da categoria/região** | a levantar |
+| **Provisão de rescisão/demissão** | **JÁ inclusa no Grupo C** — não somar de novo | regra (evitar duplicação) |
+| Provisão de rotatividade *extra* (recrutar + treinar reposição) | ~2% da folha, **opcional** (churn alto, ex.: médico) | a calibrar por estudo |
 
 > Os pisos (médico, enfermeiro, técnico de enfermagem, condutor socorrista, TARM,
 > rádio-operador, administrativo) vêm da **Convenção Coletiva vigente** da região
@@ -118,6 +120,21 @@
 | Fator K de referência (serviços, MPU) | 2,5–2,7 | validação |
 | Gross-up (uso: conferência de custo↔preço) | `Preço = Custo ÷ [1 − (Tributos% + Margem%)]` | método |
 | ⚠️ Histórico | a política anterior (custo cheio FC 4,5 em tudo + margem 35% via gross-up) gerava ~2× mercado e assustou o teto de viabilidade — substituída pela Métrica de Ouro em jul/2026 (episódio Avaré: 1,33 mi → 500k) | registro |
+
+### 5d. Provisões e indiretos (BDI) — composição padrão
+
+| Linha | % | Base | Observação |
+|---|---|---|---|
+| Overhead administrativo | 7% | custo direto | sede/RH/**jurídico interno**/qualidade (§9) |
+| Operacional não-pessoal | 3% | custo direto | TI/comunicação/capacitação (§9) |
+| **Honorários advocatícios gerais** | **2%** | **faturamento** | **externo/contingência** (defesa em ações, sucumbência, contrato público) — pedido do CEO jul/2026; distinto do jurídico interno do overhead |
+| Rotatividade extra | ~2% folha | opcional | ver §4 (churn alto) |
+
+> **Rescisão/demissão NÃO entra aqui** — já está nos encargos (Grupo C, §4).
+> **Como o preço é teto de mercado (Métrica de Ouro 5,2 + USA), estas provisões
+> NÃO sobem o preço — reduzem a margem.** Cada linha nova custa ~seu % em pontos de
+> margem. Registrar no cálculo interno; não altera o valor cliente-facing.
+> Impacto do +2% honorários (Avaré jul/2026): Solo 33→31% · Trio 36→34% · Regional 46→44%.
 
 ### Tributos sobre faturamento — referência por regime
 
