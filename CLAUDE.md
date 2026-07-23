@@ -1,9 +1,28 @@
 # CLAUDE.md — Instruções para qualquer sessão neste repositório
 
 Este repositório é a **metodologia de estudo de custo de SAMU da Samais** (a
-"Fórmula Mestre"). Toda sessão que for **fazer, validar ou calibrar um estudo de
+"Fórmula Mestre") e o **produto cliente-facing** (os estudos HTML publicados no
+Vercel). Toda sessão que for **fazer, validar ou calibrar um estudo de
 município** DEVE seguir o procedimento abaixo. Não improvise um método próprio —
 use o que está aqui.
+
+## Relação com o `samais-os` (cockpit operacional)
+
+O **cockpit operacional da Samais** — rastreamento das frentes (`frentes/<alvo>/`
+com `status.json` + `fatos.md` + `interpretacao.md`), dashboard e **doutrina
+canônica de precificação** — vive no repo **`victorotaa/samais-os`**. Divisão:
+
+- **Este repo (`samais-estudos`) = produto:** o motor Fórmula Mestre e os HTML
+  cliente-facing com deploy Vercel próprio. Continua sendo a fonte dos estudos.
+- **`samais-os` = fonte operacional e de doutrina:** ao registrar o estado
+  comercial/estratégico de uma frente (verdict, score, valor, memória de preço),
+  fazer em `samais-os/frentes/<alvo>/`, não aqui. Na dúvida de **nomenclatura de
+  preço** (nunca "lucro/margem"; BDI decomposto), a fonte canônica é
+  `samais-os/doutrina/precificacao.md` — o `FORMULA-MESTRE.md` deste repo é a
+  versão-motor e **defere** a ela em caso de conflito.
+- Exemplo vivo: a frente **Avaré** (3 cenários) está consolidada em
+  `samais-os/frentes/avare/`; o HTML publicado (`site/estudos/avare-cenarios.html`)
+  permanece aqui.
 
 ## Procedimento obrigatório (leia nesta ordem antes de calcular)
 
