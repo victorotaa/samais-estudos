@@ -23,26 +23,89 @@ use o que está aqui.
 - **Princípio da Realidade:** nunca inventar dado inexistente. Sem dado → marcar
   "a levantar"/premissa a validar; jamais apresentar premissa como fato.
 - **Projeção conservadora:** na dúvida, sempre o **mais caro** (regime, faixas → teto).
-- **Fator de Cobertura 24/7 = ~4,5** por posto (12×36), **NUNCA 2,2**. O 2,2 cobre
-  só um turno e subdimensiona pela metade (é o erro histórico — lição Taboão
-  148 vs 80). Não duplicar férias/13º: se já estão nos encargos (~68%), o FC é só
-  o headcount físico (~4,5).
+- **Fator de Cobertura 24/7 = ~4,5** por posto (12×36), **NUNCA 2,2 para cobrir
+  24/7**. O 2,2 cobre só um turno e subdimensiona pela metade (erro histórico —
+  lição Taboão 148 vs 80). Não duplicar férias/13º: se já estão nos encargos
+  (~68%), o FC é só o headcount físico (~4,5). *Nuance Lean Sizing:* um **posto
+  deliberadamente de 12h** (2ª USB no pico, motolância diurna) usa FC ≈ 2,25 e é
+  legítimo — o proibido é usar 2,2 achando que cobre 24h.
 - **Encargos e FC são multiplicativos** sobre o salário — esquecer um (ou os dois)
   produz os "valores muito errados" que originaram esta fórmula.
 - **Dois cenários sempre:** A = Custo Real Atual (com os invisíveis públicos
-  somados) · B = Proposta Samais (margem-alvo **35%**, definida pelo CEO, embutida
-  no gross-up `Preço = Custo ÷ [1 − (Tributos% + Margem%)]`).
+  somados) · B = Proposta Samais. **Preço do B pela Métrica de Ouro (CEO,
+  jul/2026, válida de Avaré em diante): `VCM = população × R$ 5,20/hab/mês`
+  (teto)** — preço ancorado no mercado; a margem (alvo interno ≥ ~30–35%) sai do
+  **Lean Sizing** do escopo, nunca de inflar o preço. Se o escopo não couber no
+  teto, enxugar ou escalonar por gatilhos (`parametros-base.md` §5a/5b). O
+  gross-up `Preço = Custo ÷ [1 − (Trib% + Margem%)]` vira conferência. Estudos
+  publicados antes da régua não são recalculados retroativamente, salvo pedido.
 - **Regras Operacionais:** frota é do ente (sem CAPEX de aquisição; Samais faz
-  manutenção + reativação; aluguel só como contingência); equipe própria CLT no
-  piso; bases/CRU e suas obras são do ente; atendimentos por histórico.
-- **Validar por benchmark** antes de entregar (custo/habitante, /viatura — mercado
-  ~R$ 93–159k/viatura/mês; peso da folha ~55–70%). Fora da faixa = investigar.
+  manutenção + reativação; **inclusão de viatura nova via locação+equipação só por
+  aditivo de contrato**, fora do objeto do estudo-base); equipe própria CLT no
+  piso; bases/CRU e suas obras são do ente; atendimentos por histórico. **USA/USB
+  são ativos do ente**; a USA existente fica e é administrada pelo maior município
+  da regional de saúde — precificada dentro da proposta pela régua Ourinhos, com o
+  **repasse tripartite (federal ~R$ 134k/USA) voltando ao município** como desconto.
+- **Custo aparente × custo real (obrigatório em todo estudo):** Cenário A não é só
+  o declarado — somar os ocultos (frota na pasta geral, combustível, insumos no
+  almox central, imóvel, coordenação e, o maior, **médicos cedidos à USA/CRU**).
+  Fator de referência calibrado em Avaré: **declarado × 1,38 ≈ real**. Comparar 3
+  níveis: declarado × custo real hoje × **autogestão da estrutura cheia** × oferta
+  Samais. **Honestidade:** a Samais não é "mais barata" que a autogestão (preço tem
+  tributo+margem); o argumento é **empate em custo real + sem passivo + tecnologia +
+  chave-na-mão**. Cabe na página-mãe multi-cenário.
+- **Varredura completa do termo de referência (lição Canoas, jul/2026).** O edital
+  é fonte do **escopo E do custo** — ler só a matriz de pessoal e a frota é erro.
+  Extrair *sempre*, com checklist: **horas extras obrigatórias de capacitação/NEP**
+  (em Canoas eram 400h médico + 600h enf + 600h téc + 250h condutor = **R$ 229
+  mil/mês omitidos**), seguros exigidos (seguro total da frota), EPI/uniformes
+  especificados, resíduos/esterilização/controle de pragas, manutenção predial e
+  de equipamentos, **imóvel por conta da contratada**, e metas com desconto no
+  repasse. Cada obrigação do termo que consome dinheiro **é rubrica de custo**.
+- **Nunca presumir que o BDI fecha — calcular a remuneração residual (lição
+  Canoas).** A tabela canônica de BDI lista as linhas como "% sobre CDO", mas
+  **tributos incidem sobre faturamento**. Com BDI 35%: tributos 13,5% × preço =
+  **18,2% do CDO** (não 13,5%), e as demais linhas somam 20,5% do CDO → 38,7% >
+  35% disponíveis. **A remuneração real fica em −2,8% do preço — negativa, em
+  qualquer estudo.** Portanto: (a) sempre computar explicitamente
+  `remuneração = preço − CDO − tributos×preço − demais×CDO`; (b) se der < ~5% do
+  preço, o BDI está errado para aquela operação. **Piso prático: BDI ≈ 46% para
+  4% de remuneração · ≈ 52% para 7%** (usado em Canoas) · ≈ 57% para 10%. O preço
+  segue ancorado no teto de mercado — o BDI maior não infla preço, apenas revela
+  o custo verdadeiro e evita operar no prejuízo.
+- **Validar por benchmark** antes de entregar (per capita vs R$ 5,20/hab — régua
+  principal; custo/viatura mercado ~R$ 93–159k/mês; peso da folha ~55–70%). Fora
+  da faixa = investigar. **Per capita sempre exibido no estudo** (pedido do CEO).
 
 ## Saída
 
-- Salvar cada estudo em `estudos/<municipio-uf>.md` (ver
-  [`estudos/belem-pa.md`](estudos/belem-pa.md) como modelo de formato).
+Cada estudo gera **três artefatos**:
+
+1. **Markdown interno** em `estudos/<municipio-uf>.md` (ver
+   [`estudos/belem-pa.md`](estudos/belem-pa.md)) — o cálculo completo, com margem,
+   composição custo→preço e todas as premissas. **Uso interno.**
+2. **Página HTML de apresentação** em `site/estudos/<municipio-uf>.html` +
+   cartão em `site/index.html`, publicada na Vercel. **Cliente-facing.** Seguir
+   [`referencias/apresentacao-html.md`](referencias/apresentacao-html.md).
+3. **Anexo de composição de preço** em
+   `anexos/<municipio-uf>-memoria-financeira.html` — a memória de cálculo
+   apresentável à **diretoria** (validação da fórmula): composição rubrica a
+   rubrica com regra de cálculo, ponte custo→preço até a **remuneração residual**,
+   benchmark e tabela fato × premissa. Seguir
+   [`referencias/anexo-composicao-preco.md`](referencias/anexo-composicao-preco.md);
+   referência de implementação: `anexos/canoas-rs-memoria-financeira.html`.
+   ⚠️ **Fica FORA de `site/`** — o deploy varre só `site/`, e este anexo expõe
+   BDI, remuneração e composição. **Nunca publicar na Vercel.**
+
+> ⚠️ O HTML é visto pelo cliente (gestores/secretários/políticos). **Nunca** expor
+> nele margem (35%), bridge custo→preço, benchmark desfavorável ou estratégia
+> jurídico-tributária. Isso vive só no markdown interno e em conversa.
+
 - Sempre marcar a procedência de cada dado: ✅ real (com fonte) × ⚠️ premissa a validar.
+- **Identidade visual Samais:** preto `#0A0A0A` · dourado `#B8954E` · branco;
+  marcas em `site/assets/brand/`; estilo único em `site/css/samais.css`.
+- **Publicar:** `TOK=<vercel_token> node scripts/deploy-vercel.mjs` (token **nunca**
+  versionado — variável de ambiente; rotacionar se exposto).
 
 ## Observações de manutenção
 
@@ -57,5 +120,6 @@ use o que está aqui.
 
 ## Git
 
-- O trabalho vive na branch **`claude/kind-davinci-jjlfnq`** (a `main` ainda está
-  vazia). Desenvolver e commitar nesta branch; abrir/atualizar o PR para a `main`.
+- A `main` já contém a Fórmula Mestre (PR #1 mergeado). Para mudanças novas,
+  trabalhar em branch própria e abrir PR para a `main`.
+- **Nunca** commitar segredos (tokens Vercel etc.) — ver `.gitignore`.

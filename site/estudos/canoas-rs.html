@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Canoas/RS — SAMU 192 + Rede CAPS (estudo de operação)</title>
+<meta name="description" content="Estudo de operação da Samais para o contrato de SAMU 192 e da rede de CAPS de Canoas/RS: frota cedida pelo município operada com escala 24/7 coberta de verdade, cinco unidades de saúde mental e tecnologia CoPilot OS — operação chave-na-mão sob um único parceiro.">
+<link rel="icon" href="../assets/brand/samais-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/samais.css">
+<style>
+/* fotos protagonistas — placeholders em gradiente dourado/preto até subir imagens reais de Canoas */
+.hero-bg{opacity:1;background:radial-gradient(120% 120% at 78% 12%,rgba(184,149,78,.24) 0%,rgba(184,149,78,.06) 34%,rgba(10,10,10,0) 60%),linear-gradient(155deg,#141210 0%,#0A0A0A 58%)}
+.hero-bg::after{background:linear-gradient(180deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.40) 46%,rgba(10,10,10,.93) 100%)}
+.band{height:clamp(300px,42vw,520px);background:linear-gradient(120deg,#0A0A0A 0%,#15120c 52%,#0A0A0A 100%)}
+.band::after{background:linear-gradient(90deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.34) 56%,rgba(10,10,10,.72) 100%)}
+.band .mono-wm{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:clamp(120px,20vw,220px);opacity:.10;z-index:1}
+.cta-bg{opacity:1;background:radial-gradient(120% 120% at 20% 20%,rgba(184,149,78,.20) 0%,rgba(10,10,10,0) 55%),linear-gradient(150deg,#141210 0%,#0A0A0A 60%)}
+/* valor da proposta — o número que mais importa no documento */
+.value-hero{text-align:center;padding:56px 24px 44px;border:1px solid rgba(0,0,0,.12);background:rgba(0,0,0,.02);margin-bottom:10px}
+.value-hero .vh-label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8E7238;margin-bottom:20px}
+.value-hero .vh-number{font-family:var(--display);font-weight:800;font-size:clamp(40px,8vw,86px);line-height:1;color:#8E7238;letter-spacing:-.02em}
+.value-hero .vh-sub{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:#6b6358;margin-top:20px}
+.value-secondary{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;padding:26px 4px;border-bottom:1px solid rgba(0,0,0,.12)}
+.value-secondary .vs-item{text-align:center}
+.value-secondary .vs-item .k{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6b6358;margin-bottom:7px}
+.value-secondary .vs-item .v{font-family:var(--display);font-weight:600;font-size:22px;color:#3a352d}
+.value-federal{display:flex;justify-content:center;gap:8px 40px;flex-wrap:wrap;padding:20px 4px;font-family:var(--mono);font-size:12px;color:#6b6358}
+.value-federal .it{display:flex;align-items:baseline;gap:8px}
+.value-federal .v{font-size:13px}
+.value-federal .tot .v{color:#8E7238;font-weight:600;font-size:14.5px}
+@media (max-width:720px){
+  .band{height:clamp(220px,58vw,340px)}
+  .value-hero{padding:40px 18px 32px}
+  .value-secondary{gap:28px;padding:20px 4px}
+  .value-federal{flex-direction:column;align-items:center;gap:10px}
+}
+</style>
+</head>
+<body>
+
+<!-- refração do liquid glass -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none">
+  <filter id="glassDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="1.1" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="#top" aria-label="Samais — topo">
+    <svg class="nav-wordmark" viewBox="0 0 595.3 175.9" role="img" aria-label="SAMAIS"><path fill="#B8954E" d="M44,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM411.7,60.6h4.7c4.4,0,8.6,2.1,11.3,5.6l36.8,48.2h-11.7l-41-53.7ZM476.6,106.6l4.9-4.9c6.3,3.6,18.2,8.8,33.8,8.8s25.5-3.2,25.5-11.1-14.2-9.6-24.4-9.8c-16.2-.2-35.4-2.8-35.4-14.1s17.3-16.4,32.7-16.4,27,3.2,34.1,6.5l-4.4,4.9c-6.8-3.1-17.2-6-28.9-6s-22.8,1.7-22.8,9.6,17,7.7,24.8,7.9c15.9.2,35.4,3.2,35.4,16.9s-20.1,17.1-35.9,17.1-31.6-5.3-39.4-9.4ZM184.3,60.6h-12.4s24.4,33.7,24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3s10.8,14.9,10.8,14.9h13.1l-39.6-53.7ZM372.1,60.6h-12.4l24.4,33.7h-42.4c-3.2,0-6.3,1.5-8.2,4.2l-11.7,15.9h7.6l7.9-10.7c1.9-2.6,5-4.2,8.2-4.2h42.3l10.8,14.9h13.1l-39.6-53.7ZM287.2,65.9l-23.3,32.3-23.9-32.4c-2.4-3.2-6.2-5.2-10.2-5.2h-6l33.5,46.6h7.2l27.8-37.7v44.8h11.7v-53.7h-6.6c-4.1,0-7.9,2-10.3,5.3Z"/></svg>
+    <svg class="nav-mono" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  </a>
+  <div class="nav-links" id="navlinks">
+    <a href="#panorama">O contrato</a>
+    <a href="#samu">SAMU</a>
+    <a href="#caps">Rede CAPS</a>
+    <a href="#metodo">Método</a>
+    <a href="#viabilidade">Viabilidade</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#fechamento" class="nav-cta">Decisão</a>
+  </div>
+  <button class="nav-ham" id="navham" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="top">
+  <div class="hero-bg" data-px="0.12"></div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="tag">Canoas · RS · SAMU 192 + Rede CAPS · Estudo de operação</div>
+      <h1>A urgência e o<br/>cuidado de Canoas</h1>
+      <div class="hero-sub">Dois serviços essenciais, uma só operação chave-na-mão: o SAMU 192 rodando com escala 24/7 coberta de verdade e a rede de saúde mental (CAPS) funcionando por inteiro — com tecnologia própria e equipe CLT.</div>
+      <div class="hero-grid">
+        <div class="left">
+          <p>Canoas — 3ª maior cidade do Rio Grande do Sul, no coração da Região Metropolitana de Porto Alegre — recontrata a operação do seu SAMU municipal (que também atende Nova Santa Rita) e estrutura a gestão de cinco unidades da sua Rede de Atenção Psicossocial. Este documento é o estudo de operação da Samais para esse contrato-alvo: como operamos cada serviço, com que dimensionamento, que tecnologia e sob que rigor de escala. A frota é cedida pelo município; o que a Samais entrega é a operação inteira, funcionando, sob um só parceiro.</p>
+          <div class="src">Dados — Orçamentos SMS Canoas nº 194/2026 (SAMU) e nº 211/2026 (CAPS), IBGE (cód. 4304606) e portarias GM/MS</div>
+        </div>
+        <div class="right">
+          <svg class="mono-icon" viewBox="0 0 271 175.9" role="img" aria-label="Samais SA+"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="it"><div class="n">347.657 hab</div><div class="l">Canoas + Nova Santa Rita<br/>população coberta</div></div>
+        <div class="it"><div class="n">2+4+2</div><div class="l">USA · USB · motolância<br/>frota do SAMU</div></div>
+        <div class="it"><div class="n">5 CAPS</div><div class="l">unidades de saúde mental<br/>na Rede RAPS</div></div>
+        <div class="it"><div class="n">R$ 5,75</div><div class="l">por morador/mês · SAMU<br/>~263 CLT na operação</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 00 O CONTRATO -->
+<section class="wrap" id="panorama">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">O contrato-alvo · como funciona</span>
+      <h2>Dois serviços, dois orçamentos, uma operação.</h2>
+      <p class="lede">Canoas conduz, via parceria com organização social, dois processos de formação de preço em paralelo: o SAMU 192 (Orçamento 194/2026) e a rede de CAPS (Orçamento 211/2026). A Samais entra como o operador que executa os dois — com a mesma disciplina de escala, tecnologia e equipe própria. Este estudo apresenta a nossa operação para cada frente.</p>
+    </div>
+    <div class="right">Contratante<br/><span class="acc">Organização Social parceira</span></div>
+  </div>
+
+  <div class="g-2">
+    <div class="card">
+      <div class="tag">Frente 01 · Urgência</div>
+      <h3>SAMU 192 municipal</h3>
+      <p>Atendimento pré-hospitalar móvel 24/7 para Canoas e Nova Santa Rita, com frota cedida pelo município (2 UTIs móveis, 4 suportes básicos, 2 motolâncias + reservas) e regulação própria. Escala completa, coberta com folguistas e feristas — como o próprio termo exige.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Frota (cedida)</span><span class="v">2 USA + 4 USB + 2 moto + reservas</span></div>
+        <div class="row"><span class="k">Equipe</span><span class="v">~80 CLT</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Frente 02 · Saúde mental</div>
+      <h3>Rede CAPS (RAPS)</h3>
+      <p>Gestão e operação de cinco unidades de Atenção Psicossocial — três em regime 24h, duas diurnas — incluindo a implantação de um novo CAPS Infantojuvenil. Equipe multiprofissional completa, escala 24h coberta e cuidado organizado por projeto terapêutico singular.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Unidades</span><span class="v">5 CAPS (3 em 24h)</span></div>
+        <div class="row"><span class="k">Equipe</span><span class="v">~183 CLT</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:18px"><span class="arrow">↳</span><div><strong>Por que uma operação integrada</strong> Somar SAMU e CAPS sob um só operador não é conveniência — é sinergia real: uma única estrutura de gestão, educação permanente, farmácia, logística e tecnologia serve as duas frentes, com escala coberta de ponta a ponta. É a operação inteira funcionando, não dois contratos soltos.</div></div>
+</section>
+
+<!-- 01 SAMU -->
+<section class="wrap" id="samu">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">01 · SAMU 192 · a operação de rua</span>
+      <h2>A frota é da cidade. A operação, inteira, é nossa.</h2>
+      <p class="lede">O município cede a frota e a base (a nova sede unificada da Av. Victor Barreto); a Samais entrega a operação completa — equipe, escala, manutenção, insumos, tecnologia e regulação — para Canoas e Nova Santa Rita, 24 horas por dia, todos os dias.</p>
+    </div>
+    <div class="right">Regime<br/><span class="acc">24/7 · plantão 12×36</span></div>
+  </div>
+
+  <div class="bring">
+    <span class="lbl">Escopo do SAMU</span>
+    <h4>Operação da execução do SAMU 192 · Canoas + Nova Santa Rita · 347.657 habitantes</h4>
+    <div class="rows">
+      <div class="row"><span class="k">Suporte avançado (USA)</span><span class="v">2 UTIs móveis, equipe médica própria 24h</span></div>
+      <div class="row"><span class="k">Suporte básico (USB)</span><span class="v">4 ambulâncias 24h + 2 reservas técnicas</span></div>
+      <div class="row"><span class="k">Motolância</span><span class="v">2 unidades, resposta rápida no pico urbano</span></div>
+      <div class="row"><span class="k">Regulação</span><span class="v">central própria + despacho com tecnologia CoPilot</span></div>
+      <div class="row"><span class="k">Frota</span><span class="v">cedida pelo município · manutenção e insumos pela operação</span></div>
+      <div class="row"><span class="k">Equipe</span><span class="v">~80 profissionais CLT, escala coberta com folguistas</span></div>
+    </div>
+  </div>
+
+  <table class="tbl" style="margin-top:28px">
+    <thead><tr><th>Quadro assistencial (postos no plantão)</th><th class="num">Dia + noite</th><th>Cobertura</th></tr></thead>
+    <tbody>
+      <tr><td>Médicos (suporte avançado)</td><td class="num">2 + 2</td><td>24/7 · 12×36</td></tr>
+      <tr><td>Enfermeiros</td><td class="num">3 + 3</td><td>24/7 · 12×36</td></tr>
+      <tr><td>Técnicos de enfermagem</td><td class="num">4 + 4</td><td>24/7 · 12×36</td></tr>
+      <tr><td>Condutores socorristas</td><td class="num">6 + 6</td><td>24/7 · 12×36</td></tr>
+      <tr><td>Condutores de motolância</td><td class="num">2</td><td>12h · pico diurno</td></tr>
+      <tr class="tot"><td>Equipe total com folguistas e feristas</td><td class="num">~80</td><td>escala coberta de verdade</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Escala coberta, não no papel</strong> O termo de referência lista os profissionais efetivos por plantão e determina, textualmente, provisionar folguistas e feristas por cima. É exatamente a disciplina Samais: dimensionar pela cobertura real da escala 24/7, nunca por um turno só. Subdimensionar a escala é a origem histórica das operações que rodam no limite — aqui não acontece.</div></div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Atendimento ampliado</strong> A operação cobre também Nova Santa Rita, conforme o objeto do Orçamento 194/2026 — sem custo de aquisição de frota, que permanece como ativo do município.</div></div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <svg class="mono-wm" viewBox="0 0 271 175.9" aria-hidden="true"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  <div class="cap"><div class="in">
+    <div class="e">Canoas · Rio Grande do Sul</div>
+    <div class="t">A nova sede unificada do SAMU, na Av. Victor Barreto — pronta para uma operação à altura da terceira maior cidade do estado.</div>
+  </div></div>
+</div>
+
+<!-- 02 CAPS -->
+<section class="wrap" id="caps">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">02 · Rede CAPS · o cuidado em saúde mental</span>
+      <h2>Cinco unidades, uma rede que não fecha a porta.</h2>
+      <p class="lede">A Rede de Atenção Psicossocial de Canoas ganha operação profissional em cinco Centros de Atenção Psicossocial — do acolhimento adulto e álcool-e-drogas 24h ao cuidado infantojuvenil. Cada unidade com equipe multiprofissional completa e, nas de 24h, plantão noturno e de fim de semana coberto.</p>
+    </div>
+    <div class="right">Regime<br/><span class="acc">3 unidades 24h · 2 diurnas</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>Unidade</th><th>Modalidade</th><th>Regime</th><th class="num">Equipe ≈</th></tr></thead>
+    <tbody>
+      <tr><td>CAPS III Recanto dos Girassóis</td><td>Transtorno mental · adulto</td><td>24 horas</td><td class="num">~46</td></tr>
+      <tr><td>CAPS AD III Amanhecer</td><td>Álcool e outras drogas</td><td>24 horas</td><td class="num">~46</td></tr>
+      <tr><td>CAPS AD III Travessia</td><td>Álcool e outras drogas</td><td>24 horas</td><td class="num">~46</td></tr>
+      <tr><td>CAPS II Novos Tempos</td><td>Transtorno mental · adulto</td><td>Diurno</td><td class="num">~21</td></tr>
+      <tr><td>CAPSi Cataventos</td><td>Infantojuvenil · nova unidade</td><td>Diurno</td><td class="num">~21</td></tr>
+      <tr class="tot"><td>Rede completa + equipe comum (farmácia, transporte)</td><td>RAPS · Canoas</td><td>—</td><td class="num">~183</td></tr>
+    </tbody>
+  </table>
+
+  <div class="g-3" style="margin-top:28px">
+    <div class="card">
+      <div class="tag">Cobertura</div>
+      <h3>Escala 24h coberta</h3>
+      <p>Nas três unidades 24h, o cuidado não para: equipe diurna, plantão noturno e cobertura de fins de semana e feriados. Enfermagem, higienização e portaria com folguistas e feristas provisionados — como o termo exige.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Unidades 24h</span><span class="v">3</span></div>
+        <div class="row"><span class="k">Plantão noturno</span><span class="v">coberto</span></div>
+        <div class="row"><span class="k">Fim de semana</span><span class="v">coberto</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Implantação</div>
+      <h3>Novo CAPSi Cataventos</h3>
+      <p>O CAPS Infantojuvenil é unidade nova (autorizado pelo Ministério da Saúde, CNES já atribuído). A operação assume localizar e adequar o imóvel, instalar mobiliário e equipamentos e constituir a equipe — implantação completa, não só gestão.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Público</span><span class="v">crianças e adolescentes</span></div>
+        <div class="row"><span class="k">Imóvel</span><span class="v">locado e adequado pela operação</span></div>
+        <div class="row"><span class="k">Referência</span><span class="v">SAIPS/MS · CNES ativo</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">Equipe</div>
+      <h3>Multiprofissional completa</h3>
+      <p>Psiquiatria, enfermagem em saúde mental, psicologia, serviço social, terapia ocupacional, educação física, educadores sociais e oficineiros — mais farmácia e transporte comuns à rede, sob coordenação técnica dedicada.</p>
+      <div class="specs">
+        <div class="row"><span class="k">Núcleos</span><span class="v">clínico + psicossocial</span></div>
+        <div class="row"><span class="k">Farmácia</span><span class="v">comum às 4 unidades</span></div>
+        <div class="row"><span class="k">Cuidado</span><span class="v">projeto terapêutico singular</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>O que a operação assume</strong> Para o CAPSi, o imóvel e sua adequação entram na operação (locação, reforma, mobiliário e equipamentos); nas demais, a estrutura predial segue com o município. Em todas, a Samais entrega a equipe, a escala coberta, a farmácia, o transporte de equipes e o cuidado organizado — a rede funcionando.</div></div>
+</section>
+
+<!-- BAND · CAPS -->
+<div class="band">
+  <svg class="mono-wm" viewBox="0 0 271 175.9" aria-hidden="true"><path fill="#B8954E" d="M44.8,106.6l4.9-4.9c6.3,3.6,18.1,8.8,33.7,8.8s25.4-3.2,25.4-11.1-14.2-9.6-24.3-9.8c-16.2-.2-35.3-2.8-35.3-14.1s17.3-16.3,32.6-16.3,27,3.2,34,6.5l-4.4,4.9c-6.7-3.1-17.1-6-28.8-6s-22.8,1.7-22.8,9.6,17,7.7,24.7,7.9c15.9.2,35.3,3.2,35.3,16.9s-20.1,17.1-35.8,17.1-31.5-5.3-39.3-9.4ZM168.7,60.7h-13.1l25,33.6h-42.3c-3.2,0-6.3,1.5-8.2,4.1l-11.7,15.8h7.5l7.9-10.7c1.9-2.6,5-4.1,8.2-4.1h42.2l10.8,14.8h13.1l-39.5-53.6ZM226.2,60.7h-10.4v-10.4h-10v10.4h-10.4v10h10.4v10.4h10v-10.4h10.4v-10Z"/></svg>
+  <div class="cap"><div class="in">
+    <div class="e">Rede de Atenção Psicossocial</div>
+    <div class="t">Do acolhimento noturno ao cuidado infantojuvenil — cinco unidades operando por inteiro, sob um só padrão.</div>
+  </div></div>
+</div>
+
+<!-- 03 MÉTODO -->
+<section class="wrap" id="metodo">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">03 · Método e rigor</span>
+      <h2>O número nasce da escala, não do chute.</h2>
+      <p class="lede">Cada posto é dimensionado pela cobertura real da escala — 24/7 em 12×36, com folguistas e feristas —, respeitando as portarias do Ministério da Saúde e as convenções coletivas do Rio Grande do Sul. É o mesmo rigor que sustentou nossas operações em contratos de porte comparável.</p>
+    </div>
+    <div class="right">Base normativa<br/><span class="acc">PT GM/MS 2.048 · 1.010 · 336/2002</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <h4>Cobertura 24/7 correta</h4>
+      <p>Dimensionamos o efetivo para a escala inteira, com folguistas e feristas — não por um turno. É a diferença entre uma operação que roda de verdade e uma que roda no limite.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Conformidade plena</h4>
+      <p>Equipe CLT no piso da categoria (CCT-RS), com insalubridade e periculosidade previstas, encargos completos e conformidade com as normas do Ministério da Saúde e do Trabalho.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Operação comprovada</h4>
+      <p>A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, em porte e escopo comparáveis — experiência real de rua, com atestados disponíveis para verificação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 VIABILIDADE (light fold) -->
+<section class="wrap fold-light" id="viabilidade">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">04 · Viabilidade</span>
+      <h2>O valor da operação, com escopo integral.</h2>
+      <p class="lede">A composição do valor contratual cobre a operação completa das duas frentes — pessoal com escala coberta, insumos, manutenção, tecnologia e gestão. Números de referência, a calibrar na diligência de campo sobre os pisos vigentes da convenção coletiva do Rio Grande do Sul.</p>
+    </div>
+    <div class="right">Enquadramento<br/><span class="acc">parceria · MROSC</span></div>
+  </div>
+
+  <div class="value-hero">
+    <div class="vh-label">Composição do valor contratual · mensal · referência</div>
+    <div class="vh-number">R$ 4,6 mi</div>
+    <div class="vh-sub">347.657 habitantes · operação integrada SAMU + Rede CAPS · R$ 13,15 por morador/mês</div>
+  </div>
+  <div class="value-secondary">
+    <div class="vs-item"><span class="k">SAMU 192 · ~80 CLT</span><span class="v">R$ 2,0 mi</span></div>
+    <div class="vs-item"><span class="k">Rede CAPS · ~183 CLT</span><span class="v">≈ R$ 2,6 mi</span></div>
+    <div class="vs-item"><span class="k">SAMU por morador/mês</span><span class="v">R$ 5,75</span></div>
+  </div>
+
+  <table class="tbl" style="margin-top:36px">
+    <thead><tr><th>O que entra na operação</th><th>SAMU 192</th><th>Rede CAPS</th></tr></thead>
+    <tbody>
+      <tr><td>Equipe própria CLT, escala 24/7 coberta</td><td>~80 profissionais</td><td>~183 profissionais</td></tr>
+      <tr><td>Frota / imóvel</td><td>frota cedida pelo município</td><td>predial do município (imóvel do CAPSi pela operação)</td></tr>
+      <tr><td>Insumos, medicamentos e manutenção</td><td>incluídos</td><td>incluídos</td></tr>
+      <tr><td>Tecnologia e gestão</td><td>CoPilot OS · regulação e despacho</td><td>prontuário e gestão da rede</td></tr>
+      <tr><td>Educação permanente (NEP) — horas de capacitação</td><td>previstas em contrato</td><td>previstas em contrato</td></tr>
+      <tr class="sub"><td>Composição do valor contratual · referência</td><td>R$ 2,0 mi/mês</td><td>≈ R$ 2,6 mi/mês</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><span class="arrow">↳</span><div><strong>Base do número</strong> O valor é construído de baixo para cima — pela escala real de cada posto (as horas mensais do próprio termo de referência), pelos pisos da categoria, pelas horas de educação permanente exigidas e pelos insumos de cada serviço —, não por percentual sobre um teto. São números de referência, a calibrar na diligência de campo, e apresentados com memória de cálculo completa.</div></div>
+  <div class="note"><span class="arrow">↳</span><div><strong>O que o valor sustenta</strong> Além da equipe e dos insumos, a composição cobre a reserva técnica que mantém a operação de pé quando algo sai do previsto — reposição imediata de escala, viatura em manutenção, contingências. É o que permite prometer cobertura contínua e cumprir: uma operação de urgência e de acolhimento 24h não pode depender de improviso.</div></div>
+</section>
+
+<!-- 05 DIFERENCIAIS -->
+<section class="wrap" id="diferenciais">
+  <div class="sec-head">
+    <div class="left">
+      <span class="sec-num">05 · Diferenciais</span>
+      <h2>Operação real, não consultoria.</h2>
+      <p class="lede">A Samais entrega a operação funcionando — as duas frentes, com escala coberta, tecnologia própria e equipe CLT sem passivo. Um só parceiro operacional para a urgência e o cuidado de Canoas.</p>
+    </div>
+    <div class="right">Operação comprovada<br/><span class="acc">atestados disponíveis</span></div>
+  </div>
+  <div class="g-3">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <h4>Tecnologia CoPilot OS</h4>
+      <p>Regulação, despacho e telemetria em plataforma própria de IA para urgência — rastreabilidade em tempo real e painel de gestão aberto, único no país com dataset proprietário de regulação SAMU.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4>Equipe CLT sem passivo</h4>
+      <p>Contratação 100% CLT no piso da categoria, com educação permanente estruturada. Escala coberta de verdade elimina a rotatividade e o passivo que fragilizam operações mal dimensionadas.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#B8954E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h4>Operação chave-na-mão</h4>
+      <p>SAMU e CAPS sob uma só gestão — farmácia, logística, educação permanente e tecnologia compartilhadas. Menos interfaces, mais cobertura, uma única responsabilidade operacional.</p>
+    </div>
+  </div>
+  <div class="note"><span class="arrow">↳</span><div><strong>Operação comprovada</strong> A Samais operou o SAMU em Ourinhos e no consórcio CISNORPI, com atestados disponíveis para verificação formal.</div></div>
+
+  <h3 style="margin-top:40px">Próximos passos</h3>
+  <div class="hz">
+    <div class="h">
+      <div class="t">Etapa 01</div>
+      <div class="pd">Orçamento</div>
+      <h3>Formação de preço</h3>
+      <p>Entrega dos orçamentos de referência das duas frentes (SAMU 194/2026 e CAPS 211/2026), com memória de cálculo de RH, encargos e cronograma de desembolso.</p>
+      <div class="kv"><div class="r"><span class="k">Frentes</span><span class="v">SAMU · CAPS</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 02</div>
+      <div class="pd">Diligência</div>
+      <h3>Calibração final</h3>
+      <p>Confirmação dos pisos da CCT-RS, do dimensionamento fino da escala 24h e das condições do imóvel do CAPSi — fechamento do valor com base no dado real.</p>
+      <div class="kv"><div class="r"><span class="k">Base</span><span class="v">CCT-RS · escala</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 03</div>
+      <div class="pd">Mobilização</div>
+      <h3>Equipe e implantação</h3>
+      <p>Recrutamento e treinamento das equipes, implantação do CAPSi Cataventos e integração da tecnologia — transição sem interrupção do serviço.</p>
+      <div class="kv"><div class="r"><span class="k">Entrega</span><span class="v">operação funcionando</span></div></div>
+    </div>
+    <div class="h">
+      <div class="t">Etapa 04</div>
+      <div class="pd">Operação</div>
+      <h3>Regime pleno</h3>
+      <p>SAMU e rede CAPS em operação plena, com escala coberta, indicadores em painel e educação permanente — a urgência e o cuidado de Canoas funcionando por inteiro.</p>
+      <div class="kv"><div class="r"><span class="k">Regime</span><span class="v">24/7 integrado</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL (gold fold) -->
+<section class="wrap pull fold-gold" id="fechamento">
+  <blockquote>A urgência que chega a tempo e o cuidado que não fecha a porta — <em>uma operação inteira, sob um só parceiro.</em></blockquote>
+  <div class="s">Canoas · SAMU 192 + Rede CAPS</div>
+</section>
+
+<!-- CTA -->
+<section class="wrap cta" id="cta">
+  <div class="cta-box">
+    <div class="cta-bg" data-px="0.10"></div>
+    <span class="sec-num">Canoas · RS · SAMU 192 + Rede CAPS</span>
+    <h2>Canoas pode ter as duas operações à sua altura — por inteiro.</h2>
+    <p class="lede">Frota rodando com escala coberta, cinco unidades de saúde mental funcionando e tecnologia própria integrando tudo — uma operação chave-na-mão, calibrada ao dado real do município em diligência de campo.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot">
+    <div class="tl">Onde gestão se mede em vidas.</div>
+    <div class="pg">Samais · Canoas/RS · SAMU 192 + Rede CAPS · estudo de operação</div>
+  </div>
+  <p class="mono" style="margin-top:22px;font-size:9.5px;color:var(--dim)">Documento de uso restrito · não indexado. Valores de referência, a calibrar na diligência de campo sobre a convenção coletiva do RS. Dados de escopo: Orçamentos SMS Canoas nº 194/2026 e nº 211/2026.</p>
+</footer>
+
+<script src="../js/samais.js"></script>
+</body>
+</html>
