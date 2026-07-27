@@ -23,16 +23,45 @@ para a tabela não contradizer os estudos publicados): enfermeiro R$ 7.154 ·
 técnico de enfermagem R$ 5.008 (70% do enfermeiro, Lei 14.434) · condutor
 socorrista R$ 4.591 · médico plantonista R$ 125/h (taxa cheia, não CLT integral).
 
-## A tabela
+## A tabela — preço médio e piso
 
-| Unidade | Custo/mês | **Preço/mês** | Preço/ano |
-|---|---:|---:|---:|
-| **USA** · Suporte Avançado 24/7 | 222.418 | **R$ 422.286** | 5.067.427 |
-| **VIR** · Veículo de Intervenção Rápida 24/7 | 211.451 | **R$ 401.463** | 4.817.561 |
-| **USB** · Suporte Básico 24/7 | 96.434 | **R$ 183.091** | 2.197.095 |
-| **USB** · Suporte Básico 12h (pico) | 49.867 | **R$ 94.678** | 1.136.140 |
-| **Motolância** 12h | 29.528 | **R$ 56.062** | 672.749 |
-| **Reserva técnica** (viatura de retaguarda) | 4.950 | **R$ 9.398** | 112.778 |
+Três níveis, para dar espaço real de negociação:
+
+| Unidade | Custo | **Médio** (tabela) | **Piso** (negociação) | Equilíbrio |
+|---|---:|---:|---:|---:|
+| **USA** · Suporte Avançado 24/7 | 222.418 | **422.286** | **349.329** | 265.828 |
+| **VIR** · Intervenção Rápida 24/7 | 211.451 | **401.464** | **332.105** | 252.720 |
+| **USB** · Suporte Básico 24/7 | 96.434 | **183.091** | **151.459** | 115.255 |
+| **USB** · Suporte Básico 12h (pico) | 49.867 | **94.678** | **78.321** | 59.600 |
+| **Motolância** 12h | 29.528 | **56.062** | **46.377** | 35.291 |
+| **Reserva técnica** (retaguarda) | 4.950 | **9.398** | **7.774** | 5.916 |
+| **Gestão da operação** ¹ | 106.464 | **202.134** | **167.212** | 127.245 |
+
+¹ Coordenação, supervisão, NEP, almoxarifado, tecnologia e administrativo — a
+camada que existe **acima** das viaturas. Calibrada para operação de porte
+Avaré (~45–50 CLT); escala com o tamanho da operação.
+
+### Os três níveis
+
+| Nível | Margem | Gross-up | Quando usar |
+|---|---:|---|---|
+| **Médio** (tabela) | 31% | custo × **1,899** | Valor de referência; é o que vai na proposta |
+| **Piso** de negociação | 20% | custo × **1,571** | Limite de desconto — **17% abaixo do médio** |
+| **Equilíbrio** | 0% | custo × **1,195** | Só custo + tributos. **Nunca contratar aqui** — não cobre nem a reserva técnica |
+
+**Espaço de desconto disponível: 17% em qualquer linha.** Abaixo do piso, a
+operação deixa de comportar oscilação (viatura parada, reposição de escala,
+passivo) — é o mesmo raciocínio do piso de remuneração de ~7% da lição do BDI.
+
+### Aferição contra os estudos publicados
+
+| Pacote | Soma da tabela (médio) | Publicado |
+|---|---:|---:|
+| Avaré Solo (USA + 2 USB + reserva + gestão) | R$ 1.000.000 | R$ 1.000.000 ✓ |
+| Avaré + Manduri (mesmo escopo) | R$ 1.000.000 | R$ 1.010.000 (+1%) |
+
+A tabela **reproduz exatamente** o preço do estudo Solo publicado — é o que prova
+que a régua e os estudos falam a mesma língua.
 
 ### Composição de cada unidade
 
@@ -58,12 +87,10 @@ socorrista R$ 4.591 · médico plantonista R$ 125/h (taxa cheia, não CLT integr
 ## ⚠️ Ressalvas honestas
 
 1. **A USB 24/7 a R$ 183 mil fica acima da faixa de mercado por viatura
-   (R$ 93–159 mil/mês).** Não é erro de cálculo: a faixa de mercado é uma **média
-   mesclada** (inclui reservas, postos de 12h e contratos com gestão diluída),
-   enquanto esta tabela precifica a unidade **isolada e com margem cheia**. Em
-   contrato-pacote o preço por viatura cai, porque gestão, CRU e almoxarifado se
-   diluem entre as unidades. **Usar a tabela para margem/aditivo, não como preço
-   de tabela para pacote grande.**
+   (R$ 93–159 mil/mês)** no nível *médio*. **No piso (R$ 151 mil) entra na
+   faixa.** A faixa de mercado é uma média mesclada (inclui reservas, postos de
+   12h e contratos com gestão diluída); esta tabela precifica a unidade isolada.
+   Em disputa competitiva por viatura, o piso é o nível a usar.
 2. Os pisos são de **CCT-SP**. Em outro estado, recalibrar (ver o caso de Canoas,
    onde a CCT-RS não estava disponível e os pisos ficaram como premissa).
 3. A margem de 31% é a de Avaré. Se o estudo usar outra, o gross-up muda.

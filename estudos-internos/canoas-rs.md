@@ -230,7 +230,11 @@ Psiquiatras custam **R$ 363.398/mês em CLT** (21% do CDO do CAPS). Como
 PJ/plantonista: **R$ 216.000** — economia de **R$ 147.398/mês**, levando o preço
 a 7,2% de R$ 2,63 mi para **~R$ 2,40 mi**.
 
-⚠️ **Duas ressalvas antes de adotar:** (a) vínculo PJ para função com
-subordinação gera **risco de passivo trabalhista**; (b) colide com o nosso
-próprio argumento comercial de "equipe CLT sem passivo". É decisão jurídica e de
-posicionamento, não de custo. **Não adotado por ora.**
+✅ **ADOTADO (decisão do CEO, jul/2026)** — o termo do CAPS permite (item 11.4).
+
+**CDO do CAPS: 1.693.623 → 1.546.225. Preço a 7,2%: R$ 2,63 mi → ~R$ 2,40 mi.**
+
+⚠️ Ressalvas que permanecem e devem ser tratadas com o jurídico: (a) vínculo PJ
+em função com subordinação gera **risco de passivo trabalhista**; (b) colide com
+o nosso argumento comercial de "equipe CLT sem passivo" — o discurso precisa ser
+ajustado para não prometer no CAPS o que só vale no SAMU.
