@@ -1,18 +1,16 @@
-# Proteção: nada aqui vai para a Vercel.
+# O site AGORA é a própria raiz do repositório (index.html, css/, js/, assets/,
+# estudos/). Este arquivo impede que o conteúdo INTERNO, que convive na mesma
+# raiz, seja publicado.
 #
-# O site publicado é APENAS a pasta site/ (ver "outputDirectory" em vercel.json).
-# Este arquivo é a trava de segurança para o conteúdo interno da RAIZ do
-# repositório — sem ele, o anexo de composição de preço (BDI, remuneração,
-# custos) poderia ir ao ar caso a configuração de output mude.
-#
-# ⚠️ Os padrões PRECISAM começar com "/" para ancorar na raiz. Sem a barra,
-# "estudos/" casaria também com "site/estudos/" e derrubaria todas as páginas
-# de estudo do site (erro cometido e corrigido em jul/2026).
+# ⚠️ Os padrões precisam da "/" inicial para ancorar na raiz. Sem ela, um nome
+# como "estudos/" casaria em qualquer nível (erro cometido em jul/2026).
+# ⚠️ NUNCA remover /anexos/ — contém a memória financeira (BDI, remuneração).
 
 /anexos/
-/estudos/
+/estudos-internos/
 /referencias/
 /scripts/
+/.claude/
 /CLAUDE.md
 /FORMULA-MESTRE.md
 /README.md

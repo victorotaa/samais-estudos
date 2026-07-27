@@ -2,7 +2,7 @@
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém margem, bridge custo→preço e
 > benchmark — não circular fora da equipe. HTML cliente-facing:
-> `site/estudos/avare-arandu-sp.html` (não expõe nada desta seção financeira).
+> `estudos/avare-arandu-sp.html` (não expõe nada desta seção financeira).
 
 > **Modelo "USA + 5,2" (Métrica de Ouro do CEO, jul/2026).** Preço = camada
 > local (USBs + motolância + gestão, precificada a **R$ 5,20/hab/mês**) +
@@ -125,8 +125,8 @@ Substitui a versão anterior do cenário 2 (trio Avaré + Itaí + Cerqueira Cés
 143.099 hab, R$ 1,25 mi/mês, R$ 8,74/hab, ~65 CLT). Motivo: recalibração do
 consórcio para o par Avaré + Arandu (103.335 hab), com o argumento comercial
 migrando de "ambulância em cada cidade" para "valor estrutural do consórcio +
-repasse federal". Ver também `site/estudos/avare-arandu-sp.html` (HTML cliente-facing,
-já atualizado) e `site/estudos/avare-cenarios.html` (página-mãe, cenário 02).
+repasse federal". Ver também `estudos/avare-arandu-sp.html` (HTML cliente-facing,
+já atualizado) e `estudos/avare-cenarios.html` (página-mãe, cenário 02).
 
 ## Registro — retirada da motolância (jul/2026)
 

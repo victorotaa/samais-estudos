@@ -21,11 +21,11 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
 
 - Preto institucional **#0A0A0A** · Dourado matte **#B8954E** · Branco **#FFFFFF**.
 - Logotipo: fonte *Sweet Gothic* (no corpo usamos Montserrat/Inter como análogos).
-- Marcas em `site/assets/brand/` (logo primária, branca, monograma dourado, favicon).
+- Marcas em `assets/brand/` (logo primária, branca, monograma dourado, favicon).
 - Estilo: premium, sóbrio, preto+dourado — adequado a autoridades.
-- Folha de estilo única: `site/css/samais.css` (reutilizada por todas as páginas).
+- Folha de estilo única: `css/samais.css` (reutilizada por todas as páginas).
 
-## Estrutura da página (modelo: `site/estudos/belem-pa.html`)
+## Estrutura da página (modelo: `estudos/belem-pa.html`)
 
 1. **Nav** fixa com logo branca.
 2. **Hero** full-bleed com **foto do município** (buscada na web; ver abaixo) +
@@ -86,7 +86,7 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   anual e por-morador ficam **secundários** (menores, ao lado, tratados como
   `.value-secondary`). A dedução da verba federal e o valor líquido final ficam
   **visíveis mas discretos** (fonte pequena, mono, `.value-federal`) — aparecem,
-  mas não competem com o número principal. Ver `site/estudos/avare-sp.html` §05
+  mas não competem com o número principal. Ver `estudos/avare-sp.html` §05
   como referência de implementação.
 - **Per capita sempre exibido** (pedido do CEO, jul/2026): todo estudo mostra
   `valor mensal ÷ população` como "R$ X por morador, por mês" — no strip do
@@ -130,7 +130,7 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   visitante carrega a imagem; o ambiente de build pode ter egress restrito).
   Creditar a foto no rodapé.
 - **Banco de imagens Samais** (viaturas etc.) está no Drive da Samais; quando
-  embutir, salvar em `site/assets/img/` (arquivos grandes não cabem no contexto da
+  embutir, salvar em `assets/img/` (arquivos grandes não cabem no contexto da
   sessão — baixar fora ou pedir o anexo).
 - **Imagens geradas (IA): a imagem pode e deve ser grande (hero/banda/CTA em
   tamanho normal) — só o TEXTO de disclosure é que fica pequeno e discreto.**
@@ -141,12 +141,12 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   posicionada no canto inferior direito da própria imagem grande, com o texto
   "Imagem ilustrativa". A legenda principal (eyebrow/título da banda) fica limpa,
   sem menção a "ilustrativa" — só a etiqueta de canto carrega essa informação.
-  Ver `site/estudos/avare-sp.html` para o padrão de referência.
+  Ver `estudos/avare-sp.html` para o padrão de referência.
 
 ## Publicação na Vercel
 
 - Projeto: **`samais-estudos`** (team Samais). Domínio: `samais-estudos.vercel.app`.
-- `site/vercel.json` força `noindex` (documentos não devem ser indexados).
+- `vercel.json` força `noindex` (documentos não devem ser indexados).
 - Deploy: `TOK=<vercel_token> node scripts/deploy-vercel.mjs`
   - O **token não é versionado** — passar por variável de ambiente e **rotacionar**
     se for exposto. Ideal: guardar como secret no projeto Vercel.
@@ -155,7 +155,7 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
 ## Convenção de arquivos
 
 ```
-site/
+(raiz do repositório = o site publicado)
   index.html                 ← landing que lista os estudos
   vercel.json                ← config (noindex, cleanUrls)
   css/samais.css             ← sistema visual único
@@ -164,5 +164,5 @@ site/
   estudos/<municipio>.html   ← uma página por estudo
 ```
 
-Ao criar um estudo novo: gerar `site/estudos/<municipio>.html`, adicionar o cartão
-em `site/index.html` e publicar com o script.
+Ao criar um estudo novo: gerar `estudos/<municipio>.html`, adicionar o cartão
+em `index.html` e publicar com o script.

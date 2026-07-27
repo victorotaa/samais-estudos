@@ -2,7 +2,7 @@
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém margem, bridge custo→preço e
 > benchmark — não circular fora da equipe. HTML cliente-facing:
-> `site/estudos/avare-solo-sp.html` (não expõe nada desta seção financeira).
+> `estudos/avare-solo-sp.html` (não expõe nada desta seção financeira).
 
 > **Modelo "USA + 5,2" (Métrica de Ouro do CEO, jul/2026).** Preço = camada
 > local (USBs + motolância + gestão, precificada a **R$ 5,20/hab/mês**) +

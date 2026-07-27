@@ -18,12 +18,22 @@ if (!TOKEN) { console.error("Defina TOK=<vercel_token>"); process.exit(1); }
 const TEAM = "team_QR85oPYyf6D6KukWSpRsUpsI";
 const PROJECT = "samais-estudos";
 const API = "https://api.vercel.com";
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "site");
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-function walk(dir, acc = []) {
+// O site é a própria raiz do repositório. Estas entradas são internas e NUNCA
+// podem ser publicadas — em especial anexos/, que contém a memória financeira
+// (BDI, remuneração, composição de custo). Mantenha em sincronia com
+// .vercelignore, que protege o caminho do deploy por Git.
+const EXCLUIR = new Set([
+  ".git", ".claude", "anexos", "estudos-internos", "referencias", "scripts",
+  "CLAUDE.md", "FORMULA-MESTRE.md", "README.md", ".gitignore", ".vercelignore",
+]);
+
+function walk(dir, acc = [], base = dir) {
   for (const name of readdirSync(dir)) {
+    if (dir === base && EXCLUIR.has(name)) continue;
     const p = join(dir, name);
-    statSync(p).isDirectory() ? walk(p, acc) : acc.push(p);
+    statSync(p).isDirectory() ? walk(p, acc, base) : acc.push(p);
   }
   return acc;
 }
