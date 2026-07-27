@@ -1,14 +1,18 @@
 # Proteção: nada aqui vai para a Vercel.
 #
-# O site publicado é APENAS a pasta site/. Se o projeto Vercel for conectado ao
-# Git, o "Root Directory" DEVE ser `site`. Este arquivo é a trava de segurança
-# caso a raiz do repositório seja usada por engano — sem ele, o anexo de
-# composição de preço (BDI, remuneração, custos) iria ao ar.
+# O site publicado é APENAS a pasta site/ (ver "outputDirectory" em vercel.json).
+# Este arquivo é a trava de segurança para o conteúdo interno da RAIZ do
+# repositório — sem ele, o anexo de composição de preço (BDI, remuneração,
+# custos) poderia ir ao ar caso a configuração de output mude.
+#
+# ⚠️ Os padrões PRECISAM começar com "/" para ancorar na raiz. Sem a barra,
+# "estudos/" casaria também com "site/estudos/" e derrubaria todas as páginas
+# de estudo do site (erro cometido e corrigido em jul/2026).
 
-anexos/
-estudos/
-referencias/
-scripts/
-CLAUDE.md
-FORMULA-MESTRE.md
-README.md
+/anexos/
+/estudos/
+/referencias/
+/scripts/
+/CLAUDE.md
+/FORMULA-MESTRE.md
+/README.md
