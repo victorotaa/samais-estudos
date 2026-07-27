@@ -123,6 +123,16 @@ custo/preço e a estratégia ficam **apenas** no markdown interno e em conversa.
   claras demais e cortam mal em telas estreitas; no mobile sobe a opacidade e
   reduz a altura da banda para manter legibilidade e enquadramento.
 
+## Discriminação de preço por viatura (padrão)
+
+Todo estudo com frota traz, na seção de Viabilidade, uma tabela de **preço por
+unidade** (USA · VIR · USB · motolância · reserva) — só a **coluna de preço**.
+Isso é discriminação de preço, não exposição de margem: ancora a negociação e dá
+ao gestor a régua de quanto custa incluir ou retirar cada viatura.
+
+**Nunca** exibir ao lado dela o custo, o BDI ou a margem — esses vivem no anexo.
+Fonte dos valores: `referencias/tabela-precos-unitarios.md`.
+
 ## Imagens
 
 - **Hero:** foto que identifique o município. Buscar em fonte com URL estável e
