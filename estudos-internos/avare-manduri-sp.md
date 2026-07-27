@@ -1,5 +1,8 @@
 # Avaré + Manduri — Novo Consórcio SAMU (cenário 4, modelo USA+5,2)
 
+> **Matriz de cenários de Avaré (4):** 1 Solo · 2 Avaré+Arandu · 3 Regional (AMVAPA) · 4 Avaré+Manduri.
+> Página-mãe: `estudos/avare-cenarios.html`. Os cenários 1, 2 e 4 são **concorrentes** entre si e com o 3.
+
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém margem, bridge custo→preço e
 > benchmark — não circular fora da equipe. HTML cliente-facing:
 > `estudos/avare-manduri-sp.html` (não expõe nada desta seção financeira).
@@ -91,7 +94,10 @@ substituição não for obrigatória.*
 
 - **Dado de Manduri:** ✅ população confirmada (IBGE Censo 2022). ⚠️ estrutura de
   saúde, frota local, orçamento e relação com a AMVAPA em levantamento.
-- **Prefeito de Manduri:** ✅ Paulo Roberto Martins (PODEMOS), mandato 2025–2028.
+- **Prefeito de Manduri:** ✅ **Paulo Roberto Martins** (PODEMOS/PODE, nº 20),
+  eleito em 2024 com **55,18% dos votos**; mandato 2025–2028. Vice: **Leia
+  Filadelfo** ⚠️ (fonte secundária, reconfirmar). Fontes: apuração CNN Brasil e
+  O Tempo/Eleições 2024.
   ⚠️ secretário de saúde e alinhamento político com a diretoria da AMVAPA
   (presidida por José Ramiro, prefeito de Itaí) a confirmar — **é o que define
   se ele é candidato a sócio ou aliado do consórcio atual**.

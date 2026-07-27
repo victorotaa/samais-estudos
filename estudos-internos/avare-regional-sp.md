@@ -1,5 +1,8 @@
 # SAMU Regional Vale do Jurumirim / AMVAPA (cenário 3, modelo USA+5,2)
 
+> **Matriz de cenários de Avaré (4):** 1 Solo · 2 Avaré+Arandu · 3 Regional (AMVAPA) · 4 Avaré+Manduri.
+> Página-mãe: `estudos/avare-cenarios.html`. Os cenários 1, 2 e 4 são **concorrentes** entre si e com o 3.
+
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém margem, bridge custo→preço e
 > benchmark — não circular fora da equipe. HTML cliente-facing:
 > `estudos/avare-regional-sp.html` (não expõe nada desta seção financeira).
@@ -116,7 +119,7 @@ cidades.
   margem projetada de 44% é teto e deve cair.
 - **Subfinanciamento federal** típico de consórcios regionais — repasse por
   habilitação a confirmar por cidade.
-- **Saída de Avaré para consórcio próprio** (cenários 1 ou 2 deste estudo)
+- **Saída de Avaré para consórcio próprio** (cenários 1, 2 ou 4 do estudo)
   **canibaliza este cenário regional** — são caminhos concorrentes, não
   complementares; decisão estratégica do CEO sobre qual perseguir.
 - Governança: decisão colegiada dos 17 prefeitos da AMVAPA (não só Avaré).
