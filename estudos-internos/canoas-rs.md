@@ -184,3 +184,53 @@ de R$ 2,0 mi. Se o teto de R$ 2,0 mi for inegociável, aceitar 5,3% de remunera�
 
 ⚠️ **Assunto de estruturação jurídico-tributária não é registrado aqui** — tratar
 apenas em conversa (regra do CLAUDE.md).
+
+## 8. CORREÇÃO — Fator de Cobertura do plantão CAPS (jul/2026)
+
+⚠️ **Erro de cálculo identificado e corrigido.** Na v2 apliquei **FC 2,25** ao
+bloco de plantão das unidades CAPS 24h. O correto é **3,00**.
+
+O termo exige, **além** da equipe diurna de segunda a sexta:
+- **(b)** plantão noturno 19h–7h **todos os dias** → 12h × 7 = **84h/semana**
+- **(c)** plantão diurno 7h–19h em **sábados, domingos e feriados** → 12h × 2 = **24h/semana**
+
+Total de **108h/semana** por posto. Com jornada CLT de **36h/semana** da
+categoria: **FC = 108 ÷ 36 = 3,00**. Eu havia contabilizado apenas a cobertura
+noturna aproximada, deixando o plantão de fim de semana descoberto.
+
+| | Valor |
+|---|---|
+| Bloco de plantão por unidade (1 enf + 3 téc + 1 aux limpeza) | R$ 36.542 |
+| Subestimação por unidade 24h (0,75 × bloco) | R$ 27.406 |
+| **× 3 unidades 24h** (Recanto, Amanhecer, Travessia) | **R$ 82.219** |
+
+**CDO do CAPS: 1.692.014 → 1.774.233.**
+
+### O que é enxugável (e por que quase se anula)
+
+| Alavanca | Efeito | Situação |
+|---|---:|---|
+| Sinergia SAMU+CAPS (gestão, NEP, TI, farmácia) | −58.560 | ✅ real — vantagem da operação integrada |
+| Materiais e apoio mais enxutos | −22.050 | ✅ premissa, dá para apertar |
+| Composição das equipes | 0 | ❌ **fixada unidade a unidade no termo (item 11.15)** |
+| Cobertura 24h | 0 | ❌ exigência do termo |
+| **Correção do FC acima** | **+82.219** | ⚠️ obrigatória |
+
+**Saldo: +R$ 1.609.** O enxugamento praticamente anula a correção — o CDO fica em
+**R$ 1.693.623** e o preço a 7,2% permanece em **~R$ 2,63 mi**.
+
+### A única alavanca grande: regime de vínculo dos psiquiatras
+
+O termo do CAPS **não exige CLT** — ao contrário do SAMU:
+
+> **Item 11.4:** *"A definição da modalidade de vínculo ou de contratação dos
+> profissionais compete à OSC, sob sua exclusiva responsabilidade"*
+
+Psiquiatras custam **R$ 363.398/mês em CLT** (21% do CDO do CAPS). Como
+PJ/plantonista: **R$ 216.000** — economia de **R$ 147.398/mês**, levando o preço
+a 7,2% de R$ 2,63 mi para **~R$ 2,40 mi**.
+
+⚠️ **Duas ressalvas antes de adotar:** (a) vínculo PJ para função com
+subordinação gera **risco de passivo trabalhista**; (b) colide com o nosso
+próprio argumento comercial de "equipe CLT sem passivo". É decisão jurídica e de
+posicionamento, não de custo. **Não adotado por ora.**
