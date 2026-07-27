@@ -58,6 +58,13 @@ Mesma estrutura, condensada. Se o serviço **não couber na régua de BDI padrã
 demonstrar numericamente (em Canoas, o CAPS dava remuneração negativa de
 R$ 63 mil a 35%) e registrar o **piso de preço recomendado**.
 
+### 03-bis · Discriminação de preço por viatura (obrigatório quando há frota)
+Tabela unidade a unidade (USA · VIR · USB 24/7 · USB 12h · motolância · reserva),
+com **custo e preço** — ancorada em `referencias/tabela-precos-unitarios.md`.
+Serve de régua para aditivo: "incluir uma USB 24/7 = +R$ X/mês".
+Sempre aferir a linha USA contra a régua calibrada (Avaré: custo R$ 222.418) — se
+divergir, os pisos do estudo saíram da régua e é preciso justificar.
+
 ### 04 · Consolidado
 Tabela por frente: CDO · preço · remuneração (R$ e %) · BDI. Mais os cartões do
 total, per capita integrado e remuneração total.

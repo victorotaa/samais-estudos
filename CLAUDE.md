@@ -88,6 +88,13 @@ use o que está aqui.
   contratação privada em Lucro Presumido (**15,33%** em Canoas, com ISS
   municipal de 4%). **Nunca assumir o caminho** — a diferença muda preço e
   remuneração.
+- **Discriminação de preço por viatura (padrão, jul/2026).** Todo estudo com frota
+  exibe o preço **unidade a unidade**, ancorado em
+  [`referencias/tabela-precos-unitarios.md`](referencias/tabela-precos-unitarios.md)
+  (USA · VIR · USB 24/7 · USB 12h · motolância · reserva técnica). Serve para
+  negociar linha a linha e para precificar **aditivos** com preço conhecido de
+  antemão. A **coluna de preço** pode ir à proposta; **custo e margem, nunca**.
+  Recalibrar os pisos quando o estudo for de outro estado (a tabela é CCT-SP).
 - **Validar por benchmark** antes de entregar (per capita vs R$ 5,20/hab — régua
   principal; custo/viatura mercado ~R$ 93–159k/mês; peso da folha ~55–70%). Fora
   da faixa = investigar. **Per capita sempre exibido no estudo** (pedido do CEO).
