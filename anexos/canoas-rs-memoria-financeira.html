@@ -94,7 +94,7 @@ VALIDAÇÃO: remuneração = preço − CDO − (tributos% × preço) − (20,5%
     <tr><td data-l="Parâmetro">Insalubridade</td><td data-l="Valor">20%</td><td data-l="Origem">NR-15 Anexo 14 — <strong>exigida no termo</strong> <span class="tagf f">fato</span></td></tr>
     <tr><td data-l="Parâmetro">Periculosidade</td><td data-l="Valor">30%</td><td data-l="Origem">Condutor de motolância — <strong>exigida no termo</strong> <span class="tagf f">fato</span></td></tr>
     <tr><td data-l="Parâmetro">Fator de cobertura</td><td data-l="Valor">embutido</td><td data-l="Origem">O termo fornece as <strong>horas mensais por categoria</strong>, já com folguistas <span class="tagf f">fato</span></td></tr>
-    <tr><td data-l="Parâmetro">Tributos s/ faturamento</td><td data-l="Valor">13,5% ou <strong>15,33%</strong></td><td data-l="Origem">Depende do regime de contratação — ver seção 06 <span class="tagf f">ISS Canoas 4% verificado</span></td></tr>
+    <tr><td data-l="Parâmetro">Tributos s/ faturamento</td><td data-l="Valor">13,5% ou <strong>15,33%</strong></td><td data-l="Origem">Depende do regime de contratação — ver seção 04 <span class="tagf f">ISS Canoas 4% verificado</span></td></tr>
     <tr><td data-l="Parâmetro">Base de horas (40h/sem)</td><td data-l="Valor">220 h/mês</td><td data-l="Origem">Convenção CLT</td></tr>
   </tbody>
 </table>
@@ -268,23 +268,72 @@ VALIDAÇÃO: remuneração = preço − CDO − (tributos% × preço) − (20,5%
   Preservar a remuneração no regime privado exige apenas <strong>+2,4%</strong> no preço. O per capita do SAMU vai de <strong>R$ 5,75 para R$ 5,89</strong> por habitante/mês — ainda <strong>muito abaixo</strong> da régua Ourinhos corrigida (10,6/hab). O regime tributário muda a conta interna, não a defensabilidade do preço diante do contratante.
 </div>
 
-<h2><span class="n">05 · Consolidado</span>A operação integrada</h2>
+
+<h2><span class="n">05 · Discriminação por viatura</span>Régua unitária de Canoas</h2>
+<div class="callout warn">
+  <strong>Não usar a tabela de Avaré aqui</strong>
+  <code>referencias/tabela-precos-unitarios.md</code> está na régua de Avaré (CCT-SP, margem sobre custo com indiretos). Canoas está na <strong>régua do BDI</strong>, com tributos de 15,33% e pisos do RS. São frames diferentes e misturá-los produz número errado.
+</div>
+<table class="resp">
+  <thead><tr><th>Unidade</th><th class="num">Custo</th><th class="num">Referência</th><th class="num">Piso 4%</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Unidade"><strong>USA</strong> · Suporte Avançado 24/7</td><td class="num" data-l="Custo">327.387</td><td class="num" data-l="Referência">509.232</td><td class="num" data-l="Piso">489.032</td></tr>
+    <tr><td data-l="Unidade"><strong>USB</strong> · Suporte Básico 24/7</td><td class="num" data-l="Custo">78.978</td><td class="num" data-l="Referência">122.846</td><td class="num" data-l="Piso">117.973</td></tr>
+    <tr><td data-l="Unidade"><strong>Motolância</strong> 12h</td><td class="num" data-l="Custo">58.594</td><td class="num" data-l="Referência">91.139</td><td class="num" data-l="Piso">87.524</td></tr>
+    <tr><td data-l="Unidade"><strong>Reserva técnica</strong> (por viatura)</td><td class="num" data-l="Custo">10.444</td><td class="num" data-l="Referência">16.245</td><td class="num" data-l="Piso">15.600</td></tr>
+    <tr><td data-l="Unidade"><strong>Gestão da operação</strong></td><td class="num" data-l="Custo">207.990</td><td class="num" data-l="Referência">323.516</td><td class="num" data-l="Piso">310.683</td></tr>
+    <tr class="tot"><td data-l="Unidade">2 USA + 4 USB + 2 moto + 2 reserva + gestão</td><td class="num" data-l="Custo">1.316.755</td><td class="num" data-l="Referência">2.048.134</td><td class="num" data-l="Piso">1.966.890</td></tr>
+  </tbody>
+</table>
+<div class="callout ok">
+  <strong>Aferição fecha exatamente</strong>
+  A soma da frota do termo reproduz o CDO do estudo (R$ 1.316.755) e o preço de referência (R$ 2.048.134) — a discriminação por viatura e o buildup A+B+C+D são a mesma conta, vista de dois ângulos.
+</div>
+
+<h3>Por que a USA de Canoas custa mais que a de Avaré</h3>
+<table class="resp">
+  <thead><tr><th>Item</th><th class="num">Avaré (CCT-SP)</th><th class="num">Canoas</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Item">USA — preço de referência</td><td class="num" data-l="Avaré">422.286</td><td class="num" data-l="Canoas"><strong>509.232</strong> (+21%)</td></tr>
+    <tr><td data-l="Item">Médico da USA</td><td class="num" data-l="Avaré">91.312 <span class="tagf f">plantonista</span></td><td class="num" data-l="Canoas"><strong>175.239</strong> <span class="tagf p">CLT + 68% encargos</span></td></tr>
+  </tbody>
+</table>
+<div class="callout">
+  <strong>O termo de Canoas exige CLT (item 4.9)</strong>
+  Em Avaré o médico é plantonista com taxa cheia. Essa é a <strong>maior diferença estrutural entre os dois contratos</strong> — e a razão pela qual a régua de um não se aplica ao outro.
+</div>
+
+<h3>Faixa de negociação</h3>
+<table class="resp">
+  <thead><tr><th>Nível</th><th class="num">SAMU</th><th class="num">CAPS</th></tr></thead>
+  <tbody>
+    <tr class="sub"><td data-l="Nível"><strong>Referência</strong> (remuneração 7,2%)</td><td class="num" data-l="SAMU"><strong>2.048.134</strong></td><td class="num" data-l="CAPS"><strong>2.405.061</strong></td></tr>
+    <tr><td data-l="Nível">Piso (remuneração 4% — mínimo)</td><td class="num" data-l="SAMU">1.966.890</td><td class="num" data-l="CAPS">2.309.658</td></tr>
+    <tr><td data-l="Nível">Equilíbrio (0%) — <strong>nunca contratar</strong></td><td class="num" data-l="SAMU">1.873.969</td><td class="num" data-l="CAPS">2.200.545</td></tr>
+  </tbody>
+</table>
+<div class="callout warn">
+  <strong>O espaço de desconto é estreito: ~4%</strong>
+  Diferente de Avaré (17%), porque aqui o escopo é <strong>fixado pelo termo</strong> e não há Lean Sizing para absorver corte. Abaixo do piso, a operação não comporta oscilação.
+</div>
+
+<h2><span class="n">06 · Consolidado</span>A operação integrada</h2>
 <table class="resp">
   <thead><tr><th>Frente</th><th class="num">CDO</th><th class="num">Preço</th><th class="num">Remuneração</th><th class="num">BDI</th></tr></thead>
   <tbody>
-    <tr><td data-l="Frente">SAMU 192 (~80 CLT)</td><td class="num" data-l="CDO">1.316.755</td><td class="num" data-l="Preço">2.000.000</td><td class="num" data-l="Remuneração">143.310 (7,2%)</td><td class="num" data-l="BDI">51,9%</td></tr>
-    <tr><td data-l="Frente">Rede CAPS (~183 CLT)</td><td class="num" data-l="CDO">1.692.014</td><td class="num" data-l="Preço">2.571.861</td><td class="num" data-l="Remuneração">185.783 (7,2%)</td><td class="num" data-l="BDI">52,0%</td></tr>
-    <tr class="tot"><td data-l="Frente">Operação integrada (~263 CLT)</td><td class="num" data-l="CDO">3.008.769</td><td class="num" data-l="Preço">4.571.861</td><td class="num" data-l="Remuneração">329.093 (7,2%)</td><td class="num" data-l="BDI">52,0%</td></tr>
+    <tr><td data-l="Frente">SAMU 192 (~80 CLT)</td><td class="num" data-l="CDO">1.316.755</td><td class="num" data-l="Preço">2.048.134</td><td class="num" data-l="Remuneração">147.466 (7,2%)</td><td class="num" data-l="BDI">56%</td></tr>
+    <tr><td data-l="Frente">Rede CAPS (~183 CLT)</td><td class="num" data-l="CDO">1.546.225</td><td class="num" data-l="Preço">2.405.061</td><td class="num" data-l="Remuneração">173.164 (7,2%)</td><td class="num" data-l="BDI">56%</td></tr>
+    <tr class="tot"><td data-l="Frente">Operação integrada (~263 CLT)</td><td class="num" data-l="CDO">2.862.980</td><td class="num" data-l="Preço">4.453.196</td><td class="num" data-l="Remuneração">320.630 (7,2%)</td><td class="num" data-l="BDI">56%</td></tr>
   </tbody>
 </table>
 
 <div class="big">
-  <div class="c"><div class="k">Integrado · mensal</div><div class="v">R$ 4,6 mi</div><div class="s">R$ 54,9 mi/ano</div></div>
-  <div class="c"><div class="k">Per capita integrado</div><div class="v">R$ 13,15</div><div class="s">por habitante/mês</div></div>
-  <div class="c"><div class="k">Remuneração total</div><div class="v">R$ 329 mil</div><div class="s">7,2% do faturamento</div></div>
+  <div class="c"><div class="k">Integrado · mensal</div><div class="v">R$ 4,45 mi</div><div class="s">R$ 53,4 mi/ano</div></div>
+  <div class="c"><div class="k">Per capita integrado</div><div class="v">R$ 12,81</div><div class="s">por habitante/mês</div></div>
+  <div class="c"><div class="k">Remuneração total</div><div class="v">R$ 321 mil</div><div class="s">7,2% do faturamento</div></div>
 </div>
 
-<h2><span class="n">06 · Procedência</span>O que é fato e o que ainda é premissa</h2>
+<h2><span class="n">07 · Procedência</span>O que é fato e o que ainda é premissa</h2>
 <table class="resp">
   <thead><tr><th>Item</th><th>Situação</th></tr></thead>
   <tbody>
@@ -307,7 +356,7 @@ VALIDAÇÃO: remuneração = preço − CDO − (tributos% × preço) − (20,5%
 </div>
 
 <footer>
-  Samais Gestão em Saúde · Canoas/RS · Memória de composição financeira · v3 · julho de 2026<br>
+  Samais Gestão em Saúde · Canoas/RS · Memória de composição financeira · v4 · julho de 2026<br>
   Fontes de escopo: Orçamento nº 194/2026 (SAMU 192) e nº 211/2026 (Rede CAPS), Secretaria Municipal da Saúde de Canoas.<br>
   <strong>Documento confidencial de uso interno.</strong> Não integra a peça de apresentação ao cliente.
 </footer>

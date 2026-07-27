@@ -238,3 +238,76 @@ a 7,2% de R$ 2,63 mi para **~R$ 2,40 mi**.
 em função com subordinação gera **risco de passivo trabalhista**; (b) colide com
 o nosso argumento comercial de "equipe CLT sem passivo" — o discurso precisa ser
 ajustado para não prometer no CAPS o que só vale no SAMU.
+
+## 10. Valores consolidados e discriminação por viatura (jul/2026)
+
+Consolida as decisões: **contratação privada** (Lucro Presumido 15,33%, com ISS
+Canoas de 4%) e **psiquiatras PJ no CAPS** (autorizado pelo item 11.4 do termo).
+
+### Valores de referência
+
+| Frente | CDO | **Preço @7,2%** | Remuneração | BDI |
+|---|---:|---:|---:|---:|
+| SAMU 192 (~80 CLT) | 1.316.755 | **R$ 2.048.134** | 147.466 (7,2%) | 56% |
+| Rede CAPS (~183 CLT, psiq. PJ) | 1.546.225 | **R$ 2.405.061** | 173.164 (7,2%) | 56% |
+| **Integrado** | **2.862.980** | **R$ 4.453.196** | — | 56% |
+
+**SAMU: R$ 5,89/hab · Integrado: R$ 12,81/hab · R$ 53,4 mi/ano.**
+
+### Faixa de negociação
+
+| Nível | SAMU | CAPS |
+|---|---:|---:|
+| **Referência** (remuneração 7,2%) | **2.048.134** | **2.405.061** |
+| **Piso** (remuneração 4% — mínimo) | 1.966.890 | 2.309.658 |
+| Equilíbrio (0%) — **nunca contratar** | 1.873.969 | 2.200.545 |
+
+O espaço de desconto é **estreito: ~4%** no SAMU. Diferente de Avaré (17%),
+porque aqui o escopo é fixado pelo termo e não há Lean Sizing para absorver.
+
+### Tabela por viatura — régua Canoas
+
+⚠️ **Não usar a tabela de `referencias/tabela-precos-unitarios.md` aqui.** Aquela
+é da régua de Avaré (CCT-SP, margem sobre custo com indiretos). Canoas está na
+régua do BDI, com tributos de 15,33% e pisos do RS — frames diferentes.
+
+| Unidade | Custo | **Referência** | Piso 4% |
+|---|---:|---:|---:|
+| **USA** · Suporte Avançado 24/7 | 327.387 | **509.232** | 489.032 |
+| **USB** · Suporte Básico 24/7 | 78.978 | **122.846** | 117.973 |
+| **Motolância** 12h | 58.594 | **91.139** | 87.524 |
+| **Reserva técnica** (por viatura) | 10.444 | **16.245** | 15.600 |
+| **Gestão da operação** | 207.990 | **323.516** | 310.683 |
+
+**Aferição:** 2 USA + 4 USB + 2 motolâncias + 2 reservas + gestão = CDO de
+**R$ 1.316.755** — bate exatamente com o bloco A+B+C+D do estudo ✓
+
+**Alocação:** pessoal direto por posto (2 médicos, 3 enfermeiros, 4 técnicos, 6
+condutores, 2 condutores de motolância, conforme o termo); NEP rateada pelo peso
+do pessoal de cada unidade; materiais e frota divididos pelas 8 viaturas ativas;
+apoio 40h e bloco D na linha de gestão.
+
+### O contraste que explica tudo
+
+| | Avaré (CCT-SP) | **Canoas** |
+|---|---:|---:|
+| USA — preço de referência | R$ 422.286 | **R$ 509.232** (+21%) |
+| Médico da USA | R$ 91.312 (plantonista) | **R$ 175.239** (CLT + 68% encargos) |
+
+A USA de Canoas custa 21% mais **porque o termo exige CLT** (item 4.9). Em Avaré
+o médico é plantonista com taxa cheia. **É a maior diferença estrutural entre os
+dois contratos** — e é o que impede replicar a régua de um no outro.
+
+## 11. Discurso comercial — ajuste obrigatório após o PJ
+
+Com psiquiatras PJ no CAPS, **não podemos mais prometer "equipe CLT sem passivo"
+naquela frente**. O argumento precisa ser segmentado:
+
+- **SAMU:** ✅ equipe 100% CLT (exigência do próprio termo, item 4.9) — o
+  argumento de "sem passivo" continua válido e é verificável.
+- **CAPS:** ❌ **não usar** o argumento de CLT. Vender **cobertura de escala
+  garantida, equipe multiprofissional completa e continuidade do cuidado**, que
+  são as dores reais da RAPS.
+
+⚠️ Usar o discurso errado no CAPS é risco duplo: perde credibilidade se
+verificarem, e enfraquece a posição se o vínculo for questionado depois.
