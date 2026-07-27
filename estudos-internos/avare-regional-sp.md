@@ -54,7 +54,7 @@
 | Subtotal | 202.198 |
 | ×1,10 indiretos | **222.418** |
 
-Repasse federal da USA (~R$ 134.350/mês) **volta ao ente** e funciona como
+Repasse federal da USA (~R$ 159.568,50/mês) **volta ao ente** e funciona como
 desconto sobre o preço contratado (rateado entre as 17 cidades).
 
 ## 5. Bridge custo → preço
@@ -68,7 +68,7 @@ desconto sobre o preço contratado (rateado entre as 17 cidades).
 | **= Margem** | **≈ 931.200 (44%)** |
 
 **Líquido do repasse federal (USA): ~R$ 1.966.000/mês** (R$ 2.100.000 −
-R$ 134.350 de repasse que volta ao ente como desconto).
+R$ 159.568,50 de repasse que volta ao ente como desconto).
 
 ## 6. Nota importante — margem 44% é teto, não é definitiva
 
