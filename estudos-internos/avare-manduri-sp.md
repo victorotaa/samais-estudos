@@ -101,3 +101,49 @@ substituição não for obrigatória.*
   Arandu (cenário 2) — não prometer os três na mesma mesa.
 - Habilitação federal do novo consórcio (trâmite MS), TAC MPT
   194.218.001.15/0-34, ISS de cada ente e CCT-SP.
+
+## 9. Perfil de Manduri (varredura jul/2026)
+
+| Campo | Valor | Proc. |
+|---|---|---|
+| População (Censo 2022) | **9.871 hab** | ✅ IBGE |
+| População (estimativa 2025) | ~10.122 hab | ✅ IBGE/estimativa |
+| Área · densidade | 229,05 km² · 43,1 hab/km² | ✅ IBGE |
+| PIB per capita (2023) | **R$ 36.583,77** | ✅ IBGE |
+| Receita bruta municipal (2024) | **R$ 66.035.439,52** | ✅ |
+| Prefeito | **Paulo Roberto Martins** (PODEMOS/PODE, nº 20), eleito 2024 com **55,18%**, mandato 2025–2028 | ✅ |
+| Vice | Leia Filadelfo | ⚠️ fonte secundária |
+| Secretária de Saúde | Maria Tereza Antunes de Almeida Moreira ⚠️ (cargo a confirmar — consta na estrutura administrativa; Rua Bahia 233, Centro) | ⚠️ |
+
+### Estrutura de saúde
+
+| Unidade | Observação | Proc. |
+|---|---|---|
+| **Pronto Municipal** | Urgência/emergência, atendimento domiciliar, laboratório clínico e diagnóstico por imagem. **Horário 24h a confirmar** | ⚠️ |
+| UBS Dr. Aldemar Holtz de Almeida | Atenção básica | ⚠️ |
+| CS III Maria Inez Melicio | Centro de saúde | ⚠️ |
+| Secretaria Municipal de Saúde | Parque das Abelhas | ⚠️ |
+
+**Não há hospital com internação identificado** — casos graves dependem de
+referência externa. ⚠️ confirmar no CNES.
+
+### AMVAPA — contexto confirmado
+
+- **19 municípios consorciados** ✅: Águas de Santa Bárbara, Avaré, Angatuba,
+  Arandu, Barão de Antonina, Cerqueira César, Coronel Macedo, Fartura, Iaras,
+  Itaí, Itaporanga, **Manduri**, Paranapanema, Piraju, Riversul, Sarutaiá,
+  Taguaí, Taquarituba, Tejupá. (A CRU do Vale do Jurumirim cobre 17 — as 19
+  menos Angatuba e Riversul.)
+- Fundado em 22/11/1999 como associação; **transformado em consórcio público em
+  29/01/2010**. Sede Piraju. ✅
+- **Gancho forte:** pauta de reunião da AMVAPA incluiu a **transferência dos
+  médicos reguladores e intervencionistas do SAMU Regional Vale do Jurumirim** —
+  ou seja, a operação médica da regulação **já é assunto em disputa dentro do
+  consórcio**, o que corrobora o diagnóstico de Avaré. ✅
+
+### Pendências a levantar
+
+CNES (frota de ambulância própria, leitos, tipo do Pronto Municipal e se é 24h) ·
+SIOPS (% e gasto em saúde per capita) · CAUC · mortalidade por causas externas ·
+rodovias que cortam o município · distância rodoviária até Avaré · alinhamento
+político de Paulo Roberto Martins com a diretoria da AMVAPA.
