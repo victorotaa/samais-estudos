@@ -79,7 +79,7 @@ use o que está aqui.
 
 ## Saída
 
-Cada estudo gera **dois artefatos**:
+Cada estudo gera **três artefatos**:
 
 1. **Markdown interno** em `estudos/<municipio-uf>.md` (ver
    [`estudos/belem-pa.md`](estudos/belem-pa.md)) — o cálculo completo, com margem,
@@ -87,6 +87,15 @@ Cada estudo gera **dois artefatos**:
 2. **Página HTML de apresentação** em `site/estudos/<municipio-uf>.html` +
    cartão em `site/index.html`, publicada na Vercel. **Cliente-facing.** Seguir
    [`referencias/apresentacao-html.md`](referencias/apresentacao-html.md).
+3. **Anexo de composição de preço** em
+   `anexos/<municipio-uf>-memoria-financeira.html` — a memória de cálculo
+   apresentável à **diretoria** (validação da fórmula): composição rubrica a
+   rubrica com regra de cálculo, ponte custo→preço até a **remuneração residual**,
+   benchmark e tabela fato × premissa. Seguir
+   [`referencias/anexo-composicao-preco.md`](referencias/anexo-composicao-preco.md);
+   referência de implementação: `anexos/canoas-rs-memoria-financeira.html`.
+   ⚠️ **Fica FORA de `site/`** — o deploy varre só `site/`, e este anexo expõe
+   BDI, remuneração e composição. **Nunca publicar na Vercel.**
 
 > ⚠️ O HTML é visto pelo cliente (gestores/secretários/políticos). **Nunca** expor
 > nele margem (35%), bridge custo→preço, benchmark desfavorável ou estratégia
