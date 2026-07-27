@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Samais · Canoas/RS — Memória financeira (uso interno)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#B8954E;--gold-dim:#8E7238;--ink:#0A0A0A;--paper:#F7F5F1;--line:rgba(0,0,0,.12);
+      --dim:#6b6358;--txt:#2c2822;--display:'Syne',serif;--mono:'JetBrains Mono',monospace;--red:#A6402F;--green:#2F6B4F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--txt);font-family:'Inter',sans-serif;font-size:15px;line-height:1.65}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px}
+header.top{background:var(--ink);color:#fff;padding:44px 0 38px;margin-bottom:44px}
+header.top .wrap{display:block}
+.conf{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(184,149,78,.45);display:inline-block;padding:5px 11px;margin-bottom:22px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.6vw,44px);line-height:1.08;margin:0 0 14px;color:#fff;letter-spacing:-.02em}
+header.top p{color:rgba(255,255,255,.72);margin:0;max-width:62ch;font-size:15.5px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(21px,3vw,29px);margin:52px 0 8px;letter-spacing:-.01em;color:#1a1712}
+h2 .n{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--gold-dim);display:block;margin-bottom:9px;font-weight:400}
+h3{font-family:var(--display);font-weight:600;font-size:18px;margin:30px 0 8px;color:#1a1712}
+p.lede{color:var(--dim);max-width:74ch;margin:0 0 20px}
+table{width:100%;border-collapse:collapse;margin:16px 0 10px;font-size:13.5px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-dim);
+   text-align:left;padding:9px 10px;border-bottom:1.5px solid var(--line);font-weight:500}
+td{padding:9px 10px;border-bottom:1px solid rgba(0,0,0,.07);vertical-align:top}
+td.num,th.num{text-align:right;font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+tr.tot td{font-weight:600;border-top:1.5px solid var(--line);border-bottom:2px solid var(--line);background:rgba(184,149,78,.07)}
+tr.sub td{background:rgba(0,0,0,.03);font-weight:500}
+.callout{border-left:3px solid var(--gold);background:rgba(184,149,78,.08);padding:16px 20px;margin:22px 0;font-size:14.5px}
+.callout.warn{border-left-color:var(--red);background:rgba(166,64,47,.07)}
+.callout.ok{border-left-color:var(--green);background:rgba(47,107,79,.07)}
+.callout>strong:first-child{display:block;font-family:var(--display);font-weight:700;margin-bottom:5px;font-size:15px;color:#1a1712}
+.callout strong{font-weight:600;color:#1a1712}
+.fx{font-family:var(--mono);font-size:12.5px;background:var(--ink);color:#E8E2D4;padding:16px 18px;overflow-x:auto;margin:16px 0;line-height:1.75;border-radius:2px;white-space:pre}
+.fx .hl{color:var(--gold)}
+.big{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
+.big .c{flex:1 1 190px;border:1px solid var(--line);padding:18px 20px;background:#fff}
+.big .c .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.big .c .v{font-family:var(--display);font-weight:700;font-size:27px;color:var(--gold-dim);line-height:1}
+.big .c .s{font-family:var(--mono);font-size:10.5px;color:var(--dim);margin-top:7px}
+.tagf{font-family:var(--mono);font-size:10px;padding:1px 6px;border-radius:2px;white-space:nowrap}
+.tagf.f{background:rgba(47,107,79,.14);color:var(--green)}
+.tagf.p{background:rgba(166,64,47,.12);color:var(--red)}
+footer{margin:64px 0 40px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;color:var(--dim)}
+@media(max-width:700px){
+  .wrap{padding:0 18px} table{font-size:12.5px} td,th{padding:7px 6px}
+  table.resp,table.resp tbody,table.resp tr,table.resp td{display:block;width:100%;max-width:100%}
+  table.resp thead{display:none}
+  table.resp tr{border:1px solid var(--line);margin-bottom:10px;padding:9px 11px;background:#fff}
+  table.resp td{border:none;padding:6px 0;overflow-wrap:anywhere}
+  table.resp td+td{border-top:1px dotted rgba(0,0,0,.10)}
+  table.resp td::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:9px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:3px}
+  table.resp td.num{text-align:left;font-size:14px;color:var(--gold-dim);font-weight:500}
+  .fx{font-size:11px;white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="conf">Confidencial · uso interno Samais · diretoria</div>
+    <h1>Canoas/RS — Memória de composição financeira</h1>
+    <p>Anexo técnico de validação da fórmula Samais aplicada ao SAMU 192 e à Rede CAPS de Canoas. Contém a composição integral, as regras de cálculo e as justificativas de cada rubrica. <strong style="color:#fff">Não circular fora da diretoria</strong> — a peça cliente-facing não expõe nada deste documento.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h2><span class="n">01 · O método</span>Como o número é construído</h2>
+<p class="lede">O valor não parte de um percentual sobre um teto. Ele é construído de baixo para cima, em quatro camadas, e só então confrontado com o preço de mercado. Se o mercado não comportar o custo real, a resposta é enxugar escopo — nunca comprimir a remuneração.</p>
+
+<div class="fx">CUSTO DIRETO OPERACIONAL (CDO)
+  <span class="hl">A</span> Pessoal      = horas do termo × (piso ÷ 220) × (1 + insalubridade/periculosidade) × (1 + encargos)
+  <span class="hl">B</span> Materiais    = medicamentos, gases medicinais, material de consumo
+  <span class="hl">C</span> Frota/apoio  = combustível, manutenção, seguros, EPI, resíduos, predial
+  <span class="hl">D</span> Gestão       = administrativo, contabilidade, TI/CoPilot, NEP
+
+PREÇO = CDO + tributos(% do faturamento) + linhas do BDI(% do CDO) + <span class="hl">remuneração</span>
+
+VALIDAÇÃO: remuneração = preço − CDO − (13,5% × preço) − (20,5% × CDO)
+           se remuneração &lt; ~5% do preço → o BDI está errado para esta operação</div>
+
+<h3>Parâmetros aplicados</h3>
+<table class="resp">
+  <thead><tr><th>Parâmetro</th><th>Valor</th><th>Origem</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Parâmetro">Encargos sociais</td><td data-l="Valor">68,24%</td><td data-l="Origem">Régua Samais (Grupos A+B+C; já cobre férias, 13º e rescisão) <span class="tagf p">validar RS</span></td></tr>
+    <tr><td data-l="Parâmetro">Insalubridade</td><td data-l="Valor">20%</td><td data-l="Origem">NR-15 Anexo 14 — <strong>exigida no termo</strong> <span class="tagf f">fato</span></td></tr>
+    <tr><td data-l="Parâmetro">Periculosidade</td><td data-l="Valor">30%</td><td data-l="Origem">Condutor de motolância — <strong>exigida no termo</strong> <span class="tagf f">fato</span></td></tr>
+    <tr><td data-l="Parâmetro">Fator de cobertura</td><td data-l="Valor">embutido</td><td data-l="Origem">O termo fornece as <strong>horas mensais por categoria</strong>, já com folguistas <span class="tagf f">fato</span></td></tr>
+    <tr><td data-l="Parâmetro">Tributos s/ faturamento</td><td data-l="Valor">13,5%</td><td data-l="Origem">PIS/COFINS + ISS + IR/CSLL</td></tr>
+    <tr><td data-l="Parâmetro">Base de horas (40h/sem)</td><td data-l="Valor">220 h/mês</td><td data-l="Origem">Convenção CLT</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <strong>Achado que motiva este anexo: a tabela de BDI 35% não fecha</strong>
+  A tabela canônica lista todas as linhas como "% sobre CDO", mas <strong>tributos incidem sobre faturamento</strong>. Com BDI 35%, os tributos consomem 13,5% × 1,35 = <strong>18,2% do CDO</strong> (não 13,5%), e as demais linhas somam 20,5% — total de 38,7% contra 35% disponíveis. <strong>A remuneração resultante é −2,8% do preço: negativa, em qualquer estudo.</strong> Os "4%" da tabela só existiriam se os tributos incidissem sobre o CDO. Conclusão: a tabela é peça de apresentação ao cliente, não motor de cálculo.
+</div>
+
+<h3>Pisos de BDI (com tributos sobre faturamento)</h3>
+<table class="resp">
+  <thead><tr><th>Remuneração-alvo (% do preço)</th><th class="num">BDI mínimo sobre o CDO</th><th>Leitura</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Alvo">4%</td><td class="num" data-l="BDI mín.">46,1%</td><td data-l="Leitura">Sobrevivência — sem folga para oscilação</td></tr>
+    <tr class="sub"><td data-l="Alvo">7% — <strong>adotado em Canoas</strong></td><td class="num" data-l="BDI mín.">51,6%</td><td data-l="Leitura">Reserva real para problema operacional</td></tr>
+    <tr><td data-l="Alvo">10%</td><td class="num" data-l="BDI mín.">57,5%</td><td data-l="Leitura">Margem confortável</td></tr>
+  </tbody>
+</table>
+<div class="callout">
+  <strong>O BDI maior não infla o preço</strong>
+  O preço permanece ancorado no teto de mercado (R$ 2,0 mi no SAMU, conforme sua indicação). O BDI de 52% é <em>consequência</em> de calcular o custo real corretamente — ele revela o custo, não o cria. Em Canoas isso é confortável: R$ 5,75/hab está <strong>abaixo</strong> da régua Ourinhos corrigida (10,6/hab).
+</div>
+
+<h2><span class="n">02 · SAMU 192</span>Composição — R$ 2,0 milhões/mês</h2>
+<p class="lede">Frota cedida pelo município (2 USA + 4 USB + 2 motolâncias + reservas), atendendo Canoas e Nova Santa Rita. O termo fornece as horas mensais por categoria, o que elimina a discricionariedade do dimensionamento — o custo de pessoal é calculado sobre a jornada que o próprio edital determina.</p>
+
+<h3>Bloco A · Pessoal</h3>
+<table class="resp">
+  <thead><tr><th>Rubrica</th><th>Quantidade</th><th>Regra de cálculo</th><th class="num">R$/mês</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Rubrica">Médico assistencial (2 USA, 24/7)</td><td data-l="Qtd">1.488 h/mês <span class="tagf f">termo</span></td><td data-l="Regra">R$ 140/h × 1,6824 encargos</td><td class="num" data-l="R$/mês">350.478</td></tr>
+    <tr><td data-l="Rubrica">Enfermeiro assistencial</td><td data-l="Qtd">2.232 h/mês <span class="tagf f">termo</span></td><td data-l="Regra">piso 5.200 × 1,20 insal. × 1,6824</td><td class="num" data-l="R$/mês">106.509</td></tr>
+    <tr><td data-l="Rubrica">Técnico de enfermagem</td><td data-l="Qtd">2.976 h/mês <span class="tagf f">termo</span></td><td data-l="Regra">piso 3.600 × 1,20 × 1,6824</td><td class="num" data-l="R$/mês">98.316</td></tr>
+    <tr><td data-l="Rubrica">Condutor socorrista</td><td data-l="Qtd">4.464 h/mês <span class="tagf f">termo</span></td><td data-l="Regra">piso 2.700 × 1,20 × 1,6824</td><td class="num" data-l="R$/mês">110.605</td></tr>
+    <tr><td data-l="Rubrica">Condutor de motolância</td><td data-l="Qtd">744 h/mês <span class="tagf f">termo</span></td><td data-l="Regra">piso 2.700 × 1,30 pericul. × 1,6824</td><td class="num" data-l="R$/mês">19.970</td></tr>
+    <tr class="sub"><td data-l="Rubrica"><strong>Horas extras de capacitação (NEP)</strong></td><td data-l="Qtd">2.000 h/mês <span class="tagf f">termo</span></td><td data-l="Regra">adicional de 50% sobre a hora-base</td><td class="num" data-l="R$/mês">229.332</td></tr>
+    <tr><td data-l="Rubrica">Médico responsável técnico</td><td data-l="Qtd">1 × 220 h</td><td data-l="Regra">piso × encargos</td><td class="num" data-l="R$/mês">51.818</td></tr>
+    <tr><td data-l="Rubrica">Enfermeiro responsável técnico</td><td data-l="Qtd">1 × 220 h</td><td data-l="Regra">piso × 1,20 × encargos</td><td class="num" data-l="R$/mês">10.498</td></tr>
+    <tr><td data-l="Rubrica">Farmacêutico</td><td data-l="Qtd">1 × 220 h</td><td data-l="Regra">piso × 1,20 × encargos</td><td class="num" data-l="R$/mês">13.123</td></tr>
+    <tr><td data-l="Rubrica">Auxiliar de higienização</td><td data-l="Qtd">2 × 220 h</td><td data-l="Regra">piso × 1,20 × encargos</td><td class="num" data-l="R$/mês">7.268</td></tr>
+    <tr><td data-l="Rubrica">Chefe de frota</td><td data-l="Qtd">1 × 220 h</td><td data-l="Regra">piso × 1,20 × encargos</td><td class="num" data-l="R$/mês">10.094</td></tr>
+    <tr><td data-l="Rubrica">Assistente administrativo</td><td data-l="Qtd">1 × 220 h</td><td data-l="Regra">piso × 1,20 × encargos</td><td class="num" data-l="R$/mês">5.047</td></tr>
+    <tr><td data-l="Rubrica">Coordenador administrativo</td><td data-l="Qtd">1 × 220 h</td><td data-l="Regra">piso × 1,20 × encargos</td><td class="num" data-l="R$/mês">15.142</td></tr>
+    <tr class="tot"><td data-l="Rubrica">Bloco A — pessoal (~80 CLT)</td><td data-l="Qtd"></td><td data-l="Regra"></td><td class="num" data-l="R$/mês">1.028.200</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <strong>A rubrica que quase escapou: NEP — R$ 229 mil/mês</strong>
+  O termo (item 4.2, pág. 14) exige <strong>horas extras obrigatórias de capacitação</strong>: 400h médico, 600h enfermeiro, 600h técnico, 250h condutor e 150h motolância. São 2.000 h/mês adicionais, remuneradas com adicional de 50%. Isoladamente representam <strong>17% do CDO</strong> — omiti-las teria produzido uma proposta estruturalmente deficitária. É a justificativa mais forte da nossa régua de varredura integral do edital.
+</div>
+
+<h3>Blocos B, C e D</h3>
+<table class="resp">
+  <thead><tr><th>Bloco</th><th>Conteúdo e justificativa</th><th class="num">R$/mês</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Bloco">B · Materiais</td><td data-l="Conteúdo">Medicamentos (lista do termo), gases medicinais, material de consumo para 8 viaturas + motolâncias</td><td class="num" data-l="R$/mês">110.000</td></tr>
+    <tr><td data-l="Bloco">C · Frota e apoio</td><td data-l="Conteúdo">Combustível <strong>R$ 12,7 mil</strong> e manutenção <strong>R$ 13,0 mil</strong> (médias reais do termo, +15% pela renovação da frota) · <strong>seguro total da frota</strong> (exigido) · EPI e uniformes (especificados item a item) · resíduos, esterilização e controle de pragas · telefonia e TI · manutenção predial e de equipamentos</td><td class="num" data-l="R$/mês">83.555</td></tr>
+    <tr><td data-l="Bloco">D · Gestão</td><td data-l="Conteúdo">Coordenação corporativa, contabilidade, auditoria, estrutura do NEP, plataforma CoPilot OS, material de escritório</td><td class="num" data-l="R$/mês">95.000</td></tr>
+    <tr class="tot"><td data-l="Bloco">CDO — Custo Direto Operacional</td><td data-l="Conteúdo"></td><td class="num" data-l="R$/mês">1.316.755</td></tr>
+  </tbody>
+</table>
+
+<h3>Do custo ao preço</h3>
+<table class="resp">
+  <thead><tr><th>Componente</th><th>Base de cálculo</th><th class="num">R$/mês</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Componente">Preço contratado</td><td data-l="Base">Teto de mercado (indicação da diretoria)</td><td class="num" data-l="R$/mês">2.000.000</td></tr>
+    <tr><td data-l="Componente">(−) CDO</td><td data-l="Base">Blocos A+B+C+D</td><td class="num" data-l="R$/mês">−1.316.755</td></tr>
+    <tr><td data-l="Componente">(−) Tributos</td><td data-l="Base">13,5% <strong>do faturamento</strong></td><td class="num" data-l="R$/mês">−270.000</td></tr>
+    <tr><td data-l="Componente">(−) Administrativas e gestão corporativa</td><td data-l="Base">8% do CDO</td><td class="num" data-l="R$/mês">−105.340</td></tr>
+    <tr><td data-l="Componente">(−) Tecnologia e inovação (CoPilot OS)</td><td data-l="Base">5% do CDO</td><td class="num" data-l="R$/mês">−65.838</td></tr>
+    <tr><td data-l="Componente">(−) Reserva técnica operacional</td><td data-l="Base">3% do CDO</td><td class="num" data-l="R$/mês">−39.503</td></tr>
+    <tr><td data-l="Componente">(−) Capacitação continuada</td><td data-l="Base">2% do CDO</td><td class="num" data-l="R$/mês">−26.335</td></tr>
+    <tr><td data-l="Componente">(−) Contingências, seguros e garantias</td><td data-l="Base">2,5% do CDO</td><td class="num" data-l="R$/mês">−32.919</td></tr>
+    <tr class="tot"><td data-l="Componente">= Remuneração empresarial</td><td data-l="Base">7,2% do preço</td><td class="num" data-l="R$/mês">143.310</td></tr>
+  </tbody>
+</table>
+
+<div class="big">
+  <div class="c"><div class="k">Preço mensal</div><div class="v">R$ 2,0 mi</div><div class="s">R$ 24 mi/ano</div></div>
+  <div class="c"><div class="k">BDI implícito</div><div class="v">51,9%</div><div class="s">sobre o CDO</div></div>
+  <div class="c"><div class="k">Remuneração</div><div class="v">R$ 143 mil</div><div class="s">7,2% do preço</div></div>
+  <div class="c"><div class="k">Per capita</div><div class="v">R$ 5,75</div><div class="s">por habitante/mês</div></div>
+</div>
+
+<div class="callout ok">
+  <strong>Validação por benchmark</strong>
+  Contrato real de Ourinhos (Samais, 2023): R$ 950 mil / 106 mil hab = <strong>8,96/hab</strong>; corrigido para 2026 (IPCA + piso da enfermagem) ≈ <strong>10,6/hab</strong>. Canoas fecha em <strong>5,75/hab</strong> — bem abaixo da âncora, explicável pela escala (347 mil habitantes diluem o custo fixo). Pela Métrica de Ouro (R$ 5,20/hab + linha USA, e Canoas tem duas USA), o valor também se sustenta. <strong>O preço não está inflado — está corretamente dimensionado.</strong>
+</div>
+
+<h2><span class="n">03 · Rede CAPS</span>Composição — ≈ R$ 2,6 milhões/mês</h2>
+<p class="lede">Cinco unidades da Rede de Atenção Psicossocial, sendo três em regime 24 horas (com plantão noturno e cobertura de fins de semana) e duas diurnas — uma delas, o CAPSi Cataventos, é implantação nova com imóvel por conta da contratada. As equipes mínimas são fixadas unidade a unidade no termo, com CBO e carga horária, o que torna o pessoal praticamente não-compressível.</p>
+
+<table class="resp">
+  <thead><tr><th>Unidade</th><th>Regime</th><th>Composição</th><th class="num">Pessoal R$/mês</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Unidade">CAPS III Recanto dos Girassóis</td><td data-l="Regime">24 horas</td><td data-l="Composição">Equipe diurna completa + plantão noturno (1 enf, 3 téc, 1 limp) + fins de semana, com folguistas (FC 2,25)</td><td class="num" data-l="Pessoal">360.488</td></tr>
+    <tr><td data-l="Unidade">CAPS AD III Amanhecer</td><td data-l="Regime">24 horas</td><td data-l="Composição">Idem + médico clínico 20h</td><td class="num" data-l="Pessoal">368.059</td></tr>
+    <tr><td data-l="Unidade">CAPS AD III Travessia</td><td data-l="Regime">24 horas</td><td data-l="Composição">Idem + médico clínico 20h</td><td class="num" data-l="Pessoal">368.059</td></tr>
+    <tr><td data-l="Unidade">CAPS II Novos Tempos</td><td data-l="Regime">Diurno</td><td data-l="Composição">Equipe multiprofissional, seg–sex</td><td class="num" data-l="Pessoal">152.156</td></tr>
+    <tr><td data-l="Unidade">CAPSi Cataventos <span class="tagf p">nova</span></td><td data-l="Regime">Diurno</td><td data-l="Composição">Equipe infantojuvenil (3 psicólogos, 2 enf. saúde mental)</td><td class="num" data-l="Pessoal">160.232</td></tr>
+    <tr><td data-l="Unidade">Equipe comum à rede</td><td data-l="Regime">44h</td><td data-l="Composição">1 farmacêutico + 2 motoristas (exigência do termo)</td><td class="num" data-l="Pessoal">20.021</td></tr>
+    <tr class="tot"><td data-l="Unidade">Pessoal — 5 unidades (~183 CLT)</td><td data-l="Regime"></td><td data-l="Composição"></td><td class="num" data-l="Pessoal">1.429.014</td></tr>
+  </tbody>
+</table>
+
+<table class="resp">
+  <thead><tr><th>Demais blocos</th><th>Justificativa</th><th class="num">R$/mês</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Bloco">Imóvel do CAPSi</td><td data-l="Justificativa"><strong>Obrigação da contratada</strong> — locação, adequação, mobiliário e equipamentos, amortizados no contrato</td><td class="num" data-l="R$/mês">28.000</td></tr>
+    <tr><td data-l="Bloco">Materiais e medicamentos</td><td data-l="Justificativa">Farmácia das 5 unidades, com prontuário e controle de estoque exigidos</td><td class="num" data-l="R$/mês">95.000</td></tr>
+    <tr><td data-l="Bloco">Apoio</td><td data-l="Justificativa">Limpeza, resíduos, transporte de equipes (veículos exigidos pelo termo)</td><td class="num" data-l="R$/mês">52.000</td></tr>
+    <tr><td data-l="Bloco">Gestão, TI e NEP</td><td data-l="Justificativa">Coordenação técnica, prontuário eletrônico, educação permanente</td><td class="num" data-l="R$/mês">88.000</td></tr>
+    <tr class="tot"><td data-l="Bloco">CDO — Rede CAPS</td><td data-l="Justificativa"></td><td class="num" data-l="R$/mês">1.692.014</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <strong>Por que o CAPS não cabe na régua de 35%</strong>
+  Aplicando BDI 35%, o preço sairia em R$ 2,28 mi — e a remuneração residual seria <strong>negativa em R$ 63 mil (−2,8%)</strong>. Uma operação de 183 profissionais em cinco unidades não se sustenta nessa régua. Com BDI 52%, o preço vai a <strong>R$ 2,57 mi</strong> e a remuneração a <strong>R$ 186 mil (7,2%)</strong> — mesma saúde do SAMU. <strong>Recomendação: não propor a Rede CAPS abaixo de ~R$ 2,5 milhões.</strong>
+</div>
+
+<h2><span class="n">04 · Consolidado</span>A operação integrada</h2>
+<table class="resp">
+  <thead><tr><th>Frente</th><th class="num">CDO</th><th class="num">Preço</th><th class="num">Remuneração</th><th class="num">BDI</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Frente">SAMU 192 (~80 CLT)</td><td class="num" data-l="CDO">1.316.755</td><td class="num" data-l="Preço">2.000.000</td><td class="num" data-l="Remuneração">143.310 (7,2%)</td><td class="num" data-l="BDI">51,9%</td></tr>
+    <tr><td data-l="Frente">Rede CAPS (~183 CLT)</td><td class="num" data-l="CDO">1.692.014</td><td class="num" data-l="Preço">2.571.861</td><td class="num" data-l="Remuneração">185.783 (7,2%)</td><td class="num" data-l="BDI">52,0%</td></tr>
+    <tr class="tot"><td data-l="Frente">Operação integrada (~263 CLT)</td><td class="num" data-l="CDO">3.008.769</td><td class="num" data-l="Preço">4.571.861</td><td class="num" data-l="Remuneração">329.093 (7,2%)</td><td class="num" data-l="BDI">52,0%</td></tr>
+  </tbody>
+</table>
+
+<div class="big">
+  <div class="c"><div class="k">Integrado · mensal</div><div class="v">R$ 4,6 mi</div><div class="s">R$ 54,9 mi/ano</div></div>
+  <div class="c"><div class="k">Per capita integrado</div><div class="v">R$ 13,15</div><div class="s">por habitante/mês</div></div>
+  <div class="c"><div class="k">Remuneração total</div><div class="v">R$ 329 mil</div><div class="s">7,2% do faturamento</div></div>
+</div>
+
+<h2><span class="n">05 · Procedência</span>O que é fato e o que ainda é premissa</h2>
+<table class="resp">
+  <thead><tr><th>Item</th><th>Situação</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Item">Horas mensais por categoria (SAMU)</td><td data-l="Situação"><span class="tagf f">fato</span> Orçamento 194/2026, item 4.2</td></tr>
+    <tr><td data-l="Item">Horas extras de capacitação (NEP)</td><td data-l="Situação"><span class="tagf f">fato</span> Orçamento 194/2026, item 4.2</td></tr>
+    <tr><td data-l="Item">Equipes mínimas por unidade CAPS</td><td data-l="Situação"><span class="tagf f">fato</span> Orçamento 211/2026, item 11.15</td></tr>
+    <tr><td data-l="Item">Combustível e manutenção da frota</td><td data-l="Situação"><span class="tagf f">fato</span> médias reais do quinquemestre no termo</td></tr>
+    <tr><td data-l="Item">Insalubridade, periculosidade, seguro da frota, imóvel do CAPSi</td><td data-l="Situação"><span class="tagf f">fato</span> obrigações expressas nos termos</td></tr>
+    <tr><td data-l="Item">Pisos da enfermagem</td><td data-l="Situação"><span class="tagf f">fato</span> Lei 14.434/2022 (piso legal)</td></tr>
+    <tr><td data-l="Item">Pisos de médico, condutor, farmacêutico, administrativo e categorias CAPS</td><td data-l="Situação"><span class="tagf p">premissa</span> estimativa — <strong>a confirmar na CCT-RS vigente</strong></td></tr>
+    <tr><td data-l="Item">Encargos de 68,24%</td><td data-l="Situação"><span class="tagf p">premissa</span> régua Samais — confirmar composição para o RS</td></tr>
+    <tr><td data-l="Item">Blocos B e D, e apoio do bloco C</td><td data-l="Situação"><span class="tagf p">premissa</span> estimativa por escopo</td></tr>
+    <tr><td data-l="Item">Desenho fino da escala 24h do CAPS</td><td data-l="Situação"><span class="tagf p">premissa</span> a fechar em diligência</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>Sensibilidade — onde o número se move</strong>
+  O piso médico é a maior alavanca do SAMU (R$ 350 mil, 27% do CDO): cada R$ 10/h de variação move ≈ R$ 29 mil/mês. Como o preço está ancorado em R$ 2,0 milhões, <strong>toda variação de custo vira variação de remuneração</strong> — razão pela qual a reserva de 7,2% é o mínimo prudente, e não folga. Confirmada a CCT-RS, o modelo recalcula em minutos: a estrutura não muda, apenas os pisos.
+</div>
+
+<footer>
+  Samais Gestão em Saúde · Canoas/RS · Memória de composição financeira · v2 · julho de 2026<br>
+  Fontes de escopo: Orçamento nº 194/2026 (SAMU 192) e nº 211/2026 (Rede CAPS), Secretaria Municipal da Saúde de Canoas.<br>
+  <strong>Documento confidencial de uso interno.</strong> Não integra a peça de apresentação ao cliente.
+</footer>
+
+</div>
+</body>
+</html>
