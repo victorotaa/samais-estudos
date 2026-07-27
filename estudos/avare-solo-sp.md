@@ -13,7 +13,8 @@
 
 - **Avaré — 96.450 hab** (IBGE).
 - **2 USB 24/7** + **1 reserva** (reativada por laudo técnico, sem CAPEX de
-  aquisição — só manutenção/preventiva) + **motolância 12h** (pico urbano).
+  aquisição — só manutenção/preventiva). **Sem motolância** (retirada do escopo
+  por decisão do CEO, jul/2026 — preço mantido).
 - **UTI móvel (USA) própria, operada pela Samais** — resolve a dor histórica de
   USA compartilhada/óbito em rota. A USA não é exigida por norma para Avaré
   (Portaria GM/MS 1.010/2012 pede >400 mil hab), mas **fica** e é administrada
@@ -64,7 +65,7 @@ desconto sobre o preço contratado.
 | (−) Custo total = camada local (279.866) + USA (222.418) | 502.284 |
 | (−) Tributos 16,33% s/ faturamento | 163.300 |
 | (−) Honorários advocatícios 2% s/ faturamento | 20.000 |
-| **= Margem** | **314.416 (31%)** |
+| **= Margem** | **≈ 326.562 (33%)** |
 
 **Líquido do repasse federal (USA): ~R$ 866.000/mês** (R$ 1.000.000 − R$ 134.350
 de repasse que volta ao ente como desconto).
@@ -111,3 +112,14 @@ em **10,37/hab** — validação forte, não é chute.
 - CCT-SP (piso, benefícios) — aplicar sem exceção.
 - Headcount de 45 CLT a validar em diligência (dimensionamento fino por
   turno/posto).
+
+## Registro — retirada da motolância (jul/2026)
+
+Decisão do CEO: **retirar a motolância do escopo mantendo o preço**. Aplicação da
+regra de Lean Sizing — o preço é teto de mercado; enxugar escopo melhora a margem,
+não baixa o preço.
+
+Custo removido: ~R$ 12.100/mês (1 posto 12h com FC 2,25 ≈ R$ 9.842 de pessoal +
+~R$ 1.200 de custeio da moto, ×1,10 de indiretos). A camada local do modelo
+"USA + 5,2" continua descrita de forma genérica (USBs + gestão) — a motolância
+deixa de compor este escopo específico.

@@ -14,7 +14,8 @@
 - **17 cidades · 312.109 hab**, geridas pela **AMVAPA** (Consórcio
   Intermunicipal do Alto Vale do Paranapanema, sede Piraju/SP, presidente José
   Ramiro/Itaí).
-- **UTI móvel (USA) + frota regional de USB + motolância**, servindo as 17
+- **UTI móvel (USA) + frota regional de USB** (sem motolância — retirada do
+  escopo por decisão do CEO, jul/2026, preço mantido), servindo as 17
   cidades. **CRU em Avaré** (a central de regulação já existe e é habilitada/
   qualificada regionalmente).
 - **Contratante:** consórcio regional (AMVAPA).
@@ -61,7 +62,7 @@ desconto sobre o preço contratado (rateado entre as 17 cidades).
 | (−) Custo total = camada local (573.598) + USA (222.418) | 796.016 |
 | (−) Tributos 16,33% s/ faturamento | 342.930 |
 | (−) Honorários advocatícios 2% s/ faturamento | 42.000 |
-| **= Margem** | **919.054 (44%)** |
+| **= Margem** | **≈ 931.200 (44%)** |
 
 **Líquido do repasse federal (USA): ~R$ 1.966.000/mês** (R$ 2.100.000 −
 R$ 134.350 de repasse que volta ao ente como desconto).
@@ -122,3 +123,14 @@ cidades.
 - TAC MPT 194.218.001.15/0-34 (a monitorar).
 - ISS (cada ente) e enquadramento tributário do consórcio.
 - CCT-SP (piso, benefícios) — aplicar sem exceção.
+
+## Registro — retirada da motolância (jul/2026)
+
+Decisão do CEO: **retirar a motolância do escopo mantendo o preço**. Aplicação da
+regra de Lean Sizing — o preço é teto de mercado; enxugar escopo melhora a margem,
+não baixa o preço.
+
+Custo removido: ~R$ 12.100/mês (1 posto 12h com FC 2,25 ≈ R$ 9.842 de pessoal +
+~R$ 1.200 de custeio da moto, ×1,10 de indiretos). A camada local do modelo
+"USA + 5,2" continua descrita de forma genérica (USBs + gestão) — a motolância
+deixa de compor este escopo específico.

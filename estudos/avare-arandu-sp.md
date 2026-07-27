@@ -13,7 +13,8 @@
 
 - **Dupla — 103.335 hab** (IBGE Censo 2022): Avaré 96.450 + Arandu 6.885.
 - **2 USB 24/7** (cobrem o par — cidades vizinhas) + **reserva** +
-  **motolância** (Avaré) + **UTI móvel (USA) própria, operada pela Samais**.
+  **UTI móvel (USA) própria, operada pela Samais**. **Sem motolância**
+  (retirada do escopo por decisão do CEO, jul/2026 — preço mantido).
   Arandu ganha ponto de apoio + acesso à USA e à regulação; **não** tem
   ambulância 24/7 dedicada (população pequena não justifica).
 - **Central de Regulação (CRU) permanece regional.**
@@ -65,7 +66,7 @@ desconto sobre o preço contratado (rateado entre os 2 municípios).
 | (−) Custo total = local (279.866) + USA (222.418) | 502.284 |
 | (−) Tributos 16,33% s/ faturamento | 161.700 |
 | (−) Honorários advocatícios 2% s/ faturamento | 19.800 |
-| **= Margem** | **≈ 306.216 (31%)** |
+| **= Margem** | **≈ 318.362 (32%)** |
 
 **Líquido do repasse federal (USA): ~R$ 856.000/mês** (R$ 990.000 −
 R$ 134.350 de repasse que volta ao ente como desconto).
@@ -126,3 +127,14 @@ consórcio para o par Avaré + Arandu (103.335 hab), com o argumento comercial
 migrando de "ambulância em cada cidade" para "valor estrutural do consórcio +
 repasse federal". Ver também `site/estudos/avare-arandu-sp.html` (HTML cliente-facing,
 já atualizado) e `site/estudos/avare-cenarios.html` (página-mãe, cenário 02).
+
+## Registro — retirada da motolância (jul/2026)
+
+Decisão do CEO: **retirar a motolância do escopo mantendo o preço**. Aplicação da
+regra de Lean Sizing — o preço é teto de mercado; enxugar escopo melhora a margem,
+não baixa o preço.
+
+Custo removido: ~R$ 12.100/mês (1 posto 12h com FC 2,25 ≈ R$ 9.842 de pessoal +
+~R$ 1.200 de custeio da moto, ×1,10 de indiretos). A camada local do modelo
+"USA + 5,2" continua descrita de forma genérica (USBs + gestão) — a motolância
+deixa de compor este escopo específico.
