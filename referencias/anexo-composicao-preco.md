@@ -17,9 +17,9 @@ Audiência: **diretoria/CEO**. Não é do cliente e não é do site.
 
 ## Regra de localização (não-negociável)
 
-- Fica em **`anexos/`**, na raiz do repositório — **nunca em `site/`**.
-- Motivo: `scripts/deploy-vercel.mjs` varre apenas `site/`. Qualquer arquivo
-  dentro de `site/` vai ao ar em `samais-estudos.vercel.app`. O anexo expõe
+- Fica em **`anexos/`**, que está no `.vercelignore` — **nunca em pasta publicada**.
+- Motivo: `scripts/deploy-vercel.mjs` varre a raiz (com `.vercelignore`). Qualquer arquivo
+  publicado na raiz vai ao ar em `samais-estudos.vercel.app`. O anexo expõe
   **BDI, remuneração e composição de custo** — exatamente o que a regra de ouro
   proíbe no cliente-facing.
 - Cabeçalho obrigatório: selo **"Confidencial · uso interno Samais · diretoria"**
@@ -87,4 +87,4 @@ célula — o CSS está inline no anexo de Canoas, copiar de lá. Testar com vie
 - Commitar em `anexos/`.
 - Enviar o arquivo ao CEO (abre no navegador; imprime em PDF com Ctrl+P se ele
   preferir circular assim).
-- **Nunca** linkar o anexo a partir do `site/` nem do `index.html`.
+- **Nunca** linkar o anexo a partir do `index.html` nem de qualquer página publicada.

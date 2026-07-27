@@ -81,11 +81,11 @@ use o que está aqui.
 
 Cada estudo gera **três artefatos**:
 
-1. **Markdown interno** em `estudos/<municipio-uf>.md` (ver
-   [`estudos/belem-pa.md`](estudos/belem-pa.md)) — o cálculo completo, com margem,
+1. **Markdown interno** em `estudos-internos/<municipio-uf>.md` (ver
+   [`estudos-internos/belem-pa.md`](estudos-internos/belem-pa.md)) — o cálculo completo, com margem,
    composição custo→preço e todas as premissas. **Uso interno.**
-2. **Página HTML de apresentação** em `site/estudos/<municipio-uf>.html` +
-   cartão em `site/index.html`, publicada na Vercel. **Cliente-facing.** Seguir
+2. **Página HTML de apresentação** em `estudos/<municipio-uf>.html` +
+   cartão em `index.html`, publicada na Vercel. **Cliente-facing.** Seguir
    [`referencias/apresentacao-html.md`](referencias/apresentacao-html.md).
 3. **Anexo de composição de preço** em
    `anexos/<municipio-uf>-memoria-financeira.html` — a memória de cálculo
@@ -94,7 +94,7 @@ Cada estudo gera **três artefatos**:
    benchmark e tabela fato × premissa. Seguir
    [`referencias/anexo-composicao-preco.md`](referencias/anexo-composicao-preco.md);
    referência de implementação: `anexos/canoas-rs-memoria-financeira.html`.
-   ⚠️ **Fica FORA de `site/`** — o deploy varre só `site/`, e este anexo expõe
+   ⚠️ **Fica FORA do que é publicado** — o deploy varre a raiz (com `.vercelignore`), e este anexo expõe
    BDI, remuneração e composição. **Nunca publicar na Vercel.**
 
 > ⚠️ O HTML é visto pelo cliente (gestores/secretários/políticos). **Nunca** expor
@@ -103,7 +103,7 @@ Cada estudo gera **três artefatos**:
 
 - Sempre marcar a procedência de cada dado: ✅ real (com fonte) × ⚠️ premissa a validar.
 - **Identidade visual Samais:** preto `#0A0A0A` · dourado `#B8954E` · branco;
-  marcas em `site/assets/brand/`; estilo único em `site/css/samais.css`.
+  marcas em `assets/brand/`; estilo único em `css/samais.css`.
 - **Publicar:** `TOK=<vercel_token> node scripts/deploy-vercel.mjs` (token **nunca**
   versionado — variável de ambiente; rotacionar se exposto).
 

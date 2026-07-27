@@ -1,7 +1,7 @@
 # Canoas/RS — SAMU 192 + Rede CAPS (estudo de operação · Camada 1 Samais→OS)
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém composição de custo, BDI e
-> premissas. HTML cliente-facing: `site/estudos/canoas-rs.html` (não expõe
+> premissas. HTML cliente-facing: `estudos/canoas-rs.html` (não expõe
 > BDI/CDO nem a decomposição). Valores **v2**, ancorados no número do CEO — ver §4 e §5.
 
 > **Enquadramento (nota do cliente):** a OS/CEBAS contrata a Samais para operar
