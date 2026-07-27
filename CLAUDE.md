@@ -73,6 +73,21 @@ use o que está aqui.
   4% de remuneração · ≈ 52% para 7%** (usado em Canoas) · ≈ 57% para 10%. O preço
   segue ancorado no teto de mercado — o BDI maior não infla preço, apenas revela
   o custo verdadeiro e evita operar no prejuízo.
+- **Contratação via OS/OSC — PERGUNTAR O CENÁRIO ANTES DE PRECIFICAR (regra do
+  CEO, jul/2026).** Quando o objeto envolve Organização Social/OSC, existem
+  **caminhos de precificação diferentes**, e o número muda em cada um. Sempre
+  perguntar **antes** de calcular:
+  1. **OS contrata a Samais** (Camada 1) — precificamos a nossa operação para a
+     OS. O "mais um pouco" que a OS agrega até o ente **não é nosso** e não entra
+     no estudo. Foi o caso de Canoas.
+  2. **Samais assume o processo licitatório completo e vence** — somos a
+     contratada direta do ente. Aqui entram as obrigações do edital por inteiro
+     (garantias, habilitação, CEBAS quando exigido) e a carga tributária do
+     **nosso** regime.
+  O regime tributário acompanha o caminho: parceria MROSC/OSC (~13,5%) ×
+  contratação privada em Lucro Presumido (**15,33%** em Canoas, com ISS
+  municipal de 4%). **Nunca assumir o caminho** — a diferença muda preço e
+  remuneração.
 - **Validar por benchmark** antes de entregar (per capita vs R$ 5,20/hab — régua
   principal; custo/viatura mercado ~R$ 93–159k/mês; peso da folha ~55–70%). Fora
   da faixa = investigar. **Per capita sempre exibido no estudo** (pedido do CEO).
