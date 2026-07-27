@@ -83,7 +83,7 @@ footer{margin:64px 0 40px;padding-top:22px;border-top:1px solid var(--line);font
 
 PREÇO = CDO + tributos(% do faturamento) + linhas do BDI(% do CDO) + <span class="hl">remuneração</span>
 
-VALIDAÇÃO: remuneração = preço − CDO − (13,5% × preço) − (20,5% × CDO)
+VALIDAÇÃO: remuneração = preço − CDO − (tributos% × preço) − (20,5% × CDO)
            se remuneração &lt; ~5% do preço → o BDI está errado para esta operação</div>
 
 <h3>Parâmetros aplicados</h3>
@@ -94,7 +94,7 @@ VALIDAÇÃO: remuneração = preço − CDO − (13,5% × preço) − (20,5% × 
     <tr><td data-l="Parâmetro">Insalubridade</td><td data-l="Valor">20%</td><td data-l="Origem">NR-15 Anexo 14 — <strong>exigida no termo</strong> <span class="tagf f">fato</span></td></tr>
     <tr><td data-l="Parâmetro">Periculosidade</td><td data-l="Valor">30%</td><td data-l="Origem">Condutor de motolância — <strong>exigida no termo</strong> <span class="tagf f">fato</span></td></tr>
     <tr><td data-l="Parâmetro">Fator de cobertura</td><td data-l="Valor">embutido</td><td data-l="Origem">O termo fornece as <strong>horas mensais por categoria</strong>, já com folguistas <span class="tagf f">fato</span></td></tr>
-    <tr><td data-l="Parâmetro">Tributos s/ faturamento</td><td data-l="Valor">13,5%</td><td data-l="Origem">PIS/COFINS + ISS + IR/CSLL</td></tr>
+    <tr><td data-l="Parâmetro">Tributos s/ faturamento</td><td data-l="Valor">13,5% ou <strong>15,33%</strong></td><td data-l="Origem">Depende do regime de contratação — ver seção 06 <span class="tagf f">ISS Canoas 4% verificado</span></td></tr>
     <tr><td data-l="Parâmetro">Base de horas (40h/sem)</td><td data-l="Valor">220 h/mês</td><td data-l="Origem">Convenção CLT</td></tr>
   </tbody>
 </table>
@@ -218,7 +218,57 @@ VALIDAÇÃO: remuneração = preço − CDO − (13,5% × preço) − (20,5% × 
   Aplicando BDI 35%, o preço sairia em R$ 2,28 mi — e a remuneração residual seria <strong>negativa em R$ 63 mil (−2,8%)</strong>. Uma operação de 183 profissionais em cinco unidades não se sustenta nessa régua. Com BDI 52%, o preço vai a <strong>R$ 2,57 mi</strong> e a remuneração a <strong>R$ 186 mil (7,2%)</strong> — mesma saúde do SAMU. <strong>Recomendação: não propor a Rede CAPS abaixo de ~R$ 2,5 milhões.</strong>
 </div>
 
-<h2><span class="n">04 · Consolidado</span>A operação integrada</h2>
+
+<h2><span class="n">04 · Cenário tributário</span>Parceria MROSC × contratação privada</h2>
+<p class="lede">A composição acima assume a parceria via OSC (tributos de 13,5%). Se o contrato for <strong>privado, tributado pelo Lucro Presumido</strong>, a carga sobe — e a remuneração cai na mesma proporção, porque o preço está ancorado no teto de mercado.</p>
+
+<h3>A carga em Canoas</h3>
+<table class="resp">
+  <thead><tr><th>Tributo</th><th class="num">Alíquota</th><th>Observação</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Tributo">PIS</td><td class="num" data-l="Alíquota">0,65%</td><td data-l="Obs.">Cumulativo (Presumido)</td></tr>
+    <tr><td data-l="Tributo">COFINS</td><td class="num" data-l="Alíquota">3,00%</td><td data-l="Obs.">Cumulativo (Presumido)</td></tr>
+    <tr><td data-l="Tributo">IRPJ</td><td class="num" data-l="Alíquota">4,80%</td><td data-l="Obs.">Base presumida de serviços</td></tr>
+    <tr><td data-l="Tributo">CSLL</td><td class="num" data-l="Alíquota">2,88%</td><td data-l="Obs.">Base presumida de serviços</td></tr>
+    <tr class="sub"><td data-l="Tributo"><strong>ISS Canoas — serviços de saúde</strong></td><td class="num" data-l="Alíquota"><strong>4,00%</strong></td><td data-l="Obs."><span class="tagf f">verificado</span> Em vigor desde <strong>12/01/2026</strong> — reajuste do município em resposta à reforma tributária (Lei 4.818/2003 e alterações). <strong>Não é o teto de 5%</strong></td></tr>
+    <tr class="tot"><td data-l="Tributo">Total sobre faturamento</td><td class="num" data-l="Alíquota">15,33%</td><td data-l="Obs."></td></tr>
+  </tbody>
+</table>
+
+<div class="callout ok">
+  <strong>O ISS de 4% vale ~R$ 20 mil/mês</strong>
+  Se Canoas cobrasse o teto de 5%, a carga iria a 16,33% e a remuneração do SAMU cairia de 5,3% para <strong>4,3%</strong> ao mesmo preço. A alíquota efetiva de 4% é o que mantém o cenário privado viável sem reajuste maior. ⚠️ Confirmar o subitem/CNAE exato na tabela oficial da Prefeitura antes de fechar proposta.
+</div>
+
+<h3>Comparação dos dois regimes</h3>
+<table class="resp">
+  <thead><tr><th>Frente</th><th>A · MROSC/OSC (13,5%)</th><th>B · Privada · Lucro Presumido (15,33%)</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Frente">SAMU — preço mantido em R$ 2,00 mi</td><td data-l="A">remuneração R$ 143.310 (<strong>7,2%</strong>)</td><td data-l="B">remuneração <strong>R$ 106.710 (5,3%)</strong></td></tr>
+    <tr><td data-l="Frente">CAPS — preço mantido em R$ 2,57 mi</td><td data-l="A">remuneração R$ 185.783 (<strong>7,2%</strong>)</td><td data-l="B">remuneração <strong>R$ 138.718 (5,4%)</strong></td></tr>
+  </tbody>
+</table>
+<div class="callout warn">
+  <strong>Manter o preço no regime privado custa ~1,9 ponto de remuneração</strong>
+  E leva as duas frentes para <strong>abaixo do piso prudente de ~7%</strong> fixado após a correção do BDI — margem que não sobrevive bem a uma oscilação operacional.
+</div>
+
+<h3>Preço que preserva os 7,2%</h3>
+<table class="resp">
+  <thead><tr><th>Frente</th><th class="num">Preço ajustado</th><th class="num">Delta</th><th class="num">Remuneração</th><th class="num">BDI</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Frente">SAMU</td><td class="num" data-l="Preço">2.048.134</td><td class="num" data-l="Delta">+48.134</td><td class="num" data-l="Remuneração">147.466 (7,2%)</td><td class="num" data-l="BDI">56%</td></tr>
+    <tr><td data-l="Frente">Rede CAPS</td><td class="num" data-l="Preço">2.631.828</td><td class="num" data-l="Delta">+59.967</td><td class="num" data-l="Remuneração">189.492 (7,2%)</td><td class="num" data-l="BDI">56%</td></tr>
+    <tr class="tot"><td data-l="Frente">Integrado</td><td class="num" data-l="Preço">4.679.962</td><td class="num" data-l="Delta">+108.101</td><td class="num" data-l="Remuneração">—</td><td class="num" data-l="BDI">56%</td></tr>
+  </tbody>
+</table>
+
+<div class="callout ok">
+  <strong>O reajuste é pequeno e o preço continua defensável</strong>
+  Preservar a remuneração no regime privado exige apenas <strong>+2,4%</strong> no preço. O per capita do SAMU vai de <strong>R$ 5,75 para R$ 5,89</strong> por habitante/mês — ainda <strong>muito abaixo</strong> da régua Ourinhos corrigida (10,6/hab). O regime tributário muda a conta interna, não a defensabilidade do preço diante do contratante.
+</div>
+
+<h2><span class="n">05 · Consolidado</span>A operação integrada</h2>
 <table class="resp">
   <thead><tr><th>Frente</th><th class="num">CDO</th><th class="num">Preço</th><th class="num">Remuneração</th><th class="num">BDI</th></tr></thead>
   <tbody>
@@ -234,7 +284,7 @@ VALIDAÇÃO: remuneração = preço − CDO − (13,5% × preço) − (20,5% × 
   <div class="c"><div class="k">Remuneração total</div><div class="v">R$ 329 mil</div><div class="s">7,2% do faturamento</div></div>
 </div>
 
-<h2><span class="n">05 · Procedência</span>O que é fato e o que ainda é premissa</h2>
+<h2><span class="n">06 · Procedência</span>O que é fato e o que ainda é premissa</h2>
 <table class="resp">
   <thead><tr><th>Item</th><th>Situação</th></tr></thead>
   <tbody>
@@ -257,7 +307,7 @@ VALIDAÇÃO: remuneração = preço − CDO − (13,5% × preço) − (20,5% × 
 </div>
 
 <footer>
-  Samais Gestão em Saúde · Canoas/RS · Memória de composição financeira · v2 · julho de 2026<br>
+  Samais Gestão em Saúde · Canoas/RS · Memória de composição financeira · v3 · julho de 2026<br>
   Fontes de escopo: Orçamento nº 194/2026 (SAMU 192) e nº 211/2026 (Rede CAPS), Secretaria Municipal da Saúde de Canoas.<br>
   <strong>Documento confidencial de uso interno.</strong> Não integra a peça de apresentação ao cliente.
 </footer>

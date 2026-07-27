@@ -127,3 +127,60 @@ valor do CAPS antes de apresentar.
   (política de rede mudou no meio; provável exigir nova sessão/ambiente).
 - SAMU tem prazo curto (24/07); CAPS 06/08.
 - Coexiste o Salvar-SAMU estadual (RMPA) — escopo distinto do SAMU municipal.
+
+## 7. Cenário tributário B — contratação privada com Lucro Presumido
+
+> **Pedido do CEO (jul/2026):** precificar o SAMU também como **contratação
+> privada tributada pelo Lucro Presumido**, em vez da parceria MROSC/OSC. Muda
+> a carga tributária e, portanto, a remuneração.
+
+### A carga em Canoas
+
+| Tributo | Alíquota |
+|---|---|
+| PIS | 0,65% |
+| COFINS | 3,00% |
+| IRPJ (presumido) | 4,80% |
+| CSLL (presumido) | 2,88% |
+| **ISS Canoas — serviços de saúde** | **4,00%** ✅ |
+| **Total sobre faturamento** | **15,33%** |
+
+✅ **ISS confirmado:** Canoas elevou a alíquota de serviços de saúde para **4,0%**,
+em vigor desde **12/01/2026** (reajuste do município em resposta à reforma
+tributária; Lei Municipal 4.818/2003 e alterações). **Não são os 5% do teto** —
+diferença que vale ~R$ 20 mil/mês no SAMU. ⚠️ Confirmar o subitem/CNAE exato na
+tabela oficial da Prefeitura antes de fechar proposta.
+
+### Comparação dos dois regimes
+
+| | A · MROSC/OSC (13,5%) | B · Privada · L. Presumido (15,33%) |
+|---|---|---|
+| **SAMU — preço mantido** | R$ 2,00 mi · rem. R$ 143 mil (**7,2%**) | R$ 2,00 mi · rem. **R$ 107 mil (5,3%)** |
+| **CAPS — preço mantido** | R$ 2,57 mi · rem. R$ 186 mil (**7,2%**) | R$ 2,57 mi · rem. **R$ 139 mil (5,4%)** |
+
+**Manter o preço no regime privado custa ~1,9 ponto de remuneração.**
+
+### Preço que preserva os 7,2%
+
+| Frente | Preço ajustado | Delta | Remuneração | BDI |
+|---|---|---|---|---|
+| SAMU | **R$ 2.048.134** | +R$ 48.134 | R$ 147.466 (7,2%) | 56% |
+| CAPS | **R$ 2.631.828** | +R$ 59.967 | R$ 189.492 (7,2%) | 56% |
+| **Integrado** | **R$ 4.679.962** | +R$ 108.101 | — | — |
+
+Per capita do SAMU: **5,75 → 5,89/hab**. Segue **muito abaixo** da régua Ourinhos
+corrigida (10,6/hab), então o ajuste **não compromete a defesa do preço**.
+
+### Leitura
+
+O reajuste necessário é de apenas **+2,4%** — pequeno porque o ISS de Canoas (4%)
+ficou abaixo do teto. Se a alíquota fosse 5%, o mesmo preço entregaria só 4,3% de
+remuneração e o ajuste teria de ser bem maior.
+
+**Recomendação:** se o contrato for privado, propor **R$ 2,05 mi** no SAMU em vez
+de R$ 2,0 mi. Se o teto de R$ 2,0 mi for inegociável, aceitar 5,3% de remuneração
+é viável, mas fica **abaixo do piso prudente de ~7%** definido após a lição do BDI
+— margem que não sobrevive bem a oscilação operacional.
+
+⚠️ **Assunto de estruturação jurídico-tributária não é registrado aqui** — tratar
+apenas em conversa (regra do CLAUDE.md).
