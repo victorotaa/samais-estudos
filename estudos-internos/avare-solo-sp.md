@@ -70,8 +70,13 @@ desconto sobre o preço contratado.
 | (−) Honorários advocatícios 2% s/ faturamento | 20.000 |
 | **= Margem** | **≈ 326.562 (33%)** |
 
-**Líquido do repasse federal (USA): ~R$ 866.000/mês** (R$ 1.000.000 − R$ 134.350
-de repasse que volta ao ente como desconto).
+**Líquido do repasse federal: ~R$ 840.000/mês** (R$ 1.000.000 − **R$ 159.568,50**).
+
+> **Correção jul/2026:** usávamos R$ 134.350 (repasse só da USA). A própria SMS
+> de Avaré declarou receber **R$ 159.568,50/mês** (USA + USB + Central —
+> Portarias GM/MS 1.631/2023, 1.816/2023 e 10.850/2026). Operando tudo, o
+> repasse cheio continua entrando: o abatimento é **R$ 25.218/mês maior** do que
+> vínhamos considerando (R$ 303 mil/ano).
 
 ## 6. Custo aparente × custo real (obrigatório em todo estudo)
 
@@ -79,12 +84,39 @@ Cenário A não é só o declarado — somam-se os ocultos (frota na pasta geral
 combustível, insumos no almoxarifado central, imóvel, coordenação e, o maior,
 os médicos cedidos pela Prefeitura à USA/CRU).
 
+### Memória dos ocultos — item a item (jul/2026)
+
+Substitui o fator ×1,38 por soma auditável. Base: levantamento oficial da **SMS
+de Avaré (21/05/2026)** + régua Samais.
+
+| Oculto | R$/mês | Como se chega |
+|---|---:|---|
+| **Médico da UTI móvel** — posto 24/7 cedido | **91.312** | ⚠️ régua Samais: R$125/h × 730,5h (o mesmo posto que precificamos) |
+| Médico regulador cedido à CRU (fração de Avaré) | 30.000 | ⚠️ estimativa |
+| Manutenção da frota (3 USB na "frota geral") | 13.500 | ⚠️ R$4.500/viatura (preventiva + seguro + licenciamento) |
+| Combustível | 2.169 | ✅ **349,8 L/mês reais** (SMS) × ~R$6,20 ⚠️ |
+| Insumos no almoxarifado central | 6.000 | ⚠️ |
+| Imóvel base + central (água, luz, IPTU, predial) | 10.000 | ⚠️ |
+| Coordenação (servidor cedido) | 11.000 | ⚠️ |
+| **Total dos ocultos** | **163.981** | |
+
+**Os médicos cedidos são R$ 121 mil dos R$ 164 mil — 74% de todo o oculto**, e é
+exatamente o posto que a nossa proposta assume: não criamos custo novo,
+internalizamos um custo que já existe e está invisível.
+
+**Fora da conta mensal** (contingência, não despesa recorrente): passivo do TAC
+MPT 194.218.001.15/0-34 e a reposição das 2 USB paradas (CAPEX).
+
+**Aferição dos dois métodos:** a soma dá fator **1,334**; o estudo usava **1,38**.
+Diferença de R$ 22.758 (3,5%) — dois caminhos independentes convergindo, o que
+mostra que o fator não era chute. **Adotar a memória**, que é auditável.
+
 | Nível | R$/mês | Leitura |
 |---|---|---|
-| Declarado (rubrica oficial hoje) | 491.418 | O que a Prefeitura reporta na peça orçamentária |
-| Custo real hoje (com ocultos) | ~678.000 | Fator +38% (declarado × 1,38) — maior componente: médicos efetivos cedidos à USA/CRU (~120k) |
+| Declarado (rubrica oficial hoje) | 491.418 | ✅ declarado pela SMS de Avaré |
+| Custo real hoje (memória item a item) | **655.399** | Declarado + R$ 163.981 de ocultos |
 | Autogestão da estrutura cheia (custo real) | ~804.000 | Com passivo trabalhista, sem tecnologia |
-| Samais (líquido do repasse federal) | ~866.000 | Preço com tributo + margem, sem passivo, com tecnologia e chave-na-mão |
+| Samais (líquido do repasse federal) | ~840.000 | Preço com tributo + margem, sem passivo, com tecnologia e chave-na-mão |
 
 **Honestidade obrigatória:** a Samais **não é mais barata** que a autogestão da
 estrutura cheia (o preço carrega tributo + margem). O argumento correto é
@@ -126,3 +158,19 @@ Custo removido: ~R$ 12.100/mês (1 posto 12h com FC 2,25 ≈ R$ 9.842 de pessoal
 ~R$ 1.200 de custeio da moto, ×1,10 de indiretos). A camada local do modelo
 "USA + 5,2" continua descrita de forma genérica (USBs + gestão) — a motolância
 deixa de compor este escopo específico.
+
+## 10. Esforço líquido do caixa municipal (o número que o secretário vê)
+
+| Cenário | Bruto | (−) repasse federal | **Líquido** |
+|---|---:|---:|---:|
+| Hoje — declarado | 491.418 | 159.568 | **331.850** |
+| Hoje — custo real (memória) | 655.399 | 159.568 | **495.830** |
+| Proposta Solo | 1.000.000 | 159.568 | **840.432** |
+
+**Delta contra o custo real: +R$ 344.601/mês (+53%) · +R$ 4,1 mi/ano.**
+
+⚠️ **Honestidade obrigatória:** não é "empate em custo real" — é **aumento de
+orçamento**. O argumento correto é o que se recebe pelo delta: o dobro de frota
+rodando, UTI móvel com equipe própria, tecnologia, equipe CLT sem passivo e um
+contrato único auditável. Chegar à mesa dizendo "empate" e ser confrontado com
+esta conta destrói a credibilidade do estudo inteiro.
