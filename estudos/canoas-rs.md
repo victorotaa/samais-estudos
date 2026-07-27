@@ -2,7 +2,7 @@
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém composição de custo, BDI e
 > premissas. HTML cliente-facing: `site/estudos/canoas-rs.html` (não expõe
-> BDI/CDO nem a decomposição). Números **PROVISÓRIOS** — ver §5.
+> BDI/CDO nem a decomposição). Valores **v2**, ancorados no número do CEO — ver §4 e §5.
 
 > **Enquadramento (nota do cliente):** a OS/CEBAS contrata a Samais para operar
 > (Camada 1). Precificamos com **nosso BDI** (Composição do Valor Contratual). O
@@ -40,35 +40,75 @@ motoristas). Rateio fino da escala 24h a fechar em diligência.
 | Insalubridade | 20% (NR15 Anexo 14) | ✅ exigência do termo |
 | Periculosidade | 30% (condutor motolância) | ✅ exigência do termo |
 | Pisos enfermagem | Enf R$ 4.750 · Téc R$ 3.325 (Lei 14.434) | ✅ piso legal |
-| Médico | R$ 125/h (âncora Avaré) — tratado CLT c/ encargos | ⚠️ maior sensibilidade |
+| Médico | R$ 140/h carregado (v2) | ⚠️ maior sensibilidade do bloco A |
 | Demais pisos (condutor, farmac., admin, CAPS) | estimativa | ⚠️ a validar CCT-RS |
-| BDI | Composição do Valor Contratual = CDO × 1,35 | doutrina samais-os |
+| BDI | Composição do Valor Contratual — **52% (v2)**, para reserva real | decisão CEO jul/2026 |
 
-## 4. Preço PROVISÓRIO (opção 3 — pisos estimados)
+## 4. Preço — v2, ancorado no número do CEO (André)
 
-### SAMU (custo por horas do termo × custo-hora carregado)
+> **Âncora (jul/2026):** André informou que **o SAMU comporta R$ 2,0 milhões/mês**,
+> confirmado como **o que a Samais recebe e também o teto do município** (a camada
+> da OS fica dentro desse valor, não por cima). Base de trabalho a partir daqui.
 
-| Bloco | R$/mês | Proc. |
-|---|---|---|
-| A · Pessoal (~80 CLT) | 718.000 | horas ✅ · pisos ⚠️ (enfermagem ✅) |
-| B · Materiais/medicamentos/gases | 80.000 | ⚠️ estimativa |
-| C · Frota + apoio (comb 12,7k + manut 13k ✅) | 47.700 | parcial ✅ |
-| D · Gestão/TI/CoPilot | 60.000 | ⚠️ estimativa |
-| **CDO** | **905.900** | |
-| **Preço = CDO × 1,35** | **≈ 1.220.000/mês** | R$ 3,52/hab · R$ 14,7 mi/ano |
+### Correção relevante da v1 → v2
 
-Sensibilidade médico: se plantonista puro (R$125/h já cheio), SAMU cai a
-~R$ 1,06 mi. **Faixa provisória SAMU: R$ 1,06–1,22 mi/mês.**
+A v1 (R$ 1,22 mi) estava **subdimensionada**. Dois motivos:
 
-### CAPS (grosseiro)
+1. **Horas extras de capacitação (NEP) — R$ 229 mil/mês omitidos.** O termo (pág.
+   14) exige horas extras obrigatórias: médico 400h, enfermeiro 600h, técnico
+   600h, condutor 250h, motolância 150h. ✅ **FATO do edital.**
+2. Pisos estimados baixos e blocos B/C/D subestimados (sem seguro total da frota
+   — exigência do termo —, uniformes/EPI detalhados, resíduos, esterilização,
+   controle de pragas, manutenção predial e de equipamentos).
 
-Pessoal ~R$ 1,2 mi + materiais/medicamentos/imóvel CAPSi/transporte → CDO
-~R$ 1,37 mi × 1,35 ≈ **R$ 1,8–2,0 mi/mês** (bem mais ⚠️; precisa da passada de
-pisos por categoria e do desenho fino de plantão).
+### SAMU · CDO reforçado
+
+| Bloco | R$/mês |
+|---|---|
+| A · Pessoal (~80 CLT, inclui NEP 229k) | 1.028.200 |
+| B · Materiais/medicamentos/gases | 110.000 |
+| C · Frota + apoio (comb/manut ✅ + seguro, EPI, resíduos, predial) | 83.555 |
+| D · Gestão/TI/CoPilot/NEP estrutura | 95.000 |
+| **CDO** | **1.316.755** |
+
+**Preço = R$ 2.000.000/mês** · R$ 5,75/hab · R$ 24 mi/ano · **BDI implícito 52%**.
+
+Composição a R$ 2,0 mi: tributos 13,5% (270.000) · administrativas 8% (105.340) ·
+tecnologia 5% (65.838) · reserva técnica 3% (39.503) · capacitação 2% (26.335) ·
+contingências 2,5% (32.919) · **remuneração empresarial R$ 143.310 (7,2% do preço)**.
+
+> **Por que 52% e não os 35% da doutrina:** a R$ 1,22 mi (BDI 35%) a remuneração
+> ficava em ~R$ 36 mil — **margem que não sobrevive a um problema operacional**
+> (viatura parada, reposição de escala, passivo). Decisão do CEO: operar com
+> reserva real. O preço segue **ancorado no teto de mercado** (R$ 5,75/hab está
+> **abaixo** da régua Ourinhos corrigida de 10,6/hab e da Métrica de Ouro de
+> 5,20/hab + linha USA — Canoas tem 2 USA).
+
+### CAPS · CDO reforçado
+
+| Bloco | R$/mês |
+|---|---|
+| Pessoal (5 unidades, ~183 CLT) | 1.429.014 |
+| Imóvel CAPSi (locação + adequação amortizada) | 28.000 |
+| Materiais e medicamentos | 95.000 |
+| Apoio (limpeza, resíduos, transporte de equipes) | 52.000 |
+| Gestão/TI/NEP | 88.000 |
+| **CDO** | **1.692.014** |
+
+**Preço ≈ R$ 2.570.000/mês** (BDI 52%) · remuneração ~R$ 186 mil (7,2%).
+
+> ⚠️ **Achado crítico:** no BDI padrão de 35%, o CAPS daria **resultado negativo
+> (−2,8%)** — R$ 2,28 mi não cobre CDO + tributos + linhas do BDI. Uma operação de
+> 183 CLT em 5 unidades **não se sustenta na régua de 35%**. Não propor CAPS abaixo
+> de ~R$ 2,5 mi.
 
 ### Operação integrada (referência exibida no HTML)
 
-**≈ R$ 3,1 mi/mês** (SAMU ~1,2 + CAPS ~1,9) · **R$ 8,92/hab** · ~263 CLT.
+**≈ R$ 4,6 mi/mês** (SAMU 2,0 + CAPS 2,6) · **R$ 13,15/hab** · ~263 CLT ·
+R$ 54,9 mi/ano.
+
+⚠️ O CAPS **não tem âncora do CEO** — o R$ 2,0 mi do André é do SAMU. Validar o
+valor do CAPS antes de apresentar.
 
 ## 5. O que firma o número
 
