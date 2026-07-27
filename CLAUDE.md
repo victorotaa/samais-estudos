@@ -54,6 +54,25 @@ use o que está aqui.
   Samais. **Honestidade:** a Samais não é "mais barata" que a autogestão (preço tem
   tributo+margem); o argumento é **empate em custo real + sem passivo + tecnologia +
   chave-na-mão**. Cabe na página-mãe multi-cenário.
+- **Varredura completa do termo de referência (lição Canoas, jul/2026).** O edital
+  é fonte do **escopo E do custo** — ler só a matriz de pessoal e a frota é erro.
+  Extrair *sempre*, com checklist: **horas extras obrigatórias de capacitação/NEP**
+  (em Canoas eram 400h médico + 600h enf + 600h téc + 250h condutor = **R$ 229
+  mil/mês omitidos**), seguros exigidos (seguro total da frota), EPI/uniformes
+  especificados, resíduos/esterilização/controle de pragas, manutenção predial e
+  de equipamentos, **imóvel por conta da contratada**, e metas com desconto no
+  repasse. Cada obrigação do termo que consome dinheiro **é rubrica de custo**.
+- **Nunca presumir que o BDI fecha — calcular a remuneração residual (lição
+  Canoas).** A tabela canônica de BDI lista as linhas como "% sobre CDO", mas
+  **tributos incidem sobre faturamento**. Com BDI 35%: tributos 13,5% × preço =
+  **18,2% do CDO** (não 13,5%), e as demais linhas somam 20,5% do CDO → 38,7% >
+  35% disponíveis. **A remuneração real fica em −2,8% do preço — negativa, em
+  qualquer estudo.** Portanto: (a) sempre computar explicitamente
+  `remuneração = preço − CDO − tributos×preço − demais×CDO`; (b) se der < ~5% do
+  preço, o BDI está errado para aquela operação. **Piso prático: BDI ≈ 46% para
+  4% de remuneração · ≈ 52% para 7%** (usado em Canoas) · ≈ 57% para 10%. O preço
+  segue ancorado no teto de mercado — o BDI maior não infla preço, apenas revela
+  o custo verdadeiro e evita operar no prejuízo.
 - **Validar por benchmark** antes de entregar (per capita vs R$ 5,20/hab — régua
   principal; custo/viatura mercado ~R$ 93–159k/mês; peso da folha ~55–70%). Fora
   da faixa = investigar. **Per capita sempre exibido no estudo** (pedido do CEO).
