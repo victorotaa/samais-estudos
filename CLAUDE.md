@@ -104,8 +104,39 @@ Cada estudo gera **três artefatos**:
 - Sempre marcar a procedência de cada dado: ✅ real (com fonte) × ⚠️ premissa a validar.
 - **Identidade visual Samais:** preto `#0A0A0A` · dourado `#B8954E` · branco;
   marcas em `assets/brand/`; estilo único em `css/samais.css`.
-- **Publicar:** `TOK=<vercel_token> node scripts/deploy-vercel.mjs` (token **nunca**
-  versionado — variável de ambiente; rotacionar se exposto).
+## Publicação (lições de jul/2026 — não repetir estes erros)
+
+**O site é a PRÓPRIA RAIZ do repositório** (`index.html`, `css/`, `js/`, `assets/`,
+`estudos/`). O conteúdo interno convive na mesma raiz e é protegido por
+`.vercelignore` + lista de exclusão no script de deploy.
+
+- **Publicar = mergear na `main`.** O projeto Vercel está conectado ao GitHub;
+  todo merge na `main` dispara build e publica. O script por token
+  (`TOK=<vercel_token> node scripts/deploy-vercel.mjs`) é fallback — o token
+  **nunca** é versionado e deve ser rotacionado se exposto.
+
+### Armadilhas que já custaram horas
+
+1. **`.vercelignore` exige padrões ancorados com `/`.** Igual ao `.gitignore`,
+   `estudos/` sem barra casa em **qualquer nível** — chegou a excluir as próprias
+   páginas do site, que passaram a dar 404 enquanto a home funcionava. Sempre
+   `/anexos/`, `/estudos-internos/`, etc.
+2. **`outputDirectory` NÃO funciona para site estático sem build.** Essa chave
+   vale para a *saída de um build*; sem build a Vercel ignora e serve a raiz. Foi
+   por isso que o site virou a raiz — não tentar reintroduzir subpasta + config.
+3. **O domínio pode ficar preso em um deployment antigo.** Sintoma: builds novos
+   ficam `Ready` mas o ar não muda. Correção: no deployment novo → "⋯" →
+   **Promote to Production** (cuidado para não tocar em "Instant Rollback", que
+   causa o problema inverso). O script já fixa o alias após o READY.
+4. **Cache do navegador mascara sucesso.** Depois de publicar, testar com
+   `?v=N` no fim da URL (ou aba anônima) — páginas já visitadas ficam em cache e
+   parecem não ter atualizado, mesmo com `must-revalidate`.
+5. **Verificar por conteúdo, nunca por HTTP 200.** Um 200 pode ser conteúdo
+   velho. Conferir se a informação nova aparece de fato.
+6. **Checklist pós-deploy:** (a) home lista o estudo novo · (b) a página abre
+   **sem** `.html` (prova que o `cleanUrls` foi lido) · (c)
+   `/anexos/<estudo>-memoria-financeira.html` dá **404** — se abrir, a memória
+   financeira vazou e é urgente.
 
 ## Observações de manutenção
 
