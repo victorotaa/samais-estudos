@@ -44,7 +44,12 @@ motoristas). Rateio fino da escala 24h a fechar em diligência.
 | Demais pisos (condutor, farmac., admin, CAPS) | estimativa | ⚠️ a validar CCT-RS |
 | BDI | Composição do Valor Contratual — **52% (v2)**, para reserva real | decisão CEO jul/2026 |
 
-## 4. Preço — v2, ancorado no número do CEO (André)
+## 4. Preço — v2 (histórico; **superado pela §9**)
+
+> ⚠️ **Esta seção é histórica.** Registra a v2, ancorada no R$ 2,0 mi indicado pelo
+> CEO quando o enquadramento ainda era parceria MROSC. **Os valores vigentes
+> estão na §9**, já com contratação privada (Lucro Presumido 15,33%) e
+> psiquiatras PJ no CAPS.
 
 > **Âncora (jul/2026):** André informou que **o SAMU comporta R$ 2,0 milhões/mês**,
 > confirmado como **o que a Samais recebe e também o teto do município** (a camada
@@ -71,7 +76,8 @@ A v1 (R$ 1,22 mi) estava **subdimensionada**. Dois motivos:
 | D · Gestão/TI/CoPilot/NEP estrutura | 95.000 |
 | **CDO** | **1.316.755** |
 
-**Preço = R$ 2.000.000/mês** · R$ 5,75/hab · R$ 24 mi/ano · **BDI implícito 52%**.
+**Preço v2 = R$ 2.000.000/mês** · R$ 5,75/hab · BDI implícito 52%.
+*(Vigente: **R$ 2.048.134** — ver §9.)*
 
 Composição a R$ 2,0 mi: tributos 13,5% (270.000) · administrativas 8% (105.340) ·
 tecnologia 5% (65.838) · reserva técnica 3% (39.503) · capacitação 2% (26.335) ·
@@ -239,7 +245,7 @@ em função com subordinação gera **risco de passivo trabalhista**; (b) colide
 o nosso argumento comercial de "equipe CLT sem passivo" — o discurso precisa ser
 ajustado para não prometer no CAPS o que só vale no SAMU.
 
-## 10. Valores consolidados e discriminação por viatura (jul/2026)
+## 9. Valores consolidados e discriminação por viatura (jul/2026)
 
 Consolida as decisões: **contratação privada** (Lucro Presumido 15,33%, com ISS
 Canoas de 4%) e **psiquiatras PJ no CAPS** (autorizado pelo item 11.4 do termo).
@@ -298,7 +304,7 @@ A USA de Canoas custa 21% mais **porque o termo exige CLT** (item 4.9). Em Avar�
 o médico é plantonista com taxa cheia. **É a maior diferença estrutural entre os
 dois contratos** — e é o que impede replicar a régua de um no outro.
 
-## 11. Discurso comercial — ajuste obrigatório após o PJ
+## 10. Discurso comercial — ajuste obrigatório após o PJ
 
 Com psiquiatras PJ no CAPS, **não podemos mais prometer "equipe CLT sem passivo"
 naquela frente**. O argumento precisa ser segmentado:
