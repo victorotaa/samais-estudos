@@ -1,7 +1,7 @@
 # SAMU Regional Vale do Jurumirim / AMVAPA (cenário 3, modelo USA+5,2)
 
-> **Matriz de cenários de Avaré (4):** 1 Solo · 2 Avaré+Arandu · 3 Regional (AMVAPA) · 4 Avaré+Manduri.
-> Página-mãe: `estudos/avare-cenarios.html`. Os cenários 1, 2 e 4 são **concorrentes** entre si e com o 3.
+> **Matriz de cenários de Avaré (5):** 1 Solo · 2 Avaré+Arandu · 3 Regional (AMVAPA) · 4 Avaré+Manduri (ponto de apoio) · 5 Avaré+Manduri com base descentralizada.
+> Página-mãe: `estudos/avare-cenarios.html`. Os cenários 1, 2, 4 e 5 são **concorrentes** entre si e com o 3.
 
 > **CONFIDENCIAL · USO INTERNO SAMAIS.** Contém margem, bridge custo→preço e
 > benchmark — não circular fora da equipe. HTML cliente-facing:
